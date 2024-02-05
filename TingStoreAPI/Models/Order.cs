@@ -20,7 +20,7 @@ namespace TingStoreAPI.Models
         public DateTime orderDate { get; set; }
         [Column(TypeName = "Money")]
 
-        public Decimal TotalAmount { get; set; }
+        public long TotalAmount { get; set; }
 
         public int orderStatusId { get; set; }
 
