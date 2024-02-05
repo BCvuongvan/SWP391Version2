@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "xFO9D8YJGwoYuo0lvNG5ovJZbtlz3CJRAJ8xnn6jTIHA1VYyiXEO54g0Vw+HlpYBIngzi5WWUlglofuw8wqD6Q==",
+  "dgSpecHash": "L3O35ENCi8ynV3iTsLj/ZYCbBZ5xENZKdEqb5xHGWWeMgdzEZfxZ4uJR9HrYopoYz3P3ih+JUav6XeBmMZy/cA==",
   "success": true,
-  "projectFilePath": "D:\\SP24\\SWP391\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
+  "projectFilePath": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
