@@ -1,0 +1,35 @@
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  */
+.page-header h1 {
+    font-weight: 300;
+    font-size: 30px;
+    color: #4c4d5a;
+    margin-bottom: 15px;
+    text-shadow: 0 1px #fff;
+    margin-top: 10px;
+}
+
+.card-body {
+    border: 1px solid gray;
+}
+
+.title-col td {
+    color: #1e91cf;
+    font-weight: 500;
+}
+
+.title-col td:hover {
+    color: #1874a6;
+}
+
+/* Filter CSS */
+#filter-order .card .card-body .form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}

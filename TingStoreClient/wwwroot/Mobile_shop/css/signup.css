@@ -1,0 +1,39 @@
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+.mask {
+    background-color: antiquewhite;
+}
+
+/*  */
+.card {
+    border-radius: 20px;
+    margin: 20px;
+}
+
+/*  */
+.card_body {
+    margin: 15px;
+}
+
+/*  */
+.form_box .form_outline {
+    margin: 0 30px;
+    margin-bottom: 10px;
+}
+
+/*  */
+.form_box .form-label {
+    font-size: 12px;
+}
+
+/* Button Signup */
+.btn input {
+    width: 100%;
+    margin: 0 15px;
+}
