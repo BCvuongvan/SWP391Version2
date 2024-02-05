@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TingStoreClient
-build_property.ProjectDir = D:\FPT\Summer2024_SE1708\TingStore\SWP391Version2\TingStoreClient\
+build_property.ProjectDir = D:\SP24\SWP391\SWP391Version2\TingStoreClient\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

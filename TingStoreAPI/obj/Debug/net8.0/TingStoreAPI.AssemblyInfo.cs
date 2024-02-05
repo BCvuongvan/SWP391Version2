@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TingStoreAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7d3be429180393f5eac0f4e681063fcb4f47fe4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32a487fba51d3399086d618a7b81d86ec8e53043")]
 [assembly: System.Reflection.AssemblyProductAttribute("TingStoreAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TingStoreAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
