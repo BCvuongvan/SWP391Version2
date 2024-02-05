@@ -4,5 +4,12 @@
   "success": true,
   "projectFilePath": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
