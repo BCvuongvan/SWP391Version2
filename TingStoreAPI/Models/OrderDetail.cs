@@ -19,7 +19,6 @@ namespace TingStoreAPI.Models
 
         [Required]
         public int quantity { get; set; }
-        [Column(TypeName = "Money")]
         public Decimal subTotal { get; set; }
     }
 }
