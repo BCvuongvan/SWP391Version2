@@ -26,7 +26,7 @@ namespace TingStoreClient.Models
         [Required(ErrorMessage = ("Please enter price!"))]
         [DisplayName("Price")]
         [Column(TypeName = "Money")]          // ánh xạ thuộc tính Price, kiểu decimal vào cột Price,  kiểu Money của bảng
-        public long Price { set; get; }
+        public long proPrice { set; get; }
 
         [Required(ErrorMessage = ("Please enter quantity!"))]
         [DisplayName("Quantity")]

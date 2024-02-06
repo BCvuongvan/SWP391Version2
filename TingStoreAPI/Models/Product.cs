@@ -17,7 +17,7 @@ namespace TingStoreAPI.Models
         public String proDescription { get; set; }
         [Required]
         [Column(TypeName = "Money")]          // ánh xạ thuộc tính Price, kiểu decimal vào cột Price,  kiểu Money của bảng
-        public long Price { set; get; }
+        public long proPrice { set; get; }
         [Required]
         public int proQuantity { get; set; }
         [Required]
