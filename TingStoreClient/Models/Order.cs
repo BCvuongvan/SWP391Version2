@@ -25,7 +25,6 @@ namespace TingStoreClient.Models
         public DateTime orderDate { get; set; }
 
         [DisplayName("Total Amount")]
-        [Column(TypeName = "Money")]
         public Decimal TotalAmount { get; set; }
 
         [DisplayName("Status ID")]

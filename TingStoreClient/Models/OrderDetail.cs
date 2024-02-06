@@ -25,7 +25,6 @@ namespace TingStoreClient.Models
         public int quantity { get; set; }
 
         [DisplayName("Sub Total")]
-        [Column(TypeName = "Money")]
-        public long subTotal { get; set; }
+        public Decimal subTotal { get; set; }
     }
 }
