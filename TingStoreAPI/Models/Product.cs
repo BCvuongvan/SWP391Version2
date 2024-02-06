@@ -16,7 +16,7 @@ namespace TingStoreAPI.Models
         [Required]
         public String proDescription { get; set; }
         [Required]
-        public long proPrice { set; get; }
+        public decimal proPrice { set; get; }
         [Required]
         public int proQuantity { get; set; }
         [Required]

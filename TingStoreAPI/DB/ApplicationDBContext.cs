@@ -45,6 +45,21 @@ namespace TingStoreAPI.DB
                 new OrderStatus { orderStatusId = 1, statusName = "Spending" },
                 new OrderStatus { orderStatusId = 2, statusName = "Successful" }
             );
+            // Chỉ định kiểu cột và tỷ lệ cho TotalAmount
+            modelBuilder.Entity<Order>()
+                .Property(o => o.TotalAmount)
+                .HasColumnType("decimal(18, 2)"); // Điều chỉnh tỷ lệ và tỷ lệ theo nhu cầu
+            modelBuilder.Entity<Product>()
+                .Property(o => o.proPrice)
+                .HasColumnType("decimal(18, 2)"); // Điều chỉnh tỷ lệ và tỷ lệ theo nhu cầu
+            modelBuilder.Entity<OrderDetail>()
+                .Property(o => o.subTotal)
+                .HasColumnType("decimal(18, 2)"); // Điều chỉnh tỷ lệ và tỷ lệ theo nhu cầu
+
+            // Thêm các cấu hình khác nếu cần thiết
+
+            base.OnModelCreating(modelBuilder);
         }
+
     }
 }
