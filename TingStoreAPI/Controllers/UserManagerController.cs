@@ -21,33 +21,7 @@ namespace TingStoreAPI.Controllers
         [HttpGet]
         public IActionResult GetAllOfUser()
         {
-            var ListOfUser = this._db.users.Include(u => u.orders).Include(u => u.feedbacks).Select(u => new
-            {
-                u.userName,
-                u.email,
-                u.password,
-                u.fullName,
-                u.phoneNumber,
-                u.address,
-                u.picture,
-                u.createdAt,
-                u.updateAt,
-                u.userType,
-                Feedback = u.feedbacks.Select(f => new
-                {
-                    f.proId,
-                    f.product.proName,
-                    f.product.proPrice
-                }),
-                Orser = u.orders.Select(o => new
-                {
-                    o.orderId,
-                    o.orderDate,
-                    o.TotalAmount,
-                    o.orderStatusId,
-                    o.orderStatus.statusName
-                })
-            }).ToList();
+            var ListOfUser = this._db.users.Include(u => u.orders).Include(u => u.feedbacks);
             return Ok(ListOfUser);
         }
 
