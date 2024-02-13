@@ -1,0 +1,139 @@
+@model Product
+@{
+    ViewData["Title"] = "ManagementProductDetail";
+    Layout = "/Views/Shared/_ManagementProduct.cshtml";
+}
+<nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+    <div class="navbar-nav align-items-center ms-auto">
+        <div class="nav-item">
+            <a class="nav-link" style="margin-right: 20px;" asp-controller="Product" asp-action="ListProduct">
+                <i class="fa fa-sign-out-alt"></i>
+                <span class="d-none d-lg-inline-flex">Back</span>
+            </a>
+        </div>
+    </div>
+</nav>
+    <div class="card" style="margin-top: -10px;" enctype="multipart/form-data">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                    <div class="preview col-md-6">
+                        <div class="preview-pic tab-content">
+                            <div class="tab-pane active" id="pic-1">
+                                    <img src="~/assets/Product_Images/@Model.proImage"
+                                            style="width: 2000px; height: 500px;" alt="@Model.proName">
+                            </div>
+                            <div class="tab-pane" id="pic-2">
+                            </div>
+                            <div class="tab-pane" id="pic-3">
+                            </div>
+                            <div class=" tab-pane" id="pic-4">
+                            </div>
+                            <div class="tab-pane" id="pic-5">
+                            </div>
+
+                        </div>
+                        
+                        <ul class="preview-thumbnail nav nav-tabs">
+                            <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="~/assets/Product_Images/@Model.proImage"
+                                            alt="@Model.proName"></a>
+                            </li>
+                            <li><a>
+                                <form asp-controller="Product" asp-action="UploadImage" method="post" enctype="multipart/form-data">
+                                    <div class="tab-pane" style="position: relative; height: 95px; width: 95px; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;">
+                                        <label for="file" style="cursor: pointer;">
+                                        <i class="fa fa-plus-circle" style="font-size: 24px;"></i>
+                                        <input id="file" name="file" type="file" style="display: none;" onchange="form.submit()" />
+                                        <input type="hidden" name="productId" value="@Model.proId" />
+                                        </label>
+                                    </div>
+                                </form></a>
+                            </li>
+                            <li><a>
+                                <form asp-controller="Product" asp-action="UploadImage" method="post" enctype="multipart/form-data">
+                                    <div class="tab-pane" style="position: relative; height: 95px; width: 95px; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;">
+                                        <label for="file" style="cursor: pointer;">
+                                        <i class="fa fa-plus-circle" style="font-size: 24px;"></i>
+                                        <input id="file" name="file" type="file" style="display: none;" onchange="form.submit()" />
+                                        <input type="hidden" name="productId" value="@Model.proId" />
+                                        </label>
+                                    </div>
+                                </form></a>
+                            </li>
+                            <li><a>
+                                <div class="tab-pane" id="pic-2" style="position: relative; height: 95px; width: 95px; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;">
+                                <label for="images" style="cursor: pointer;">
+                                <i class="fa fa-plus-circle" style="font-size: 24px;"></i>
+                                <input id="images" name="images" type="file" style="display: none;" multiple/>
+                            </label>
+                        </div>
+                        </a>
+                            </li>
+                            <li><a>
+                                <div class="tab-pane" id="pic-2" style="position: relative; height: 95px; width: 95px; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;">
+                                <label for="images" style="cursor: pointer;">
+                                <i class="fa fa-plus-circle" style="font-size: 24px;"></i>
+                                <input id="images" name="images" type="file" style="display: none;" multiple/>
+                            </label>
+                        </div>
+                        </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="details col-md-6">
+                        <h3 class="product-title">@Model.proName</h3>
+                        <div class="rating">
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                            <span class="review-no">31 reviews</span>
+                        </div>
+                        <p class="product-description">@Model.proDescription</p>
+                        <h4 class="price"><span>@String.Format("{0:0,0VND}", Model.proPrice).Replace(",", ".")</span></h4>
+                        <p class="vote"><strong>91%</strong> người mua rất thích sản phẩm này! <strong>(87
+                                votes)</strong>
+                        </p>
+                        <div class="box_info">
+                            <div class="box_title">
+                                <p>Thông tin sản phẩm</p>
+                            </div>
+                            <div class="box_content">
+                                <div class="item_info d-flex">
+                                    <div class="icon"><i class="fa fa-mobile"></i></div>
+                                    <div class="description">
+                                        @ViewBag.ProductInfo 
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div style="margin-left: 400px; margin-bottom: 10px;"><a asp-controller="Product" asp-action="UpdateProductInfomationDetail" asp-route-id="@Model.proId" class="edit-button" aria-label="Edit">
+    <i class="fas fa-pencil-alt"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block_content_product">
+            <div class="col-md-8 block_content_product_left">
+                <h2 class="text-center">ĐẶC ĐIỂM NỔI BẬT </h2>
+                <div class="ul">
+                    @ViewBag.HighlightFeatures
+                </div>
+                <div style="margin-left: 630px; margin-bottom: 10px;"><a asp-controller="Product" asp-action="UpdateProductHighlightFeaturesDetail" asp-route-id="@Model.proId" class="edit-button" aria-label="Edit">
+    <i class="fas fa-pencil-alt"></i></a></div>
+            </div>
+            <div class="col-md-4 block_content_product_right">
+                <p class="title">Thông số kỹ thuật</p>
+                <div class="ul">
+                    @ViewBag.HighlightFeatures
+                </div>
+                <div style="margin-left: 280px; margin-bottom: 10px;"><a asp-controller="Product" asp-action="UpdateProductTechnicalSpecsDetail" asp-route-id="@Model.proId" class="edit-button" aria-label="Edit">
+    <i class="fas fa-pencil-alt"></i></a></div>
+            </div>
+            
+        </div>
+    </div>

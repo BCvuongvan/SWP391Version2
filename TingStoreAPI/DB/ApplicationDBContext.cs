@@ -59,6 +59,7 @@ namespace TingStoreAPI.DB
             // Thêm các cấu hình khác nếu cần thiết
 
             base.OnModelCreating(modelBuilder);
+            
         }
 
     }

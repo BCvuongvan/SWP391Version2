@@ -1,0 +1,92 @@
+@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "GetProductsByCategory";
+    Layout = "/Views/Shared/_ListProduct.cshtml";
+}
+
+
+<div class="page-header">
+    <h3 style="margin-top:20px; text-align: center;">DANH SÁCH SẢN PHẨM</h3>
+    <div style="text-align: center;">
+        <a asp-controller="Product" asp-action="CreateProduct" class="fancy-button"> Thêm sản phẩm mới</a>
+    </div>
+</div>
+<div class="container">
+        <div class="dropdown">
+            <button class="fas fa-list no-border-button custom-font" type="button" data-bs-toggle="dropdown">
+                Phân loại sản phẩm
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" asp-controller="Product"
+                                                            asp-action="ListProduct">Tất cả sản phẩm</a></li>
+                @foreach (var category in ViewBag.cateList)
+                {
+                    <a class="dropdown-item"
+                        asp-for="cateId" asp-controller="Product" asp-action="ByCategory" asp-route-id="@category.cateId" asp-items="@(new SelectList(ViewBag.cateList, "cateId", "cateName"))">@category.cateName</a>
+                }
+            </div>  
+        </div>
+        <div id="order" class="card-body mb-2 mt-2">
+            <form action="" id="form-order" method="">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr class="title-col">
+                                <td style="width: 18%; text-align: center;">Tên sản phẩm</td>
+                                <td style="width: 25%; text-align: center;">Mô tả sản phẩm</td>
+                                <td style="text-align: center;">Giá sản phẩm</td>
+                                <td style="text-align: center;">Số lượng sản phẩm</td>
+                                <td style="text-align: center;">Ảnh sản phẩm</td>
+                                <td style="text-align: center;">Phân loại sản phẩm</td>
+                                <td style="text-align: center;"><span>Action</span></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var product in Model)
+                            {
+                                @if (product.proStatus == true)
+                                {
+                                    <tr>
+                                        <td>@product.proName</td>
+                                        <td class="text-start">@product.proDescription</td>
+                                        <td class="text-end">@String.Format("{0:0,0VND}", product.proPrice).Replace(",", ".")
+                                        </td>
+                                        <td class="text-start">@product.proQuantity</td>
+                                        <td class="text-end d-none d-lg-table-cell"><img
+                                                src="~/assets/Product_Images/@product.proImage"
+                                                style="width: 200px; height: 200px;" alt="@product.proName"></td>
+                                        <td class="d-none d-lg-table-cell">@product.category.cateName</td>
+
+                                        <td class="text-end">
+                                            <div class="btn-group dropdown">
+                                                <a class="btn" aria-label="Edit"><i class="fas fa-pencil-alt"></i></a>
+                                                <button type="button" class="btn dropdown-toggle dropdown-toggle-split"
+                                                    data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li>
+                                                        <h6 class="dropdown-header">Options</h6>
+                                                    </li>
+                                                    <li><a class="dropdown-item" asp-controller="Product"
+                                                            asp-action="UpdateProduct" asp-route-id=@product.proId><i
+                                                                class="fas fa-edit"></i> Cập nhật</a></li>
+                                                    <li><a class="dropdown-item" asp-controller="Product"
+                                                            asp-action="DeleteProduct" asp-route-id=@product.proId><i
+                                                                class="fas fa-trash-alt"></i> Xóa</a></li>
+                                                    <li><a class="dropdown-item" asp-controller="Product"
+                                                            asp-action="ManagementProductDetail" asp-route-id=@product.proId><i
+                                                                class="fas fa-info-circle"></i> Chi tiết</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-end" style="margin-right: 10px;">
+                    <h5>Tổng sản phẩm: @Model.Count(p => p.proStatus)</span></h5>
+                </div>
+            </form>
+        </div>
+    </div>

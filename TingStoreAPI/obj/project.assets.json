@@ -6240,19 +6240,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
+      "projectUniqueName": "d:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
       "projectName": "TingStoreAPI",
-      "projectPath": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreAPI\\obj\\",
+      "projectPath": "d:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "d:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

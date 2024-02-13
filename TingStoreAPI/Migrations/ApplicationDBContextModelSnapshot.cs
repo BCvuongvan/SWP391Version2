@@ -236,7 +236,9 @@ namespace TingStoreAPI.Migrations
                         .HasColumnType("int");
 
                     b.Property<bool>("proStatus")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
 
                     b.HasKey("proId");
 
