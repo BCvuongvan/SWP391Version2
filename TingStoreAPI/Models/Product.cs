@@ -32,5 +32,30 @@ namespace TingStoreAPI.Models
         public ICollection<Feedback> feedbacks { get; set; }
         public ICollection<OrderDetail> orderDetails { get; set; }
         public ICollection<Cart> carts { get; set; }
+        public Product(string proName, string proDescription, decimal proPrice, int proQuantity, string proImage, int cateId, bool proStatus = true)
+        {
+            this.proName = proName;
+            this.proDescription = proDescription;
+            this.proPrice = proPrice;
+            this.proQuantity = proQuantity;
+            this.proImage = proImage;
+            this.cateId = cateId;
+            this.proStatus = proStatus;
+        }
+        public Product(int proId, string proName, string proDescription, decimal proPrice, int proQuantity, string proImage, int cateId, bool proStatus = true)
+        {
+            this.proId = proId;
+            this.proName = proName;
+            this.proDescription = proDescription;
+            this.proPrice = proPrice;
+            this.proQuantity = proQuantity;
+            this.proImage = proImage;
+            this.cateId = cateId;
+            this.proStatus = proStatus;
+        }
+
+        public Product()
+        {
+        }
     }
 }
