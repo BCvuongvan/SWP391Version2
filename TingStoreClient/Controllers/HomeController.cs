@@ -37,11 +37,14 @@ namespace TingStoreClient.Controllers
 
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             List<Product> productList = JsonSerializer.Deserialize<List<Product>>(data, option);
-            switch(sortOrder){
-                case "asc" : productList = productList.OrderBy(p => p.proPrice).ToList();
-                break;
-                case "desc" : productList = productList.OrderByDescending(p => p.proPrice).ToList();
-                break;
+            switch (sortOrder)
+            {
+                case "asc":
+                    productList = productList.OrderBy(p => p.proPrice).ToList();
+                    break;
+                case "desc":
+                    productList = productList.OrderByDescending(p => p.proPrice).ToList();
+                    break;
                 default: break;
             }
             ViewBag.CurrentSortOrder = sortOrder;

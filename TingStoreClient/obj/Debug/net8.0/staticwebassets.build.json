@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FC/re4GyEDa6V9jR8SdXqGjTaCYJfMrRJiS7uCWRn7o=",
+  "Hash": "itfuxXB9wAOCTOqblklydXhmGjUgJh64pzblHPJYWEc=",
   "Source": "TingStoreClient",
   "BasePath": "_content/TingStoreClient",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "TingStoreClient\\wwwroot",
       "Source": "TingStoreClient",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Find N2 Flip_Features.txt",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Find N2 Flip_Features.txt",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Details/OPPO Find N2 Flip_Features.txt",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Details\\OPPO Find N2 Flip_Features.txt"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Find N2 Flip_Info.txt",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Find N2 Flip_Info.txt",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Details/OPPO Find N2 Flip_Info.txt",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Details\\OPPO Find N2 Flip_Info.txt"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Find N2 Flip_Specs.txt",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Find N2 Flip_Specs.txt",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Details/OPPO Find N2 Flip_Specs.txt",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Details\\OPPO Find N2 Flip_Specs.txt"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\woaaaâ_Features.txt",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\woaaaâ_Features.txt",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Details/woaaaâ_Features.txt",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Details\\woaaaâ_Features.txt"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\woaaaâ_Info.txt",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\woaaaâ_Info.txt",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Details/woaaaâ_Info.txt",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Details\\woaaaâ_Info.txt"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\woaaaâ_Specs.txt",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\woaaaâ_Specs.txt",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Details/woaaaâ_Specs.txt",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Details\\woaaaâ_Specs.txt"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\418025021_1073057710697656_6950206025922473540_n.jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\418025021_1073057710697656_6950206025922473540_n.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/418025021_1073057710697656_6950206025922473540_n.jpg",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\418025021_1073057710697656_6950206025922473540_n.jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\chicken.jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\chicken.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/chicken.jpg",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\chicken.jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\code.jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\code.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/code.jpg",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\code.jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\cuteee.jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\cuteee.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/cuteee.jpg",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\cuteee.jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\eat.jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\eat.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/eat.jpg",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\eat.jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Iphone-13-128GB.jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Iphone-13-128GB.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/Iphone-13-128GB.jpg",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\Iphone-13-128GB.jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-15-pro-max_4.webp",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-15-pro-max_4.webp",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/iphone-15-pro-max_4.webp",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\iphone-15-pro-max_4.webp"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\kanna5.webp",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\kanna5.webp",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/kanna5.webp",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\kanna5.webp"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\money.jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\money.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/money.jpg",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\money.jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\OIP (1).jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\OIP (1).jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/OIP (1).jpg",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\OIP (1).jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\OIP.jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\OIP.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/OIP.jpg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\OIP.jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\oppo-find-n2-flip.webp",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\oppo-find-n2-flip.webp",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/oppo-find-n2-flip.webp",
       "AssetKind": "All",
@@ -359,10 +359,29 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\oppo-find-n2-flip.webp"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\rabit.jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Pk.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "BasePath": "_content/TingStoreClient",
+      "RelativePath": "assets/Product_Images/Pk.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\Pk.jpg"
+    },
+    {
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\rabit.jpg",
+      "SourceId": "TingStoreClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/rabit.jpg",
       "AssetKind": "All",
@@ -378,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\rabit.jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\sea2.jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\sea2.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/sea2.jpg",
       "AssetKind": "All",
@@ -397,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\sea2.jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\umaru_lm.jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\umaru_lm.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/umaru_lm.jpg",
       "AssetKind": "All",
@@ -416,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\umaru_lm.jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Umaru2.png",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Umaru2.png",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/Umaru2.png",
       "AssetKind": "All",
@@ -435,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\Umaru2.png"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Umaru4.jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Umaru4.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "assets/Product_Images/Umaru4.jpg",
       "AssetKind": "All",
@@ -454,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\Umaru4.jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\css\\site.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\css\\site.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -473,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\favicon.ico",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\favicon.ico",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -492,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\js\\site.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\js\\site.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -511,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -530,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -549,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -568,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -587,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -606,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -625,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -644,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -663,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -682,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -701,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -720,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -739,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -758,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -777,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -796,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -815,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -834,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -853,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -872,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -891,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -910,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -929,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -948,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -967,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -986,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1005,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1024,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1043,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1062,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1081,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1100,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1119,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1138,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\bootstrap.min.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\bootstrap.min.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1157,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\contact.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\contact.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/contact.css",
       "AssetKind": "All",
@@ -1176,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\contact.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\font-awesome.min.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\font-awesome.min.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/font-awesome.min.css",
       "AssetKind": "All",
@@ -1195,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\font-awesome.min.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\homeAdmin.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\homeAdmin.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/homeAdmin.css",
       "AssetKind": "All",
@@ -1214,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\homeAdmin.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\login.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\login.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/login.css",
       "AssetKind": "All",
@@ -1233,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\login.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\media.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\media.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/media.css",
       "AssetKind": "All",
@@ -1252,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\media.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\navbar_styleSheet.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\navbar_styleSheet.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/navbar_styleSheet.css",
       "AssetKind": "All",
@@ -1271,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\navbar_styleSheet.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\product.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\product.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/product.css",
       "AssetKind": "All",
@@ -1290,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\product.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\productDetail.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\productDetail.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/productDetail.css",
       "AssetKind": "All",
@@ -1309,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\productDetail.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\profileAdmin.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\profileAdmin.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/profileAdmin.css",
       "AssetKind": "All",
@@ -1328,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\profileAdmin.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\profileCustomer.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\profileCustomer.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/profileCustomer.css",
       "AssetKind": "All",
@@ -1347,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\profileCustomer.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\signup.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\signup.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/signup.css",
       "AssetKind": "All",
@@ -1366,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\signup.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\slick.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\slick.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/slick.css",
       "AssetKind": "All",
@@ -1385,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\slick.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\style.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\style.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/style.css",
       "AssetKind": "All",
@@ -1404,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\style.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\totalCustomer.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\totalCustomer.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/totalCustomer.css",
       "AssetKind": "All",
@@ -1423,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\totalCustomer.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\totalOrders.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\totalOrders.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/totalOrders.css",
       "AssetKind": "All",
@@ -1442,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\totalOrders.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\venobox.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\venobox.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/css/venobox.css",
       "AssetKind": "All",
@@ -1461,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\css\\venobox.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\flaticon.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\flaticon.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/font/flaticon.css",
       "AssetKind": "All",
@@ -1480,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\font\\flaticon.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.eot",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.eot",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/font/Flaticon.eot",
       "AssetKind": "All",
@@ -1499,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.eot"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.svg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.svg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/font/Flaticon.svg",
       "AssetKind": "All",
@@ -1518,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.svg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.ttf",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.ttf",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/font/Flaticon.ttf",
       "AssetKind": "All",
@@ -1537,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.ttf"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.woff",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.woff",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/font/Flaticon.woff",
       "AssetKind": "All",
@@ -1556,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.woff"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticond41d.eot",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticond41d.eot",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/font/Flaticond41d.eot",
       "AssetKind": "All",
@@ -1575,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\font\\Flaticond41d.eot"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.eot",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.eot",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/fontawesome-webfont3e6e.eot",
       "AssetKind": "All",
@@ -1594,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.eot"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.svg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.svg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/fontawesome-webfont3e6e.svg",
       "AssetKind": "All",
@@ -1613,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.svg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.ttf",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.ttf",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/fontawesome-webfont3e6e.ttf",
       "AssetKind": "All",
@@ -1632,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.ttf"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.woff",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.woff",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/fontawesome-webfont3e6e.woff",
       "AssetKind": "All",
@@ -1651,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.woff"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.woff2",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.woff2",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/fontawesome-webfont3e6e.woff2",
       "AssetKind": "All",
@@ -1670,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.woff2"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfontd41d.eot",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfontd41d.eot",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/fontawesome-webfontd41d.eot",
       "AssetKind": "All",
@@ -1689,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\fontawesome-webfontd41d.eot"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.eot",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.eot",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/glyphicons-halflings-regular.eot",
       "AssetKind": "All",
@@ -1708,10 +1727,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.eot"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.svg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.svg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/glyphicons-halflings-regular.svg",
       "AssetKind": "All",
@@ -1727,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.svg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.ttf",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.ttf",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/glyphicons-halflings-regular.ttf",
       "AssetKind": "All",
@@ -1746,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.ttf"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.woff",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.woff",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/glyphicons-halflings-regular.woff",
       "AssetKind": "All",
@@ -1765,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.woff"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.woff2",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.woff2",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/glyphicons-halflings-regular.woff2",
       "AssetKind": "All",
@@ -1784,10 +1803,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.woff2"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regulard41d.eot",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regulard41d.eot",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/fonts/glyphicons-halflings-regulard41d.eot",
       "AssetKind": "All",
@@ -1803,10 +1822,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regulard41d.eot"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\banner1.png",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\banner1.png",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/images/banner1.png",
       "AssetKind": "All",
@@ -1822,10 +1841,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\images\\banner1.png"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\banner2.png",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\banner2.png",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/images/banner2.png",
       "AssetKind": "All",
@@ -1841,10 +1860,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\images\\banner2.png"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\banner3.jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\banner3.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/images/banner3.jpg",
       "AssetKind": "All",
@@ -1860,10 +1879,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\images\\banner3.jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\logo_login.jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\logo_login.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/images/logo_login.jpg",
       "AssetKind": "All",
@@ -1879,10 +1898,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\images\\logo_login.jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\logo.png",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\logo.png",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/images/logo.png",
       "AssetKind": "All",
@@ -1898,10 +1917,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\images\\logo.png"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\signin.jpg",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\signin.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/images/signin.jpg",
       "AssetKind": "All",
@@ -1917,10 +1936,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\images\\signin.jpg"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\admin.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\admin.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/js/admin.js",
       "AssetKind": "All",
@@ -1936,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\js\\admin.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\bootstrap.min.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\bootstrap.min.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1955,10 +1974,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\counterup.min.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\counterup.min.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/js/counterup.min.js",
       "AssetKind": "All",
@@ -1974,10 +1993,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\js\\counterup.min.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\custom.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\custom.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/js/custom.js",
       "AssetKind": "All",
@@ -1993,10 +2012,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\js\\custom.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\jquery-1.12.4.min.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\jquery-1.12.4.min.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/js/jquery-1.12.4.min.js",
       "AssetKind": "All",
@@ -2012,10 +2031,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\js\\jquery-1.12.4.min.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\slick.min.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\slick.min.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/js/slick.min.js",
       "AssetKind": "All",
@@ -2031,10 +2050,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\js\\slick.min.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\venobox.min.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\venobox.min.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/js/venobox.min.js",
       "AssetKind": "All",
@@ -2050,10 +2069,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\js\\venobox.min.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\waypoints.min.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\waypoints.min.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/js/waypoints.min.js",
       "AssetKind": "All",
@@ -2069,10 +2088,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\js\\waypoints.min.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\ajax-loader.gif",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/lib/owlcarousel/assets/ajax-loader.gif",
       "AssetKind": "All",
@@ -2088,10 +2107,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\ajax-loader.gif"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.carousel.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/lib/owlcarousel/assets/owl.carousel.css",
       "AssetKind": "All",
@@ -2107,10 +2126,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.carousel.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/lib/owlcarousel/assets/owl.carousel.min.css",
       "AssetKind": "All",
@@ -2126,10 +2145,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.default.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/lib/owlcarousel/assets/owl.theme.default.css",
       "AssetKind": "All",
@@ -2145,10 +2164,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.default.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/lib/owlcarousel/assets/owl.theme.default.min.css",
       "AssetKind": "All",
@@ -2164,10 +2183,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.green.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/lib/owlcarousel/assets/owl.theme.green.css",
       "AssetKind": "All",
@@ -2183,10 +2202,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.green.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/lib/owlcarousel/assets/owl.theme.green.min.css",
       "AssetKind": "All",
@@ -2202,10 +2221,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.video.play.png",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/lib/owlcarousel/assets/owl.video.play.png",
       "AssetKind": "All",
@@ -2221,10 +2240,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.video.play.png"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\LICENSE",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\LICENSE",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/lib/owlcarousel/LICENSE",
       "AssetKind": "All",
@@ -2240,10 +2259,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\lib\\owlcarousel\\LICENSE"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\owl.carousel.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\owl.carousel.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/lib/owlcarousel/owl.carousel.js",
       "AssetKind": "All",
@@ -2259,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\lib\\owlcarousel\\owl.carousel.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\owl.carousel.min.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\owl.carousel.min.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/lib/owlcarousel/owl.carousel.min.js",
       "AssetKind": "All",
@@ -2278,10 +2297,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\lib\\owlcarousel\\owl.carousel.min.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/lib/tempusdominus/css/tempusdominus-bootstrap-4.css",
       "AssetKind": "All",
@@ -2297,10 +2316,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css",
       "AssetKind": "All",
@@ -2316,10 +2335,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/lib/tempusdominus/js/tempusdominus-bootstrap-4.js",
       "AssetKind": "All",
@@ -2335,10 +2354,10 @@
       "OriginalItemSpec": "wwwroot\\Mobile_shop\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js"
     },
     {
-      "Identity": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js",
+      "Identity": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "ContentRoot": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\",
       "BasePath": "_content/TingStoreClient",
       "RelativePath": "Mobile_shop/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js",
       "AssetKind": "All",
