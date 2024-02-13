@@ -43,7 +43,7 @@ namespace TingStoreClient.Models
         public DateTime updateAt { get; set; }
 
         [DisplayName("User Type")]
-        public int userType { get; set; }
+        public int userType { get; set; } // admin: 1, staff: 2, customer: 3, account ban: 4
 
         public ICollection<Order> orders { get; set; }
         public ICollection<Feedback> feedbacks { get; set; }
