@@ -1,5 +1,330 @@
+@model IEnumerable<User>
 @{
     ViewData["Title"] = "Index";
 }
 <h1>User manager</h1>
 <h2>lam tui di</h2>
+<div class="container">
+    <div class="page-header">
+        <h1></i>Customer</h1>
+        <div class="float-end" style="margin-top: -50px;">
+            <a href="homeAdmin.html" data-bs-toggle="tooltip" title class="btn btn-success"
+                data-bs-original-title="Back" aria-label="Back"><i class="fas fa-reply"></i></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="card col-md-9">
+                <div class="card-header">
+                    <i class="fas fa-list"></i> Customer List
+                </div>
+                <div id="order" class="card-body mb-2 mt-2">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr class="title-col">
+                                    <th class="text-start">UserName</th>
+                                    <th class="text-start">E-Mail</th>
+                                    <th class="text-start">Full Name</th>
+                                    <th class="text-end">Phone</th>
+                                    <th class="text-end">count</th>
+                                    <th class="text-start">Create date</th>
+                                    <th class="text-start">Update date</th>
+                                    <th class="text-end"><span style="color: #000;">Action</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var Item in @Model)
+                                {
+                                    if (@Item.userType == 3)
+                                    {
+                                        <tr>
+                                            <td class="text-start">@Item.userName</td>
+                                            <td class="text-start">@Item.email</td>
+                                            <td class="text-end">@Item.fullName</td>
+                                            <td class="text-start">@Item.phoneNumber</td>
+                                            
+                                            <td class="text-end d-none d-lg-table-cell">@Item.createdAt</td>
+                                            <td class="text-end d-none d-lg-table-cell">@Item.updateAt</td>
+                                            <td class="text-end">
+                                                <div class="btn-group dropdown">
+                                                    <a href="#" class="btn" aria-label="Edit"><i
+                                                            class="fas fa-pencil-alt"></i></a>
+                                                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                                    <ul class="dropdown-menu dropdown-menu-right">
+                                                        <li>
+                                                            <h6 class="dropdown-header">Options</h6>
+                                                        </li>
+                                                        <li><a class="dropdown-item" href="#"
+                                                                onclick="doBan('@Item.userName')"><i class="fas fa-ban"></i> Ban
+                                                                account</a></li>
+                                                        <li><a class="dropdown-item" href="#"><i class="fas fa-unlock"></i>
+                                                                Delete
+                                                                account</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="filter-order" class="col-md-3 order-lg-last d-none d-lg-block mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-filter"></i> Filter
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Order ID</label>
+                            <input type="text" name="" id="" placeholder="Order ID" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Customer</label>
+                            <input type="text" name="" id="" placeholder="Customer" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Order Status</label>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Total</label>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Date Added</label>
+                            <input type="date" name="" id="" placeholder="" class="form-control">
+                        </div>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-filter"></i>Filter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="page-header">
+        <h1></i>Sales Staff</h1>
+        <div class="float-end" style="margin-top: -50px;">
+            <a href="homeAdmin.html" data-bs-toggle="tooltip" title class="btn btn-success"
+                data-bs-original-title="Back" aria-label="Back"><i class="fas fa-reply"></i></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="card col-md-9">
+                <div class="card-header">
+                    <i class="fas fa-list"></i> Sales Staff List
+                </div>
+                <div id="order" class="card-body mb-2 mt-2">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr class="title-col">
+                                    <th class="text-start">UserName</th>
+                                    <th class="text-start">E-Mail</th>
+                                    <th class="text-start">Full Name</th>
+                                    <th class="text-end">Phone</th>
+                                    <th class="text-end">Feedback</th>
+                                    <th class="text-start">Create date</th>
+                                    <th class="text-start">Update date</th>
+                                    <th class="text-end"><span style="color: #000;">Action</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var Item in @Model)
+                                {
+                                    if (@Item.userType == 2)
+                                    {
+                                        <tr>
+                                            <td class="text-start">@Item.userName</td>
+                                            <td class="text-start">@Item.email</td>
+                                            <td class="text-end">@Item.fullName</td>
+                                            <td class="text-start">@Item.phoneNumber</td>
+                                            @* <td class="text-start">@Item.feedbacks.Count</td> *@
+                                            <td class="text-end d-none d-lg-table-cell">@Item.createdAt</td>
+                                            <td class="text-end d-none d-lg-table-cell">@Item.updateAt</td>
+                                            <td class="text-end">
+                                                <div class="btn-group dropdown">
+                                                    <a href="#" class="btn" aria-label="Edit"><i
+                                                            class="fas fa-pencil-alt"></i></a>
+                                                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                                    <ul class="dropdown-menu dropdown-menu-right">
+                                                        <li>
+                                                            <h6 class="dropdown-header">Options</h6>
+                                                        </li>
+                                                        <li><a class="dropdown-item" href="#"><i class="fas fa-ban"></i> Ban
+                                                                account</a></li>
+                                                        <li><a class="dropdown-item" href="#"><i class="fas fa-unlock"></i>
+                                                                Delete
+                                                                account</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="filter-order" class="col-md-3 order-lg-last d-none d-lg-block mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-filter"></i> Filter
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Order ID</label>
+                            <input type="text" name="" id="" placeholder="Order ID" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Customer</label>
+                            <input type="text" name="" id="" placeholder="Customer" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Order Status</label>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Total</label>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Date Added</label>
+                            <input type="date" name="" id="" placeholder="" class="form-control">
+                        </div>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-filter"></i>Filter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="page-header">
+        <h1></i>Account Ban</h1>
+        <div class="float-end" style="margin-top: -50px;">
+            <a href="homeAdmin.html" data-bs-toggle="tooltip" title class="btn btn-success"
+                data-bs-original-title="Back" aria-label="Back"><i class="fas fa-reply"></i></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="card col-md-9">
+                <div class="card-header">
+                    <i class="fas fa-list"></i> Account Ban List
+                </div>
+                <div id="order" class="card-body mb-2 mt-2">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr class="title-col">
+                                    <th class="text-start">UserName</th>
+                                    <th class="text-start">E-Mail</th>
+                                    <th class="text-start">Full Name</th>
+                                    <th class="text-end">Phone</th>
+                                    <th class="text-start">Create date</th>
+                                    <th class="text-start">Update date</th>
+                                    <th class="text-end"><span style="color: #000;">Action</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    var banCount = 0;
+                                }
+                                @foreach (var Item in @Model)
+                                {
+
+                                    if (@Item.userType == 4)
+                                    {
+                                        <tr>
+                                            <td class="text-start">@Item.userName</td>
+                                            <td class="text-start">@Item.email</td>
+                                            <td class="text-end">@Item.fullName</td>
+                                            <td class="text-start">@Item.phoneNumber</td>
+                                            <td class="text-end d-none d-lg-table-cell">@Item.createdAt</td>
+                                            <td class="text-end d-none d-lg-table-cell">@Item.updateAt</td>
+                                            <td class="text-end">
+                                                <div class="btn-group dropdown">
+                                                    <a href="#" class="btn" aria-label="Edit"><i
+                                                            class="fas fa-pencil-alt"></i></a>
+                                                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                                    <ul class="dropdown-menu dropdown-menu-right">
+                                                        <li>
+                                                            <h6 class="dropdown-header">Options</h6>
+                                                        </li>
+                                                        <li><a class="dropdown-item" href="#"><i class="fas fa-ban"></i> Unban
+                                                                account</a></li>
+                                                        <li><a class="dropdown-item" href="#"><i class="fas fa-unlock"></i>
+                                                                Delete
+                                                                account</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                @if (banCount == 0)
+                                {
+                                    <tr>
+                                        <td colspan="7" class="text-center">No one banned the account.</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="filter-order" class="col-md-3 order-lg-last d-none d-lg-block mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-filter"></i> Filter
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Order ID</label>
+                            <input type="text" name="" id="" placeholder="Order ID" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Customer</label>
+                            <input type="text" name="" id="" placeholder="Customer" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Order Status</label>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Total</label>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Date Added</label>
+                            <input type="date" name="" id="" placeholder="" class="form-control">
+                        </div>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-filter"></i>Filter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

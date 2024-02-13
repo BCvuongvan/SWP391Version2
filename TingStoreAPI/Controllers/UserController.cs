@@ -10,6 +10,6 @@ namespace TingStoreAPI.Controllers
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
-
+        
     }
 }

@@ -27,5 +27,33 @@ namespace TingStoreAPI.Models
         public ICollection<Order> orders { get; set; }
         public ICollection<Feedback> feedbacks { get; set; }
         public ICollection<Cart> carts { get; set; }
+
+        public User()
+        {
+
+        }
+        public User(String userName, String email, String password, String fullName, String phoneNumber, DateTime updateAt)
+        {
+            this.userName = userName;
+            this.email = email;
+            this.password = password;
+            this.fullName = fullName;
+            this.phoneNumber = phoneNumber;
+            this.picture = "l60Hf-150x150.png";
+            this.createdAt = DateTime.Now;
+            this.updateAt = DateTime.Now;
+        }
+
+        public User(String userName, String email, String password, String fullName, String phoneNumber, String picture, DateTime createdAt, int userType)
+        {
+            this.userName = userName;
+            this.email = email;
+            this.password = password;
+            this.fullName = fullName;
+            this.phoneNumber = phoneNumber;
+            this.picture = picture;
+            this.updateAt = updateAt;
+            this.userType = userType;
+        }
     }
 }
