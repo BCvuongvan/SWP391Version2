@@ -22,6 +22,16 @@
 
     @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" /> *@
+    <style>
+        .manage {
+            margin-left: 5px;
+        }
+        .management{
+            font-size: 15px;
+            text-decoration: none; 
+        }
+    </style>
+
 </head>
 
 <body>
@@ -49,9 +59,11 @@
                 </div>
                 <div class="navbar-nav w-100">
                     <a class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="/Admin/ManagementProduct" class="nav-item nav-link">
-                        <i class="fa fa-laptop me-2"></i>Manage Products
-                    </a>
+                    <div class="nav-item dropdown">
+                        <a asp-controller="Product" asp-action="ListProduct" class="nav-link">
+                            <i class="fa fa-laptop me-2"></i>Manage Products </a>
+                        </a>
+                    </div>
                     <a href="" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Manage Account</a>
                     <a href="" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Manage Orders</a>
                     <a asp-controller="Admin" asp-action="ManagementUser" class="nav-item nav-link"><i

@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\TingStoreClient",
+    "\\TingStoreClient\\Controllers",
+    "\\TingStoreClient\\Views",
+    "\\TingStoreClient\\Views\\Product"
+  ],
+  "SelectedNode": "\\TingStoreClient\\Controllers\\ProductController.cs",
+  "PreviewInSolutionExplorer": false
+}

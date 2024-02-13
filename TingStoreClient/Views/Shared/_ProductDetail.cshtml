@@ -1,0 +1,201 @@
+@{
+    ViewData["Title"] = "_ProductDetail";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Web Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans:300,400,600,700,800|Raleway:200,300,400,500,600,700,900"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- link bootstrap -->
+    <link rel="stylesheet" href="~/Mobile_shop/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Mobile_shop/css/productDetail.css">
+    <link rel="stylesheet" href="~/Mobile_shop/css/slick.css">
+    <link rel="stylesheet" href="~/Mobile_shop/css/navbar_styleSheet.css">
+    <link rel="stylesheet" type="text/css" href="~/Mobile_shop/fonts/font/flaticon.css">
+
+
+    <title>Product Detail</title>
+
+</head>
+
+<body>
+    <!-- preloader start  -->
+    <div id="spinners">
+        <div id="preloader_1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- preloader end  -->
+
+    <!--  Navbar start-->
+    <nav id="header" class="navbar navbar-fixed-top">
+        <div id="header-container" class="container navbar-container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="brand" class="navbar-brand rounded" href="#">
+                    <img src="~/Mobile_shop/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="">Sale</a></li>
+                    <li><a href="">News</a></li>
+                    <li>
+                        <form class="navbar-form nav_margin" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search" name="">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><i
+                                            class="glyphicon glyphicon-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                    <li><a href="signup.html"><i class="fas fa-shopping-cart" style="margin-top: 4px;"></i></a></li>
+                    <li><a href="login.html"><i class="fa-solid fa-user" style="margin-top: 4px;"></i> <br>
+                        </a></li>
+                    <li><a href="#"> <i class="fa fa-sign-out" style="margin-top: 4px;"></i> Logout <br>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+@RenderBody()
+    
+
+    <!-- footer part start -->
+    <a href="#" class="back-top-btn"><span class="fa fa-arrow-up"></span></a>
+    <footer id="footer_part">
+        <div class="container">
+            <div class="row">
+                <div class="newsletter">
+                    <div class="col-md-12">
+                        <i class="fa fa-paper-plane"></i>
+                        <span>Newsletter</span>
+                        <p style="color: rgb(47, 69, 173);">Ting Store shop</p>
+                    </div>
+                </div>
+                <div class="footer row">
+                    <div class="col-md-3">
+                        <div class="support_part">
+                            <h3>Hỗ Trợ - Dịch Vụ</h3>
+                            <i><span>Gọi mua hàng<a href="">1800.1080</a> (7h30 - 22h00)</span></i></p>
+                            <i><span>Gọi khiếu nại <a href="">1800.2024</a> (8h00 - 21h30)</span></i></p>
+                            <i><span>Gọi bảo hành <a href="">1800.2064</a> (8h00 - 21h00)</span></i></p>
+                        </div>
+                        <div class="pay_part">
+                            <h3>Hỗ trợ thanh toán</h3>
+                            <div class="d-flex">
+                                <li><a href="">
+                                        <img src="https://cdn2.cellphones.com.vn/x35,webp/media/wysiwyg/apple-pay-og.png"
+                                            alt="Apple Pay">
+                                    </a></li>
+                                <li class="border"><a href=""><img
+                                            src="https://cdn2.cellphones.com.vn/x35,webp/media/logo/payment/vnpay-logo.png"
+                                            alt="VN Pay"></a></li>
+                                <li class="border"><a href=""><img
+                                            src="https://cdn2.cellphones.com.vn/x/media/wysiwyg/momo_1.png"
+                                            alt="MoMo"></a></li>
+                                <li class="border"><a href=""><img
+                                            src="https://cdn2.cellphones.com.vn/x35,webp/media/logo/payment/zalopay-logo.png"
+                                            alt="Zalo Pay"></a></li>
+                            </div>
+                            <div class="d-flex mt-1">
+                                <li class="border"><a href=""><img
+                                            src="https://cdn2.cellphones.com.vn/x35,webp/media/logo/payment/mpos-logo.png"
+                                            alt="Mpos"></a></li>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="info-part">
+                            <h3>Thông tin và chính sách</h3>
+                            <p><a href="">Qui định bảo hành</a></p>
+                            <p><a href="">Thông tin hóa đơn mua hàng</a></p>
+                            <p><a href="">Trung tâm bảo hành chính hãng</a></p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="email_part">
+                            <h3>Email liên hệ </h3>
+                            <div class="email">
+                                <p>Hỗ trợ khách hàng: <br><span><a href="">cskh@tingstore.fpt.vn</a></span></p>
+                                <p>Liên hệ báo giá: <br><span> <a href="">baogia@tingstore.fpt.vn</a></span></p>
+                                <p>Liên hệ hợp tác:<span> <a href="">hoptac@tingstore@fpt.vn</a></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="maps-part">
+                            <h3>Google Maps</h3>
+                            <div class="maps">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.758933687126!2d105.76906057468611!3d10.036740890070538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a089dcf1adc511%3A0xe08676142d0af97e!2zVHJ1bmcgdMOibSBBbmggTmfhu68gR2lhIFZp4buHdCB0cuG7pSBz4bufIGNow61uaA!5e0!3m2!1sen!2s!4v1689568914249!5m2!1sen!2s"
+                                    width="300" height="120" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="mxh_part">
+                                <p>Kết nối với Sting Store</p>
+                                <div class="social_logo">
+                                    <a href=""><img src="https://fptshop.com.vn/Content/v4/images/icon-facebook.png"
+                                            alt="Facebook logo"></a>
+                                    <a href=""><img src="https://fptshop.com.vn/Content/v4/images/icon-zalo.png"
+                                            alt="Zalo logo"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="design text-center text-dark mt-5">
+            <p>© Copyright by Group 04 - 2024</p>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer part end -->
+
+
+    <script type="text/javascript" src="~/Mobile_shop/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="~/Mobile_shop/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Mobile_shop/js/slick.min.js"></script>
+    <script src="~/Mobile_shop/js/venobox.min.js"></script>
+    <script type="text/javascript" src="~/Mobile_shop/js/custom.js"></script>
+</body>
+
+</html>

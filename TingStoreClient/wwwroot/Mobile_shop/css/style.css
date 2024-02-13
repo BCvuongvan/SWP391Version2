@@ -5,13 +5,8 @@ Table of Content
 1. Navbar
 2. Banner
 3. Product
-4. Today's menu
-6. Gallery
-7. Chef
-8. Testimonial
-9. Blog
-10. Footer
-11. Foot-bottom
+4. Footer
+5. Foot-bottom
 */
 
 /*================ 
@@ -70,7 +65,8 @@ main {
 
 .nav>li>a:hover {
     background: none;
-    color: #da7e29;
+    color: rgb(47, 69, 173);
+
 }
 
 .nav>li>a:focus {
@@ -243,18 +239,18 @@ main {
 }
 
 .card_box {
-    /* margin: 20px 0px; */
     padding: 6px;
 }
 
 .card_box .card {
-    border: 1px solid gray;
+    border: 1px solid #e5e7eb;
     overflow: hidden;
     border-radius: 20px;
     height: 380px;
     padding: 15px 0px;
     box-shadow: rgba(0, 0, 0, 0.6);
-
+    cursor: pointer;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
 }
 
 .image {
@@ -268,6 +264,7 @@ main {
 .star_rate {
     color: #f59e0b;
     margin-top: 8px;
+    cursor: pointer;
 }
 
 h4 {
@@ -319,11 +316,11 @@ h4 {
     Footer CSS 
 ===============*/
 #footer_part {
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
-.footer {
-    padding-top: 130px;
+.newsletter .col-md-12 {
+    background: #f2f2f2;
 }
 
 .newsletter i {
@@ -508,7 +505,6 @@ h4 {
     color: #fff;
 }
 
-
 /*================ 
     Preloader CSS 
 ===============*/
@@ -590,25 +586,25 @@ body {
     0% {
         height: 5px;
         -webkit-transform: translateY(0px);
-        background: #4a93e6;
+        background: rgb(47, 69, 173);
     }
 
     25% {
         height: 30px;
         -webkit-transform: translateY(15px);
-        background: #cf680a;
+        background: rgb(47, 69, 173);
     }
 
     50% {
         height: 5px;
         -webkit-transform: translateY(0px);
-        background: #e6a24a;
+        background: rgb(47, 69, 173);
     }
 
     100% {
         height: 5px;
         -webkit-transform: translateY(0px);
-        background: #e6a24a;
+        background: rgb(47, 69, 173);
     }
 }
 
@@ -616,25 +612,25 @@ body {
     0% {
         height: 5px;
         -moz-transform: translateY(0px);
-        background: #e6a24aed;
+        background: rgb(47, 69, 173);
     }
 
     25% {
         height: 30px;
         -moz-transform: translateY(15px);
-        background: #cf680a;
+        background: rgb(47, 69, 173);
     }
 
     50% {
         height: 5px;
         -moz-transform: translateY(0px);
-        background: #e6a24a;
+        background: rgb(47, 69, 173);
     }
 
     100% {
         height: 5px;
         -moz-transform: translateY(0px);
-        background: #e6a24a;
+        background: rgb(47, 69, 173);
     }
 }
 
@@ -642,25 +638,25 @@ body {
     0% {
         height: 5px;
         -ms-transform: translateY(0px);
-        background: #e6a24a;
+        background: rgb(47, 69, 173);
     }
 
     25% {
         height: 30px;
         -ms-transform: translateY(15px);
-        background: #cf680a;
+        background: rgb(47, 69, 173);
     }
 
     50% {
         height: 5px;
         -ms-transform: translateY(0px);
-        background: #e6a24a;
+        background: rgb(47, 69, 173);
     }
 
     100% {
         height: 5px;
         -ms-transform: translateY(0px);
-        background: #e6a24a;
+        background: rgb(47, 69, 173);
     }
 }
 
@@ -668,24 +664,24 @@ body {
     0% {
         height: 5px;
         transform: translateY(0px);
-        background: #e6a24a;
+        background: rgb(47, 69, 173);
     }
 
     25% {
         height: 30px;
         transform: translateY(15px);
-        background: #cf680a;
+        background: rgb(47, 69, 173);
     }
 
     50% {
         height: 5px;
         transform: translateY(0px);
-        background: #e6a24a;
+        background: rgb(47, 69, 173);
     }
 
     100% {
         height: 5px;
         transform: translateY(0px);
-        background: #cf680a;
+        background: rgb(47, 69, 173);
     }
 }
