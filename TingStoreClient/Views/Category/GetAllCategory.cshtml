@@ -1,0 +1,87 @@
+@model List<Category>
+@{
+    ViewData["Title"] = "GetAllCategory";
+}
+
+<div class="page-header">
+    <h3 style="margin-top:20px; text-align: center;">DANH SÁCH THƯƠNG HIỆU</h3>
+    <div style="text-align: center;">
+        <a asp-controller="Category" asp-action="CreateCategory" class="fancy-button"> Thêm thương hiệu</a>
+    </div>
+</div>
+
+<style>
+    .title-col {
+        font-weight: bold;
+        color: #006666;
+        /* Màu xanh dương */
+    }
+</style>
+
+<div class="container">
+    <div id="order" class="card-body mb-2 mt-2">
+        <form action="" id="form-order" method="">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr class="title-col">
+                            <td style="width: 7%; text-align: center; ">No.</td>
+                            <td style="width: 25%; text-align: center;">Category Name</td>
+                            <td style="width: 30%;text-align: center;">Category Describe</td>
+                            <td style="width: 18%;text-align: center;">Number of Product</td>
+                            <td style="width: 20%;text-align: center;"><span>Action</span></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            int count = 0;
+                        }
+                        @foreach (var item in Model)
+                        {
+                            count++;
+                            <tr>
+                                <td>@count</td>
+                                <td>@item.cateName</td>
+                                <td>@item.cateDescribe</td>
+                                <td>@item.Products.Count</td>
+
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <a asp-controller="Category" asp-action="UpdateCategory" asp-route-id="@item.cateId"
+                                            i class="fas fa-edit text-decoration-none">Update</a>
+                                        <span class="vertical-line"></span>
+                                        <a asp-controller="Category" asp-action="DeleteCategory" asp-route-id="@item.cateId"
+                                            class="fas fa-trash-alt text-decoration-none delete"> Delete</a>
+                                    </div>
+
+                                    <style>
+                                        .vertical-line {
+                                            border-left: 1px solid #000;
+                                            height: 20px;
+                                            /* Điều chỉnh độ cao tùy thuộc vào nhu cầu */
+                                            margin: 0 10px;
+                                            /* Điều chỉnh khoảng cách giữa dòng dọc và nút */
+                                        }
+
+                                        .delete {
+                                            color: red;
+                                        }
+
+                                        a:hover {
+                                            color: black;
+                                        }
+                                    </style>
+
+                                </td>
+                            </tr>
+                        }
+                        @if (count == 0)
+                        {
+                            <p>There is no category in lisst</p>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+</div>

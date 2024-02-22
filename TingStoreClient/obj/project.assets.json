@@ -8,26 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
+      "projectUniqueName": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
       "projectName": "TingStoreClient",
-      "projectPath": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\obj\\",
+      "projectPath": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -64,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
