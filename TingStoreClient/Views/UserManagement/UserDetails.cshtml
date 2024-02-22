@@ -141,7 +141,8 @@
                                     <div class="col-sm-10">
                                         <div class="form-check form-switch form-switch-lg">
                                             <select asp-for="userType">
-                                                <option selected="@(Model.userType == 0)" value="-1">account Delete</option>
+                                                <option selected="@(Model.userType == 0)" value="-1">account Delete
+                                                </option>
                                                 <option selected="@(Model.userType == 0)" value="0">Ban account</option>
                                                 <option selected="@(Model.userType == 1)" value="1">Admin</option>
                                                 <option selected="@(Model.userType == 2)" value="2">staff</option>
@@ -182,7 +183,8 @@
                                                 <td class="text-start">@item.orderId</td>
                                                 <td class="text-start">@item.orderDate</td>
                                                 <td class="text-start">@item.TotalAmount</td>
-                                                <td class="text-start"><a href="#">@item.orderStatus.statusName </a></td>
+                                                <td class="text-start"><a asp-controller="Order"  asp-action="orderDetail"
+                                                        asp-route-id="@item.orderId">@item.orderStatus.statusName </a></td>
                                             }
                                             @if (count == 0)
                                             {
