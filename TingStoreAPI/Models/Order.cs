@@ -9,6 +9,7 @@ namespace TingStoreAPI.Models
 {
     public class Order
     {
+
         [Key]
         public int orderId { get; set; }
         [Required]
@@ -28,5 +29,19 @@ namespace TingStoreAPI.Models
         public OrderStatus orderStatus { get; set; }
 
         public ICollection<OrderDetail> orderDetails { get; set; }
+
+        public Order(int orderId, String userName, DateTime orderDate, decimal totalAmount, int orderStatusId)
+        {
+            this.orderId = orderId;
+            this.userName = userName;
+            this.orderDate = orderDate;
+            this.TotalAmount = totalAmount;
+            this.orderStatusId = orderStatusId;
+        }
+        public Order()
+        {
+
+        }
     }
+
 }

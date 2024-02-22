@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj": {}
+    "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj": {}
   },
   "projects": {
-    "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj": {
+    "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
+        "projectUniqueName": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
         "projectName": "TingStoreClient",
-        "projectPath": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\obj\\",
+        "projectPath": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

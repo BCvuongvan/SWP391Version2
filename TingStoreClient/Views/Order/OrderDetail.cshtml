@@ -1,0 +1,136 @@
+@model Order
+@{
+    ViewData["Title"] = "OrderDetail";
+}
+<link rel="stylesheet" href="~/Mobile_shop/css/totalOrders.css">
+
+<body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <!-- Content Start -->
+        <!-- Selection Right Start -->
+        <div class="container mt-5">
+            <div class="page-header">
+                <h1></i>Orders Detail</h1>
+                <div class="float-end" style="margin-top: -50px;">
+                    <a asp-controller="Order" asp-action="GetAllOrder" data-bs-toggle="tooltip" title
+                        class="btn btn-success" data-bs-original-title="Back" aria-label="Back"><i
+                            class="fas fa-reply"></i></a>
+                </div>
+            </div>
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="card col-md-12 p-0">
+                        <div class="card-header">
+                            <i class="fas fa-info-circle"></i> Order (#@Model.orderId)
+                        </div>
+                        <div id="order" class="card-body mb-2 mt-2">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-control p-0 border rounded">
+                                        <div class="lead p-2" style="background: #ced4da;">
+                                            <Strong>Customer</Strong>
+                                            <br>
+                                            <a href="" style="text-decoration: none;">@Model.userName</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-control p-0 border rounded">
+                                        <div class="lead p-2" style="background: #ced4da;">
+                                            <Strong>Date Added</Strong>
+                                            <br>
+                                            @Model.orderDate
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-bordered table-hover mt-3">
+                                <tr>
+                                    <td><strong>Full Name:</strong> @Model.user.fullName</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Phone number:</strong> @Model.user.phoneNumber</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Email:</strong> @Model.user.email</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Address:</strong> @Model.user.address</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="table-responsive p-3">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr class="title-col">
+                                        <td class="text-center">No.</td>
+                                        <td class="text-center">Product Name</td>
+                                        <td class="text-end">Quantity</td>
+                                        <td class="text-end">Unit Price</td>
+                                        <td class="text-end ">Total</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                @{
+                                    int count = 1;
+                                }
+                                @foreach (var item in Model.orderDetails)
+                                {
+                                        <tr>
+                                            <td class="text-center">@count</td>
+                                            <td>@item.product.proName</td>
+                                            <td class="text-end">@item.quantity</td>
+                                            <td class="text-end">@item.product.proPrice</td>
+                                            <td class="text-end">@item.subTotal</td>
+                                        </tr>
+                                    count++;
+                                }
+                                </tbody>
+                            </table>
+                            <table class="table table-bordered">
+                                <tbody id="order-totals">
+                                    
+                                    <tr>
+                                        <td class=" text-end">
+                                            <strong>Total Amount</strong>
+                                        </td>
+                                        <td class="text-end" style="width: 1px;">@Model.TotalAmount</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="btn" style="float: inline-end;">
+                            @if (@Model.orderStatusId != 2 && Model.orderStatusId != 3)
+                            {
+                                <form asp-controller="Order" asp-action="ChangeOrderStatusConfirm" method="post">
+                                    <input type="hidden" name="id" value="@Model.orderId" />
+                                    <button type="submit" class="btn btn-success">Confirm</button>
+                                </form> 
+                            }
+                            @if(@Model.orderStatusId == 2){
+                                <p class="text-success fs-5">The order has been confirmed!</p>
+                            }
+                            
+                            @if(@Model.orderStatusId == 3){
+                                <p class="text-danger fs-5">The order has been refused!</p>
+                            }
+                        </div>
+
+                        <div class="btn" style="float: inline-end;">
+                            @if (@Model.orderStatusId != 2 && @Model.orderStatusId != 3)
+                            {
+                                <form asp-controller="Order" asp-action="ChangeOrderStatusReject" asp-route-id="@Model.orderId" method="post">
+                                    <button type="submit" class="btn btn-danger">Reject</button>
+                                </form>
+                            }
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href=" #" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+</body>
