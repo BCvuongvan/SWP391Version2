@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
+      "projectUniqueName": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
       "projectName": "TingStoreClient",
-      "projectPath": "d:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
+      "projectPath": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "d:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\obj\\",
+      "outputPath": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

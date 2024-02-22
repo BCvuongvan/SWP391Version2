@@ -5847,11 +5847,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
+      "projectUniqueName": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
       "projectName": "TingStoreAPI",
-      "projectPath": "d:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
+      "projectPath": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "d:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\obj\\",
+      "outputPath": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

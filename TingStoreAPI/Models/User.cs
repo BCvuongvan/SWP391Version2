@@ -44,14 +44,16 @@ namespace TingStoreAPI.Models
             this.updateAt = DateTime.Now;
         }
 
-        public User(String userName, String email, String password, String fullName, String phoneNumber, String picture, DateTime createdAt, int userType)
+        public User(String userName, String email, String password, String fullName, String phoneNumber,String address ,String picture, DateTime createdAt, DateTime updateAt,int userType)
         {
             this.userName = userName;
             this.email = email;
             this.password = password;
             this.fullName = fullName;
             this.phoneNumber = phoneNumber;
+            this.address = address;
             this.picture = picture;
+            this.createdAt = createdAt;
             this.updateAt = updateAt;
             this.userType = userType;
         }

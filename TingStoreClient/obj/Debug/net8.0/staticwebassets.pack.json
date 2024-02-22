@@ -345,6 +345,14 @@
       "PackagePath": "staticwebassets\\assets\\Product_Images\\iphone-14-pro-256gb_1.webp"
     },
     {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-14-pro_2__5.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\iphone-14-pro_2__5.webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-15-pro-max_3.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\iphone-15-pro-max_3.webp"
+    },
+    {
       "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-15-pro-max_4.webp",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\iphone-15-pro-max_4.webp"
     },
@@ -355,10 +363,6 @@
     {
       "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\money.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\money.jpg"
-    },
-    {
-      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\monney.html",
-      "PackagePath": "staticwebassets\\assets\\Product_Images\\monney.html"
     },
     {
       "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\oppo-find-n2-flip.webp",
@@ -427,6 +431,14 @@
     {
       "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\thỏ 3.jpg",
       "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\thỏ 3.jpg"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\User_Picture\\WIN_20221005_11_13_34_Pro.jpg",
+      "PackagePath": "staticwebassets\\assets\\User_Picture\\WIN_20221005_11_13_34_Pro.jpg"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\User_Picture\\l60Hf-150x150.png",
+      "PackagePath": "staticwebassets\\assets\\User_Picture\\l60Hf-150x150.png"
     },
     {
       "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\css\\site.css",
