@@ -29,12 +29,29 @@
             background-color: transparent;
             color: #000;
         }
+        .fancy-button{
+            text-decoration: none;
+        }
         
     </style>
     <title>Total Customer</title>
 </head>
 
 <body>
+    <script>function loadProductsByCategory(cateId) {
+    $.ajax({
+        url: '/ProductsByCategoryID/' + cateId,
+        type: 'GET',
+        success: function(data) {
+            // Thay thế nội dung của bảng sản phẩm với kết quả trả về
+            $('#order').html(data);
+        },
+        error: function(error) {
+            console.error("Có lỗi xảy ra: ", error);
+        }
+    });
+}
+</script>
     
     <div class="container-xxl position-relative bg-white d-flex p-0">
 
@@ -63,6 +80,11 @@
                     <div class="nav-item dropdown">
                         <a asp-controller="Product" asp-action="ListProduct" class="nav-link"><i
                                 class="fa fa-laptop me-2"></i>Manage Products</a>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a asp-controller="SaleProduct" asp-action="ListSaleProduct" class="nav-link">
+                            <i class="fa fa-dollar-sign me-2"></i>Manage Sale</a>
+                        </a>
                     </div>
                     <a href="" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Manage Category</a>
                     <a href="" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Manage Account</a>
@@ -149,23 +171,7 @@
             <!-- Selection Right End-->
 
 
-            <!-- Footer Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-light rounded-top p-4">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Sting Store Shop</a>, All Right Reserved.
-                        </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="">Group4</a>
-                            <br>
-                            Distributed By <a class="border-bottom" href="" target="_blank">Group4</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer End -->
+            
         </div>
         <!-- Content End -->
 

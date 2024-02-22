@@ -23,5 +23,7 @@ namespace TingStoreClient.Models
         [Required(ErrorMessage = ("Please enter image URL!"))]
         [DisplayName("URL")]
         public String imageUrl { get; set; }
+
+        public bool imageStatus { get; set; }
     }
 }

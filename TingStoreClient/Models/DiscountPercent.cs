@@ -32,7 +32,8 @@ namespace TingStoreClient.Models
         [Required(ErrorMessage = ("Please enter date end!"))]
         [DisplayName("Date End")]
         public DateTime endDate { get; set; }
-
+        [Required]
+        public String discountImage { get; set; }
         [DisplayName("Active")]
         public bool isActive { get; set; }
     }

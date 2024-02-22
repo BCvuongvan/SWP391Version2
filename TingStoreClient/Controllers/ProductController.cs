@@ -66,14 +66,13 @@ namespace TingStoreClient.Controllers
         [HttpGet("ProductsByCategoryID/{cateId}")]
         public async Task<IActionResult> GetProductsByCategory(int cateId)
         {
-            HttpResponseMessage response = await client.GetAsync($"{this.api}/ByCategory/{cateId}");
+            HttpResponseMessage response = await client.GetAsync($"{this.api}/ProductsByCategoryID/{cateId}");
 
             string data = await response.Content.ReadAsStringAsync();
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             List<Product> list = JsonSerializer.Deserialize<List<Product>>(data, option);
             await GetCategoriesAsync();
-            ViewBag.cateList = ViewBag.cateList;
-            return View(list);
+            return View("ListProduct",list);
         }
 
         [HttpGet("list")]
@@ -157,7 +156,8 @@ namespace TingStoreClient.Controllers
                 var productImage = new ProductImage
                 {
                     proId = productId, 
-                    imageUrl = fileName 
+                    imageUrl = fileName,
+                    imageStatus = true 
                 };
 
 
@@ -181,6 +181,39 @@ namespace TingStoreClient.Controllers
             return View();
         }
 
+
+        [HttpGet("Picture/{id}")]
+        public async Task<IActionResult> DeleteImage(int id)
+        {
+            HttpResponseMessage response = await client.GetAsync($"{this.api}/Picture/{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                var data = response.Content.ReadAsStringAsync().Result;
+                var proImg = JsonSerializer.Deserialize<ProductImage>(data);
+                return View(proImg);
+            }
+            return NotFound();
+        }
+        [HttpPost("DeleteImageProduct/{imageId}")]
+        public async Task<IActionResult> DeleteImageProductDetail(int imageId)
+        {
+            HttpResponseMessage response = await client.DeleteAsync($"{this.api}/DeleteImageProduct/{imageId}");
+            if (response.IsSuccessStatusCode)
+            {
+                var data = await response.Content.ReadAsStringAsync();
+                var imgProduct = JsonSerializer.Deserialize<ProductImage>(data); 
+                if (imgProduct != null)
+                {
+                    imgProduct.imageStatus = false;
+                    var json = JsonSerializer.Serialize(imgProduct); 
+                    var content = new StringContent(data, System.Text.Encoding.UTF8, "application/json"); 
+                    HttpResponseMessage updateResponse = await client.PostAsync($"{this.api}/DeleteImageProduct/{imageId}", content); 
+                    int productId = imgProduct.proId; 
+                    return RedirectToAction("ManagementProductDetail", new { id = productId });
+                }
+            }
+            return Redirect("Home/Error");
+        }
 
         private void SaveToFile(string fileName, string content)
         {
@@ -247,7 +280,7 @@ namespace TingStoreClient.Controllers
                 }
 
             }
-            pro.proStatus = false;
+            pro.proStatus = true;
             string data = JsonSerializer.Serialize(pro);
             var content = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
             HttpResponseMessage response = await client.PutAsync(api + "/" + id, content);
@@ -318,6 +351,7 @@ namespace TingStoreClient.Controllers
                 var productInfoPath = Path.Combine(detailFilesPath, $"{product.proName}_Info.txt");
                 var highlightFeaturesPath = Path.Combine(detailFilesPath, $"{product.proName}_Features.txt");
                 var technicalSpecsPath = Path.Combine(detailFilesPath, $"{product.proName}_Specs.txt");
+
                 // Đọc nội dung từ file
                 var productInfo = ReadFromFile(productInfoPath);
                 var highlightFeatures = ReadFromFile(highlightFeaturesPath);

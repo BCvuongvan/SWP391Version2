@@ -1,0 +1,84 @@
+@model IEnumerable<DiscountPercent>
+@{
+    ViewData["Title"] = "ListSaleProduct";
+    Layout = "/Views/Shared/_ListProduct.cshtml";
+}
+<div class="page-header">
+    <h3 style="margin-top:20px; text-align: center;">DANH SÁCH SẢN PHẨM ĐANG GIẢM GIÁ</h3>
+    <div style="text-align: center;">
+        <a asp-controller="SaleProduct" asp-action="CreateSaleProduct" class="fancy-button"> Thêm sản phẩm giảm giá mới</a>
+    </div>
+</div>
+<div class="container">
+        <div class="dropdown">
+            <button class="fas fa-list no-border-button custom-font" type="button" data-bs-toggle="dropdown">
+                Sắp xếp giá trị giảm giá 
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" asp-controller="Product"
+                                                            asp-action="ListProduct">Tất cả sản phẩm giảm giá</a></li>
+                                                            
+            </div>  
+        </div>
+        <div id="order" class="card-body mb-2 mt-2">
+            <form action="" id="form-order" method="">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr class="title-col">
+                                <td style="width: 18%; text-align: center;">Tên sản phẩm</td>
+                                <td style="text-align: center;">Ảnh sản phẩm</td>
+                                <td style="text-align: center;">Giảm giá (%)</td>
+                                <td style="text-align: center;">Giá gốc</td>
+                                <td style="text-align: center;">Giá sau khi giảm</td>
+                                <td style="text-align: center;">Ngày bắt đầu giảm giá</td>
+                                <td style="text-align: center;">Ngày kết thúc giảm giá</td>
+                                <td style="text-align: center;"><span>Action</span></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var saleProduct in Model)
+                            {
+                                @if (saleProduct.isActive == true)
+                                {
+                                    <tr>
+                                        <td style="text-align: center;">@saleProduct.product.proName</td>
+                                        <td class="text-end d-none d-lg-table-cell"><img
+                                                src="~/assets/Product_Images/@saleProduct.product.proImage"
+                                                style="width: 180px; height: 180px;" alt="@saleProduct.product.proName"></td>
+                                        <td style="text-align: center;">@saleProduct.discountPercentage %</td>
+                                        <td style="text-align: center;">@String.Format("{0:0,0VND}", saleProduct.product.proPrice).Replace(",", ".")</td>
+                                        <td style="text-align: center;">@String.Format("{0:0,0VND}", (saleProduct.product.proPrice-(saleProduct.product.proPrice * saleProduct.discountPercentage/100))).Replace(",", ".")</td>
+                                        <td style="text-align: center;">@saleProduct.startDate.ToString("MM/dd/yyyy")
+                                        </td>
+                                        <td style="text-align: center;">@saleProduct.endDate.ToString("MM/dd/yyyy")</td>
+                                        <td class="text-end">
+                                            <div class="btn-group dropdown">
+                                                <a class="btn" aria-label="Edit"><i class="fas fa-pencil-alt"></i></a>
+                                                <button type="button" class="btn dropdown-toggle dropdown-toggle-split"
+                                                    data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li>
+                                                        <h6 class="dropdown-header">Options</h6>
+                                                    </li>
+                                                    <li><a class="dropdown-item" asp-controller="SaleProduct"
+                                                            asp-action="UpdateSaleProduct" asp-route-id=@saleProduct.discountId><i
+                                                                class="fas fa-edit"></i> Cập nhật</a></li>
+                                                    <li><a class="dropdown-item" asp-controller="SaleProduct"
+                                                            asp-action="DeleteSaleProduct" asp-route-id=@saleProduct.discountId><i
+                                                                class="fas fa-trash-alt"></i> Xóa</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-end" style="margin-right: 10px;">
+                    <h5>Tổng sản phẩm được sale: @Model.Count(p => p.isActive)</span></h5>
+                </div>
+            </form>
+        </div>
+    </div>

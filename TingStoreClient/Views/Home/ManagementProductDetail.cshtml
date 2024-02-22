@@ -3,104 +3,103 @@
     ViewData["Title"] = "ManagementProductDetail";
     Layout = "/Views/Shared/_ProductDetail.cshtml";
 }
+@{
+    var productImagesList = Model.productImages.ToList();
+}
 <div class="container">
     <div class="card">
         <div class="container-fliud">
             <div class="wrapper row">
-                    <div class="preview col-md-6">
-                        <div class="preview-pic tab-content">
-                            <div class="tab-pane active" id="pic-1">
-                                @* <img
-                                    src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_pink_pdp_image_position-1a_pink_color_1_3.jpg" /> *@
-                                    <img src="~/assets/Product_Images/@Model.proImage"
-                                            style="width: 3000px; height: 500px;" alt="@Model.proName">
-                            </div>
-                            <div class="tab-pane" id="pic-2"><img
-                                    src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_pink_pdp_image_position-2_design_2.jpg" />
-                            </div>
-                            <div class="tab-pane" id="pic-3"><img
-                                    src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_pink_pdp_image_position-8_usb-c_charge_cable_2.jpg" />
-                            </div>
-                            <div class=" tab-pane" id="pic-4"><img
-                                    src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn1b93_1_2.jpg" />
-                            </div>
-                            <div class="tab-pane" id="pic-5"><img
-                                    src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_pink_pdp_image_position-5_colors_2.jpg" />
-                            </div>
-
+                <div class="preview col-md-6">
+                    <div class="preview-pic tab-content">
+                        <div class="tab-pane active" id="pic-1">
+                            <img src="~/assets/Product_Images/@Model.proImage" style="width: 2000px; height: 500px;"
+                                alt="@Model.proName">
                         </div>
-                        
-                        <ul class="preview-thumbnail nav nav-tabs">
-                            <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="~/assets/Product_Images/@Model.proImage"
-                                            alt="@Model.proName"></a>
-                            </li>
-                            <li><a data-target="#pic-2" data-toggle="tab"><img
-                                        src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_pink_pdp_image_position-2_design_2.jpg" /></a>
-                            </li>
-                            <li><a data-target="#pic-3" data-toggle="tab"><img
-                                        src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_pink_pdp_image_position-8_usb-c_charge_cable_2.jpg" /></a>
-                            </li>
-                            <li><a data-target="#pic-4" data-toggle="tab"><img
-                                        src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn1b93_1_2.jpg" /></a>
-                            </li>
-                            <li><a data-target="#pic-5" data-toggle="tab"><img
-                                        src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_pink_pdp_image_position-5_colors_2.jpg" /></a>
-                            </li>
+                        @for (int i = 0; i < productImagesList.Count; i++)
+                        {
+                            var subPicture = productImagesList[i];
+                            var panId = $"pic-{i + 2}";
+                            <div class="tab-pane" id="@panId">
+                                <img src="~/assets/Product_Images/@subPicture.imageUrl"
+                                    style="width: 2000px; height: 500px;" alt="@Model.proName">
+                            </div>
+                        }
 
-                        </ul>
                     </div>
-                    <div class="details col-md-6">
-                        <h3 class="product-title">@Model.proName</h3>
-                        <div class="rating">
-                            <div class="stars">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                            </div>
-                            <span class="review-no">31 reviews</span>
+
+                    <ul class="preview-thumbnail nav nav-tabs">
+                    <li class="active"><a data-target="#pic-1" data-toggle="tab"><img
+                                src="~/assets/Product_Images/@Model.proImage" alt="@Model.proName"></a>
+                    </li>
+
+                    @for (int i = 0; i < productImagesList.Count; i++)
+                    {
+                        var subPicture = productImagesList[i];
+                        var targetId = $"pic-{i + 2}";
+
+                       @if(@subPicture.imageStatus == true){
+                        <li class="image-container">
+                            <a data-target="#@targetId" data-toggle="tab">
+                                <img src="~/assets/Product_Images/@subPicture.imageUrl" alt="@Model.proName"
+                                    class="img-thumbnail">
+                            </a>
+                        </li>
+                        }
+                    }
+                </ul>
+                </div>
+                <div class="details col-md-6">
+                    <h3 class="product-title">@Model.proName</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
                         </div>
-                        <p class="product-description">@Model.proDescription</p>
-                        <h4 class="price"><span>@String.Format("{0:0,0VND}", Model.proPrice).Replace(",", ".")</span></h4>
-                        <p class="vote"><strong>91%</strong> người mua rất thích sản phẩm này! <strong>(87
-                                votes)</strong>
-                        </p>
-                        <div class="box_info">
-                            <div class="box_title">
-                                <p>Thông tin sản phẩm</p>
-                            </div>
-                            <div class="box_content">
-                                <div class="item_info d-flex">
-                                    <div class="icon"><i class="fa fa-mobile"></i></div>
-                                    <div class="description">
-                                        @ViewBag.ProductInfo 
-                                    </div>
-                                    
+                        <span class="review-no">31 reviews</span>
+                    </div>
+                    <p class="product-description">@Model.proDescription</p>
+                    <h4 class="price"><span>@String.Format("{0:0,0VND}", Model.proPrice).Replace(",", ".")</span></h4>
+                    <p class="vote"><strong>91%</strong> người mua rất thích sản phẩm này! <strong>(87
+                            votes)</strong>
+                    </p>
+                    <div class="box_info">
+                        <div class="box_title">
+                            <p>Thông tin sản phẩm</p>
+                        </div>
+                        <div class="box_content">
+                            <div class="item_info d-flex">
+                                <div class="icon"><i class="fa fa-mobile"></i></div>
+                                <div class="description">
+                                    @ViewBag.ProductInfo
                                 </div>
+
                             </div>
                         </div>
-                        <div class="action">
-                            <button class="add-to-cart btn btn-default" type="button">Thêm vào giỏ hàng</button>
-                            <button class="add-to-cart btn btn-default" type="button">Mua Ngay</button>
-                            <button class="like btn btn-default" type="button"><span
-                                    class="fa fa-heart"></span></button>
-                        </div>
+                    </div>
+                    <div class="action">
+                        <button class="add-to-cart btn btn-default" type="button">Thêm vào giỏ hàng</button>
+                        <button class="add-to-cart btn btn-default" type="button">Mua Ngay</button>
+                        <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="block_content_product">
-            <div class="col-md-8 block_content_product_left">
-                <h2 class="text-center">ĐẶC ĐIỂM NỔI BẬT </h2>
-                <div class="ul">
-                    @ViewBag.HighlightFeatures
-                </div>
-            </div>
-            <div class="col-md-4 block_content_product_right">
-                <p class="title">Thông số kỹ thuật</p>
-                @ViewBag.TechnicalSpecs
-            </div>
-            
         </div>
     </div>
+    <div class="block_content_product">
+        <div class="col-md-8 block_content_product_left">
+            <h2 class="text-center">ĐẶC ĐIỂM NỔI BẬT </h2>
+            <div class="ul">
+                @ViewBag.HighlightFeatures
+            </div>
+        </div>
+        <div class="col-md-4 block_content_product_right">
+            <p class="title">Thông số kỹ thuật</p>
+            @ViewBag.TechnicalSpecs
+        </div>
+
+    </div>
+</div>

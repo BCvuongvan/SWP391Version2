@@ -1,0 +1,73 @@
+@model DiscountPercent
+@{
+    ViewData["Title"] = "UpdateSaleProduct";
+    Layout = "/Views/Shared/_ManagementProduct.cshtml";
+}
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.ErrorMessage
+    </div>
+}
+<nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+    <div class="navbar-nav align-items-center ms-auto">
+        <div class="nav-item">
+            <a class="nav-link" style="margin-right: 20px;" asp-controller="Product" asp-action="ListProduct">
+                <i class="fa fa-sign-out-alt"></i>
+                <span class="d-none d-lg-inline-flex">Back</span>
+            </a>
+        </div>
+    </div>
+</nav>
+<section id="product_part" class="main">
+    <div class="container">
+        <h2 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">CẬP NHẬT SẢN
+            PHẨM GIẢM GiÁ</h2>
+        <div class="card-body" style="margin-bottom: 10px;">
+            <form asp-controller="SaleProduct" asp-action="UpdateSaleProduct" method="post" style="margin: 10px;"
+                enctype="multipart/form-data">
+                <div hidden>
+                    <input type="text" asp-for="discountId" class="form-control">
+                </div>
+                <div hidden>
+                    <input type="text" asp-for="proId" class="form-control">
+                </div>
+                <div>
+                    <label class="form-label">Tên sản phẩm: </label>
+                    <input type="text" class="form-control large-input" value="@Model.product.proName">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Ảnh sản phẩm: </label> </br>
+                    <img src="~/assets/Product_Images/@Model.product.proImage" style="width: 180px; height: 180px;" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="discountPercentage" class="form-label">Giá giảm giá: </label>
+                    <input type="text" asp-for="discountPercentage" class="form-control large-input">
+                    <span asp-validation-for="discountPercentage" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="startDate" class="form-label">Ngày bắt đầu: </label>
+                    <input type="text" asp-for="startDate" class="form-control large-input">
+                    <span asp-validation-for="startDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="endDate" class="form-label">Ngày kết thúc: </label>
+                    <input type="text" asp-for="endDate" class="form-control large-input">
+                    <span asp-validation-for="endDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="discountImage" class="form-label">Ảnh giảm gi:</label> <br>
+                    <img src="~/assets/Product_Images/@Model.discountImage" style="width: 200px; height: 200px;"
+                        alt="@Model.discountId"><br> <br>
+                    <label>Ảnh mới:</label>
+                    <input type="file" class="form-control large-input" name="newImageFile">
+                    <span asp-validation-for="discountImage" class="text-danger"></span>
+                </div>
+                <div class="button-container" style="text-align: center;">
+                    <button type="submit" style="font-size: 18px; padding: 10px 20px;"
+                        class="fancy-button">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

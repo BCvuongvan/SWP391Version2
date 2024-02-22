@@ -44,6 +44,14 @@
             <div class="clent">
                 @foreach (var product in Model)
                 {
+                    var originalPrice = product.proPrice;
+                    var discountProduct = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now).FirstOrDefault();
+                    var discountedPrice = originalPrice;
+                    if (discountProduct != null)
+                {
+                    var discount = originalPrice * discountProduct.discountPercentage / 100;
+                    discountedPrice -= discount;
+                }
                     @if (product.proStatus == true)
                     {
                         <div class="col-md-3 col-sm-6 col-xs-6 wow card_box">
@@ -56,11 +64,14 @@
                                     <h4>@product.proName</h4>
                                 </div>
                                 <div class="price-c">
-                                    <p class="price"><s>34.990.000₫</s>
-                                        <br><span class="giamoi">@String.Format("{0:0,0VND}", product.proPrice).Replace(",", ".")</span>
+                                    <p class="price">
+                                        @if(discountProduct != null){
+                                            <s class="giacu">@String.Format("{0:0,0VND}", originalPrice).Replace(",", ".")</s>
+                                            }
+                                        <br><span class="giamoi">@String.Format("{0:0,0VND}", discountedPrice).Replace(",", ".")</span>
                                     </p>
                                 </div>
-                                <a href=""><button type="button" class="btn btn-danger">Add to cart</button></a>
+                                <a href=""><button type="button" class="btn btn-danger">Thêm vào giỏ hàng</button></a>
                                 <div class="star_rate">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -68,9 +79,14 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                 </div>
-                                <div class="install-0-tag">
-                                    @product.discountPercents %
-                                </div>
+                                @{
+                                    var discountPrice = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now && dc.isActive == true).FirstOrDefault();
+                                    if(discountPrice != null){
+                                    <div class="install-0-tag">
+                                        <span> Giảm @discountPrice.discountPercentage % </span>
+                                    </div>
+                                    }
+                                }
                             </div>
                         </div>
                     }
