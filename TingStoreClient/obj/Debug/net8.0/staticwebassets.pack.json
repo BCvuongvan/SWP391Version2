@@ -325,6 +325,14 @@
       "PackagePath": "staticwebassets\\assets\\Product_Images\\eat.jpg"
     },
     {
+      "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-14-pro_2__5.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\iphone-14-pro_2__5.webp"
+    },
+    {
+      "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-15-pro-max_3.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\iphone-15-pro-max_3.webp"
+    },
+    {
       "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-15-pro-max_4.webp",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\iphone-15-pro-max_4.webp"
     },
@@ -351,6 +359,14 @@
     {
       "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\umaru_lm.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\umaru_lm.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\User_Picture\\WIN_20221005_11_13_34_Pro.jpg",
+      "PackagePath": "staticwebassets\\assets\\User_Picture\\WIN_20221005_11_13_34_Pro.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\User_Picture\\l60Hf-150x150.png",
+      "PackagePath": "staticwebassets\\assets\\User_Picture\\l60Hf-150x150.png"
     },
     {
       "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\css\\site.css",
