@@ -114,7 +114,7 @@
             padding: 6px 15px;
             font-size: 15px;
             color: #fff;
-            background: linear-gradient(45deg, #2e7acb, #aa2acd);
+            background: linear-gradient(45deg, #0871e0, #b73dd8);
             border: none;
             outline: none;
             cursor: pointer;
@@ -127,7 +127,7 @@
         }
 
         .fancy-button:hover {
-            background: linear-gradient(45deg, #9a3bb4, #399ad6);
+            background: linear-gradient(45deg, #9a3bb4, #254fc5);
             transform: translateY(-5px);
         }
 
@@ -159,9 +159,15 @@
             text-decoration: none;
             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
-    </style>
+
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
 
     </style>
+
     <title>Home Admin Page</title>
 </head>
 
@@ -199,17 +205,18 @@
                             <i class="fa fa-laptop me-2"></i>Manage Products </a>
                         </a>
                     </div>
-                    @* ------- *@
+
+                    <div class="nav-item dropdown">
+                        <a asp-controller="SaleProduct" asp-action="ListSaleProduct" class="nav-link">
+                            <i class="fa fa-dollar-sign me-2"></i>Manage Sale</a>
+                        </a>
+                    </div>
                     <div class="nav-item dropdown">
                         <a asp-controller="Category" asp-action="GetAllCategory" class="nav-link" data-bs-toggle="dropdown"
                             style="font-weight: bold;">
                             <i class="fa fa-laptop me-2"></i>Manage Category
                         </a>
-                        @* <a href="" class="nav-item nav-link" style="font-weight: bold;"><i
-                                class="fa fa-th me-2"></i>Manage
-                            Category</a> *@
                     </div>
-                    @* ---------- *@
 
                     <a href="" class="nav-item nav-link" style="font-weight: bold;"><i
                             class="fa fa-keyboard me-2"></i>Manage Account</a>

@@ -57,7 +57,7 @@ namespace TingStoreClient.Controllers
             {
                 return System.IO.File.ReadAllText(filePath);
             }
-            return "File not found";
+            return "Không có thông tin.";
         }
         [HttpGet]
         public async Task<IActionResult> ManagementProductDetail(int id)
@@ -86,7 +86,5 @@ namespace TingStoreClient.Controllers
             }
             return NotFound();
         }
-
-
     }
 }

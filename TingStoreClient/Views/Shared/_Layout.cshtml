@@ -63,18 +63,17 @@
                             <i class="fa fa-laptop me-2"></i>Manage Products </a>
                         </a>
                     </div>
-
-                    <a asp-controller="UserManagement" asp-action="Index" asp-route-id="3" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>User Management</a>
-                    
-
-                    
+                    <div class="nav-item dropdown">
+                        <a asp-controller="SaleProduct" asp-action="ListSaleProduct" class="nav-link">
+                            <i class="fa fa-dollar-sign me-2"></i>Manage Sale</a>
+                        </a>
+                    </div>
+                    <a asp-controller="UserManagement" asp-action="Index" asp-route-id="3" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>User Management</a>                  
                     <div class="nav-item dropdown">
                         <a asp-controller="Category" asp-action="GetAllCategory" class="nav-link">
                             <i class="fa fa-laptop me-2"></i> Manage Category
                         </a>
-                     
                     </div>
-                    
                     <a href="" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Manage Account</a>
                     <a asp-controller="Order" asp-action="GetAllOrder" class="nav-item nav-link"><i
                             class="fa fa-table me-2"></i>Manage Orders</a>

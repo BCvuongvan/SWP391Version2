@@ -83,6 +83,10 @@ namespace TingStoreAPI.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("discountImage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("discountPercentage")
                         .HasColumnType("int");
 
@@ -236,9 +240,7 @@ namespace TingStoreAPI.Migrations
                         .HasColumnType("int");
 
                     b.Property<bool>("proStatus")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(true);
+                        .HasColumnType("bit");
 
                     b.HasKey("proId");
 
@@ -253,6 +255,9 @@ namespace TingStoreAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("imageStatus")
+                        .HasColumnType("bit");
 
                     b.Property<string>("imageUrl")
                         .IsRequired()

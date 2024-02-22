@@ -23,14 +23,14 @@ namespace TingStoreAPI.Controllers
         [HttpGet]
         public IActionResult GetAllProduct()
         {
-            var productList = _db.products.Include(p => p.category).ToList();
+            var productList = _db.products.Include(p => p.category).Include(p => p.discountPercents).ToList();
             return Ok(productList);
         }
 
         [HttpGet("{id}", Name = "GetProductById")]
         public IActionResult GetProductById(int id)
         {
-            Product pro = this._db.products.Find(id);
+            var pro = this._db.products.Include(p => p.productImages).FirstOrDefault(p => p.proId == id);
             if (pro == null)
             {
                 return NotFound();
@@ -43,7 +43,7 @@ namespace TingStoreAPI.Controllers
         {
             if (product == null)
             {
-                return BadRequest("Product cannot be null");
+                return BadRequest("Product cannot be null.");
             }
             var existedName = this._db.products.FirstOrDefault(p => p.proName == product.proName); //check từ phần tử đầu tiên với tên đầu vào 
             if (existedName != null)
@@ -67,11 +67,6 @@ namespace TingStoreAPI.Controllers
             if (pro == null)
             {
                 return NotFound("Could not be found!!!");
-            }
-            var existedName = this._db.products.FirstOrDefault(p => p.proName == product.proName); //check từ phần tử đầu tiên với tên đầu vào 
-            if (existedName != null)
-            {
-                return BadRequest("Name product already exists.");
             }
             product.proStatus = true;
             this._db.products.Update(new Product(product.proId, product.proName, product.proDescription, product.proPrice, product.proQuantity, product.proImage, product.cateId, product.proStatus));
@@ -104,17 +99,6 @@ namespace TingStoreAPI.Controllers
             return Ok(products);
         }
 
-        [HttpGet("Picture/{id}", Name = "GetPictureById")]
-        public IActionResult GetPicturetById(int id)
-        {
-            ProductImage proImg = this._db.productImages.Find(id);
-            if (proImg == null)
-            {
-                return NotFound();
-            }
-            return Ok(proImg);
-        }
-
         [HttpGet("ImagesByProductID/{productId}", Name = "GetProductsByCategory")]
         public ActionResult<IEnumerable<ProductImage>> GetImagesByProductId(int productId)
         {
@@ -132,10 +116,32 @@ namespace TingStoreAPI.Controllers
             {
                 return BadRequest("Product cannot be null");
             }
-            this._db.productImages.Add(new ProductImage(productImage.proId, productImage.imageUrl));
+            productImage.imageStatus = true;
+            this._db.productImages.Add(new ProductImage(productImage.proId, productImage.imageUrl, productImage.imageStatus));
             this._db.SaveChanges();
             return CreatedAtRoute("GetProductById", new { id = productImage.proId }, productImage);
         }
+        [HttpGet("Picture/{id}", Name = "GetPictureById")]
+        public IActionResult GetPicturetById(int id)
+        {
+            ProductImage proImg = this._db.productImages.Include(p => p.product).FirstOrDefault(p => p.imageId == id);
+            if (proImg == null)
+            {
+                return NotFound();
+            }
+            return Ok(proImg);
+        }
 
+        [HttpDelete("DeleteImageProduct/{imageId}")]
+        public IActionResult DeleteImageProduct(int imageId)
+        {
+            ProductImage proImg = this._db.productImages.Include(p => p.product).FirstOrDefault(p => p.imageId == imageId);
+            if (proImg == null)
+                return NotFound("Could not be found!!!");
+            proImg.imageStatus = false;
+            this._db.SaveChanges();
+
+            return Ok(proImg);
+        }
     }
 }

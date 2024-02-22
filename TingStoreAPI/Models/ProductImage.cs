@@ -17,11 +17,13 @@ namespace TingStoreAPI.Models
         public Product product { get; set; }
         [Required]
         public String imageUrl { get; set; }
-
-        public ProductImage(int proId, String imageUrl)
+        public bool imageStatus { get; set; }
+        public ProductImage(int proId, String imageUrl, bool imageStatus)
         {
             this.proId = proId;
             this.imageUrl = imageUrl;
+            this.imageStatus = imageStatus;
         }
+        
     }
 }

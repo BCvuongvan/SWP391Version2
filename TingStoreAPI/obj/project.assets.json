@@ -5842,24 +5842,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
+      "projectUniqueName": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
       "projectName": "TingStoreAPI",
-      "projectPath": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreAPI\\obj\\",
+      "projectPath": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5926,7 +5928,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

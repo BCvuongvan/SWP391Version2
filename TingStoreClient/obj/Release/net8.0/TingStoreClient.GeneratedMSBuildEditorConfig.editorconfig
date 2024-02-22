@@ -38,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDcmVhdGVQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/SWP391_PROJECT_VERSIONX/SWP391Version2/TingStoreClient/Views/Product/DeleteImage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGVJbWFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/SWP391_PROJECT_VERSIONX/SWP391Version2/TingStoreClient/Views/Product/DeleteProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGVQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -68,6 +72,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/SWP391_PROJECT_VERSIONX/SWP391Version2/TingStoreClient/Views/Product/UpdateProductTechnicalSpecsDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxVcGRhdGVQcm9kdWN0VGVjaG5pY2FsU3BlY3NEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SWP391_PROJECT_VERSIONX/SWP391Version2/TingStoreClient/Views/SaleProduct/CreateSaleProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVByb2R1Y3RcQ3JlYXRlU2FsZVByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SWP391_PROJECT_VERSIONX/SWP391Version2/TingStoreClient/Views/SaleProduct/DeleteSaleProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVByb2R1Y3RcRGVsZXRlU2FsZVByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SWP391_PROJECT_VERSIONX/SWP391Version2/TingStoreClient/Views/SaleProduct/ListSaleProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVByb2R1Y3RcTGlzdFNhbGVQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SWP391_PROJECT_VERSIONX/SWP391Version2/TingStoreClient/Views/SaleProduct/UpdateSaleProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVByb2R1Y3RcVXBkYXRlU2FsZVByb2R1Y3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SWP391_PROJECT_VERSIONX/SWP391Version2/TingStoreClient/Views/Shared/Error.cshtml]
