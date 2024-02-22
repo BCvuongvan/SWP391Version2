@@ -154,12 +154,11 @@
         .edit-button {
             border: 1px solid #198ae0;
             border-radius: 5px;
-            padding: 6px 12px; 
+            padding: 6px 12px;
             margin-left: 10px;
             text-decoration: none;
             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
-        
     </style>
 
     </style>
@@ -167,7 +166,7 @@
 </head>
 
 <body>
-    
+
     <div class="container-xxl position-relative bg-white d-flex p-0">
         <!-- Section-left-->
         <!-- Sidebar Start -->
@@ -175,7 +174,7 @@
             <nav class="navbar navbar-light">
                 <a href="" class="navbar-brand mx-4 mb-3 " style="margin-top: -20px;">
                     <h3 class="text-primary" style="font-family: 'Heebo';><i class=" fa fa fa- me-2">
-                        </i>STING STORE
+                        </i>TING STORE
                     </h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4" style="margin-top: 30px;">
@@ -200,8 +199,18 @@
                             <i class="fa fa-laptop me-2"></i>Manage Products </a>
                         </a>
                     </div>
-                    <a href="" class="nav-item nav-link" style="font-weight: bold;"><i class="fa fa-th me-2"></i>Manage
-                        Category</a>
+                    @* ------- *@
+                    <div class="nav-item dropdown">
+                        <a asp-controller="Category" asp-action="GetAllCategory" class="nav-link" data-bs-toggle="dropdown"
+                            style="font-weight: bold;">
+                            <i class="fa fa-laptop me-2"></i>Manage Category
+                        </a>
+                        @* <a href="" class="nav-item nav-link" style="font-weight: bold;"><i
+                                class="fa fa-th me-2"></i>Manage
+                            Category</a> *@
+                    </div>
+                    @* ---------- *@
+
                     <a href="" class="nav-item nav-link" style="font-weight: bold;"><i
                             class="fa fa-keyboard me-2"></i>Manage Account</a>
                     <a href="" class="nav-item nav-link" style="font-weight: bold;"><i

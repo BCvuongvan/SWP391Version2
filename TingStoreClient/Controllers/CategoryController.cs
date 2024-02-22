@@ -12,11 +12,10 @@ using TingStoreClient.Models;
 
 namespace TingStoreClient.Controllers
 {
-    [Route("[controller]")]
     public class CategoryController : Controller
     {
         private readonly HttpClient client = null;
-        private String api;
+        private string api;
 
         public CategoryController()
         {
@@ -26,14 +25,94 @@ namespace TingStoreClient.Controllers
             this.api = "https://localhost:5001/api/Category";
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> GetAllCategory()
         {
             HttpResponseMessage response = await client.GetAsync(api);
-            String data = await response.Content.ReadAsStringAsync();
+            string data = await response.Content.ReadAsStringAsync();
 
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             List<Category> list = JsonSerializer.Deserialize<List<Category>>(data, option);
             return View(list);
+        }
+
+        // [HttpPost]
+        public IActionResult CreateCategory()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateCategory(Category category)
+        {
+            if (ModelState.IsValid)
+            {
+                string data = JsonSerializer.Serialize(category);
+                var content = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await client.PostAsync(api, content);
+                if (response.StatusCode == System.Net.HttpStatusCode.Created)
+                {
+                    // Redirect to the GetAllCategory action
+                    return RedirectToAction("GetAllCategory");
+                }
+                else
+                {
+                    var errorMessage = await response.Content.ReadAsStringAsync();
+                    ViewBag.ErrorMessage = errorMessage;
+                }
+                return RedirectToAction("GetAllCategory");
+            }
+
+            // If creation fails or ModelState is invalid, return the same view with the provided category
+            return View(category);
+        }
+
+        public async Task<IActionResult> UpdateCategory(int id)
+        {
+            HttpResponseMessage response = await client.GetAsync(api + "/" + id);
+            if (response.IsSuccessStatusCode)
+            {
+                var data = response.Content.ReadAsStringAsync().Result; //kq phản hồi từ phía server, lấy dữ liệu đó lưu vào data
+                var category = JsonSerializer.Deserialize<Category>(data); //bóc tách dữ liệu
+                                                                           //=>lấy được thông tin của khách hàng
+                return View(category);
+            }
+            return NotFound();
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpdateCategory(int id, Category category)
+        {
+            category.cateId = id;
+            string data = JsonSerializer.Serialize(category);
+            var content = new StringContent(data, System.Text.Encoding.UTF8, "application/json");//định nghĩa nội dung gửi đi
+            HttpResponseMessage response = await client.PutAsync(api + "/" + id, content);//nhận kết quả phản hồi về
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("GetAllCategory");
+            }
+            return RedirectToAction("GetAllCategory");
+        }
+
+        public async Task<IActionResult> DeleteCategory(int id)
+        {
+            HttpResponseMessage response = await client.GetAsync(api + "/" + id);
+            if (response.IsSuccessStatusCode)
+            {
+                var data = response.Content.ReadAsStringAsync().Result;
+                var category = JsonSerializer.Deserialize<Category>(data);
+                return View(category);
+            }
+            return NotFound();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int cateId)
+        {
+            HttpResponseMessage response = await client.DeleteAsync(api + "/" + cateId);
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("GetAllCategory");
+            }
+            return RedirectToAction("GetAllCategory");
         }
     }
 }
