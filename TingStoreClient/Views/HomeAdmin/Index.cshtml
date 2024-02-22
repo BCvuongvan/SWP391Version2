@@ -10,10 +10,11 @@
                 </div>
                 <div class="tile-body">
                     <i class="fas fa-shopping-cart"></i>
-                    <h2 class="float-end">10</h2>
+                    <h2 class="float-end">@ViewBag.countOrder</h2>
                 </div>
                 <div class="tile-footer">
-                    <a href="totalOrders.html" class="text-decoration-none text-white">View more...</a>
+                    <a asp-action="GetAllOrder" asp-controller="Order" class="text-decoration-none text-white">View
+                        more...</a>
                 </div>
             </div>
         </div>
