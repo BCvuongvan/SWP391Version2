@@ -23,5 +23,28 @@ namespace TingStoreClient.Models
 
         [DisplayName("Status")]
         public bool cateStatus { get; set; }
+
+        public ICollection<Product> Products { get; set; }
+
+        public Category(String cateName, String cateDescribe, bool cateStatus = true)
+        {
+            this.cateName = cateName;
+            this.cateDescribe = cateDescribe;
+            this.cateStatus = cateStatus;
+
+        }
+
+        public Category(int cateId, String cateName, String cateDescribe, bool cateStatus = true)
+        {
+            this.cateId = cateId;
+            this.cateName = cateName;
+            this.cateDescribe = cateDescribe;
+            this.cateStatus = cateStatus;
+
+        }
+        public Category()
+        {
+        }
+
     }
 }

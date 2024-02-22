@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace TingStoreAPI.Models
 {
+
     public class Category
     {
         [Key]
@@ -15,5 +16,28 @@ namespace TingStoreAPI.Models
         [Required]
         public String cateDescribe { get; set; }
         public bool cateStatus { get; set; }
+
+                public ICollection<Product> Products { get; set; }
+
+
+        public Category(String cateName, String cateDescribe, bool cateStatus = true)
+        {
+            this.cateName = cateName;
+            this.cateDescribe = cateDescribe;
+            this.cateStatus = cateStatus;
+
+        }
+
+        public Category(int cateId, String cateName, String cateDescribe, bool cateStatus = true)
+        {
+            this.cateId = cateId;
+            this.cateName = cateName;
+            this.cateDescribe = cateDescribe;
+            this.cateStatus = cateStatus;
+
+        }
+        public Category()
+        {
+        }
     }
 }

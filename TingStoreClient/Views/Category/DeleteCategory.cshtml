@@ -1,0 +1,36 @@
+@model Category
+@{
+    ViewData["Title"] = "DeleteCategory";
+}
+<nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+    <div class="navbar-nav align-items-center ms-auto">
+        <div class="nav-item">
+            <a class="nav-link" style="margin-right: 20px;" asp-controller="Category" asp-action="GetAllCategory">
+                <i class="fa fa-sign-out-alt"></i>
+                <span class="d-none d-lg-inline-flex">Back</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<h2 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font">Delete Category</h2>
+<div class="card-body">
+    <form asp-controller="Category" asp-action="Delete" method="post" style="margin: 10px;">
+        <div hidden>
+            <input type="text" asp-for="cateId" class="form-control" >
+        </div>
+        <div>
+            <label class="form-label">Enter category name: </label>
+            <input type="text" asp-for="cateName" class="form-control large-input" disabled>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Enter category description: </label>
+            <input type="text" asp-for="cateDescribe" class="form-control large-input" disabled>
+        </div>
+        
+        <div class="button-container">
+            <button type="submit" class="btn btn-primary btn-lg"
+                style="font-size: 15px; padding: 10px 15px;">Delete</button>
+        </div>
+    </form>
+</div>
