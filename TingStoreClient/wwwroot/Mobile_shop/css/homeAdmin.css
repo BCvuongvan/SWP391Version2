@@ -220,6 +220,7 @@
     padding: 5px 8px;
     background-color: rgba(0, 0, 0, .1);
 }
+
 .fancy-button {
     padding: 5px 15px;
     font-size: 15px;
@@ -232,16 +233,16 @@
     transition: all 0.3s ease;
     border-radius: 30px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .fancy-button:hover {
+}
+
+.fancy-button:hover {
     background: linear-gradient(45deg, #8811AA, #007BFF);
     transform: translateY(-5px);
-  }
-  
-  .fancy-button:active {
+}
+
+.fancy-button:active {
     transform: translateY(-1px);
-  }
+}
 
 @media (min-width: 992px) {
     .sidebar {
