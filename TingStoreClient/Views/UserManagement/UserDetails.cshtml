@@ -1,0 +1,261 @@
+@model User
+@{
+    ViewData["Title"] = "UserDetails";
+}
+<div id="content">
+    <div class="page-header">
+        <div class="container-fluid">
+            <div class="float-end">
+                <a asp-action="Index" data-bs-toggle="tooltip" title class="btn btn-light" data-bs-original-title="Back"
+                    aria-label="Back"><i class="fas fa-reply"></i></a>
+            </div>
+            <h1>Customers</h1>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-controller="HomeAdmin" asp-action="Index">Home</a></li>
+                <li class="breadcrumb-item"><a asp-action="Index">Customers</a></li>
+            </ol>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header"><i class="fas fa-pencil-alt"></i> Edit Customer</div>
+            <div class="card-body">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a href="#tab-general" data-bs-toggle="tab" class="nav-link active">General</a>
+                    </li>
+                    <li class="nav-item"><a href="#tab-history" data-bs-toggle="tab" class="nav-link">History Of
+                            Order</a></li>
+                    <li class="nav-item"><a href="#tab-transaction" data-bs-toggle="tab" class="nav-link">Feedback</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab-general" class="tab-pane active">
+                        <form id="form-customer" asp-action="UserDetails" method="post" data-oc-toggle="ajax"
+                            enctype="multipart/form-data">
+                            <fieldset>
+                                <legend>Customer Details</legend>
+                                <div class="row mb-3 required">
+                                    <label for="input-firstname" class="col-sm-2 col-form-label">Username</label>
+                                    <div class="col-sm-10">
+                                        <input readonly type="text" asp-for="userName" placeholder="First Name"
+                                            id="input-firstname" class="form-control">
+                                        <div id="error-firstname" class="invalid-feedback">
+                                            <span asp-validation-for="userName"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3 required">
+                                    <label for="input-firstname" class="col-sm-2 col-form-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" asp-for="email" placeholder="Email" id="input-firstname"
+                                            class="form-control">
+                                        <div id="error-firstname" class="invalid-feedback">
+                                            <span asp-validation-for="email"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3 required">
+                                    <label for="input-firstname" class="col-sm-2 col-form-label">Full Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" asp-for="fullName" placeholder="Full name"
+                                            id="input-firstname" class="form-control">
+                                        <div id="error-firstname" class="invalid-feedback">
+                                            <span asp-validation-for="fullName"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3 required">
+                                    <label for="input-firstname" class="col-sm-2 col-form-label">Phone Number</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" asp-for="phoneNumber" placeholder="Phone number"
+                                            id="input-firstname" class="form-control">
+                                        <div id="error-firstname" class="invalid-feedback">
+                                            <span asp-validation-for="phoneNumber"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3 required">
+                                    <label for="input-firstname" class="col-sm-2 col-form-label">Address</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" asp-for="address" placeholder="Address" id="input-firstname"
+                                            class="form-control">
+                                        <div id="error-firstname" class="invalid-feedback">
+                                            <span asp-validation-for="address"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3 required">
+                                    <label for="input-firstname" class="col-sm-2 col-form-label">Picture</label>
+                                    <div class="col-sm-10">
+                                        <input hidden type="text" asp-for="picture" placeholder="Address"
+                                            id="input-firstname" class="form-control">
+                                        <input type="file" name="UserPicture" id="input-firstname" class="form-control">
+                                        <img src="~/assets/User_Picture/@Model.picture" alt="">
+                                        <div id="error-firstname" class="invalid-feedback">
+                                            <span asp-validation-for="picture"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Time</legend>
+                                <div class="row mb-3 required">
+                                    <label for="input-firstname" class="col-sm-2 col-form-label">Date Create</label>
+                                    <div class="col-sm-10">
+                                        <input readonly type="datetime" asp-for="createdAt" value="@Model.createdAt"
+                                            placeholder="Address" id="input-firstname" class="form-control">
+                                        <div id="error-firstname" class="invalid-feedback">
+                                            <span asp-validation-for="createdAt"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3 required">
+                                    <label for="input-firstname" class="col-sm-2 col-form-label">Date Create</label>
+                                    <div class="col-sm-10">
+                                        <input readonly type="datetime" asp-for="updateAt" value="@Model.updateAt"
+                                            placeholder="Address" id="input-firstname" class="form-control">
+                                        <div id="error-firstname" class="invalid-feedback">
+                                            <span asp-validation-for="updateAt"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Password</legend>
+                                <div class="row mb-3 required">
+                                    <label for="input-password" class="col-sm-2 col-form-label">Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" asp-for="password" value="@Model.password"
+                                            placeholder="Password" id="input-password" class="form-control"
+                                            autocomplete="new-password">
+                                        <div id="error-password" class="invalid-feedback">
+                                            <span asp-validation-for="password"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Other</legend>
+                                <div class="row mb-3">
+                                    <label class="col-sm-2 col-form-label">Status</label>
+                                    <div class="col-sm-10">
+                                        <div class="form-check form-switch form-switch-lg">
+                                            <select asp-for="userType">
+                                                <option selected="@(Model.userType == 0)" value="-1">account Delete</option>
+                                                <option selected="@(Model.userType == 0)" value="0">Ban account</option>
+                                                <option selected="@(Model.userType == 1)" value="1">Admin</option>
+                                                <option selected="@(Model.userType == 2)" value="2">staff</option>
+                                                <option selected="@(Model.userType == 3)" value="3">Customer</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="save-button-container">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="tab-history" class="tab-pane">
+                        <fieldset>
+                            <legend>History Of Order(@Model.orders.Count)</legend>
+                            <div id="history">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <td class="text-start">No.</td>
+                                                <td class="text-start">Order Id</td>
+                                                <td class="text-start">Date Added</td>
+                                                <td class="text-start">Toltal Amount</td>
+                                                <td class="text-start">Status</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @{
+                                                int count = 0;
+                                            }
+                                            @foreach (var item in @Model.orders)
+                                            {
+                                                count++;
+                                                <td class="text-start">@count</td>
+                                                <td class="text-start">@item.orderId</td>
+                                                <td class="text-start">@item.orderDate</td>
+                                                <td class="text-start">@item.TotalAmount</td>
+                                                <td class="text-start"><a href="#">@item.orderStatus.statusName </a></td>
+                                            }
+                                            @if (count == 0)
+                                            {
+                                                <td class="text-center" colspan="5">No results!</td>
+                                                count = 0;
+                                            }
+                                            else
+                                            {
+                                                count = 0;
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 text-start"></div>
+                                    <div class="col-sm-6 text-end">Showing @Model.orders.Count of List Order</div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div id="tab-transaction" class="tab-pane">
+                        <fieldset>
+                            <legend>List of Feedback (@Model.feedbacks.Count)</legend>
+                            <div id="transaction">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <td class="text-start">No.</td>
+                                                <td class="text-start">Product</td>
+                                                <td class="text-start">Product Picture</td>
+                                                <td class="text-start">Feedback</td>
+                                                <td class="text-start">Rating</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+
+                                                @foreach (var item in Model.feedbacks)
+                                                {
+                                                    count++;
+                                                    <td class="text-start">@count</td>
+                                                    <td class="text-start">@item.product.proName</td>
+                                                    <td class="text-start d-none d-lg-table-cell"><img
+                                                            src="~/assets/Product_Images/@item.product.proImage"
+                                                            style="width: 200px; height: 200px;"
+                                                            alt="@item.product.proImage">
+                                                    </td>
+                                                    <td class="text-start">@item.comment</td>
+                                                    <td>@for (int i = 0; i < item.rating; i++)
+                                                        {
+                                                            <span class="fa fa-star checked"></span>
+                                                        }
+                                                    </td>
+                                                }
+                                                @if (count == 0)
+                                                {
+                                                    <td class="text-center" colspan="5">No results!</td>
+
+                                                }
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 text-start"></div>
+                                    <div class="col-sm-6 text-end">Showing @Model.feedbacks.Count of List Feedback</div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

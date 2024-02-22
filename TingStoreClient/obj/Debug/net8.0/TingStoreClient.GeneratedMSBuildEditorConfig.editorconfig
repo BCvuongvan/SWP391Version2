@@ -9,119 +9,111 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TingStoreClient
 build_property.RootNamespace = TingStoreClient
-build_property.ProjectDir = E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreClient\
+build_property.ProjectDir = D:\FPT\Summer2024_SE1708\TingStore\SWP391Version2\TingStoreClient\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreClient
+build_property.MSBuildProjectDirectory = D:\FPT\Summer2024_SE1708\TingStore\SWP391Version2\TingStoreClient
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Category/CreateCategory.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlQ2F0ZWdvcnkuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Category/DeleteCategory.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRGVsZXRlQ2F0ZWdvcnkuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Category/GetAllCategory.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcR2V0QWxsQ2F0ZWdvcnkuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Category/UpdateCategory.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcVXBkYXRlQ2F0ZWdvcnkuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/HomeAdmin/Index.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/HomeAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZUFkbWluXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Home/Index.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Home/ManagementProductDetail.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Home/ManagementProductDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYW5hZ2VtZW50UHJvZHVjdERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Home/Privacy.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Product/CreateProduct.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Product/CreateProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDcmVhdGVQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Product/DeleteProduct.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Product/DeleteProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGVQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Product/GetProductsByCategory.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Product/GetProductsByCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxHZXRQcm9kdWN0c0J5Q2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Product/ListProduct.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Product/ListProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxMaXN0UHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Product/ManagementProductDetail.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Product/ManagementProductDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxNYW5hZ2VtZW50UHJvZHVjdERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Product/UpdateProduct.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Product/UpdateProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxVcGRhdGVQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Product/UpdateProductHighlightFeaturesDetail.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Product/UpdateProductHighlightFeaturesDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxVcGRhdGVQcm9kdWN0SGlnaGxpZ2h0RmVhdHVyZXNEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Product/UpdateProductInfomationDetail.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Product/UpdateProductInfomationDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxVcGRhdGVQcm9kdWN0SW5mb21hdGlvbkRldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Product/UpdateProductTechnicalSpecsDetail.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Product/UpdateProductTechnicalSpecsDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxVcGRhdGVQcm9kdWN0VGVjaG5pY2FsU3BlY3NEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Shared/Error.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Shared/_HomePage.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Shared/_HomePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ib21lUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Shared/_Layout.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Shared/_ListProduct.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Shared/_ListProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MaXN0UHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Shared/_ManagementProduct.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Shared/_ManagementProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYW5hZ2VtZW50UHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Shared/_ProductDetail.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Shared/_ProductDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdWN0RGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/UserManagement/Index.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/UserManagement/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZW1lbnRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/UserManagement/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZW1lbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/_ViewImports.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/UserManagement/UserDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZW1lbnRcVXNlckRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/FPT/00_Ky_5/SWP391/1project/SWP391Version2/TingStoreClient/Views/_ViewStart.cshtml]
+[D:/FPT/Summer2024_SE1708/TingStore/SWP391Version2/TingStoreClient/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

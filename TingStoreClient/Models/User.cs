@@ -30,6 +30,7 @@ namespace TingStoreClient.Models
         [DisplayName("Phone number")]
         public String phoneNumber { get; set; }
 
+        [Required(ErrorMessage =("Please enter Address!"))]
         [DisplayName("Address")]
         public String address { get; set; }
 

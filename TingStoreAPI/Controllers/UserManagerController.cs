@@ -25,38 +25,50 @@ namespace TingStoreAPI.Controllers
             return Ok(ListOfUser);
         }
 
-        [HttpGet("{inputName}")]
-        public IActionResult GetUserByUsername(string inputName)
+        [HttpGet("{id}")]
+        public IActionResult GetUserByUsername(string id)
         {
-            var user = this._db.users.Include(u => u.orders).Include(u => u.feedbacks).Where(u => u.userName == inputName).Select(u => new
-            {
-                u.userName,
-                u.email,
-                u.password,
-                u.fullName,
-                u.phoneNumber,
-                u.address,
-                u.picture,
-                u.createdAt,
-                u.updateAt,
-                u.userType,
-                Feedback = u.feedbacks.Select(f => new
-                {
-                    f.proId,
-                    f.product.proName,
-                    f.product.proPrice
-                }),
-                Orser = u.orders.Select(o => new
-                {
-                    o.orderId,
-                    o.orderDate,
-                    o.TotalAmount,
-                    o.orderStatusId,
-                    o.orderStatus.statusName
-                })
-            });
+            var user = this._db.users
+        .Include(u => u.orders)
+            .ThenInclude(o => o.orderStatus)
+        .Include(u => u.feedbacks)
+            .ThenInclude(f => f.product)
+        .FirstOrDefault(u => u.userName == id);
             return Ok(user);
         }
+
+        [HttpPost]
+        public IActionResult AddUser(User user)
+        {
+            if (user == null)
+            {
+                return BadRequest("User can't be null");
+            }
+            this._db.users.Add(new User(user.userName, user.email, user.password, user.fullName, user.phoneNumber, user.address, user.picture, user.createdAt, user.updateAt, user.userType));
+            this._db.SaveChanges();
+            // return CreatedAtRoute("GetUserByUsername", new { id = user.userName }, user);
+            return Ok(user);
+        }
+
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateUsername(string id, User user)
+        {
+            if (user == null)
+            {
+                return BadRequest("User can't be null");
+            }
+            User obj = this._db.users.AsNoTracking().FirstOrDefault(u => u.userName.Equals(id));
+            if (obj == null)
+            {
+                return NotFound("Could not be found");
+            }
+            this._db.users.Update(new User(user.userName, user.email, user.password, user.fullName, user.phoneNumber, user.address, user.picture, user.createdAt, user.updateAt, user.userType));
+            this._db.SaveChanges();
+            // return CreatedAtRoute("GetUserByUsername", new { id = user.userName }, user);
+            return Ok(user);
+        }
+
 
     }
 }
