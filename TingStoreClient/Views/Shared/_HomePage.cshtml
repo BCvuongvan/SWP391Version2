@@ -26,6 +26,45 @@
 </head>
 
 <body>
+
+    <style>
+        .dropdown-toggle {
+            font-size: 16px;
+            color: #333;
+            padding: 5px 10px;
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-toggle:focus {
+            outline: none;
+            border-color: #66afe9;
+        }
+
+        .dropdown-toggle {
+            position: relative;
+        }
+
+        .dropdown-toggle:after {
+            content: '\25BC';
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .dropdown-item {
+            text-decoration: none;
+            /* Loại bỏ gạch chân */
+            font-size: 18px;
+            /* Chữ to hơn */
+            margin-bottom: 10px;
+            /* Khoảng cách giữa các mục */
+        }
+    </style>
     <!-- preloader start  -->
     <div id="spinners">
         <div id="preloader_1">
@@ -55,14 +94,66 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- <li class="active"><a href="index.html">Home</a></li> -->
-                    <li><a href="">Product</a></li>
-                    <li><a href="">Accesstory</a></li>
+                    <li class="active"><a>Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Danh mục
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="dropdown-submenu dropright">
+                                <a class="dropdown-item" href="#" style="font-size: 17px; margin-bottom: -5px;"><i class="fa fa-mobile-alt"
+                                        style="margin-left: -10px; margin-right: 10px;"></i>Điện Thoại
+                                    <i class="fa fa-angle-right" aria-hidden="true" style="float: right;"></i></a>
+                                <ul class="dropdown-menu" style="width: 450px;">
+                                    <div style="display: flex; flex-wrap: wrap; margin-left: 15px;">
+                                        <div style="flex: 1;">
+                                            <li>
+                                                <p style="font-size: 17px;"><strong>Thương hiệu điện thoại</strong></p>
+                                            </li>
+                                            @if (ViewBag.cateList != null)
+                                            {
+                                                foreach (var category in ViewBag.cateList)
+                                                {
+                                                    <li><a class="dropdown-item"
+                                                            href="@Url.Action("ProductsByCategoryID", "Home", new { cateId = category.cateId })"
+                                                            style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">@category.cateName</a>
+                                                    </li>
+                                                }
+                                            }
+                                             <li><a asp-controller="Home" asp-action="Index" class="dropdown-item" style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Tất cả thương hiệu</a>
+                                                    </li>
+                                        </div>
+                                        <div style="flex: 1; margin-right: -100px;">
+                                            <li>
+                                                <p style="font-size: 17px;"><strong>Mức giá điện thoại</strong></p>
+                                            </li>
+                                            <li><a href="#" class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">5tr-10tr</a>
+                                            </li>
+                                            <li><a href="#" class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">11tr-15tr</a>
+                                            </li>
+                                            <li><a href="#" class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">16tr-20tr</a>
+                                            </li>
+                                            <li><a href="#" class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">21tr-25tr</a>
+                                            </li>
+
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <li><a href="">Sale</a></li>
-                    <!-- <li><a href="">Feedback</a></li> -->
                     <li><a href="">News</a></li>
-                    <!-- <li><a href="">Setting</a></li> -->
-                    <li><a href="">Support</a></li>
                     <li>
                         <form class="navbar-form nav_margin" role="search">
                             <div class="input-group">
@@ -76,6 +167,8 @@
                     </li>
                     <li><a href="signup.html"><i class="fas fa-shopping-cart" style="margin-top: 4px;"></i></a></li>
                     <li><a href="login.html"><i class="fa-solid fa-user" style="margin-top: 4px;"></i> <br>
+                        </a></li>
+                    <li><a href="#"> <i class="fa fa-sign-out" style="margin-top: 4px;"></i> Logout <br>
                         </a></li>
                 </ul>
             </div>
@@ -199,6 +292,44 @@
 
     <script type="text/javascript" src="~/Mobile_shop/js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="~/Mobile_shop/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-submenu a.dropdown-toggle').on("mouseenter", function (e) {
+                $(this).next('ul').toggle();
+                e.stopPropagation();
+                e.preventDefault();
+            });
+
+            $('.dropdown-submenu').on("mouseleave", function (e) {
+                $(this).find('.dropdown-menu').hide();
+                e.stopPropagation();
+            });
+        });
+        $(document).ready(function () {
+            // Khi người dùng di chuyển chuột vào liên kết "Điện Thoại"
+            $('.dropdown-submenu a.dropdown-item').on("mouseenter", function (e) {
+                // Tìm menu con và thay đổi trạng thái hiển thị của nó
+                $(this).next('.dropdown-menu').toggle();
+                e.stopPropagation();
+            });
+
+            // Khi người dùng di chuyển chuột ra khỏi menu con "Điện Thoại"
+            $('.dropdown-submenu').on("mouseleave", function (e) {
+                // Ẩn menu con
+                $(this).find('.dropdown-menu').hide();
+            });
+        });
+        function updateSortOrder(sortOrder) {
+            let currentUrl = new URL(window.location.href);
+            let cateId = currentUrl.searchParams.get("cateId");
+            let newUrl = `${window.location.origin}${window.location.pathname}?cateId=${cateId}&sortOrder=${sortOrder}`;
+            window.location.href = newUrl;
+        }
+
+    </script>
+
+
     <script type="text/javascript" src="~/Mobile_shop/js/slick.min.js"></script>
     <script src="~/Mobile_shop/js/venobox.min.js"></script>
     <script type="text/javascript" src="~/Mobile_shop/js/custom.js"></script>

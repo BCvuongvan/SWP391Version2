@@ -1,0 +1,7 @@
+Kích thước màn hình: 7.6 inches
+Công nghệ màn hình: Dynamic AMOLED 2X
+Camera sau: Camera siêu rộng: 12MP F2.2, 123°, 1.12μm
+Camera góc rộng: 50MP, F1.8, Dual Pixel AF, OIS, 2.0μm
+Camera Tele: 10 MP, F2.4, PDAF, OIS, 1.0μm, zoom 3X, zoom kỹ thuật số 30X
+Camera trước: Camera bên ngoài:10 MP, f/2.2
+Camera bên trong: 4 MP, F1.8
