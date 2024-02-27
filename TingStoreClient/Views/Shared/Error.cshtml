@@ -1,4 +1,6 @@
-﻿@model ErrorViewModel
+﻿@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@model ErrorViewModel
 @{
     ViewData["Title"] = "Error";
 }

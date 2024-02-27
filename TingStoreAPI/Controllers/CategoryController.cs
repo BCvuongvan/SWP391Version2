@@ -93,6 +93,17 @@ namespace TingStoreAPI.Controllers
             return Ok(cate);
         }
 
+        [HttpGet("ProductsByCategoryID/{categoryId}")]
+        public ActionResult<IEnumerable<Product>> GetProductsByCategory(int categoryId)
+        {
+            var products = _db.products.Where(p => p.cateId == categoryId).ToList();
+            var productList = _db.products.Include(p => p.category).ToList();
+            if (products == null)
+            {
+                return NotFound();
+            }
+            return Ok(products);
+        }
 
 
     }
