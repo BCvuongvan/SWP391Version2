@@ -30,7 +30,39 @@ namespace TingStoreClient.Controllers
             this.api = "https://localhost:5001/api/Product";
         }
 
-        public async Task<IActionResult> Index(string sortOrder)
+        private async Task GetCategoriesAsync()
+        {
+            HttpResponseMessage response = await client.GetAsync("https://localhost:5001/api/Category");
+            String data = await response.Content.ReadAsStringAsync();
+
+            var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            List<Category> list = JsonSerializer.Deserialize<List<Category>>(data, option);
+            ViewBag.cateList = list;
+        }
+        public async Task<IActionResult> ProductsByCategoryID(int cateId, string sortOrder)
+        {
+            HttpResponseMessage response = await client.GetAsync(api);
+
+            string data = await response.Content.ReadAsStringAsync();
+            var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            List<Product> list = JsonSerializer.Deserialize<List<Product>>(data, option);
+            List<Product> listProductByCategory = list.Where(p => p.cateId == cateId).ToList();
+           switch (sortOrder)
+            {
+                case "asc":
+                    listProductByCategory = listProductByCategory.OrderBy(p => p.proPrice).ToList();
+                    break;
+                case "desc":
+                    listProductByCategory = listProductByCategory.OrderByDescending(p => p.proPrice).ToList();
+                    break;
+                default: break;
+            }
+            await GetCategoriesAsync();
+            ViewBag.CurrentSortOrder = sortOrder;
+            return View("Index", listProductByCategory);
+        }
+
+        public async Task<IActionResult> Index(string sortOrder, bool redirectToHomePage = false)
         {
             HttpResponseMessage response = await client.GetAsync(api);
             string data = await response.Content.ReadAsStringAsync();
@@ -47,6 +79,8 @@ namespace TingStoreClient.Controllers
                     break;
                 default: break;
             }
+            await GetCategoriesAsync();
+            ViewBag.Categories = ViewBag.cateList;
             ViewBag.CurrentSortOrder = sortOrder;
             return View(productList);
         }
