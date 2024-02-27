@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj": {}
+    "H:\\Ky5\\SWP\\projectv2cuav4\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj": {}
   },
   "projects": {
-    "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj": {
+    "H:\\Ky5\\SWP\\projectv2cuav4\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
+        "projectUniqueName": "H:\\Ky5\\SWP\\projectv2cuav4\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
         "projectName": "TingStoreAPI",
-        "projectPath": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreAPI\\obj\\",
+        "projectPath": "H:\\Ky5\\SWP\\projectv2cuav4\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "H:\\Ky5\\SWP\\projectv2cuav4\\SWP391Version2\\TingStoreAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

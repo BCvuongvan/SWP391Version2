@@ -1,6 +1,6 @@
 @model List<TingStoreClient.Models.Order>
 @{
-    ViewData["Title"] = "GetAllOrder";
+    ViewData["Title"] = "TotalInfor";
 }
 <link rel="stylesheet" href="~/Mobile_shop/css/totalOrders.css">
 <style>
@@ -156,17 +156,18 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="alert alert-primary" role="alert">
-                                            Orders Waitting: <strong>@ViewBag.countAllOrder</strong>
+                                            Total Orders: 
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="alert alert-success" role="alert">
-                                            Orders Successful: <strong>@ViewBag.countOrderSuccessful</strong>
+                                            Orders Successful: 
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="alert alert-danger" role="alert">
-                                            Orders Rejected: <strong>@ViewBag.countOrderReject</strong>
+                                            Total Revenue: 
+                                            @ViewBag.content
                                         </div>
                                     </div>
                                 </div>

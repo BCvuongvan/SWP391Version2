@@ -35,7 +35,18 @@ namespace TingStoreClient
                 options.Cookie.IsEssential = true;
             });
 
+            services.AddHttpClient();
             services.AddControllersWithViews();
+            services.AddCors(options =>
+{
+    options.AddPolicy("AllowOrigin",
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:6001")
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,6 +64,8 @@ namespace TingStoreClient
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseCors("AllowOrigin");
 
             app.UseRouting();
 

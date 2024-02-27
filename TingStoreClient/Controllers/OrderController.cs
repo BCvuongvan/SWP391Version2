@@ -17,11 +17,13 @@ namespace TingStoreClient.Controllers
     [Route("[controller]")]
     public class OrderController : Controller
     {
+        private readonly IHttpClientFactory _httpClientFactory;
         private readonly HttpClient client = null;
 
         private string orderApi;
-        public OrderController()
+        public OrderController(IHttpClientFactory httpClientFactory)
         {
+            _httpClientFactory = httpClientFactory;
             client = new HttpClient();
             var contentType = new MediaTypeWithQualityHeaderValue("application/json");
             client.DefaultRequestHeaders.Accept.Add(contentType);
@@ -160,6 +162,59 @@ namespace TingStoreClient.Controllers
                 return View(orderList);
             }
             return NotFound();
+        }
+        public async Task<IActionResult> TotalInfor()
+        {
+            try
+            {
+                var viewModel = new TotalInforViewModel
+                {
+                    TotalRevenue = await GetTotalRevenue(),
+                };
+
+                return View(viewModel); // Trả về view với dữ liệu viewModel
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi tại đây
+                Console.WriteLine($"Error in TotalInfor: {ex.Message}");
+                return BadRequest(new { Message = "Error while fetching total information.", Error = ex.Message });
+            }
+        }
+        private async Task<decimal> GetTotalRevenue()
+        {
+            var client = _httpClientFactory.CreateClient();
+            var response = await client.GetAsync("https://localhost:5001/api/Total/GetTotalRevenue");
+            response.EnsureSuccessStatusCode();
+            var content = await response.Content.ReadAsStringAsync();
+            Console.WriteLine(content);
+            ViewBag.content = content;
+            return System.Text.Json.JsonSerializer.Deserialize<decimal>(content);
+        }
+        private async Task<int> GetTotalOrders()
+        {
+            try
+            {
+                using var client = _httpClientFactory.CreateClient();
+                var response = await client.GetAsync("https://localhost:5001/api/Total/GetTotalOrders");
+                response.EnsureSuccessStatusCode();
+                var content = await response.Content.ReadAsStringAsync();
+
+                if (int.TryParse(content, out int confirmedOrders))
+                {
+                    return confirmedOrders;
+                }
+                else
+                {
+                    Console.WriteLine("Error: JSON value is not a valid integer");
+                    return 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in GetTotalProducts: {ex.Message}");
+                return 0;
+            }
         }
     }
 }
