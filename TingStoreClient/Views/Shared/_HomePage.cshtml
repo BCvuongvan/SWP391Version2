@@ -1,3 +1,5 @@
+@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 @{
     ViewData["Title"] = "_HomePage";
 }
@@ -103,7 +105,8 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li class="dropdown-submenu dropright">
-                                <a class="dropdown-item" href="#" style="font-size: 17px; margin-bottom: -5px;"><i class="fa fa-mobile-alt"
+                                <a class="dropdown-item" href="#" style="font-size: 17px; margin-bottom: -5px;"><i
+                                        class="fa fa-mobile-alt"
                                         style="margin-left: -10px; margin-right: 10px;"></i>Điện Thoại
                                     <i class="fa fa-angle-right" aria-hidden="true" style="float: right;"></i></a>
                                 <ul class="dropdown-menu" style="width: 450px;">
@@ -122,8 +125,10 @@
                                                     </li>
                                                 }
                                             }
-                                             <li><a asp-controller="Home" asp-action="Index" class="dropdown-item" style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Tất cả thương hiệu</a>
-                                                    </li>
+                                            <li><a asp-controller="Home" asp-action="Index" class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Tất
+                                                    cả thương hiệu</a>
+                                            </li>
                                         </div>
                                         <div style="flex: 1; margin-right: -100px;">
                                             <li>
@@ -165,11 +170,19 @@
                             </div>
                         </form>
                     </li>
-                    <li><a href="signup.html"><i class="fas fa-shopping-cart" style="margin-top: 4px;"></i></a></li>
-                    <li><a href="login.html"><i class="fa-solid fa-user" style="margin-top: 4px;"></i> <br>
-                        </a></li>
-                    <li><a href="#"> <i class="fa fa-sign-out" style="margin-top: 4px;"></i> Logout <br>
-                        </a></li>
+                    @if (@HttpContextAccessor.HttpContext.Session.GetString("_user") != null)
+                    {
+                        <li><a href="signup.html"><i class="fas fa-shopping-cart" style="margin-top: 4px;"></i></a></li>
+                        <li><a href="login.html"><i class="fa-solid fa-user" style="margin-top: 4px;"></i> <br></a></li>
+                        <li><a asp-controller="Auth" asp-action="Logout">Logout <i class="fa-solid fa-right-from-bracket"
+                                    style="margin-top: 4px;"></i> <br></a></li>
+                    }
+                    else
+                    {
+
+                        <li><a asp-controller="Auth" asp-action="Login"><i class="fa-solid fa-right-to-bracket"
+                                    style="margin-top: 4px;"></i> Login</a></li>
+                    }
                 </ul>
             </div>
         </div>
@@ -333,6 +346,7 @@
     <script type="text/javascript" src="~/Mobile_shop/js/slick.min.js"></script>
     <script src="~/Mobile_shop/js/venobox.min.js"></script>
     <script type="text/javascript" src="~/Mobile_shop/js/custom.js"></script>
+    <script src="https://kit.fontawesome.com/8143c9cd7e.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

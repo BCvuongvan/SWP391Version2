@@ -1,0 +1,146 @@
+@model User
+@{
+    ViewData["Title"] = "Index";
+}
+
+<html>
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Import font Montserrat từ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* Thiết lập font-family cho toàn bộ trang web */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navy-text {
+            color: navy;
+        }
+    </style>
+</head>
+
+
+<body>
+    <hr>
+    <div class="container bootstrap snippet">
+        <div class="row">
+            <div class="col-sm-10">
+                <h1 class="text-center navy-text">Profile Admin</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-sm-3">
+            <!--left col-->
+            <div class="text-center">
+                <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="rounded-circle img-thumbnail"
+                    alt="avatar">
+
+                <h6 style="margin-top: 10px;">Upload a different photo...</h6>
+                <input type="file" class="text-center center-block file-upload">
+            </div>
+            <hr><br>
+            <div class="panel panel-default">
+                <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i></div>
+                <div class="panel-body"><a href="http://bootnipets.com">bootnipets.com</a></div>
+            </div>
+        </div><!--/col-3-->
+        <div class="col-sm-9">
+            <div class="tab-content">
+                <hr>
+                <form class="form" action="##" method="post" id="registrationForm">
+                    <div class="row">
+                        <div class="col-md-6">
+
+                           <div class="form-group">
+                                <label for="phone">
+                                    <h4>Full Name</h4>
+                                </label>
+                                <input type="text" asp-for="fullName" placeholder="Full name" id="input-firstname"
+                                    class="form-control">
+                                <div id="error-firstname" class="invalid-feedback">
+                                    <span asp-validation-for="fullName"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-firstname">
+                                    <h4>Email</h4>
+                                </label>
+                                <input type="text" asp-for="email" placeholder="Email" id="input-firstname"
+                                    class="form-control">
+                                <div id="error-firstname" class="invalid-feedback">
+                                    <span asp-validation-for="email"></span>
+                                </div>
+                            </div>
+
+                            
+                            <div class="form-group">
+                                <label for="password">
+                                    <h4>Address</h4>
+                                </label>
+                                <input type="text" asp-for="address" placeholder="Address" id="input-firstname"
+                                    class="form-control">
+                                <div id="error-firstname" class="invalid-feedback">
+                                    <span asp-validation-for="address"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirm">
+                                    <h4>Phone Number</h4>
+                                </label>
+                                <input type="text" asp-for="phoneNumber" placeholder="Phone number" id="input-firstname"
+                                    class="form-control">
+                                <div id="error-firstname" class="invalid-feedback">
+                                    <span asp-validation-for="phoneNumber"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            
+                             <div class="form-group">
+                                <label for="input-firstname">
+                                    <h4>Username</h4>
+                                </label>
+                                <input readonly type="text" asp-for="userName" placeholder="First Name"
+                                    id="input-firstname" class="form-control">
+                                <div id="error-firstname" class="invalid-feedback">
+                                    <span asp-validation-for="userName"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="username">
+                                    <h4>Password</h4>
+                                </label>
+                                <input type="password" asp-for="password" value="@Model.password" placeholder="Password"
+                                    id="input-password" class="form-control" >
+                                <div id="error-password" class="invalid-feedback">
+                                    <span asp-validation-for="password"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div><!--/col-9-->
+    </div><!--/row-->
+</body>
+
+</html>

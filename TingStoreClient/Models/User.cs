@@ -18,19 +18,19 @@ namespace TingStoreClient.Models
         [DisplayName("Email")]
         public String email { get; set; }
 
-        [Required(ErrorMessage =("Please enter your password!"))]
+        [Required(ErrorMessage = ("Please enter your password!"))]
         [DisplayName("Password")]
         public String password { get; set; }
 
-        [Required(ErrorMessage =("Please enter your Fullname!"))]
+        [Required(ErrorMessage = ("Please enter your Fullname!"))]
         [DisplayName("Fullname")]
         public String fullName { get; set; }
 
-        [Required(ErrorMessage =("Please enter your Phonenumber!"))]
+        [Required(ErrorMessage = ("Please enter your Phonenumber!"))]
         [DisplayName("Phone number")]
         public String phoneNumber { get; set; }
 
-        [Required(ErrorMessage =("Please enter Address!"))]
+        [Required(ErrorMessage = ("Please enter Address!"))]
         [DisplayName("Address")]
         public String address { get; set; }
 
@@ -49,5 +49,24 @@ namespace TingStoreClient.Models
         public ICollection<Order> orders { get; set; }
         public ICollection<Feedback> feedbacks { get; set; }
         public ICollection<Cart> carts { get; set; }
+
+        public User()
+        {
+            
+        }
+        public User(String userName, String email, String password, String fullName, String phoneNumber, String address, String picture, DateTime createdAt, DateTime updateAt, int userType)
+        {
+            this.userName = userName;
+            this.email = email;
+            this.password = password;
+            this.fullName = fullName;
+            this.phoneNumber = phoneNumber;
+            this.address = address;
+            this.picture = picture;
+            this.createdAt = createdAt;
+            this.updateAt = updateAt;
+            this.userType = userType;
+
+        }
     }
 }

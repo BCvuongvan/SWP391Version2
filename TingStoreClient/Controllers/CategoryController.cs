@@ -114,5 +114,6 @@ namespace TingStoreClient.Controllers
             }
             return RedirectToAction("GetAllCategory");
         }
+
     }
 }

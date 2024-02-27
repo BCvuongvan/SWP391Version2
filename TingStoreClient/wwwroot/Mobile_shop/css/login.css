@@ -95,3 +95,17 @@ a {
     margin-top: 360px;
     margin-left: 28px;
 }
+
+.img_box {
+    position: relative; /* Ensure relative positioning for the container */
+}
+
+.fa.fa-times {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff; /* Adjust color as needed */
+    cursor: pointer; /* Add cursor style to indicate it's clickable */
+    font-size: 20px;
+    z-index: 999; /* Ensure it's above other elements */
+}
