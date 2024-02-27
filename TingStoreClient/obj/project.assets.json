@@ -1201,19 +1201,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
+    "C:\\Users\\ACER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
+      "projectUniqueName": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
       "projectName": "TingStoreClient",
-      "projectPath": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\obj\\",
+      "projectPath": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1269,16 +1269,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj": {}
+    "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj": {}
   },
   "projects": {
-    "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj": {
+    "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
+        "projectUniqueName": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
         "projectName": "TingStoreAPI",
-        "projectPath": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreAPI\\obj\\",
+        "projectPath": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
