@@ -35,6 +35,16 @@ namespace TingStoreAPI
             .AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
             services.AddControllers();
+            services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader();
+        });
+});
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TingStoreAPI", Version = "v1" });
@@ -53,9 +63,13 @@ namespace TingStoreAPI
 
             app.UseHttpsRedirection();
 
+            app.UseCors("AllowAll");
+
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

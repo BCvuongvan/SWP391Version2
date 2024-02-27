@@ -1,0 +1,496 @@
+@model TingStoreClient.Models.RevenueViewModel
+
+@{
+    ViewData["Title"] = "Revenue";
+}
+@if (Model != null)
+{
+    <script>
+        $(document).ready(function () {
+            // Sử dụng dữ liệu từ Model thay vì ViewBag
+            var dailyRevenue = "@Html.Raw(Model.DailyRevenue)";
+            var monthlyRevenue = "@Html.Raw(Model.MonthlyRevenue)";
+            var yearlyRevenue = "@Html.Raw(Model.YearlyRevenue)";
+
+
+            // Hiển thị dữ liệu vào các id tương ứng
+            $("#dailyRevenue").text(dailyRevenue);
+            $("#monthlyRevenue").text(monthlyRevenue);
+            $("#yearlyRevenue").text(yearlyRevenue);
+        });
+    </script>
+}
+
+
+<!-- Sale & Revenue Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-chart-line fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">Total Revenue</p>
+                    <h6 id="totalRevenue" class="mb-0">@ViewBag.CalculateTotalRevenue</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">Daily Revenue</p>
+                    <h6 id="dailyRevenue" class="mb-0">@ViewBag.DailyRevenue</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">Monthly Revenue</p>
+                    <h6 id="monthlyRevenue" class="mb-0">@ViewBag.MonthlyRevenue</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-chart-area fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">Yearly Revenue</p>
+                    <h6 id="yearlyRevenue" class="mb-0">@ViewBag.YearlyRevenue</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Sale & Revenue End -->
+
+
+<!-- Sales Chart Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-6">
+            <div class="bg-light text-center rounded p-4">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                <h6 class="mb-0">Orders Revenue</h6>
+                @* <a href="">Show All</a> *@
+                </div>
+                <canvas id="orders-revenue"></canvas>
+            </div>
+        </div>
+        <div class="col-sm-12 col-xl-6">
+            <div class="bg-light text-center rounded p-4">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h6 class="mb-0">Yearly Revenue</h6>
+                    @* <a href="">Show All</a> *@
+                </div>
+                <canvas id="yearly-revenue"></canvas>
+            </div>
+        </div>
+        <div class="col-sm-12 col-xl-6">
+            <div class="bg-light text-center rounded p-4">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h6 class="mb-0">Users Revenue</h6>
+                    @* <a href="">Show All</a> *@
+                </div>
+                <canvas id="users-revenue"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Sales Chart End -->
+
+<!-- Recent Sales Start -->
+@* <div class="container-fluid pt-4 px-4">
+<div class="bg-light text-center rounded p-4">
+<div class="d-flex align-items-center justify-content-between mb-4">
+<h6 class="mb-0">Recent Salse</h6>
+<a href="">Show All</a>
+</div>
+<div class="table-responsive">
+<table class="table text-start align-middle table-bordered table-hover mb-0">
+<thead>
+<tr class="text-dark">
+<th scope="col"><input class="form-check-input" type="checkbox"></th>
+<th scope="col">Date</th>
+<th scope="col">Invoice</th>
+<th scope="col">Customer</th>
+<th scope="col">Amount</th>
+<th scope="col">Status</th>
+<th scope="col">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><input class="form-check-input" type="checkbox"></td>
+<td>01 Jan 2045</td>
+<td>INV-0123</td>
+<td>Jhon Doe</td>
+<td>$123</td>
+<td>Paid</td>
+<td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+</tr>
+<tr>
+<td><input class="form-check-input" type="checkbox"></td>
+<td>01 Jan 2045</td>
+<td>INV-0123</td>
+<td>Jhon Doe</td>
+<td>$123</td>
+<td>Paid</td>
+<td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+</tr>
+<tr>
+<td><input class="form-check-input" type="checkbox"></td>
+<td>01 Jan 2045</td>
+<td>INV-0123</td>
+<td>Jhon Doe</td>
+<td>$123</td>
+<td>Paid</td>
+<td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+</tr>
+<tr>
+<td><input class="form-check-input" type="checkbox"></td>
+<td>01 Jan 2045</td>
+<td>INV-0123</td>
+<td>Jhon Doe</td>
+<td>$123</td>
+<td>Paid</td>
+<td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+</tr>
+<tr>
+<td><input class="form-check-input" type="checkbox"></td>
+<td>01 Jan 2045</td>
+<td>INV-0123</td>
+<td>Jhon Doe</td>
+<td>$123</td>
+<td>Paid</td>
+<td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Recent Sales End -->
+
+
+<!-- Widgets Start -->
+<div class="container-fluid pt-4 px-4">
+<div class="row g-4">
+<div class="col-sm-12 col-md-6 col-xl-4">
+<div class="h-100 bg-light rounded p-4">
+<div class="d-flex align-items-center justify-content-between mb-2">
+<h6 class="mb-0">Messages</h6>
+<a href="">Show All</a>
+</div>
+<div class="d-flex align-items-center border-bottom py-3">
+<img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
+style="width: 40px; height: 40px;">
+<div class="w-100 ms-3">
+<div class="d-flex w-100 justify-content-between">
+<h6 class="mb-0">Jhon Doe</h6>
+<small>15 minutes ago</small>
+</div>
+<span>Short message goes here...</span>
+</div>
+</div>
+<div class="d-flex align-items-center border-bottom py-3">
+<img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
+style="width: 40px; height: 40px;">
+<div class="w-100 ms-3">
+<div class="d-flex w-100 justify-content-between">
+<h6 class="mb-0">Jhon Doe</h6>
+<small>15 minutes ago</small>
+</div>
+<span>Short message goes here...</span>
+</div>
+</div>
+<div class="d-flex align-items-center border-bottom py-3">
+<img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
+style="width: 40px; height: 40px;">
+<div class="w-100 ms-3">
+<div class="d-flex w-100 justify-content-between">
+<h6 class="mb-0">Jhon Doe</h6>
+<small>15 minutes ago</small>
+</div>
+<span>Short message goes here...</span>
+</div>
+</div>
+<div class="d-flex align-items-center pt-3">
+<img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
+style="width: 40px; height: 40px;">
+<div class="w-100 ms-3">
+<div class="d-flex w-100 justify-content-between">
+<h6 class="mb-0">Jhon Doe</h6>
+<small>15 minutes ago</small>
+</div>
+<span>Short message goes here...</span>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-md-6 col-xl-4">
+<div class="h-100 bg-light rounded p-4">
+<div class="d-flex align-items-center justify-content-between mb-4">
+<h6 class="mb-0">Calender</h6>
+<a href="">Show All</a>
+</div>
+<div id="calender"></div>
+</div>
+</div>
+<div class="col-sm-12 col-md-6 col-xl-4">
+<div class="h-100 bg-light rounded p-4">
+<div class="d-flex align-items-center justify-content-between mb-4">
+<h6 class="mb-0">To Do List</h6>
+<a href="">Show All</a>
+</div>
+<div class="d-flex mb-2">
+<input class="form-control bg-transparent" type="text" placeholder="Enter task">
+<button type="button" class="btn btn-primary ms-2">Add</button>
+</div>
+<div class="d-flex align-items-center border-bottom py-2">
+<input class="form-check-input m-0" type="checkbox">
+<div class="w-100 ms-3">
+<div class="d-flex w-100 align-items-center justify-content-between">
+<span>Short task goes here...</span>
+<button class="btn btn-sm"><i class="fa fa-times"></i></button>
+</div>
+</div>
+</div>
+<div class="d-flex align-items-center border-bottom py-2">
+<input class="form-check-input m-0" type="checkbox">
+<div class="w-100 ms-3">
+<div class="d-flex w-100 align-items-center justify-content-between">
+<span>Short task goes here...</span>
+<button class="btn btn-sm"><i class="fa fa-times"></i></button>
+</div>
+</div>
+</div>
+<div class="d-flex align-items-center border-bottom py-2">
+<input class="form-check-input m-0" type="checkbox" checked>
+<div class="w-100 ms-3">
+<div class="d-flex w-100 align-items-center justify-content-between">
+<span><del>Short task goes here...</del></span>
+<button class="btn btn-sm text-primary"><i class="fa fa-times"></i></button>
+</div>
+</div>
+</div>
+<div class="d-flex align-items-center border-bottom py-2">
+<input class="form-check-input m-0" type="checkbox">
+<div class="w-100 ms-3">
+<div class="d-flex w-100 align-items-center justify-content-between">
+<span>Short task goes here...</span>
+<button class="btn btn-sm"><i class="fa fa-times"></i></button>
+</div>
+</div>
+</div>
+<div class="d-flex align-items-center pt-2">
+<input class="form-check-input m-0" type="checkbox">
+<div class="w-100 ms-3">
+<div class="d-flex w-100 align-items-center justify-content-between">
+<span>Short task goes here...</span>
+<button class="btn btn-sm"><i class="fa fa-times"></i></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> *@
+<!-- Widgets End -->
+
+</div>
+<!-- Content End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+</div>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+@* <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> *@
+
+<script src="lib/chart/chart.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+<!-- Thêm dropdown list để chọn năm -->
+<select id="yearSelect" onchange="onYearChange()">
+    <option value="2023">2023</option>
+    <option value="2024">2024</option>
+    <option value="2025">2025</option>
+    <!-- Thêm các năm khác nếu cần -->
+</select>
+
+<!-- Thêm canvas để vẽ biểu đồ -->
+<canvas id="yearly-revenue"></canvas>
+<script>
+    // Function to fetch yearly revenue data from API and draw chart
+    async function drawYearlyRevenueChart(year) {
+        try {
+            const response = await fetch(`https://localhost:5001/api/Revenue/yearly-revenue/${year}`); // Update with your API endpoint
+            const data = await response.json();
+
+            const months = Object.keys(data);
+            const revenues = Object.values(data);
+
+            const ctx = document.getElementById('yearly-revenue').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: months,
+                    datasets: [{
+                        label: `Yearly Revenue (${year})`,
+                        data: revenues,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    // Call the function to draw the yearly revenue chart for current year
+    drawYearlyRevenueChart(new Date().getFullYear());
+</script>
+<canvas id="orders-revenue"></canvas>
+<script>
+    // Function to fetch yearly orders data from API and draw chart
+    async function drawYearlyOrdersChart(year) {
+        try {
+            const yearlyOrders = await fetchYearlyOrders(year);
+            const months = Object.keys(yearlyOrders);
+            const orders = Object.values(yearlyOrders);
+
+            const ctx = document.getElementById('orders-revenue').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: months,
+                    datasets: [{
+                        label: `Yearly Orders (${year})`,
+                        data: orders,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    // Function to fetch yearly orders from API
+    async function fetchYearlyOrders(year) {
+        try {
+            const response = await fetch(`https://localhost:5001/api/revenue/yearly-orders/${year}`);
+            if (!response.ok) {
+                throw new Error('Failed to fetch data');
+            }
+            return await response.json();
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            return {};
+        }
+    }
+
+    // Call the function to draw the yearly orders chart for current year
+    drawYearlyOrdersChart(new Date().getFullYear());
+</script>
+<canvas id="users-revenue" width="400" height="400"></canvas>
+<script>
+    // Hàm gọi API để lấy dữ liệu
+    async function getUsersRevenueData() {
+        try {
+            const response = await fetch('https://localhost:5001/api/Total/GetTotalUser');
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Error while fetching users revenue data:', error);
+            throw error;
+        }
+    }
+
+    // Hàm vẽ biểu đồ
+    async function drawUsersRevenueChart() {
+        try {
+            // Lấy dữ liệu từ API
+            const revenueData = await getUsersRevenueData();
+
+            // Lấy canvas để vẽ biểu đồ
+            const ctx = document.getElementById('users-revenue').getContext('2d');
+
+            // Khởi tạo biểu đồ
+            new Chart(ctx, {
+                type: 'bar', // Loại biểu đồ: bar chart
+                data: {
+                    labels: ['Total Users'],
+                    datasets: [{
+                        label: 'Banned Users',
+                        data: [revenueData[1]],
+                        backgroundColor: 'rgba(255, 99, 132, 0.5)', // Đổi màu cột cho cột Banned Users
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    
+                    }, {
+                        label: 'Active Users',
+                        data: [revenueData[2]],
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)', // Đổi màu cột cho cột Active Users
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                      
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            stacked: true
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    // Gọi hàm vẽ biểu đồ khi trang đã được tải
+    window.onload = drawUsersRevenueChart;
+
+
+</script>
