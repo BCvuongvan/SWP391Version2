@@ -26,7 +26,7 @@
             <div class="header box-title_title">
                 <h3><strong>Sắp xếp theo</strong></h3>
             </div>
-            <select name="sortOrder" id="sortOrder"  onchange="location.href='?sortOrder='+this.value">
+            <select name="sortOrder" id="sortOrder" class="dropdown-toggle" onchange="updateSortOrder(this.value)">
                 @if(ViewBag.CurrentSortOrder == "asc")
                 {
                     <option value="asc" selected="selected">Thấp - cao</option>

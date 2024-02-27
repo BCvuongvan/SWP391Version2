@@ -17,7 +17,7 @@ namespace TingStoreAPI.Models
         public String cateDescribe { get; set; }
         public bool cateStatus { get; set; }
 
-                public ICollection<Product> Products { get; set; }
+        public ICollection<Product> Products { get; set; }
 
 
         public Category(String cateName, String cateDescribe, bool cateStatus = true)

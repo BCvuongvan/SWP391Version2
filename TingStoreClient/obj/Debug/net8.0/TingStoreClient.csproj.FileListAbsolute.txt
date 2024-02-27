@@ -88,7 +88,10 @@ E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreClient\obj\Debug\net8.0\r
 D:\FPT\Summer2024_SE1708\TingStore\SWP391Version2\TingStoreClient\bin\Debug\net8.0\System.Security.Permissions.dll
 D:\FPT\Summer2024_SE1708\TingStore\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingStoreClient.csproj.AssemblyReference.cache
 D:\FPT\Summer2024_SE1708\TingStore\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingStoreClient.csproj.CopyComplete
+D:\SWP391_PROJECT_VERSIONX\SWP391Version2\TingStoreClient\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\SWP391_PROJECT_VERSIONX\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingStoreClient.csproj.AssemblyReference.cache
+D:\SWP391_PROJECT_VERSIONX\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingStoreClient.csproj.CopyComplete
+E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreClient\bin\Debug\net8.0\Newtonsoft.Json.dll
 E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreClient\bin\Debug\net8.0\System.Security.Permissions.dll
 E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingStoreClient.csproj.AssemblyReference.cache
 E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingStoreClient.csproj.CopyComplete
-E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreClient\bin\Debug\net8.0\Newtonsoft.Json.dll

@@ -54,14 +54,25 @@ namespace TingStoreClient.Controllers
         }
 
         [HttpGet("list")]
-        public async Task<IActionResult> ListSaleProduct(bool redirectToHomePage = false)
+        public async Task<IActionResult> ListSaleProduct(string sortOrder)
         {
             HttpResponseMessage response = await client.GetAsync(api);
             string data = await response.Content.ReadAsStringAsync();
 
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-            List<DiscountPercent> list = JsonSerializer.Deserialize<List<DiscountPercent>>(data, option);
-            return View(list);
+            List<DiscountPercent> saleProductList = JsonSerializer.Deserialize<List<DiscountPercent>>(data, option);
+            switch (sortOrder)
+            {
+                case "asc":
+                    saleProductList = saleProductList.OrderBy(s => s.discountPercentage).ToList();
+                    break;
+                case "desc":
+                    saleProductList = saleProductList.OrderByDescending(p => p.discountPercentage).ToList();
+                    break;
+                default: break;
+            }
+            ViewBag.CurrentSortOrder = sortOrder;
+            return View(saleProductList);
         }
         [HttpGet("create")]
         public async Task<IActionResult> CreateSaleProduct()

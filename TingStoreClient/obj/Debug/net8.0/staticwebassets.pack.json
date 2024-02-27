@@ -269,6 +269,18 @@
       "PackagePath": "staticwebassets\\assets\\Product_Details\\OPPO Find N2 Flip_Specs.txt"
     },
     {
+      "Id": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Samsung Galaxy Z Fold5 12GB 512GB_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\Samsung Galaxy Z Fold5 12GB 512GB_Features.txt"
+    },
+    {
+      "Id": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Samsung Galaxy Z Fold5 12GB 512GB_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\Samsung Galaxy Z Fold5 12GB 512GB_Info.txt"
+    },
+    {
+      "Id": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Samsung Galaxy Z Fold5 12GB 512GB_Specs.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\Samsung Galaxy Z Fold5 12GB 512GB_Specs.txt"
+    },
+    {
       "Id": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Xiaomi Redmi Note 12 Pro 5G_Features.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\Xiaomi Redmi Note 12 Pro 5G_Features.txt"
     },
@@ -427,6 +439,10 @@
     {
       "Id": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\rabit.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\rabit.jpg"
+    },
+    {
+      "Id": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\samsung-galaxy-z-fold-5.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\samsung-galaxy-z-fold-5.webp"
     },
     {
       "Id": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\sea2.jpg",
