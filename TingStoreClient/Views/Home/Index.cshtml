@@ -71,7 +71,7 @@
                                         <br><span class="giamoi">@String.Format("{0:0,0VND}", discountedPrice).Replace(",", ".")</span>
                                     </p>
                                 </div>
-                                <a href=""><button type="button" class="btn btn-danger">Thêm vào giỏ hàng</button></a>
+                                <a asp-controller="CartManager" asp-action="AddToCart" asp-route-id="@product.proId">Thêm vào giỏ hàng</a>
                                 <div class="star_rate">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>

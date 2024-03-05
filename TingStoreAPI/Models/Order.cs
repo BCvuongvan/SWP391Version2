@@ -42,6 +42,13 @@ namespace TingStoreAPI.Models
         {
 
         }
+        public Order(String userName, DateTime orderDate, decimal totalAmount, int orderStatusId)
+        {
+            this.userName = userName;
+            this.orderDate = orderDate;
+            this.TotalAmount = totalAmount;
+            this.orderStatusId = orderStatusId;
+        }
     }
 
 }

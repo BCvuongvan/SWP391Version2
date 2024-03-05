@@ -130,24 +130,28 @@
                                                     cả thương hiệu</a>
                                             </li>
                                         </div>
-                                        <div style="flex: 1; margin-right: -100px;">
-                                            <li>
-                                                <p style="font-size: 17px;"><strong>Mức giá điện thoại</strong></p>
-                                            </li>
-                                            <li><a href="#" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">5tr-10tr</a>
-                                            </li>
-                                            <li><a href="#" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">11tr-15tr</a>
-                                            </li>
-                                            <li><a href="#" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">16tr-20tr</a>
-                                            </li>
-                                            <li><a href="#" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">21tr-25tr</a>
-                                            </li>
+                                        @* <div style="flex: 1; margin-right: -100px;">
+                                        <li>
+                                        <p style="font-size: 17px;"><strong>Mức giá điện thoại</strong></p>
+                                        </li>
+                                        <li><a href="#" class="dropdown-item"
+                                        style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color:
+                                        #626060;">5tr-10tr</a>
+                                        </li>
+                                        <li><a href="#" class="dropdown-item"
+                                        style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color:
+                                        #626060;">11tr-15tr</a>
+                                        </li>
+                                        <li><a href="#" class="dropdown-item"
+                                        style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color:
+                                        #626060;">16tr-20tr</a>
+                                        </li>
+                                        <li><a href="#" class="dropdown-item"
+                                        style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color:
+                                        #626060;">21tr-25tr</a>
+                                        </li>
 
-                                        </div>
+                                        </div> *@
                                     </div>
                                 </ul>
                             </li>
@@ -172,14 +176,13 @@
                     </li>
                     @if (@HttpContextAccessor.HttpContext.Session.GetString("_user") != null)
                     {
-                        <li><a href="signup.html"><i class="fas fa-shopping-cart" style="margin-top: 4px;"></i></a></li>
+                        <li><a asp-controller="CartManager", asp-action="Index"><i class="fas fa-shopping-cart" style="margin-top: 4px;"></i></a></li>
                         <li><a href="login.html"><i class="fa-solid fa-user" style="margin-top: 4px;"></i> <br></a></li>
                         <li><a asp-controller="Auth" asp-action="Logout">Logout <i class="fa-solid fa-right-from-bracket"
                                     style="margin-top: 4px;"></i> <br></a></li>
                     }
                     else
                     {
-
                         <li><a asp-controller="Auth" asp-action="Login"><i class="fa-solid fa-right-to-bracket"
                                     style="margin-top: 4px;"></i> Login</a></li>
                     }

@@ -20,5 +20,15 @@ namespace TingStoreAPI.Models
 
         [Required]
         public int quantity { get; set; }
+        public Cart()
+        {
+
+        }
+        public Cart(String userName, int proId, int quantity)
+        {
+            this.userName = userName;
+            this.proId = proId;
+            this.quantity = quantity;
+        }
     }
 }
