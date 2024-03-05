@@ -129,3 +129,4 @@ H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingStoreClien
 H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingStoreClient.genruntimeconfig.cache
 H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreClient\obj\Debug\net8.0\ref\TingStoreClient.dll
 D:\SWP391_PROJECT_VERSIONX\SWP391Version2\TingStoreClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\FPT\Summer2024_SE1708\TingStore\SWP391Version2\TingStoreClient\bin\Debug\net8.0\Newtonsoft.Json.dll

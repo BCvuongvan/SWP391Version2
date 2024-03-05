@@ -158,10 +158,6 @@ namespace TingStoreClient.Controllers
             await GetCategoriesAsync();
             await GetHotProducts();
             await GetDiscountProductAsync();
-            if (ViewBag.proList.Count != 4)
-            {
-                throw new Exception("Số lượng sản phẩm bán chạy không đúng");
-            }
             var techNews = ListTechNews();
             ViewBag.TechNews = techNews;
             ViewBag.Categories = ViewBag.cateList;

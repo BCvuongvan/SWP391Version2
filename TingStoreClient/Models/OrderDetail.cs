@@ -26,5 +26,19 @@ namespace TingStoreClient.Models
 
         [DisplayName("Sub Total")]
         public Decimal subTotal { get; set; }
+
+        public OrderDetail(int orderId, int proId, int quantity, Decimal subTotal)
+        {
+            this.orderId = orderId;
+            this.proId = proId;
+            this.quantity = quantity;
+            this.subTotal = subTotal;
+
+        }
+
+        public OrderDetail()
+        {
+            
+        }
     }
 }

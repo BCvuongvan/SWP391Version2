@@ -1,0 +1,124 @@
+@model IEnumerable<Cart>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "/Views/Shared/_HomePage.cshtml";
+}
+
+<div style="margin-top: 100px; width: 1000px;" class="container-fluid pt-4 px-4">
+    <div class="bg-light text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">My Cart</h6>
+            <a href="">Show All</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-dark">
+                        <th scope="col">No.</th>
+                        <th scope="col">Product Image</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Discount</th>
+                        <th scope="col">Uniprice</th>
+                        <th scope="col">Uni Total</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int count = 0;
+                        decimal discount = 0;
+                        decimal realPrice = 0;
+                        decimal TotalMount = 0;
+                    }
+                    @foreach (var item in Model)
+                    {
+                        count++;
+                        <tr>
+                            <td>1</td>
+                            <td><img src="~/assets/Product_Images/@item.product.proImage"
+                                    style="width: 200px; height: 200px;" alt="@item.product.proName"></td>
+                            <td>@item.product.proName</td>
+                            <td><a asp-action="DecreaseQuantityProduct" asp-route-id="@item.proId"><i
+                                        class="fa-solid fa-minus"></i></a> @item.quantity <a asp-action="AddToCart"
+                                    asp-route-id="@item.proId"><i class="fa-solid fa-plus"></i></a></td>
+                            <td>
+                                @foreach (var dis in item.product.discountPercents)
+                                {
+                                    if (dis.isActive)
+                                    {
+                                        <text>@dis.discountPercentage%</text>
+                                    }
+                                    else
+                                    {
+                                        <text>none</text>
+                                    }
+                                }
+                            </td>
+                            <td>
+                                @foreach (var dis in @item.product.discountPercents)
+                                {
+                                    if (dis.isActive)
+                                    {
+                                        discount = (1 - (decimal)dis.discountPercentage / 100);
+                                    }
+                                }
+                                <p class="price">
+                                    @if (discount != 0)
+                                    {
+                                        realPrice = @item.product.proPrice * discount;
+                                        <s class="giacu">@String.Format("{0:0,0VND}", @item.product.proPrice).Replace(",",
+                                        ".")</s>
+                                        <br>
+                                        <span class="giamoi">@String.Format("{0:0,0VND}", @realPrice).Replace(",", ".")</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="giamoi">@String.Format("{0:0,0VND}",
+                                    @item.product.proPrice).Replace(",", ".")</span>
+                                    }
+                                </p>
+                            </td>
+                            <td>
+                                @if (discount != 0)
+                                {
+                                    TotalMount += ((decimal)realPrice * item.quantity);
+                                    <span class="giamoi">@String.Format("{0:0,0VND}", realPrice * item.quantity).Replace(",",
+                                ".")</span>
+                                    discount = 0;
+                                    realPrice = 0;
+                                }
+                                else
+                                {
+                                    TotalMount += ((decimal)item.product.proPrice * item.quantity);
+                                    <span class="giamoi">@String.Format("{0:0,0VND}", item.product.proPrice *
+                                item.quantity).Replace(",", ".")</span>
+                                }
+                            </td>
+                            <td><a asp-action="RemoveItem" asp-route-id="@item.proId" class="btn btn-sm btn-primary"><i
+                                        class="fa-solid fa-trash"></i></a></td>
+                        </tr>
+                    }
+                    @if (count == 0)
+                    {
+                        <td class="text-center" colspan="8"><img src="~/assets/Cart_Images/empty-cart_pro.png"
+                                alt="Cart is empty"></td>
+                    }
+                </tbody>
+            </table>
+            @if (count != 0)
+            {
+                <h1>Total mount: <span class="giamoi">@String.Format("{0:0,0VND}", @TotalMount).Replace(",", ".")</span>
+                </h1>
+                @if (TempData["SystemNotification"] != null)
+                {
+                    <div id="systemNotification" class="alert alert-success m-0 p-2">
+                        <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification:
+                            @TempData["SystemNotification"]</p>
+                    </div>
+                }
+                <a asp-controller="CartManager" asp-action="Order">Order</a>
+            }
+        </div>
+    </div>
+</div>
