@@ -90,7 +90,6 @@ namespace TingStoreAPI.Controllers
             }
             var orderList = query.ToList();
             return Ok(orderList);
-
         }
     }
 }

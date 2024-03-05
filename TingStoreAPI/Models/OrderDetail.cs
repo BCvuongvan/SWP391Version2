@@ -20,5 +20,19 @@ namespace TingStoreAPI.Models
         [Required]
         public int quantity { get; set; }
         public Decimal subTotal { get; set; }
+
+        public OrderDetail(int orderId, int proId, int quantity, decimal subTotal)
+        {
+            this.orderId = orderId;
+            this.proId = proId;
+            this.quantity = quantity;
+            this.subTotal = subTotal;
+        }
+
+        public OrderDetail()
+        {
+
+        }
+
     }
 }

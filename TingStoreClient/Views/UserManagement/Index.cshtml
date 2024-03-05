@@ -116,17 +116,17 @@
             });
         }
     }
-    setTimeout(function () {
+    @* setTimeout(function () {
         var systemNotification = document.getElementById('systemNotification');
         if (systemNotification) {
         systemNotification.style.display = 'none';
         }
-        }, 3000);
+        }, 3000); *@
 </script>
 @if (TempData["SystemNotificationError"] != null)
 {
     <div id="systemNotification" class="alert alert-danger m-0 p-2">
-        <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotification"]</p>
+        <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotificationError"]</p>
     </div>
 }
 @if (TempData["SystemNotification"] != null)

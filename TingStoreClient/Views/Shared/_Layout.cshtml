@@ -85,18 +85,20 @@
                         <i class="fa fa-laptop me-2"></i>Manage Products </a>
                     <a asp-controller="SaleProduct" asp-action="ListSaleProduct" class="nav-link">
                         <i class="fa fa-dollar-sign me-2"></i>Manage Sale</a>
+                    <a asp-controller="TechNew" asp-action="ListTechNew" class="nav-link">
+                        <i class="fa-regular fa-newspaper"></i> Manage Tech New</a>
                     <a asp-controller="UserManagement" asp-action="Index" asp-route-id="3" class="nav-item nav-link"><i
-                            class="fas fa-users"></i>User Management</a>
+                            class="fas fa-users"></i>  User Management</a>
                     <a asp-controller="Category" asp-action="GetAllCategory" class="nav-link">
-                        <i class="fa fa-laptop me-2"></i> Manage Category</a>
+                        <i class="fa fa-laptop me-2"></i>Manage Category</a>
                     <a asp-controller="Order" asp-action="GetAllOrder" class="nav-item nav-link"><i
                             class="fa fa-table me-2"></i>Manage Orders</a>
                     <a asp-controller="Revenue" asp-action="Index" class="nav-item nav-link"><i
-                            class="fa-solid fa-chart-simple"></i>Revenue Chart</a>
+                            class="fa-solid fa-chart-simple"></i> Revenue Chart</a>
 
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
-                                class="fa-solid fa-gear"></i>Setting</a>
+                                class="fa-solid fa-gear"></i>  Setting</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a asp-controller="Auth" asp-action="Logout" class="dropdown-item">Logout</a>
                         </div>
@@ -147,8 +149,10 @@
                         </div>
                     </div> *@
                     <div class="nav-item dropdown">
+
                         <a href="#" class="nav-link " data-bs-toggle="dropdown">
                             <img class="rounded-circle" src="~/assets/User_Picture/@user.picture" alt="admin"
+
                                 style="width: 40px; height: 40px;">
                             <div>
                                 <span class="d-none d-lg-inline-flex">@user.fullName</span>
@@ -156,12 +160,9 @@
                             </div>
 
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="profileAdmin.html" class="dropdown-item">My Profile</a>
-                        </div>
                     </div>
                     <div class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a asp-controller="Auth" asp-action="Logout" class="nav-link">
                             <i class="fa fa-sign-out-alt"></i>
                             <span class="d-none d-lg-inline-flex">Logout</span>
                         </a>
@@ -170,9 +171,7 @@
             </nav>
             <!-- Navbar End -->
 
-            <!-- Sale & Revenue Start -->
             @RenderBody()
-            <!-- Sale & Revenue End -->
         </div>
         <!-- Content End -->
 
@@ -189,7 +188,6 @@
                         &copy; <a href="#">Ting Store Shop</a>, All Right Reserved.
                     </div>
                     <div class="col-12 col-sm-6 text-center text-sm-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed By <a href="#">Group4</a>
                         <br>
                         Distributed By <a class="border-bottom" href="#" target="_blank">Group4</a>

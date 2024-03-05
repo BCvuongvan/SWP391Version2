@@ -35,6 +35,7 @@ namespace TingStoreAPI
             .AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
             services.AddControllers();
+            
             services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",

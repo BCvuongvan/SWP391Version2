@@ -1,4 +1,12 @@
 @model User
+<script>
+    setTimeout(function () {
+        var systemNotification = document.getElementById('systemNotification');
+        if (systemNotification) {
+            systemNotification.style.display = 'none';
+        }
+    }, 3000);
+</script>
 @{
     ViewData["Title"] = "Create";
 }
@@ -32,6 +40,10 @@
                             <label class="labels">Phone Number</label>
                             <input asp-for="phoneNumber" type="text" class="form-control" placeholder="Phone number">
                             <span asp-validation-for="phoneNumber" class="text-danger"></span>
+                            @if (TempData["SystemNotificationError"] != null)
+                            {
+                                <span class="text-danger">@TempData["SystemNotificationError"]</span>
+                            }
                         </div>
                         <div class="col-md-12 mt-3">
                             <label class="labels">Address</label>

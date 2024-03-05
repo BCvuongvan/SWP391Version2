@@ -83,5 +83,20 @@ namespace TingStoreAPI.Controllers
             return Ok(disPer);
         }
 
+        [HttpGet("DiscountProduct/Latest")]
+        public async Task<IActionResult> GetLatestDiscountEndTime()
+        {
+            var latestDiscount = await this._db.discountPercents
+                                        .OrderByDescending(d => d.endDate).Where(d => d.isActive == true)
+                                        .FirstOrDefaultAsync();
+            if (latestDiscount == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(latestDiscount.endDate);
+        }
+
+
     }
 }

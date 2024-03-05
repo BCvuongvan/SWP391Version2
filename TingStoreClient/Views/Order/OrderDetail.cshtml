@@ -55,7 +55,7 @@
                                     <td><strong>Email:</strong> @Model.user.email</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Address:</strong> @Model.user.address</td>
+                                    <td><strong>Delivery address:</strong> @Model.user.address</td>
                                 </tr>
                             </table>
                         </div>
@@ -99,10 +99,10 @@
                                 </tbody>
                             </table>
                             <div class="btn" style="float: inline-end;">
-                            @if (@Model.orderStatusId != 2 && Model.orderStatusId != 3)
+                            @if (@Model.orderStatusId != 2 && Model.orderStatusId != 3 && Model.orderStatusId != 4)
                             {
                                 <form asp-controller="Order" asp-action="ChangeOrderStatusConfirm" method="post">
-                                    <input type="hidden" name="id" value="@Model.orderId" />
+                                    <input type="hidden" name="id" value="@Model.orderId"/>
                                     <button type="submit" class="btn btn-success">Confirm</button>
                                 </form> 
                             }
@@ -111,12 +111,15 @@
                             }
                             
                             @if(@Model.orderStatusId == 3){
-                                <p class="text-danger fs-5">The order has been refused!</p>
+                                <p class="text-danger fs-5">The order has been refused by the Admin!</p>
+                            }
+                            @if(@Model.orderStatusId == 4){
+                                <p class="text-danger fs-5">The order has been canceled by the Customer!</p>
                             }
                         </div>
 
                         <div class="btn" style="float: inline-end;">
-                            @if (@Model.orderStatusId != 2 && @Model.orderStatusId != 3)
+                            @if (@Model.orderStatusId != 2 && @Model.orderStatusId != 3 && Model.orderStatusId != 4)
                             {
                                 <form asp-controller="Order" asp-action="ChangeOrderStatusReject" asp-route-id="@Model.orderId" method="post">
                                     <button type="submit" class="btn btn-danger">Reject</button>

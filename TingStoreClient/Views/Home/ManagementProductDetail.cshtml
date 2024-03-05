@@ -6,6 +6,15 @@
 @{
     var productImagesList = Model.productImages.ToList();
 }
+<style>
+    .card.item-product {
+    height: 430px; /* Ví dụ cố định chiều cao */
+    width: 250px; /* Ví dụ cố định chiều rộng */
+}
+
+
+</style>
+<section id="product_part" class="main">
 <div class="container">
     <div class="card">
         <div class="container-fliud">
@@ -22,7 +31,7 @@
                             var panId = $"pic-{i + 2}";
                             <div class="tab-pane" id="@panId">
                                 <img src="~/assets/Product_Images/@subPicture.imageUrl"
-                                    style="width: 2000px; height: 500px;" alt="@Model.proName">
+                                    style="width: 250px; height: 250px;" alt="@Model.proName">
                             </div>
                         }
 
@@ -90,16 +99,97 @@
         </div>
     </div>
     <div class="block_content_product">
-        <div class="col-md-8 block_content_product_left">
+        <div class="col-md-8 block_content_product_left" style="marrgin-right: 20px;">
             <h2 class="text-center">ĐẶC ĐIỂM NỔI BẬT </h2>
             <div class="ul">
                 @ViewBag.HighlightFeatures
             </div>
         </div>
         <div class="col-md-4 block_content_product_right">
-            <p class="title">Thông số kỹ thuật</p>
-            @ViewBag.TechnicalSpecs
-        </div>
+    <p class="title">Specifications</p>
+    @if (!string.IsNullOrEmpty(ViewBag.TechnicalSpecs))
+    {
+        <table class="table">
+            <tbody>
+            @{
+                var lines = ViewBag.TechnicalSpecs.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var line in lines)
+                {
+                    var parts = line.Split(new string[] { ": " }, 2, StringSplitOptions.RemoveEmptyEntries);
+                    if (parts.Length == 2)
+                    {
+                        <tr>
+                            <th>@parts[0]</th>
+                            <td>@parts[1]</td>
+                        </tr>
+                    }
+                }
+            }
+            </tbody>
+        </table>
+    }
+</div>
 
     </div>
 </div>
+</section>
+<section id="product_part testimonial_part" class="main">
+    <div class="container">
+        <h2 class="text-center" style="font-size: 28px;font-family: 'Arial', sans-serif; font-weight: bold; 
+    color: #333; margin-bottom: 20px;">Sản phẩm tương tự</h2>
+        <div class="row bg-light ">
+            <div class="clent">
+                
+                @foreach (var product in  ViewBag.SimilarProducts as List<Product>)
+                {
+                    var originalPrice = product.proPrice;
+                    var discountProduct = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now).FirstOrDefault();
+                    var discountedPrice = originalPrice;
+                    if (discountProduct != null)
+                {
+                    var discount = originalPrice * discountProduct.discountPercentage / 100;
+                    discountedPrice -= discount;
+                }
+                    @if (product.proStatus == true)
+                    {
+                        <div class="col-md-3 col-sm-6 col-xs-6 wow card_box" style="margin-top: -180px;">
+                            <div class="card item-product text-center">
+                                <div class="image">
+                                    <a asp-controller="Home" asp-action="ManagementProductDetail" asp-route-id=@product.proId>
+                                        <img src="~/assets/Product_Images/@product.proImage"
+    style="width: 300px !important; height: 200px !important;" alt="@product.proName">
+
+                                    </a>
+                                    <h4>@product.proName</h4>
+                                </div>
+                                <div class="price-c" >
+                                    <p class="price">
+                                        @if(discountProduct != null){
+                                            <s class="giacu">@String.Format("{0:0,0VND}", originalPrice).Replace(",", ".")</s>
+                                            }
+                                        <br><span class="giamoi">@String.Format("{0:0,0VND}", discountedPrice).Replace(",", ".")</span>
+                                    </p>
+                                </div>
+                                <a href=""><button type="button" class="btn btn-danger">Thêm vào giỏ hàng</button></a>
+                                <div class="star_rate">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                @{
+                                    var discountPrice = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now && dc.isActive == true).FirstOrDefault();
+                                    if(discountPrice != null){
+                                    <div class="install-0-tag">
+                                        <span> Giảm @discountPrice.discountPercentage % </span>
+                                    </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+        </div>
+    </div>
+</section>

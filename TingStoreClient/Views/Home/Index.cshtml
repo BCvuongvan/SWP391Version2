@@ -3,28 +3,91 @@
     ViewData["Title"] = "Home Page";
     Layout = "/Views/Shared/_HomePage.cshtml";
 }
-<!-- Discount part Start -->
-<section id="discount_part">
-    <div class="container discount">
-        <div class="row">
-            <div class="name_box" style="margin-top: 100px">
-                <h2><strong class="name_box_title">KHUYẾN MÃI CHỈ CÓ TRÊN ONLINE</strong></h2>
-            </div>
-            <div class="discount_payonl">
-                <div class="home_slider">
-                    <a href=""><img src="https://cdn.tgdd.vn/2023/09/banner/1200x150-tgdd-1200x150-1.png"
-                            alt="discount"></a>
+
+<section id="product_part" class="main">
+        <div class="container">
+            <div class="row hotsale_part_box">
+                <div class="row hotsale_part_detail">
+                    <div class="select_part col-md-4">
+                    </div>
+                    <div class="img_hotsale box-title_title col-md-4">
+                        <img class="text-center"
+                            src="https://cdn2.cellphones.com.vn/x/media/catalog/product/h/s/hs-cuoi-tuan-tet-text.png"
+                            alt="hotsale">
+                    </div>
+                    <div class="hotsale_timer col-md-4">
+                        
+                     <div class="box-time">
+                        <div style="color: #ebef28; font-size: 18px;">Kết thúc sau : </div>
+    <div class="time-segment" id="hours"></div>
+    <span class="time-divider">:</span>
+    <div class="time-segment" id="minutes"></div>
+    <span class="time-divider">:</span>
+    <div class="time-segment" id="seconds"></div>
+</div>
+        </div>
+                </div>
+                <div class="clent">
+                    @foreach (var product in Model)
+                {
+                    var originalPrice = product.proPrice;
+                    var discountProduct = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now).FirstOrDefault();
+                    var discountedPrice = originalPrice;
+                    if (discountProduct != null)
+                {
+                    var discount = originalPrice * discountProduct.discountPercentage / 100;
+                    discountedPrice -= discount;
+                }
+                    @if(product.proStatus == true){
+                        @if(product.discountPercents.Any(dp => dp.discountPercentage >= 40 && dp.isActive == true)){
+                    <div class="col-md-3 col-sm-6 col-xs-6 wow card_box">
+                        <div class="card item-product_sale text-center">
+                            <div class="image">
+                                    <a asp-controller="Home" asp-action="ManagementProductDetail" asp-route-id=@product.proId>
+                                        <img src="~/assets/Product_Images/@product.proImage"
+                                            style="width: 200px; height: 200px;" alt="@product.proName">
+                                    </a>
+                                    <h4>@product.proName</h4>
+                                </div>
+                            <div class="price-c">
+                                    <p class="price">
+                                        @if(discountProduct != null){
+                                            <s class="giacu">@String.Format("{0:0,0VND}", originalPrice).Replace(",", ".")</s>
+                                            }
+                                        <br><span class="giamoi">@String.Format("{0:0,0VND}", discountedPrice).Replace(",", ".")</span>
+                                    </p>
+                                </div>
+                                <a href=""><button type="button" class="btn btn-danger">Thêm vào giỏ hàng</button></a>
+                                <div class="star_rate">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                            @{
+                                    var discountPrice = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now && dc.isActive == true).FirstOrDefault();
+                                    if(discountPrice != null){
+                                    <div class="install-0-tag">
+                                        <span> Giảm @discountPrice.discountPercentage % </span>
+                                    </div>
+                                    }
+                                }
+                        </div>
+                    </div>
+                    }
+                    }
+                    }
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Discount part End -->
+    </section>
 <section id="product_part testimonial_part" class="main">
     <div class="container">
         <div class="row bg-light">
+            <div><h2><strong>SẢN PHẨM NỔI BẬT</strong></h2></div>
             <div class="header box-title_title">
-                <h3><strong>Sắp xếp theo</strong></h3>
+                <p style="font-size: 18px;">Sắp xếp theo</p>
             </div>
             <select name="sortOrder" id="sortOrder" class="dropdown-toggle" onchange="updateSortOrder(this.value)">
                 @if(ViewBag.CurrentSortOrder == "asc")
@@ -71,7 +134,7 @@
                                         <br><span class="giamoi">@String.Format("{0:0,0VND}", discountedPrice).Replace(",", ".")</span>
                                     </p>
                                 </div>
-                                <a href=""><button type="button" class="btn btn-danger">Thêm vào giỏ hàng</button></a>
+                                <a asp-controller="CartManager" asp-action="AddToCart" asp-route-id="@product.proId">Thêm vào giỏ hàng</a>
                                 <div class="star_rate">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -94,4 +157,24 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row bg-light">
+            <div><h2><strong>TIN CÔNG NGHỆ</strong></h2></div>
+            <div class="clent">
+                @foreach(var technew in ViewBag.TechNews as IEnumerable<(string Title, string ImageUrl, string NewsId, string Link)>){
+                <div class="col-md-3 col-sm-6 col-xs-6 wow card_box">
+                        <div class="producthot text-center">
+                                    <div class="image">
+                                <a href="@technew.Link" target="_blank">
+                                    <img src="@Url.Content($"~/assets/TechNews/{technew.NewsId}/image.jpg")" style="width: 200px; height: 200px;"/>
+                                </a>
+                                <h4>@technew.Title</h4>
+                                </div>
+                        </div>
+                    </div>
+                    }
+            </div>
+        </div>
+    </div>
+    
 </section>

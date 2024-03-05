@@ -5,19 +5,19 @@
 }
 <script src="https://kit.fontawesome.com/8143c9cd7e.js" crossorigin="anonymous"></script>
 <div class="page-header">
-    <h3 style="margin-top:20px; text-align: center;">DANH SÁCH SẢN PHẨM</h3>
+    <h3 style="margin-top:20px; text-align: center;">LIST PRODUCT</h3>
     <div style="text-align: center;">
-        <a asp-controller="Product" asp-action="CreateProduct" class="fancy-button"> Thêm sản phẩm mới</a>
+        <a asp-controller="Product" asp-action="CreateProduct" class="fancy-button">Add new product</a>
     </div>
 </div>
 <div class="container">
         <div class="dropdown">
             <button class="no-border-button" type="button" data-bs-toggle="dropdown"> <i class="fa-solid fa-list "></i>
-                Phân loại sản phẩm
+                Product classification
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li><a class="dropdown-item" asp-controller="Product"
-                                                            asp-action="ListProduct">Tất cả sản phẩm</a></li>
+                                                            asp-action="ListProduct">All product</a></li>
                 @foreach (var category in ViewBag.cateList)
                 {
                     <a class="dropdown-item"
@@ -31,12 +31,12 @@
                     <table class="table table-bordered table-hover">
                         <thead>
                             <tr class="title-col">
-                                <td style="width: 18%; text-align: center;">Tên sản phẩm</td>
-                                <td style="width: 25%; text-align: center;">Mô tả sản phẩm</td>
-                                <td style="text-align: center;">Giá sản phẩm</td>
-                                <td style="text-align: center;">Số lượng sản phẩm</td>
-                                <td style="text-align: center;">Ảnh sản phẩm</td>
-                                <td style="text-align: center;">Phân loại sản phẩm</td>
+                                <td style="width: 18%; text-align: center;">Product Name</td>
+                                <td style="width: 25%; text-align: center;">Product Description</td>
+                                <td style="text-align: center;">Product Price</td>
+                                <td style="text-align: center;">Number Of Products</td>
+                                <td style="text-align: center;">Product Photo</td>
+                                <td style="text-align: center;">Product Type</td>
                                 <td style="text-align: center;"><span>Action</span></td>
                             </tr>
                         </thead>
@@ -66,13 +66,13 @@
                                                     </li>
                                                     <li><a class="dropdown-item" asp-controller="Product"
                                                             asp-action="UpdateProduct" asp-route-id=@product.proId><i
-                                                                class="fas fa-edit"></i> Cập nhật</a></li>
+                                                                class="fas fa-edit"></i>Update</a></li>
                                                     <li><a class="dropdown-item" asp-controller="Product"
                                                             asp-action="DeleteProduct" asp-route-id=@product.proId><i
-                                                                class="fas fa-trash-alt"></i> Xóa</a></li>
+                                                                class="fas fa-trash-alt"></i>Delete</a></li>
                                                     <li><a class="dropdown-item" asp-controller="Product"
                                                             asp-action="ManagementProductDetail" asp-route-id=@product.proId><i
-                                                                class="fas fa-info-circle"></i> Chi tiết</a></li>
+                                                                class="fas fa-info-circle"></i>Detail</a></li>
                                                 </ul>
                                             </div>
                                         </td>
@@ -83,7 +83,7 @@
                     </table>
                 </div>
                 <div class="text-end" style="margin-right: 10px;">
-                    <h5>Tổng sản phẩm: @Model.Count(p => p.proStatus)</span></h5>
+                    <h5>Total Product: @Model.Count(p => p.proStatus)</span></h5>
                 </div>
             </form>
         </div>

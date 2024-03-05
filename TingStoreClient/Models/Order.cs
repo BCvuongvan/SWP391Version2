@@ -34,5 +34,18 @@ namespace TingStoreClient.Models
         public OrderStatus orderStatus { get; set; }
 
         public ICollection<OrderDetail> orderDetails { get; set; }
+
+        public Order(String userName, DateTime orderDate, Decimal totalAmount, int orderStatusId)
+        {
+            this.userName = userName;
+            this.orderDate = orderDate;
+            this.TotalAmount = totalAmount;
+            this.orderStatusId = orderStatusId;
+        }
+
+        public Order()
+        {
+            
+        }
     }
 }

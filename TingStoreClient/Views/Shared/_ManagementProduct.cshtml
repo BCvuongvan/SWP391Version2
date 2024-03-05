@@ -57,6 +57,7 @@
     <link rel="stylesheet" href="~/Mobile_shop/css/navbar_styleSheet.css">
     <link rel="stylesheet" type="text/css" href="~/Mobile_shop/fonts/font/flaticon.css">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         body {
             font-size: 16px;
@@ -167,12 +168,81 @@
             position: relative;
             display: inline-block;
         }
+
+        .video-upload-btn {
+            position: relative;
+            width: 85px;
+            /* Đặt chiều rộng của nút */
+            height: 85px;
+            /* Đặt chiều cao của nút */
+            border: 2px dashed #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background: url('path_to_your_video_icon/video-icon.png') no-repeat center;
+            /* Thay 'path_to_your_video_icon/video-icon.png' bằng đường dẫn thực tế tới icon video của bạn */
+            background-size: 50%;
+            /* Điều chỉnh kích thước của icon video */
+        }
+
+        .video-upload-btn input[type="file"] {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        #specifications-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        #specifications-container input,
+        #specifications-container button {
+            flex-grow: 1;
+        }
     </style>
 
     <title>Home Admin Page</title>
 </head>
 
 <body>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('addSpecButton').addEventListener('click', function() {
+        var specName = document.getElementById('specName').value;
+        var specValue = document.getElementById('specValue').value;
+
+        // Tạo một hàng mới cho bảng thông số kỹ thuật
+        var newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td><input type="text" name="specNames[]" value="${specName}" readonly></td>
+            <td><input type="text" name="specValues[]" value="${specValue}" readonly></td>
+            <td><button type="button" class="btn btn-danger removeSpec">Xóa</button></td>
+        `;
+
+        // Thêm hàng mới vào bảng
+        document.getElementById('specsTable').querySelector('tbody').appendChild(newRow);
+
+        // Xóa trường input sau khi thêm
+        document.getElementById('specName').value = '';
+        document.getElementById('specValue').value = '';
+
+        // Thêm sự kiện click cho nút xóa thông số kỹ thuật
+        newRow.querySelector('.removeSpec').addEventListener('click', function() {
+            this.closest('tr').remove();
+        });
+    });
+});
+
+</script>
+
 
     <div class="container-xxl position-relative bg-white d-flex p-0">
         <!-- Section-left-->
@@ -204,6 +274,8 @@
                         <i class="fa fa-laptop me-2"></i>Manage Products </a>
                     <a asp-controller="SaleProduct" asp-action="ListSaleProduct" class="nav-link">
                         <i class="fa fa-dollar-sign me-2"></i>Manage Sale</a>
+                    <a asp-controller="TechNew" asp-action="ListTechNew" class="nav-link">
+                        <i class="fa-regular fa-newspaper"></i> Manage Tech New</a>
                     <a asp-controller="UserManagement" asp-action="Index" asp-route-id="3" class="nav-item nav-link"><i
                             class="fas fa-users"></i>User Management</a>
                     <a asp-controller="Category" asp-action="GetAllCategory" class="nav-link">
