@@ -1,0 +1,76 @@
+@model IEnumerable<(string Title, string ImageUrl, string NewsId, string Link)>
+
+@{
+    ViewData["Title"] = "ListTechNew";
+    Layout = "/Views/Shared/_ListProduct.cshtml";
+}
+<script src="https://kit.fontawesome.com/8143c9cd7e.js" crossorigin="anonymous"></script>
+<div class="page-header">
+    <h3 style="margin-top:20px; text-align: center;">LIST TECH NEW</h3>
+    <div style="text-align: center;">
+        <a asp-controller="TechNew" asp-action="CreatetechNew" class="fancy-button">Add new tech new</a>
+    </div>
+</div>
+<div class="container">
+        <div class="dropdown">
+            <button class="no-border-button" type="button" data-bs-toggle="dropdown"> <i class="fa-solid fa-list "></i>
+                Product classification
+            </button>
+            @* <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" asp-controller="Product"
+                                                            asp-action="ListProduct">All product</a></li>
+                @foreach (var category in ViewBag.cateList)
+                {
+                    <a class="dropdown-item"
+                        asp-for="cateId" asp-controller="Product" asp-action="ProductsByCategoryID" asp-route-id="@category.cateId" asp-items="@(new SelectList(ViewBag.cateList, "cateId", "cateName"))">@category.cateName</a>
+                }
+            </div>   *@
+        </div>
+        <div id="order" class="card-body mb-2 mt-2">
+            <form action="" id="form-order" method="">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr class="title-col">
+                                <td style="text-align: center;">Technology News Headlines</td>
+                                <td style="text-align: center;">Technology News Picture</td>
+                                <td style="text-align: center;">Technology News Link</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var technew in Model)
+                            {
+                                    <tr>
+                                        <td>@technew.Title</td>
+                                        <td class="text-end d-none d-lg-table-cell"><img src="@Url.Content($"~/assets/TechNews/{technew.NewsId}/image.jpg")" style="width: 200px; height: 200px;" alt="News Image">
+</td>
+                                        <td class="d-none d-lg-table-cell"><a href="@technew.Link">@technew.Link</a></td>
+                                        <td class="text-end">
+                                            <div class="btn-group dropdown">
+                                                <a class="btn" aria-label="Edit"><i class="fas fa-pencil-alt"></i></a>
+                                                <button type="button" class="btn dropdown-toggle dropdown-toggle-split"
+                                                    data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li>
+                                                        <h6 class="dropdown-header">Options</h6>
+                                                    </li>
+                                                    <li><a class="dropdown-item" asp-controller="TechNew"
+                                                            asp-action="UpdateTechNew" asp-route-id ="@technew.NewsId"><i
+                                                                class="fas fa-edit"></i>Update</a></li>
+                                                    <li><a class="dropdown-item" asp-controller="TechNew"
+                                                            asp-action="DeleteTechNew" asp-route-id ="@technew.NewsId"><i
+                                                                class="fas fa-trash-alt"></i>Delete</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-end" style="margin-right: 10px;">
+                    @* <h5>Total Product: @Model.Count(p => p.proStatus)</span></h5> *@
+                </div>
+            </form>
+        </div>
+    </div>

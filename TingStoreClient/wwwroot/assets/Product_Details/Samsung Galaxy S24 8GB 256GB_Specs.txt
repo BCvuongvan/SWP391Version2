@@ -1,0 +1,5 @@
+Screen size: 6.2 inches
+Screen technology: Dynamic AMOLED 2X
+Rear camera: 50 MP main camera, f/1.8 Telephoto camera: 10 MP, f/2.4, PDAF, OIS, 3x optical zoom Ultra wide-angle camera: 12 MP, f/2.2, 120°
+Front camera: 12 MP, f/2.2
+Chipsets: Exynos 2400
