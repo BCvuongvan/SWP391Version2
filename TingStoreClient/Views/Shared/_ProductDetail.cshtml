@@ -35,7 +35,7 @@
 
 </head>
 
-<body>
+<body>  
     <!-- preloader start  -->
     <div id="spinners">
         <div id="preloader_1">
@@ -49,7 +49,7 @@
     <!-- preloader end  -->
 
     <!--  Navbar start-->
-    <nav id="header" class="navbar navbar-fixed-top">
+    <nav id="header" class="navbar navbar-fixed-top" style="background: #a54747">
         <div id="header-container" class="container navbar-container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -65,7 +65,70 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><a>Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Danh mục
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="dropdown-submenu dropright">
+                                <a class="dropdown-item" href="#" style="font-size: 17px; margin-bottom: -5px;"><i
+                                        class="fa fa-mobile-alt"
+                                        style="margin-left: -10px; margin-right: 10px;"></i>Điện Thoại
+                                    <i class="fa fa-angle-right" aria-hidden="true" style="float: right;"></i></a>
+                                <ul class="dropdown-menu" style="width: 450px;">
+                                    <div style="display: flex; flex-wrap: wrap; margin-left: 15px;">
+                                        <div style="flex: 1;">
+                                            <li>
+                                                <p style="font-size: 17px;"><strong>Thương hiệu điện thoại</strong></p>
+                                            </li>
+                                            @if (ViewBag.cateList != null)
+                                            {
+                                                foreach (var category in ViewBag.cateList)
+                                                {
+                                                    <li><a class="dropdown-item"
+                                                            href="@Url.Action("ProductsByCategoryID", "Home", new { cateId = category.cateId })"
+                                                            style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">@category.cateName</a>
+                                                    </li>
+                                                }
+                                            }
+                                            <li><a asp-controller="Home" asp-action="Index" class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Tất
+                                                    cả thương hiệu</a>
+                                            </li>
+                                        </div>
+                                        <div style="flex: 1; margin-right: -100px;">
+                                            <li>
+                                                <p style="font-size: 17px;"><strong>Mức giá điện thoại</strong></p>
+                                            </li>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=5000000&maxPrice=10000000" class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ 5-10 triệu</a>
+                                            </li>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=10000000&maxPrice=15000000" class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ 10-15 triệu</a>
+                                            </li>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=15000000&maxPrice=20000000" class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ 15-20 triệu</a>
+                                            </li>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=20000000&maxPrice=25000000" class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ 20-25 triệu</a>
+                                            </li>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=25000000&maxPrice=30000000" class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ 25-30 triệu</a>
+                                            </li>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=30000000&maxPrice=35000000" class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ 30-35 triệu</a>
+                                            </li>
+
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
                     <li><a href="product.html">Product</a></li>
                     <li><a href="">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -82,16 +145,23 @@
                             </div>
                         </form>
                     </li>
-                    <li><a href="signup.html"><i class="fas fa-shopping-cart" style="margin-top: 4px;"></i></a></li>
-                    <li><a href="login.html"><i class="fa-solid fa-user" style="margin-top: 4px;"></i> <br>
-                        </a></li>
-                    <li><a href="#"> <i class="fa fa-sign-out" style="margin-top: 4px;"></i> Logout <br>
-                        </a></li>
+                    @if (@HttpContextAccessor.HttpContext.Session.GetString("_user") != null)
+                    {
+                        <li><a href="signup.html"><i class="fas fa-shopping-cart" style="margin-top: 4px;"></i></a></li>
+                        <li><a href="login.html"><i class="fa-solid fa-user" style="margin-top: 4px;"></i> <br></a></li>
+                        <li><a asp-controller="Auth" asp-action="Logout">Logout <i class="fa-solid fa-right-from-bracket"
+                                    style="margin-top: 4px;"></i> <br></a></li>
+                    }
+                    else
+                    {
+
+                        <li><a asp-controller="Auth" asp-action="Login"><i class="fa-solid fa-right-to-bracket"
+                                    style="margin-top: 4px;"></i> Login</a></li>
+                    }
                 </ul>
             </div>
         </div>
     </nav>
-
     @RenderBody()
 
 

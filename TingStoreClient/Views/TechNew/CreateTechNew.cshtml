@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "CreateTechNew";
+    Layout = "/Views/Shared/_ManagementProduct.cshtml";
+}
+<nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+    <div class="navbar-nav align-items-center ms-auto">
+        <div class="nav-item">
+            <a class="nav-link" style="margin-right: 20px;" asp-controller="TechNew" asp-action="ListTechNew">
+                <i class="fa fa-sign-out-alt"></i>
+                <span class="d-none d-lg-inline-flex">Back</span>
+            </a>
+        </div>
+    </div>
+</nav>
+<section id="product_part" class="main">
+    <div class="container">
+        <h4 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">ADD NEW TECH NEW</h4>
+        <div class="card-body" style="margin-bottom: 10px;">
+            <form asp-controller="TechNew" asp-action="CreateTechNew" method="post" id="productForm"
+                style="margin: 10px;" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="title" class="form-label">Technology News Headlines: </label>
+                    <input type="text" class="form-control" id="title" name="title" class="form-control large-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="image" class="form-label">Technology News Picture: </label>
+                    <input type="file" class="form-control" id="image" name="image" class="form-control large-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="link" class="form-label">Technology News Link: </label>
+                    <input type="url" class="form-control" id="link" name="link" class="form-control large-input" required>
+                </div>
+
+                <div class="button-container" style="text-align: center;">
+                    <button type="submit" style="font-size: 18px; padding: 10px 20px;"
+                        class="fancy-button">Create</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>

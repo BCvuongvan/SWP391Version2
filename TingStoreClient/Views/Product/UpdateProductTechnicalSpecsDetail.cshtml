@@ -16,7 +16,7 @@
 </nav>
 <section id="product_part" class="main">
     <div class="container">
-        <h2 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">CẬP NHẬT THÔNG SỐ KỸ THUẬT SẢN PHẨM</h2>
+        <h2 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">UPDATE PRODUCT SPECIFICATIONS</h2>
         <div class="card-body">
             <form asp-controller="Product" asp-action="UpdateProductTechnicalSpecsDetail" method="post"
                 style="margin: 10px;" enctype="multipart/form-data">
@@ -27,7 +27,7 @@
                     <input type="text" asp-for="proName" class="form-control">
                 </div>
                 <div>
-                    <label class="form-label">Thông số kỹ thuật: </label>
+                    <label class="form-label">Specifications: </label>
                     <textarea name="technicalSpecs" class="form-control large-input" rows="10">@ViewBag.TechnicalSpecs</textarea>
                 </div> <br>
                 <div class="button-container" style="text-align: center;">

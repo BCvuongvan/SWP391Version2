@@ -1,667 +1,967 @@
 {
   "Files": [
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\bootstrap.min.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\bootstrap.min.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\contact.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\contact.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\contact.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\font-awesome.min.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\font-awesome.min.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\font-awesome.min.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\homeAdmin.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\homeAdmin.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\homeAdmin.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\login.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\login.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\login.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\media.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\media.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\media.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\navbar_styleSheet.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\navbar_styleSheet.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\navbar_styleSheet.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\product.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\product.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\product.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\productDetail.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\productDetail.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\productDetail.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\profileAdmin.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\profileAdmin.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\profileAdmin.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\profileCustomer.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\profileCustomer.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\profileCustomer.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\signup.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\signup.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\signup.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\slick.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\slick.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\slick.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\style.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\style.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\style.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\totalCustomer.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\totalCustomer.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\totalCustomer.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\totalOrders.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\totalOrders.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\totalOrders.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\venobox.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\venobox.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\venobox.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.eot",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.eot",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\font\\Flaticon.eot"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.svg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.svg",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\font\\Flaticon.svg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.ttf",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.ttf",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\font\\Flaticon.ttf"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.woff",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticon.woff",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\font\\Flaticon.woff"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticond41d.eot",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\Flaticond41d.eot",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\font\\Flaticond41d.eot"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\flaticon.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\font\\flaticon.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\font\\flaticon.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.eot",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.eot",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.eot"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.svg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.svg",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.svg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.ttf",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.ttf",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.ttf"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.woff",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.woff",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.woff"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.woff2",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.woff2",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\fontawesome-webfont3e6e.woff2"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfontd41d.eot",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\fontawesome-webfontd41d.eot",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\fontawesome-webfontd41d.eot"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.eot",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.eot",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\glyphicons-halflings-regular.eot"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.svg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.svg",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\glyphicons-halflings-regular.svg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.ttf",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.ttf",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\glyphicons-halflings-regular.ttf"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.woff",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.woff",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\glyphicons-halflings-regular.woff"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.woff2",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regular.woff2",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\glyphicons-halflings-regular.woff2"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regulard41d.eot",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\fonts\\glyphicons-halflings-regulard41d.eot",
       "PackagePath": "staticwebassets\\Mobile_shop\\fonts\\glyphicons-halflings-regulard41d.eot"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\banner1.png",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\banner1.png",
       "PackagePath": "staticwebassets\\Mobile_shop\\images\\banner1.png"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\banner2.png",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\banner2.png",
       "PackagePath": "staticwebassets\\Mobile_shop\\images\\banner2.png"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\banner3.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\banner3.jpg",
       "PackagePath": "staticwebassets\\Mobile_shop\\images\\banner3.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\logo.png",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\logo.png",
       "PackagePath": "staticwebassets\\Mobile_shop\\images\\logo.png"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\logo_login.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\logo_login.jpg",
       "PackagePath": "staticwebassets\\Mobile_shop\\images\\logo_login.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\signin.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\signin.jpg",
       "PackagePath": "staticwebassets\\Mobile_shop\\images\\signin.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\admin.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\admin.js",
       "PackagePath": "staticwebassets\\Mobile_shop\\js\\admin.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\bootstrap.min.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\Mobile_shop\\js\\bootstrap.min.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\counterup.min.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\counterup.min.js",
       "PackagePath": "staticwebassets\\Mobile_shop\\js\\counterup.min.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\custom.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\custom.js",
       "PackagePath": "staticwebassets\\Mobile_shop\\js\\custom.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\jquery-1.12.4.min.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\jquery-1.12.4.min.js",
       "PackagePath": "staticwebassets\\Mobile_shop\\js\\jquery-1.12.4.min.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\slick.min.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\slick.min.js",
       "PackagePath": "staticwebassets\\Mobile_shop\\js\\slick.min.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\venobox.min.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\venobox.min.js",
       "PackagePath": "staticwebassets\\Mobile_shop\\js\\venobox.min.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\waypoints.min.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\js\\waypoints.min.js",
       "PackagePath": "staticwebassets\\Mobile_shop\\js\\waypoints.min.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\LICENSE",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\LICENSE",
       "PackagePath": "staticwebassets\\Mobile_shop\\lib\\owlcarousel"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\ajax-loader.gif",
       "PackagePath": "staticwebassets\\Mobile_shop\\lib\\owlcarousel\\assets\\ajax-loader.gif"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.carousel.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.carousel.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.default.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.default.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.green.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.green.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.video.play.png",
       "PackagePath": "staticwebassets\\Mobile_shop\\lib\\owlcarousel\\assets\\owl.video.play.png"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\owl.carousel.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\owl.carousel.js",
       "PackagePath": "staticwebassets\\Mobile_shop\\lib\\owlcarousel\\owl.carousel.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\owl.carousel.min.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\owlcarousel\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\Mobile_shop\\lib\\owlcarousel\\owl.carousel.min.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js",
       "PackagePath": "staticwebassets\\Mobile_shop\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js",
       "PackagePath": "staticwebassets\\Mobile_shop\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Find N2 Flip_Features.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Habbit plus_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\Habbit plus_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO A77s_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\OPPO A77s_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO A77s_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\OPPO A77s_Info.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO A77s_Specs.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\OPPO A77s_Specs.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Find N2 Flip_Features.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\OPPO Find N2 Flip_Features.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Find N2 Flip_Info.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Find N2 Flip_Info.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\OPPO Find N2 Flip_Info.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Find N2 Flip_Specs.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Find N2 Flip_Specs.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\OPPO Find N2 Flip_Specs.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Samsung Galaxy Z Fold5 12GB 512GB_Features.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Reno10 5G 8GB 256GB_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\OPPO Reno10 5G 8GB 256GB_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Reno10 5G 8GB 256GB_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\OPPO Reno10 5G 8GB 256GB_Info.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Reno10 5G 8GB 256GB_Specs.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\OPPO Reno10 5G 8GB 256GB_Specs.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Reno8 T 5G (8GB - 128GB)_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\OPPO Reno8 T 5G (8GB - 128GB)_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Reno8 T 5G (8GB - 128GB)_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\OPPO Reno8 T 5G (8GB - 128GB)_Info.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\OPPO Reno8 T 5G (8GB - 128GB)_Specs.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\OPPO Reno8 T 5G (8GB - 128GB)_Specs.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Oppo A93_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\Oppo A93_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Oppo A93_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\Oppo A93_Info.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Oppo A93_Specs.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\Oppo A93_Specs.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Samsung Galaxy S24 8GB 256GB_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\Samsung Galaxy S24 8GB 256GB_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Samsung Galaxy S24 8GB 256GB_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\Samsung Galaxy S24 8GB 256GB_Info.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Samsung Galaxy S24 8GB 256GB_Specs.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\Samsung Galaxy S24 8GB 256GB_Specs.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Samsung Galaxy Z Fold5 12GB 512GB_Features.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\Samsung Galaxy Z Fold5 12GB 512GB_Features.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Samsung Galaxy Z Fold5 12GB 512GB_Info.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Samsung Galaxy Z Fold5 12GB 512GB_Info.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\Samsung Galaxy Z Fold5 12GB 512GB_Info.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Samsung Galaxy Z Fold5 12GB 512GB_Specs.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Samsung Galaxy Z Fold5 12GB 512GB_Specs.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\Samsung Galaxy Z Fold5 12GB 512GB_Specs.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Xiaomi Redmi Note 12 Pro 5G_Features.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Xiaomi Redmi Note 12 Pro 5G_Features.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\Xiaomi Redmi Note 12 Pro 5G_Features.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Xiaomi Redmi Note 12 Pro 5G_Info.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Xiaomi Redmi Note 12 Pro 5G_Info.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\Xiaomi Redmi Note 12 Pro 5G_Info.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Xiaomi Redmi Note 12 Pro 5G_Specs.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\Xiaomi Redmi Note 12 Pro 5G_Specs.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\Xiaomi Redmi Note 12 Pro 5G_Specs.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\iphone1_Features.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\aaaaaa_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\aaaaaa_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\aaaaaa_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\aaaaaa_Info.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\aaaaaa_Specs.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\aaaaaa_Specs.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\aaaaaaaaa_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\aaaaaaaaa_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\aaaaaaaaa_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\aaaaaaaaa_Info.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\aaaaaaaaa_Specs.json",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\aaaaaaaaa_Specs.json"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\aaaaaaaaâ_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\aaaaaaaaâ_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\aaaaaaaaâ_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\aaaaaaaaâ_Info.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\aaaaaaaaâ_Specs.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\aaaaaaaaâ_Specs.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\adf_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\adf_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\adf_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\adf_Info.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\adf_Specs.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\adf_Specs.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\bbbbbbbbb_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\bbbbbbbbb_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\bbbbbbbbb_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\bbbbbbbbb_Info.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\cccccccccccccccccccccccccccc_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\cccccccccccccccccccccccccccc_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\cccccccccccccccccccccccccccc_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\cccccccccccccccccccccccccccc_Info.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\cfr_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\cfr_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\cfr_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\cfr_Info.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\cfr_Specs.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\cfr_Specs.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\dddddddddddd_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\dddddddddddd_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\dddddddddddd_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\dddddddddddd_Info.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\dddddddddddd_Specs.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\dddddddddddd_Specs.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\eeeeeeeee_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\eeeeeeeee_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\eeeeeeeee_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\eeeeeeeee_Info.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\eeeeeeeee_Specs.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\eeeeeeeee_Specs.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\iphone1_Features.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\iphone1_Features.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\iphone1_Info.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\iphone1_Info.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\iphone1_Info.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\iphone1_Specs.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\iphone1_Specs.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\iphone1_Specs.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\iphone2_Features.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\iphone2_Features.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\iphone2_Features.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\iphone2_Info.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\iphone2_Info.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\iphone2_Info.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\iphone2_Specs.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\iphone2_Specs.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\iphone2_Specs.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\samsung1_Features.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\saaaaaa_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\saaaaaa_Features.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\saaaaaa_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\saaaaaa_Info.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\saaaaaa_Specs.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\saaaaaa_Specs.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\samsung1_Features.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\samsung1_Features.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\samsung1_Info.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\samsung1_Info.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\samsung1_Info.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\samsung1_Specs.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\samsung1_Specs.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\samsung1_Specs.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\samsung_Features.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\samsung_Features.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\samsung_Features.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\samsung_Info.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\samsung_Info.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\samsung_Info.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\samsung_Specs.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\samsung_Specs.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\samsung_Specs.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\woaaaâ_Features.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\woaaaâ_Features.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\woaaaâ_Features.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\woaaaâ_Info.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\woaaaâ_Info.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\woaaaâ_Info.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\woaaaâ_Specs.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\woaaaâ_Specs.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\woaaaâ_Specs.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\418025021_1073057710697656_6950206025922473540_n.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\418025021_1073057710697656_6950206025922473540_n.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\418025021_1073057710697656_6950206025922473540_n.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Iphone-13-128GB.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Iphone-13-128GB.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\Iphone-13-128GB.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\OIP (1).jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\OIP (1).jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\OIP (1).jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\OIP.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\OIP.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\OIP.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Pk.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\OPPO Reno8 T 5G (8GB - 128GB).webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\OPPO Reno8 T 5G (8GB - 128GB).webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Oppo A77s.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\Oppo A77s.webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Oppo A93.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\Oppo A93.webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Oppo Reno10 5G 8GB 256GB.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\Oppo Reno10 5G 8GB 256GB.webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Pk.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\Pk.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Top 100 hình ảnh và nền mèo thần tài và các vị thần ngộ nghĩnh độc đáo.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Samsung Galaxy S24 8GB 256GB.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\Samsung Galaxy S24 8GB 256GB.webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Tech new redmi-note-13-pro-plus-back-hand.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\Tech new redmi-note-13-pro-plus-back-hand.webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Top 100 hình ảnh và nền mèo thần tài và các vị thần ngộ nghĩnh độc đáo.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\Top 100 hình ảnh và nền mèo thần tài và các vị thần ngộ nghĩnh độc đáo.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Umaru2.png",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Umaru2.png",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\Umaru2.png"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Umaru4.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Umaru4.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\Umaru4.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\WIN_20240213_16_53_34_Pro.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\WIN_20240213_16_53_34_Pro.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\WIN_20240213_16_53_34_Pro.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\chicken.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\chicken.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\chicken.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\code.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\code.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\code.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\cuteee.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\cuteee.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\cuteee.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\download (10).jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\download (10).jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\download (10).jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\eat.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\eat.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\eat.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-14-pro-256gb_1.webp",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-14-pro-256gb_1.webp",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\iphone-14-pro-256gb_1.webp"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-14-pro_2__5.webp",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-14-pro_2__5.webp",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\iphone-14-pro_2__5.webp"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-15-pro-max_3.webp",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-15-pro-max_3.webp",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\iphone-15-pro-max_3.webp"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-15-pro-max_4.webp",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\iphone-15-pro-max_4.webp",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\iphone-15-pro-max_4.webp"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\kanna5.webp",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\kanna5.webp",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\kanna5.webp"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\money.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\money.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\money.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\oppo-find-n2-flip.webp",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\oppo-find-n2-flip.webp",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\oppo-find-n2-flip.webp"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\rabit.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\oppo_find_n2_flip_1_.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\oppo_find_n2_flip_1_.webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\oppo_find_n2_flip_2_.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\oppo_find_n2_flip_2_.webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\oppo_find_n2_flip_3_.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\oppo_find_n2_flip_3_.webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\oppo_find_n2_flip_4_.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\oppo_find_n2_flip_4_.webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\oppo_find_n2_flip_5_.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\oppo_find_n2_flip_5_.webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\rabit.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\rabit.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\samsung-galaxy-z-fold-5.webp",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\samsung-galaxy-z-fold-5.webp",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\samsung-galaxy-z-fold-5.webp"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\sea2.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\sea2.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\sea2.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\thỏ 2.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\tech new galaxy-s22-and-s22-plus-back-side-by-side.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\tech new galaxy-s22-and-s22-plus-back-side-by-side.webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\thỏ 2.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\thỏ 2.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\thỏ 3.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\thỏ 3.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\thỏ 3.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\thỏ.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\thỏ.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\thỏ.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\umaru_lm.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\umaru_lm.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\umaru_lm.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\xiaomi-redmi-note-12-pro-5g.webp",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\xiaomi-redmi-note-12-pro-5g.webp",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\xiaomi-redmi-note-12-pro-5g.webp"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\z5105115185262_3e0239e657d82cbd6ee8c5fa6fab16c7.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\z5105115185262_3e0239e657d82cbd6ee8c5fa6fab16c7.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\z5105115185262_3e0239e657d82cbd6ee8c5fa6fab16c7.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\z5105115202130_7df5beb38c5c05cad3800fcda32768e2.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\z5105115202130_7df5beb38c5c05cad3800fcda32768e2.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\z5105115202130_7df5beb38c5c05cad3800fcda32768e2.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\418025021_1073057710697656_6950206025922473540_n.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\418025021_1073057710697656_6950206025922473540_n.jpg",
       "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\418025021_1073057710697656_6950206025922473540_n.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\OIP.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\Infomation tech new.webp",
+      "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\Infomation tech new.webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\Iphone-13-128GB.jpg",
+      "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\Iphone-13-128GB.jpg"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\OIP.jpg",
       "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\OIP.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\Pk.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\OPPO Reno8 T 5G (8GB - 128GB).webp",
+      "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\OPPO Reno8 T 5G (8GB - 128GB).webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\Pk.jpg",
       "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\Pk.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\Umaru3.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\Umaru3.jpg",
       "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\Umaru3.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\cat.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\cat.jpg",
       "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\cat.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\kanna.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\kanna.jpg",
       "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\kanna.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\sale.png",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\sale.png",
       "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\sale.png"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\thỏ 2.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\samsung-galaxy-z-fold-5.webp",
+      "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\samsung-galaxy-z-fold-5.webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\thỏ 2.jpg",
       "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\thỏ 2.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\thỏ 3.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\thỏ 3.jpg",
       "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\thỏ 3.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\User_Picture\\WIN_20221005_11_13_34_Pro.jpg",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\TechNews\\1e33f752-4902-4bea-b407-1a7f15dc2760\\image.jpg",
+      "PackagePath": "staticwebassets\\assets\\TechNews\\1e33f752-4902-4bea-b407-1a7f15dc2760\\image.jpg"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\TechNews\\1e33f752-4902-4bea-b407-1a7f15dc2760\\link.txt",
+      "PackagePath": "staticwebassets\\assets\\TechNews\\1e33f752-4902-4bea-b407-1a7f15dc2760\\link.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\TechNews\\1e33f752-4902-4bea-b407-1a7f15dc2760\\title.txt",
+      "PackagePath": "staticwebassets\\assets\\TechNews\\1e33f752-4902-4bea-b407-1a7f15dc2760\\title.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\TechNews\\29ff2a15-d9b1-4e5e-828c-d0c7fb9b5831\\image.jpg",
+      "PackagePath": "staticwebassets\\assets\\TechNews\\29ff2a15-d9b1-4e5e-828c-d0c7fb9b5831\\image.jpg"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\TechNews\\29ff2a15-d9b1-4e5e-828c-d0c7fb9b5831\\link.txt",
+      "PackagePath": "staticwebassets\\assets\\TechNews\\29ff2a15-d9b1-4e5e-828c-d0c7fb9b5831\\link.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\TechNews\\29ff2a15-d9b1-4e5e-828c-d0c7fb9b5831\\title.txt",
+      "PackagePath": "staticwebassets\\assets\\TechNews\\29ff2a15-d9b1-4e5e-828c-d0c7fb9b5831\\title.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\TechNews\\2e3c3028-1d40-453d-a4e4-234ad2d910c8\\image.jpg",
+      "PackagePath": "staticwebassets\\assets\\TechNews\\2e3c3028-1d40-453d-a4e4-234ad2d910c8\\image.jpg"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\TechNews\\2e3c3028-1d40-453d-a4e4-234ad2d910c8\\link.txt",
+      "PackagePath": "staticwebassets\\assets\\TechNews\\2e3c3028-1d40-453d-a4e4-234ad2d910c8\\link.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\TechNews\\2e3c3028-1d40-453d-a4e4-234ad2d910c8\\title.txt",
+      "PackagePath": "staticwebassets\\assets\\TechNews\\2e3c3028-1d40-453d-a4e4-234ad2d910c8\\title.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\TechNews\\38e6b118-ca58-46c1-b4f4-2506a70abb50\\image.jpg",
+      "PackagePath": "staticwebassets\\assets\\TechNews\\38e6b118-ca58-46c1-b4f4-2506a70abb50\\image.jpg"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\TechNews\\38e6b118-ca58-46c1-b4f4-2506a70abb50\\link.txt",
+      "PackagePath": "staticwebassets\\assets\\TechNews\\38e6b118-ca58-46c1-b4f4-2506a70abb50\\link.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\TechNews\\38e6b118-ca58-46c1-b4f4-2506a70abb50\\title.txt",
+      "PackagePath": "staticwebassets\\assets\\TechNews\\38e6b118-ca58-46c1-b4f4-2506a70abb50\\title.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\TechNews\\a284fce2-8593-4a5a-9f0f-635cbe424637\\image.jpg",
+      "PackagePath": "staticwebassets\\assets\\TechNews\\a284fce2-8593-4a5a-9f0f-635cbe424637\\image.jpg"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\TechNews\\a284fce2-8593-4a5a-9f0f-635cbe424637\\link.txt",
+      "PackagePath": "staticwebassets\\assets\\TechNews\\a284fce2-8593-4a5a-9f0f-635cbe424637\\link.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\TechNews\\a284fce2-8593-4a5a-9f0f-635cbe424637\\title.txt",
+      "PackagePath": "staticwebassets\\assets\\TechNews\\a284fce2-8593-4a5a-9f0f-635cbe424637\\title.txt"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\User_Picture\\WIN_20221005_11_13_34_Pro.jpg",
       "PackagePath": "staticwebassets\\assets\\User_Picture\\WIN_20221005_11_13_34_Pro.jpg"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\User_Picture\\l60Hf-150x150.png",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\User_Picture\\l60Hf-150x150.png",
       "PackagePath": "staticwebassets\\assets\\User_Picture\\l60Hf-150x150.png"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\css\\site.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\favicon.ico",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\js\\site.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
