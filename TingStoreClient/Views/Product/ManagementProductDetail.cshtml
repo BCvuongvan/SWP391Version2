@@ -40,21 +40,25 @@
 
                 <ul class="preview-thumbnail nav nav-tabs">
                     <li class="active"><a data-target="#pic-1" data-toggle="tab"><img
-                                src="~/assets/Product_Images/@Model.proImage" alt="@Model.proName" class="img-thumbnail"></a>
+                                src="~/assets/Product_Images/@Model.proImage" alt="@Model.proName"
+                                class="img-thumbnail"></a>
                     </li>
 
                     @for (int i = 0; i < productImagesList.Count; i++)
                     {
                         var subPicture = productImagesList[i];
                         var targetId = $"pic-{i + 2}";
-                        @if(@subPicture.imageStatus == true){
-                        <li class="image-container">
-                            <a data-target="#@targetId" data-toggle="tab">
-                                <img src="~/assets/Product_Images/@subPicture.imageUrl" alt="@Model.proName"
-                                    class="img-thumbnail">
-                                <a asp-controller="Product" asp-action="DeleteImage" asp-route-id="@subPicture.imageId" class="delete-icon" style="position: absolute; top: 0; right: 0; background-color: red; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 16px; text-decoration: none;">-</a>
-                            </a>
-                        </li>
+                        @if (@subPicture.imageStatus == true)
+                        {
+                            <li class="image-container">
+                                <a data-target="#@targetId" data-toggle="tab">
+                                    <img src="~/assets/Product_Images/@subPicture.imageUrl" alt="@Model.proName"
+                                        class="img-thumbnail">
+                                    <a asp-controller="Product" asp-action="DeleteImage" asp-route-id="@subPicture.imageId"
+                                        class="delete-icon"
+                                        style="position: absolute; top: 0; right: 0; background-color: red; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 16px; text-decoration: none;">-</a>
+                                </a>
+                            </li>
                         }
                     }
                     <li><a>
@@ -63,7 +67,7 @@
                                 <div class="tab-pane"
                                     style="position: relative; height: 85px; width: 85px; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;">
                                     <label for="file" style="cursor: pointer;">
-                                        <i class="fa fa-plus-circle" style="font-size: 24px;"></i>
+                                        <i class="fa-solid fa-image" style="font-size: 24px;"></i>
                                         <input id="file" name="file" type="file" style="display: none;"
                                             onchange="form.submit()" />
                                         <input type="hidden" name="productId" value="@Model.proId" />
@@ -93,7 +97,7 @@
                 </p>
                 <div class="box_info">
                     <div class="box_title">
-                        <p>Thông tin sản phẩm</p>
+                        <p>Product Information</p>
                     </div>
                     <div class="box_content">
                         <div class="item_info d-flex">
@@ -115,7 +119,7 @@
 </div>
 <div class="block_content_product">
     <div class="col-md-8 block_content_product_left">
-        <h2 class="text-center">ĐẶC ĐIỂM NỔI BẬT </h2>
+        <h2 class="text-center">Distinctive Features </h2>
         <div class="ul">
             @ViewBag.HighlightFeatures
         </div>
@@ -125,15 +129,35 @@
                 <i class="fas fa-pencil-alt"></i></a></div>
     </div>
     <div class="col-md-4 block_content_product_right">
-        <p class="title">Thông số kỹ thuật</p>
-        <div class="ul">
-            @ViewBag.TechnicalSpecs
-        </div>
-        <div style="margin-left: 280px; margin-bottom: 10px;"><a asp-controller="Product"
-                asp-action="UpdateProductTechnicalSpecsDetail" asp-route-id="@Model.proId" class="edit-button"
-                aria-label="Edit">
-                <i class="fas fa-pencil-alt"></i></a></div>
+    <p class="title">Specifications</p>
+    @if (!string.IsNullOrEmpty(ViewBag.TechnicalSpecs))
+    {
+        <table class="table">
+            <tbody>
+            @{
+                var lines = ViewBag.TechnicalSpecs.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var line in lines)
+                {
+                    var parts = line.Split(new string[] { ": " }, 2, StringSplitOptions.RemoveEmptyEntries);
+                    if (parts.Length == 2)
+                    {
+                        <tr>
+                            <th>@parts[0]</th>
+                            <td>@parts[1]</td>
+                        </tr>
+                    }
+                }
+            }
+            </tbody>
+        </table>
+    }
+    <!-- Nút chỉnh sửa dưới bảng -->
+    <div style="margin-left: 280px; margin-bottom: 10px;">
+        <a asp-controller="Product" asp-action="UpdateProductTechnicalSpecsDetail" asp-route-id="@Model.proId" class="edit-button" aria-label="Edit">
+            <i class="fas fa-pencil-alt"></i>
+        </a>
     </div>
+</div>
 
 </div>
 </div>

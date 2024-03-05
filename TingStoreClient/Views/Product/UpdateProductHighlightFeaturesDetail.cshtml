@@ -16,7 +16,7 @@
 </nav>
 <section id="product_part" class="main">
     <div class="container">
-        <h2 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">CẬP NHẬT THÔNG TIN NỔI BẬC CỦA SẢN PHẨM</h2>
+        <h2 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">UPDATE PRODUCT HIGHLIGHTSUPDATE PRODUCT HIGHLIGHTS</h2>
         <div class="card-body">
             <form asp-controller="Product" asp-action="UpdateProductHighlightFeaturesDetail" method="post"
                 style="margin: 10px;" enctype="multipart/form-data">
@@ -27,7 +27,7 @@
                     <input type="text" asp-for="proName" class="form-control">
                 </div>
                 <div>
-                    <label class="form-label">Thông tin nổi bậc: </label>
+                    <label class="form-label">Specifications: </label>
                     <textarea name="highlightFeatures" class="form-control large-input" rows="10">@ViewBag.HighlightFeatures</textarea>
                 </div> <br>
                 <div class="button-container" style="text-align: center;">

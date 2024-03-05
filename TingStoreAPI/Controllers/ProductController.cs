@@ -27,6 +27,7 @@ namespace TingStoreAPI.Controllers
             return Ok(productList);
         }
 
+
         [HttpGet("{id}", Name = "GetProductById")]
         public IActionResult GetProductById(int id)
         {
@@ -142,6 +143,15 @@ namespace TingStoreAPI.Controllers
             this._db.SaveChanges();
 
             return Ok(proImg);
+        }
+
+        [HttpGet("Hot")]
+        public ActionResult<IEnumerable<Product>> GetHotProducts(){
+            var hotProducts = this._db.orderDetails.GroupBy(od => od.proId).Select(g => new { proId = g.Key, TotalQuantity = g.Sum(od => od.quantity)}).OrderByDescending(g => g.TotalQuantity).Take(4).Join(this._db.products, g => g.proId, p => p.proId, (g, p) => p).ToList();
+            if(hotProducts == null){
+                return NotFound();
+            }
+            return hotProducts;
         }
     }
 }
