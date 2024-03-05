@@ -1,18 +1,20 @@
 @model Order
 @{
-    ViewData["Title"] = "OrderDetail";
+    ViewData["Title"] = "OrderDetailByCustomer";
+   Layout = "/Views/Shared/_HomePage.cshtml"; 
 }
-<link rel="stylesheet" href="~/Mobile_shop/css/totalOrders.css">
+
+<link rel="stylesheet" href="~/Mobile_shop/css/CustomerOrderDetail.css">
 
 <body>
     <div class="container-xxl position-relative bg-white d-flex p-0">
         <!-- Content Start -->
         <!-- Selection Right Start -->
-        <div class="container mt-5">
+        <div class="container container-box mt-5">
             <div class="page-header">
-                <h1></i>Orders Detail</h1>
+                <h1></i>Your Orders Detail</h1>
                 <div class="float-end" style="margin-top: -50px;">
-                    <a asp-controller="Order" asp-action="GetAllOrder" data-bs-toggle="tooltip" title
+                    <a asp-controller="CustomerProfile" asp-action="CustomerProfile" data-bs-toggle="tooltip" title
                         class="btn btn-success" data-bs-original-title="Back" aria-label="Back"><i
                             class="fas fa-reply"></i></a>
                 </div>
@@ -24,35 +26,9 @@
                             <i class="fas fa-info-circle"></i> Order (#@Model.orderId)
                         </div>
                         <div id="order" class="card-body mb-2 mt-2">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="form-control p-0 border rounded">
-                                        <div class="lead p-2" style="background: #ced4da;">
-                                            <Strong>Customer</Strong>
-                                            <br>
-                                            <a asp-controller="UserManagement" asp-action="UserDetails" asp-route-id="@Model.userName" style="text-decoration: none;">@Model.userName</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="form-control p-0 border rounded">
-                                        <div class="lead p-2" style="background: #ced4da;">
-                                            <Strong>Date Added</Strong>
-                                            <br>
-                                            @Model.orderDate
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <table class="table table-bordered table-hover mt-3">
                                 <tr>
-                                    <td><strong>Full Name:</strong> @Model.user.fullName</td>
-                                </tr>
-                                <tr>
                                     <td><strong>Phone number:</strong> @Model.user.phoneNumber</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Email:</strong> @Model.user.email</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Delivery address:</strong> @Model.user.address</td>
@@ -99,41 +75,23 @@
                                 </tbody>
                             </table>
                             <div class="btn" style="float: inline-end;">
-                            @if (@Model.orderStatusId != 2 && Model.orderStatusId != 3 && Model.orderStatusId != 4)
-                            {
-                                <form asp-controller="Order" asp-action="ChangeOrderStatusConfirm" method="post">
-                                    <input type="hidden" name="id" value="@Model.orderId"/>
-                                    <button type="submit" class="btn btn-success">Confirm</button>
-                                </form> 
-                            }
-                            @if(@Model.orderStatusId == 2){
-                                <p class="text-success fs-5">The order has been confirmed!</p>
+                                @if(@Model.orderStatusId != 2 && @Model.orderStatusId != 3  && @Model.orderStatusId != 4){
+                                    <a asp-controller="CustomerProfile" asp-action="CustomerCancelOrder" asp-route-id="@Model.orderId" class="btn btn-danger">Cancel Order</a>
+                                }
+                                @if(@Model.orderStatusId == 2){
+                                <p class="text-success notifications">Your order has been confirmed!</p>
                             }
                             
                             @if(@Model.orderStatusId == 3){
-                                <p class="text-danger fs-5">The order has been refused by the Admin!</p>
+                                <p class="text-danger notifications">Your order has been refused by the Admin!</p>
                             }
                             @if(@Model.orderStatusId == 4){
-                                <p class="text-danger fs-5">The order has been canceled by the Customer!</p>
+                                <p class="text-danger notifications">You have canceled your order!</p>
                             }
-                        </div>
-
-                        <div class="btn" style="float: inline-end;">
-                            @if (@Model.orderStatusId != 2 && @Model.orderStatusId != 3 && Model.orderStatusId != 4)
-                            {
-                                <form asp-controller="Order" asp-action="ChangeOrderStatusReject" asp-route-id="@Model.orderId" method="post">
-                                    <button type="submit" class="btn btn-danger">Reject</button>
-                                </form>
-                            }
-                        </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Back to Top -->
-    <a href=" #" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 </body>

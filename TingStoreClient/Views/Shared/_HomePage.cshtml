@@ -149,7 +149,8 @@
             font-weight: bold;
             /* Độ đậm */
         }
-        .box-time{
+
+        .box-time {
             margin-right: -70px;
         }
     </style>
@@ -311,11 +312,12 @@
                     </li>
                     @if (@HttpContextAccessor.HttpContext.Session.GetString("_user") != null)
                     {
-                        <li><a asp-controller="CartManager", asp-action="Index"><i class="fas fa-shopping-cart" style="margin-top: 4px;"></i></a></li>
-                        <li><a asp-controller="AdminProfile" asp-action="Index"><i class="fa-solid fa-user"
-                                    style="margin-top: 4px;"></i> <br></a></li>
-                        <li><a asp-controller="Auth" asp-action="Logout">Logout <i class="fa-solid fa-right-from-bracket"
-                                    style="margin-top: 4px;"></i> <br></a></li>
+                        <li><a asp-controller="CartManager" asp-action="Index"><i class="fas fa-shopping-cart"
+                                    style="margin-top: 4px;"></i></a></li>
+                        <li><a asp-controller="CustomerProfile" asp-action="CustomerProfile"><i class="fa-solid fa-user"
+                                    style="margin-top: 4px;"></i></a></li>
+                        <li><a asp-controller="Auth" asp-action="Logout"><i class="fa fa-sign-out"
+                                    style="margin-top: 4px;"></i> Logout</a></li>
                     }
                     else
                     {
@@ -328,7 +330,7 @@
     </nav>
     <!-- Navbar part end-->
     <!--Banner part start-->
-    
+
     <img class="text-center" src="https://cdn2.cellphones.com.vn/x/media/catalog/product/h/s/hs-cuoi-tuan-tet-text.png"
         alt="hotsale">
     <!-- Discount part Start -->
@@ -492,15 +494,31 @@
             let maxPrice = currentUrl.searchParams.get("maxPrice");
             let newUrl = `${window.location.origin}${window.location.pathname}?cateId=${cateId}&minPrice=${minPrice}&maxPrice=${maxPrice}&sortOrder=${sortOrder}`;
             window.location.href = newUrl;
-        }
+        }    
+    </script>
+
+    <script>
+        $('a[data-toggle="tab"]').on('click', function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
 
     </script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="path/to/bootstrap.min.js"></script>
+
+    <!-- Thêm jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Thêm Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="~/Mobile_shop/js/slick.min.js"></script>
     <script src="~/Mobile_shop/js/venobox.min.js"></script>
     <script type="text/javascript" src="~/Mobile_shop/js/custom.js"></script>
     <script src="https://kit.fontawesome.com/8143c9cd7e.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

@@ -82,6 +82,7 @@ namespace TingStoreClient.Controllers
             }
             return NotFound();
         }
+        
         [HttpPost]
         public async Task<IActionResult> UserDetails(string id, User user, IFormFile UserPicture)
         {
