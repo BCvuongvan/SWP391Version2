@@ -30,6 +30,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/SP24/SWP391_V3/SWP391Version2/TingStoreClient/Views/CartManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydE1hbmFnZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SP24/SWP391_V3/SWP391Version2/TingStoreClient/Views/CartManager/Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydE1hbmFnZXJcT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/SP24/SWP391_V3/SWP391Version2/TingStoreClient/Views/Category/CreateCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlQ2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,6 +60,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/SP24/SWP391_V3/SWP391Version2/TingStoreClient/Views/CustomerProfile/OrderDetailByCustomer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJQcm9maWxlXE9yZGVyRGV0YWlsQnlDdXN0b21lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SP24/SWP391_V3/SWP391Version2/TingStoreClient/Views/Error/ErrorPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcRXJyb3JQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SP24/SWP391_V3/SWP391Version2/TingStoreClient/Views/HomeAdmin/Index.cshtml]
@@ -168,6 +180,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/SP24/SWP391_V3/SWP391Version2/TingStoreClient/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SP24/SWP391_V3/SWP391Version2/TingStoreClient/Views/TechNew/CreateTechNew.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaE5ld1xDcmVhdGVUZWNoTmV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SP24/SWP391_V3/SWP391Version2/TingStoreClient/Views/TechNew/DeleteTechNew.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaE5ld1xEZWxldGVUZWNoTmV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SP24/SWP391_V3/SWP391Version2/TingStoreClient/Views/TechNew/ListTechNew.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaE5ld1xMaXN0VGVjaE5ldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SP24/SWP391_V3/SWP391Version2/TingStoreClient/Views/TechNew/UpdateTechNew.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaE5ld1xVcGRhdGVUZWNoTmV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SP24/SWP391_V3/SWP391Version2/TingStoreClient/Views/TotalInformation/TotalInfor.cshtml]

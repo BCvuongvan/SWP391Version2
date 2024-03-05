@@ -89,6 +89,7 @@ namespace TingStoreClient.Controllers
             {
                 return RedirectToAction("GetAllCategory");
             }
+            
             return RedirectToAction("GetAllCategory");
         }
 

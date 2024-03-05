@@ -21,8 +21,7 @@
 </nav>
 <section id="product_part" class="main">
     <div class="container">
-        <h2 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">XÓA SẢN
-            PHẨM GIẢM GiÁ</h2>
+        <h2 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">REMOVE DISCOUNT PRODUCTS</h2>
         <div class="card-body" style="margin-bottom: 10px;">
             <form asp-controller="SaleProduct" asp-action="Delete" method="post" style="margin: 10px;"
                 enctype="multipart/form-data">
@@ -33,30 +32,30 @@
                     <input type="text" asp-for="proId" class="form-control">
                 </div>
                 <div>
-                    <label class="form-label">Tên sản phẩm: </label>
+                    <label class="form-label">Product Name: </label>
                     <input type="text" class="form-control large-input" value="@Model.product.proName" disabled>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Ảnh sản phẩm: </label> </br>
+                    <label class="form-label">Product Picture: </label> </br>
                     <img src="~/assets/Product_Images/@Model.product.proImage" style="width: 180px; height: 180px;" />
                 </div>
                 <div class="form-group">
-                    <label asp-for="discountPercentage" class="form-label">Giá giảm giá: </label>
+                    <label asp-for="discountPercentage" class="form-label">Discounted Price: </label>
                     <input type="text" asp-for="discountPercentage" class="form-control large-input" disabled>
                     <span asp-validation-for="discountPercentage" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="startDate" class="form-label">Ngày bắt đầu: </label>
+                    <label asp-for="startDate" class="form-label">Start Date: </label>
                     <input type="text" asp-for="startDate" class="form-control large-input" disabled>
                     <span asp-validation-for="startDate" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="endDate" class="form-label">Ngày kết thúc: </label>
+                    <label asp-for="endDate" class="form-label">End Date: </label>
                     <input type="text" asp-for="endDate" class="form-control large-input" disabled>
                     <span asp-validation-for="endDate" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="discountImage" class="form-label">Ảnh giảm giá:</label> <br>
+                    <label asp-for="discountImage" class="form-label">Discount Picture:</label> <br>
                     <img src="~/assets/Product_Images/@Model.discountImage" style="width: 200px; height: 200px;"
                         alt="@Model.discountId"><br> <br>
                 </div>

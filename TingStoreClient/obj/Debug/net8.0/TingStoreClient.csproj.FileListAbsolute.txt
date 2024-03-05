@@ -128,6 +128,8 @@ H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreClient\obj\Debug\net8.0\refint\TingSto
 H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingStoreClient.pdb
 H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingStoreClient.genruntimeconfig.cache
 H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreClient\obj\Debug\net8.0\ref\TingStoreClient.dll
+D:\SWP391_PROJECT_VERSIONX\SWP391Version2\TingStoreClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\FPT\Summer2024_SE1708\TingStore\SWP391Version2\TingStoreClient\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\SP24\SWP391_V3\SWP391Version2\TingStoreClient\bin\Debug\net8.0\appsettings.Development.json
 D:\SP24\SWP391_V3\SWP391Version2\TingStoreClient\bin\Debug\net8.0\appsettings.json
 D:\SP24\SWP391_V3\SWP391Version2\TingStoreClient\bin\Debug\net8.0\TingStoreClient.staticwebassets.runtime.json

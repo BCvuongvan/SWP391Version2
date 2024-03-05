@@ -15,14 +15,14 @@
 </nav>
 <section id="product_part" class="main">
     <div class="container">
-        <h2 class="font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading" style="margin-right: 120px;">BẠN CÓ CHẮC CHẮN MUỐN XÓA ẢNH NÀY?</h2>
+        <h2 class="font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading" style="margin-right: 120px;">ARE YOU SURE YOU WANT TO DELETE THIS PHOTO?</h2>
         <div class="card-body" style="margin-bottom: 10px;">
             <form asp-controller="Product" asp-action="DeleteImageProductDetail" asp-route-imageId="@Model.imageId" method="post" style="margin: 10px;">
                 <div hidden>
                     <input type="text" asp-for="imageId" class="form-control">
                 </div>
                 <div>
-                    <label class="form-label">Tên ảnh: </label>
+                    <label class="form-label">Product Photo: </label>
                     <input type="text" asp-for="imageUrl" class="form-control large-input" disabled> <br>
                 </div>
                 <div style="margin-left: 250px;">

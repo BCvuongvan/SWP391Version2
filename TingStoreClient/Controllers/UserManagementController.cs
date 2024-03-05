@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TingStoreClient.Models;
+using TingStoreClient.Util;
 
 namespace TingStoreClient.Controllers
 {
@@ -122,20 +123,25 @@ namespace TingStoreClient.Controllers
             HttpResponseMessage response = await client.PutAsync(userApi + "/" + id, content);
             if (response.IsSuccessStatusCode)
             {
-                ViewBag.SystemNotification = "Edit successful";
+                ViewBag.SystemNotification = "Ban account successful";
                 var userList = await GetUserListAsync();
                 return Json("User has been banned.");
             }
             return Json("Failed to ban user.");
         }
 
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
             return View();
         }
         [HttpPost]
         public async Task<IActionResult> Create(User user)
         {
+            if (!Utilities.validPhoneNumber(user.phoneNumber))
+            {
+                TempData["SystemNotificationError"] = "Phone number is incorrectly";
+                return View("Create");
+            }
             user.picture = "l60Hf-150x150.png";
             user.createdAt = DateTime.Now;
             user.updateAt = DateTime.Now;
@@ -145,10 +151,15 @@ namespace TingStoreClient.Controllers
                 String data = JsonSerializer.Serialize(user);
                 var content = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
                 HttpResponseMessage response = await client.PostAsync(userApi, content);
-
-                return RedirectToAction("Index");
-
+                if (response.IsSuccessStatusCode)
+                {
+                    TempData["SystemNotification"] = "Add staff successfully";
+                    return RedirectToAction("Index", new { id = 3 });
+                }
+                TempData["SystemNotificationError"] = "Account is already exit!";
+                return RedirectToAction("Index", new { id = 3 });
             }
+            TempData["SystemNotificationError"] = "Invalid input";
             return View(user);
         }
 

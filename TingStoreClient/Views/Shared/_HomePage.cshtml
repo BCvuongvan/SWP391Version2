@@ -24,10 +24,49 @@
     <link rel="stylesheet" type="text/css" href="~/Mobile_shop/fonts/font/flaticon.css">
     <link rel="stylesheet" href="~/Mobile_shop/css/venobox.css">
     <link rel="stylesheet" href="~/Mobile_shop/css/media.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <title>Home page</title>
 </head>
 
 <body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const endDateStr = '@Html.Raw(ViewBag.LatestDiscountEndDate)';
+            console.log("endDateStr:", endDateStr); // Debug
+            const endDate = new Date(endDateStr);
+            const boxTime = document.querySelector('.box-time');
+
+            if (isNaN(endDate.getTime())) {
+                console.error('Invalid endDate:', endDateStr);
+                boxTime.innerHTML = "Invalid countdown time.";
+                return;
+            }
+
+            function updateCountdown() {
+                const now = new Date();
+                const diff = endDate - now;
+
+                if (diff <= 0) {
+                    boxTime.innerHTML = "<div class='time-segment'>The</div><div class='time-segment'>discount</div><div class='time-segment'>ended.</div>";
+                    clearInterval(interval);
+                    return;
+                }
+
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('hours').innerHTML = `${hours}`;
+                document.getElementById('minutes').innerHTML = `${minutes}`;
+                document.getElementById('seconds').innerHTML = `${seconds}`;
+            }
+
+            updateCountdown();
+            const interval = setInterval(updateCountdown, 1000);
+        });
+    </script>
 
     <style>
         .dropdown-toggle {
@@ -65,6 +104,54 @@
             /* Chữ to hơn */
             margin-bottom: 10px;
             /* Khoảng cách giữa các mục */
+        }
+
+        .box-time {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            /* Điều chỉnh kích thước font chữ theo ý muốn */
+        }
+
+        .time {
+            background: rgb(244, 199, 0);
+            color: rgb(34, 34, 34);
+            padding: 5px 10px;
+            /* Điều chỉnh padding để tạo khoảng cách */
+            border-radius: 5px;
+            /* Làm tròn góc nếu muốn */
+        }
+
+        .box-time {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            /* Khoảng cách giữa các ô */
+        }
+
+        .time-segment {
+            width: 35px;
+            /* Chiều rộng của ô */
+            height: 35px;
+            /* Chiều cao của ô */
+            background-color: #ebef28;
+            /* Màu nền */
+            color: #0f0909;
+            /* Màu chữ */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            /* Bo góc */
+            font-size: 15px;
+            /* Kích thước font */
+            font-weight: bold;
+            /* Độ đậm */
+        }
+
+        .box-time {
+            margin-right: -70px;
         }
     </style>
     <!-- preloader start  -->
@@ -109,11 +196,12 @@
                                         class="fa fa-mobile-alt"
                                         style="margin-left: -10px; margin-right: 10px;"></i>Điện Thoại
                                     <i class="fa fa-angle-right" aria-hidden="true" style="float: right;"></i></a>
-                                <ul class="dropdown-menu" style="width: 450px;">
+                                <ul class="dropdown-menu" style="width: 700px;">
                                     <div style="display: flex; flex-wrap: wrap; margin-left: 15px;">
                                         <div style="flex: 1;">
                                             <li>
-                                                <p style="font-size: 17px;"><strong>Thương hiệu điện thoại</strong></p>
+                                                <p style="font-size: 17px;"><strong>Thương hiệu điện thoại</strong>
+                                                </p>
                                             </li>
                                             @if (ViewBag.cateList != null)
                                             {
@@ -130,23 +218,75 @@
                                                     cả thương hiệu</a>
                                             </li>
                                         </div>
-                                        <div style="flex: 1; margin-right: -100px;">
+
+                                        @* <div style="flex: 1; margin-right: -100px;">
+                                        <li>
+                                        <p style="font-size: 17px;"><strong>Mức giá điện thoại</strong></p>
+                                        </li>
+                                        <li><a href="#" class="dropdown-item"
+                                        style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color:
+                                        #626060;">5tr-10tr</a>
+                                        </li>
+                                        <li><a href="#" class="dropdown-item"
+                                        style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color:
+                                        #626060;">11tr-15tr</a>
+                                        </li>
+                                        <li><a href="#" class="dropdown-item"
+                                        style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color:
+                                        #626060;">16tr-20tr</a>
+                                        </li>
+                                        <li><a href="#" class="dropdown-item"
+                                        style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color:
+                                        #626060;">21tr-25tr</a>
+                                        </li>
+
+                                        </div> *@
+
+                                        <div style="flex: 1;">
                                             <li>
                                                 <p style="font-size: 17px;"><strong>Mức giá điện thoại</strong></p>
                                             </li>
-                                            <li><a href="#" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">5tr-10tr</a>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=5000000&maxPrice=10000000"
+                                                    class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
+                                                    5-10 triệu</a>
                                             </li>
-                                            <li><a href="#" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">11tr-15tr</a>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=10000000&maxPrice=15000000"
+                                                    class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
+                                                    10-15 triệu</a>
                                             </li>
-                                            <li><a href="#" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">16tr-20tr</a>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=15000000&maxPrice=20000000"
+                                                    class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
+                                                    15-20 triệu</a>
                                             </li>
-                                            <li><a href="#" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">21tr-25tr</a>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=20000000&maxPrice=25000000"
+                                                    class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
+                                                    20-25 triệu</a>
+                                            </li>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=25000000&maxPrice=30000000000000000"
+                                                    class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
+                                                    25 triệu</a>
                                             </li>
 
+                                        </div>
+                                        <div style="flex: 1;">
+                                            <li>
+                                                <p style="font-size: 17px;"><strong>Sản phẩm bán chạy</strong></p>
+                                            </li>
+                                            @if (ViewBag.proList != null)
+                                            {
+                                                foreach (var product in ViewBag.proList)
+                                                {
+                                                    <li><a class="dropdown-item"
+                                                            href="@Url.Action("ManagementProductDetail", "Home", new { id = product.proId })"
+                                                            style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">@product.proName</a>
+                                                    </li>
+                                                }
+                                            }
                                         </div>
                                     </div>
                                 </ul>
@@ -172,7 +312,8 @@
                     </li>
                     @if (@HttpContextAccessor.HttpContext.Session.GetString("_user") != null)
                     {
-                        <li><a href="signup.html"><i class="fas fa-shopping-cart" style="margin-top: 4px;"></i></a></li>
+                        <li><a asp-controller="CartManager" asp-action="Index"><i class="fas fa-shopping-cart"
+                                    style="margin-top: 4px;"></i></a></li>
                         <li><a asp-controller="CustomerProfile" asp-action="CustomerProfile"><i class="fa-solid fa-user"
                                     style="margin-top: 4px;"></i></a></li>
                         <li><a asp-controller="Auth" asp-action="Logout"><i class="fa fa-sign-out"
@@ -189,15 +330,28 @@
     </nav>
     <!-- Navbar part end-->
     <!--Banner part start-->
+
     <img class="text-center" src="https://cdn2.cellphones.com.vn/x/media/catalog/product/h/s/hs-cuoi-tuan-tet-text.png"
         alt="hotsale">
-    <!-- banner part End -->
-    <!-- Flash sale Start -->
-
-    <!-- product part Start -->
-    <section id="product_part testimonial_part" class="main">
-        @RenderBody() <!-- This is where the content of the specific view will be rendered -->
+    <!-- Discount part Start -->
+    <section id="discount_part">
+        <div class="container discount">
+            <div class="row">
+                <div class="name_box" style="margin-top: 100px">
+                    <h2><strong class="name_box_title">KHUYẾN MÃI CHỈ CÓ TRÊN ONLINE</strong></h2>
+                </div>
+                <div class="discount_payonl">
+                    <div class="home_slider">
+                        <a href=""><img src="https://cdn.tgdd.vn/2023/09/banner/1200x150-tgdd-1200x150-1.png"
+                                alt="discount"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    <!-- Discount part End -->
+    <!-- banner part End -->
+    @RenderBody() <!-- This is where the content of the specific view will be rendered -->
 
     <!-- product part End -->
 
@@ -336,7 +490,9 @@
         function updateSortOrder(sortOrder) {
             let currentUrl = new URL(window.location.href);
             let cateId = currentUrl.searchParams.get("cateId");
-            let newUrl = `${window.location.origin}${window.location.pathname}?cateId=${cateId}&sortOrder=${sortOrder}`;
+            let minPrice = currentUrl.searchParams.get("minPrice");
+            let maxPrice = currentUrl.searchParams.get("maxPrice");
+            let newUrl = `${window.location.origin}${window.location.pathname}?cateId=${cateId}&minPrice=${minPrice}&maxPrice=${maxPrice}&sortOrder=${sortOrder}`;
             window.location.href = newUrl;
         }    
     </script>

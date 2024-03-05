@@ -1,0 +1,44 @@
+@model (string Title, string ImageUrl, string NewsId, string Link)
+@{
+    ViewData["Title"] = "DeleteTechNew";
+    Layout = "/Views/Shared/_ManagementProduct.cshtml";
+}
+<nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+    <div class="navbar-nav align-items-center ms-auto">
+        <div class="nav-item">
+            <a class="nav-link" style="margin-right: 20px;" asp-controller="Product"
+                asp-action="ManagementProductDetail">
+                <i class="fa fa-sign-out-alt"></i>
+                <span class="d-none d-lg-inline-flex">Back</span>
+            </a>
+        </div>
+    </div>
+</nav>
+<section id="product_part" class="main">
+    <div class="container">
+        <h2 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">DELETE TECH NEW</h2>
+        <div class="card-body">
+            <form asp-controller="TechNew" asp-action="Delete" method="post"
+                style="margin: 10px;" enctype="multipart/form-data">
+                <input type="hidden" name="NewsId" value="@ViewBag.NewsId" />
+                <div>
+                    <label class="form-label">Technology News Headlines: </label>
+                    <input name="title" class="form-control large-input" value="@ViewBag.TitleTechNew" readonly></input>
+                </div>
+                <div>
+                    <label class="form-label">Technology News Picture: </label> </br>
+                    <img src="@Url.Content($"~/assets/TechNews/{@ViewBag.NewsId}/image.jpg")" style="width: 200px; height: 200px;" alt="News Image" readonly> </br></br>
+                </div>
+                <div>
+                    <label class="form-label">Technology News Link: </label>
+                    <input name="link" class="form-control large-input" value="@ViewBag.LinkTechNew" readonly></input> </br>
+                </div>
+                <div class="button-container" style="text-align: center;">
+                    <button type="submit" style="font-size: 18px; padding: 10px 20px;"
+                        class="fancy-button">Delete</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>

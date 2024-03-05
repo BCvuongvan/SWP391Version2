@@ -46,32 +46,44 @@
                                         <div class="text-center" style="color: rgb(47, 69, 173);">
                                             <h1>Sign Up</h1>
                                         </div>
+                                        <div hidden class="form-outline mb-0">
+                                            <label asp-for="fullName" class="form-label" for="phoneNumber">fullname
+                                                *</label>
+                                            <input asp-for="fullName" type="text" class="form-control"
+                                                placeholder="Create a new Phone number" value="none" />
+                                            <span class="error" id="phoneNumberError" style="margin-left: 28px;"></span>
+                                        </div>
+                                        <div hidden class="form-outline mb-0">
+                                            <label asp-for="address" class="form-label" for="phoneNumber">Address
+                                                *</label>
+                                            <input asp-for="address" type="text" class="form-control"
+                                                placeholder="Create a new Phone number" value="none" />
+                                            <span class="error" id="phoneNumberError" style="margin-left: 28px;"></span>
+                                        </div>
                                         <div class="form-outline mb-0">
                                             <label asp-for="userName" class="form-label" for="username">Username
                                                 *</label>
-                                            <input asp-for="userName" type="text" id="username" name="username" value=""
-                                                class="form-control" placeholder="Enter your Username" />
+                                            <input asp-for="userName" type="text" class="form-control"
+                                                placeholder="Enter your Username" />
                                             <span class="error" id="usernameError" style="margin-left: 28px;"></span>
                                         </div>
                                         <div class="form-outline mb-0">
-                                            <label asp-for="fullName" class="form-label" for="fullname">Full Name
+                                            <label asp-for="email" class="form-label" for="fullname">Email
                                                 *</label>
-                                            <input asp-for="fullName" type="text" id="fullname" name="fullname" value=""
-                                                class="form-control" placeholder="Enter your Full Name" />
+                                            <input asp-for="email" type="email" class="form-control"
+                                                placeholder="Enter your Full Name" />
                                             <span class="error" id="fullnameError" style="margin-left: 28px;"></span>
                                         </div>
-
                                         <div class="form-outline mb-0">
-                                            <label asp-for="email" class="form-label" for="email">Email *</label>
-                                            <input asp-for="email" type="email" id="email" name="email"
-                                                class="form-control" placeholder="Enter your Email" />
+                                            <label asp-for="password" class="form-label" for="email">Password</label>
+                                            <input asp-for="password" type="password" class="form-control"
+                                                placeholder="Enter your Email" />
                                             <span class="error" id="emailError" style="margin-left: 28px;"></span>
                                         </div>
                                         <div class="form-outline mb-0">
                                             <label asp-for="phoneNumber" class="form-label" for="phoneNumber">Phone
                                                 number *</label>
-                                            <input asp-for="phoneNumber" type="phoneNumber" id="phoneNumber"
-                                                name="phoneNumber" class="form-control"
+                                            <input asp-for="phoneNumber" type="text" class="form-control"
                                                 placeholder="Create a new Phone number" />
                                             <span class="error" id="phoneNumberError" style="margin-left: 28px;"></span>
                                         </div>
@@ -85,17 +97,12 @@
                                             <button class="btn text-white btn-block fa-lg gradient-custom-2 mb-1"
                                                 type="submit">Sign up</button>
                                         </div>
-
-                                        
                                         <div class="d-flex align-items-center justify-content-center">
                                             <p class="mb-0">You have an account?</p>
                                             <a asp-action="Login" asp-controller="Auth" class="signup">Login</a>
                                         </div>
-
                                         <!-- <p style="color: red;" id="errorMessage" class="error-message text-center"
                                             name="error"></p> -->
-
-
                                     </form>
                                 </div>
                             </div>
