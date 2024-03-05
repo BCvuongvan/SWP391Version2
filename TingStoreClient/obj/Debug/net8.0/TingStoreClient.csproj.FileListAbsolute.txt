@@ -94,7 +94,6 @@ D:\SWP391_PROJECT_VERSIONX\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingS
 E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreClient\bin\Debug\net8.0\Newtonsoft.Json.dll
 E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreClient\bin\Debug\net8.0\System.Security.Permissions.dll
 E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingStoreClient.csproj.AssemblyReference.cache
-E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingStoreClient.csproj.CopyComplete
 H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreClient\bin\Debug\net8.0\appsettings.Development.json
 H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreClient\bin\Debug\net8.0\appsettings.json
 H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreClient\bin\Debug\net8.0\TingStoreClient.staticwebassets.runtime.json
@@ -128,3 +127,4 @@ H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreClient\obj\Debug\net8.0\refint\TingSto
 H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingStoreClient.pdb
 H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingStoreClient.genruntimeconfig.cache
 H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreClient\obj\Debug\net8.0\ref\TingStoreClient.dll
+E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreClient\obj\Debug\net8.0\TingStor.28FACB50.Up2Date

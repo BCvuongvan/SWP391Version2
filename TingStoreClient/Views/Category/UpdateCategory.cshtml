@@ -15,7 +15,7 @@
 
 <h2 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font">Update category</h2>
 <div class="card-body">
-    <form asp-controller="Category" asp-action="UpdateCategory" method="post" style="margin: 10px;" enctype="multipart/form-data">
+    <form asp-controller="Category" asp-action="UpdateCategory" method="post" style="margin: 10px;" >
         <div hidden>
             <input type="text" asp-for="cateId" class="form-control" >
         </div>
@@ -31,7 +31,7 @@
         </div>
         
         <div class="button-container">
-            <button type="submit" class="btn btn-primary btn-lg"
+            <button type="submit" class="btn btn-primary btn-lg" value="UpdateCategory"
                 style="font-size: 15px; padding: 10px 15px;">Update</button>
         </div>
     </form>

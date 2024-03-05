@@ -52,14 +52,16 @@ namespace TingStoreClient.Controllers
                 if (response.StatusCode == System.Net.HttpStatusCode.Created)
                 {
                     // Redirect to the GetAllCategory action
+                    TempData["SystemNotification"] = "Add category sucessfully!";
                     return RedirectToAction("GetAllCategory");
                 }
                 else
                 {
                     var errorMessage = await response.Content.ReadAsStringAsync();
-                    ViewBag.ErrorMessage = errorMessage;
+                    // ViewBag.ErrorMessage = errorMessage;
+                    TempData["SystemNotificationError"] = errorMessage;
+                    return View("CreateCategory");
                 }
-                return RedirectToAction("GetAllCategory");
             }
 
             // If creation fails or ModelState is invalid, return the same view with the provided category
@@ -69,11 +71,11 @@ namespace TingStoreClient.Controllers
         public async Task<IActionResult> UpdateCategory(int id)
         {
             HttpResponseMessage response = await client.GetAsync(api + "/" + id);
+            await GetAllCategory();
             if (response.IsSuccessStatusCode)
             {
                 var data = response.Content.ReadAsStringAsync().Result; //kq phản hồi từ phía server, lấy dữ liệu đó lưu vào data
                 var category = JsonSerializer.Deserialize<Category>(data); //bóc tách dữ liệu
-                                                                           //=>lấy được thông tin của khách hàng
                 return View(category);
             }
             return NotFound();
@@ -89,7 +91,7 @@ namespace TingStoreClient.Controllers
             {
                 return RedirectToAction("GetAllCategory");
             }
-            return RedirectToAction("GetAllCategory");
+            return View(category);
         }
 
         public async Task<IActionResult> DeleteCategory(int id)
@@ -112,8 +114,12 @@ namespace TingStoreClient.Controllers
             {
                 return RedirectToAction("GetAllCategory");
             }
-            return RedirectToAction("GetAllCategory");
+            // Trả về lại trang DeleteCategory với model nếu không thành công
+            var data = await response.Content.ReadAsStringAsync();
+            var category = JsonSerializer.Deserialize<Category>(data);
+            return View("DeleteCategory", category);
         }
+
 
     }
 }

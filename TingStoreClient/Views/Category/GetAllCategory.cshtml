@@ -1,87 +1,122 @@
 @model List<Category>
 @{
-    ViewData["Title"] = "GetAllCategory";
+    ViewData["Title"] = "Categories";
 }
 
-<div class="page-header">
-    <h3 style="margin-top:20px; text-align: center;">DANH SÁCH THƯƠNG HIỆU</h3>
-    <div style="text-align: center;">
-        <a asp-controller="Category" asp-action="CreateCategory" class="fancy-button"> Thêm thương hiệu</a>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<style>
-    .title-col {
-        font-weight: bold;
-        color: #006666;
-        /* Màu xanh dương */
+<head>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Mobile_shop/css/homeAdmin.css">
+    <link rel="stylesheet" href="~/Mobile_shop/css/Category.css">
+
+    <title>@ViewData["Title"]</title>
+</head>
+
+<body>
+
+    <script>
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 3000);
+    </script>
+    @if (TempData["SystemNotification"] != null)
+    {
+        <div id="systemNotification" class="alert alert-success m-0 p-2">
+            <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotification"]
+            </p>
+        </div>
     }
-</style>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
 
-<div class="container">
-    <div id="order" class="card-body mb-2 mt-2">
-        <form action="" id="form-order" method="">
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover">
-                    <thead>
-                        <tr class="title-col">
-                            <td style="width: 7%; text-align: center; ">No.</td>
-                            <td style="width: 25%; text-align: center;">Category Name</td>
-                            <td style="width: 30%;text-align: center;">Category Describe</td>
-                            <td style="width: 18%;text-align: center;">Number of Product</td>
-                            <td style="width: 20%;text-align: center;"><span>Action</span></td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @{
-                            int count = 0;
-                        }
-                        @foreach (var item in Model)
-                        {
-                            count++;
-                            <tr>
-                                <td>@count</td>
-                                <td>@item.cateName</td>
-                                <td>@item.cateDescribe</td>
-                                <td>@item.Products.Count</td>
+        <!-- Sidebar -->
+        <!-- You can add your sidebar here -->
 
-                                <td>
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <a asp-controller="Category" asp-action="UpdateCategory" asp-route-id="@item.cateId"
-                                            i class="fas fa-edit text-decoration-none">Update</a>
-                                        <span class="vertical-line"></span>
-                                        <a asp-controller="Category" asp-action="DeleteCategory" asp-route-id="@item.cateId"
-                                            class="fas fa-trash-alt text-decoration-none delete"> Delete</a>
-                                    </div>
-
-                                    <style>
-                                        .vertical-line {
-                                            border-left: 1px solid #000;
-                                            height: 20px;
-                                            /* Điều chỉnh độ cao tùy thuộc vào nhu cầu */
-                                            margin: 0 10px;
-                                            /* Điều chỉnh khoảng cách giữa dòng dọc và nút */
-                                        }
-
-                                        .delete {
-                                            color: red;
-                                        }
-
-                                        a:hover {
-                                            color: black;
-                                        }
-                                    </style>
-
-                                </td>
-                            </tr>
-                        }
-                        @if (count == 0)
-                        {
-                            <p>There is no category in lisst</p>
-                        }
-                    </tbody>
-                </table>
+        <!-- Main Content -->
+        <div class="container-fluid">
+            <div class="page-header">
+                <h1>Category</h1>
             </div>
-        </form>
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-list"></i> Category List
+                </div>
+                <div id="order" class="card-body mb-2 mt-2">
+                    <form id="form-order">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr class="title-col">
+                                        <th class="text-center">No.</th>
+                                        <th class="text-start">Category Name</th>
+                                        <th class="text-start">Category Describe</th>
+                                        <th class="text-end">Number of Product</th>
+                                        <th class="text-end">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.Count > 0)
+                                    {
+                                        int count = 0;
+                                        @foreach (var item in Model)
+                                        {
+                                            @if (item.cateStatus == true)
+                                            {
+                                                <tr>
+                                                    <td class="text-center">@item.cateId</td>
+                                                    <td class="text-start">@item.cateName</td>
+                                                    <td class="text-start">@item.cateDescribe</td>
+                                                    <td class="text-end">@item.Products.Count</td>
+                                                    <td class="text-end">
+                                                        <div class="btn-group dropdown">
+                                                            <a asp-controller="Category" asp-action="UpdateCategory"
+                                                                asp-route-id="@item.cateId" class="btn btn-primary"
+                                                                aria-label="Edit"><i class="fas fa-pencil-alt"></i></a>
+                                                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split"
+                                                                data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                                            <ul class="dropdown-menu">
+                                                                <li>
+                                                                    <h6 class="dropdown-item">Options></h6>
+                                                                </li>
+                                                                <li>
+                                                                    <a asp-controller="Category" asp-action="CreateCategory"
+                                                                        class="dropdown-item"><i class="fas fa-plus"></i>
+                                                                        Add new</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a asp-controller="Category" asp-action="DeleteCategory"
+                                                                        asp-route-id="@item.cateId" class="dropdown-item"><i
+                                                                            class="fas fa-trash-alt"></i>
+                                                                        Delete</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <td colspan="5" class="text-center">There is no category in list</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
+</body>
+
+</html>

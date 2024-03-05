@@ -205,7 +205,6 @@ E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreAPI\obj\Debug\net8.0\stat
 E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.TingStoreAPI.props
 E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreAPI\obj\Debug\net8.0\staticwebassets.pack.json
 E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreAPI\obj\Debug\net8.0\scopedcss\bundle\TingStoreAPI.styles.css
-E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreAPI\obj\Debug\net8.0\TingStoreAPI.csproj.CopyComplete
 E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreAPI\obj\Debug\net8.0\TingStoreAPI.dll
 E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreAPI\obj\Debug\net8.0\refint\TingStoreAPI.dll
 E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreAPI\obj\Debug\net8.0\TingStoreAPI.pdb
@@ -282,3 +281,4 @@ H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreAPI\obj\Debug\net8.0\refint\TingStoreA
 H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreAPI\obj\Debug\net8.0\TingStoreAPI.pdb
 H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreAPI\obj\Debug\net8.0\TingStoreAPI.genruntimeconfig.cache
 H:\Ky5\SWP\cccccc\SWP391Version2\TingStoreAPI\obj\Debug\net8.0\ref\TingStoreAPI.dll
+E:\FPT\00_Ky_5\SWP391\1project\SWP391Version2\TingStoreAPI\obj\Debug\net8.0\TingStor.AB54A4DB.Up2Date

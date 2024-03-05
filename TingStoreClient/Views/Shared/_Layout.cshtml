@@ -37,6 +37,15 @@
 </head>
 
 <body>
+
+    @{
+        // Lấy dữ liệu JSON từ Session
+        string userDataJson = @HttpContextAccessor.HttpContext.Session.GetString("_user");
+        // Giải mã dữ liệu JSON thành đối tượng User
+        var option = new System.Text.Json.JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+        var user = System.Text.Json.JsonSerializer.Deserialize<User>(userDataJson, option);
+    }
+
     <script src="https://kit.fontawesome.com/8143c9cd7e.js" crossorigin="anonymous"></script>
 
     <div class="container-fluid position-relative bg-white d-flex p-0">
@@ -49,16 +58,25 @@
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
-                        <img class="rounded-circle" src="https://demo.opencart.com/image/cache/profile-45x45.png"
-                            alt="admin" style="width: 40px; height: 40px;">
+                        <img class="rounded-circle" src="~/assets/User_Picture/@user.picture" alt="admin"
+                            style="width: 40px; height: 40px;">
                         <div
                             class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
                         </div>
                     </div>
                     <div class="ms-3">
-                        <h6 class="mb-0">Tom</h6>
-                        <span>Admin</span>
+                        <h6 class="mb-0">@user.fullName</h6>
+                        @if (@user.userType == 1)
+                        {
+                            <span>Admin</span>
+                        }
+                        else
+                        {
+                            <span>Staff</span>
+                        }
+
                     </div>
+
                 </div>
                 <div class="navbar-nav w-100">
                     <a asp-controller="HomeAdmin" asp-action="Index" class="nav-item nav-link active"><i
@@ -80,7 +98,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
                                 class="fa-solid fa-gear"></i>Setting</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a asp-controller="" asp-action="" class="dropdown-item">Logout</a>
+                            <a asp-controller="Auth" asp-action="Logout" class="dropdown-item">Logout</a>
                         </div>
                     </div>
                 </div>
@@ -104,7 +122,7 @@
                     <input class="form-control border-0" type="search" placeholder="Search">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
-                    <div class="nav-item dropdown">
+                    @* <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-bell me-lg-2"></i>
                             <span class="d-none d-lg-inline-flex">Notificatin</span>
@@ -127,13 +145,16 @@
                             <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item text-center">See all notifications</a>
                         </div>
-                    </div>
+                    </div> *@
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2"
-                                src="https://demo.opencart.com/image/cache/profile-45x45.png" alt="admin"
+                        <a href="#" class="nav-link " data-bs-toggle="dropdown">
+                            <img class="rounded-circle" src="~/assets/User_Picture/@user.picture" alt="admin"
                                 style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">Tom</span>
+                            <div>
+                                <span class="d-none d-lg-inline-flex">@user.fullName</span>
+
+                            </div>
+
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="profileAdmin.html" class="dropdown-item">My Profile</a>
