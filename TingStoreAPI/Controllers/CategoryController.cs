@@ -55,7 +55,7 @@ namespace TingStoreAPI.Controllers
             category.cateStatus = true;
             this._db.categories.Add(new Category(category.cateName, category.cateDescribe));
             this._db.SaveChanges();
-            return CreatedAtRoute("GetCategoryById", new { id = category.cateId }, category);
+            return CreatedAtRoute("GetCategoryById", new { cateId = category.cateId }, category);
         }
 
         [HttpPut("{id}")]
@@ -65,15 +65,19 @@ namespace TingStoreAPI.Controllers
             {
                 return BadRequest("Category cannot be null");
             }
-            Category cate = this._db.categories.FirstOrDefault(ca => ca.cateName == category.cateName);
-            if (cate != null)
+
+            var existingCategory = this._db.categories.Find(id);
+            if (existingCategory == null)
             {
-                return BadRequest("name category already exists.");
+                return NotFound($"Category with ID {id} not found.");
             }
-            category.cateStatus = true;
-            this._db.categories.Update(new Category(category.cateId, category.cateName, category.cateDescribe, category.cateStatus));
+            existingCategory.cateName = category.cateName;
+            existingCategory.cateDescribe = category.cateDescribe;
+            existingCategory.cateStatus = category.cateStatus; 
+
             this._db.SaveChanges();
-            return CreatedAtRoute("GetCategorytById", new { id = category.cateId }, category);
+
+            return Ok(existingCategory); 
         }
 
         [HttpDelete("{id}")]
@@ -88,7 +92,7 @@ namespace TingStoreAPI.Controllers
         }
 
         [HttpGet("ProductsByCategoryID/{categoryId}")]
-        public ActionResult<IEnumerable<Product>> GetProductsByCategory(int categoryId)
+        public ActionResult<IEnumerable<Product>> GetCategoryByProduct(int categoryId)
         {
             var products = _db.products.Where(p => p.cateId == categoryId).ToList();
             var productList = _db.products.Include(p => p.category).ToList();

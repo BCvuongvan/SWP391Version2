@@ -29,7 +29,7 @@ namespace TingStoreClient.Controllers
             this.api = "https://localhost:5001/api/Auth";
         }
 
-        public async Task<IActionResult> Login()
+        public IActionResult Login()
         {
             return View();
         }
@@ -78,13 +78,13 @@ namespace TingStoreClient.Controllers
 
         }
 
-        public async Task<IActionResult> Logout()
+        public  IActionResult Logout()
         {
             HttpContext.Session.Clear();
             return RedirectToAction("Index", "Home");
         }
 
-        public async Task<IActionResult> SignUp()
+        public IActionResult SignUp()
         {
             return View();
         }

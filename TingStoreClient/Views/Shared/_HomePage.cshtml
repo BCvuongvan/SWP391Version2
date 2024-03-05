@@ -300,16 +300,18 @@
                     <li><a href="">Sale</a></li>
                     <li><a href="">News</a></li>
                     <li>
-                        <form class="navbar-form nav_margin" role="search">
+                        <form asp-controller="SearchProduct" asp-action="GetProductFiltered"
+                            class="navbar-form nav_margin" role="search" method="get">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search" name="">
+                                <input type="text" class="form-control" placeholder="Search" name="cateName">
                                 <div class="input-group-btn">
-                                    <button class="btn btn-default" type="submit"><i
+                                    <button class="btn btn-default" type="submit" value="Search"><i
                                             class="glyphicon glyphicon-search"></i></button>
                                 </div>
                             </div>
                         </form>
                     </li>
+
                     @if (@HttpContextAccessor.HttpContext.Session.GetString("_user") != null)
                     {
                         <li><a asp-controller="CartManager" asp-action="Index"><i class="fas fa-shopping-cart"

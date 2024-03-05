@@ -3,10 +3,6 @@
     ViewData["Title"] = "SignUp";
     Layout = null;
 }
-@* Index.cshtml *@
-@{
-    Layout = null; // Optionally remove layout
-}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -70,8 +66,7 @@
                                         <div class="form-outline mb-0">
                                             <label asp-for="email" class="form-label" for="fullname">Email
                                                 *</label>
-                                            <input asp-for="email" type="email" class="form-control"
-                                                placeholder="Enter your Full Name" />
+                                            <input asp-for="email" type="email" class="form-control"placeholder="Enter your Full Name" />
                                             <span class="error" id="fullnameError" style="margin-left: 28px;"></span>
                                         </div>
                                         <div class="form-outline mb-0">
