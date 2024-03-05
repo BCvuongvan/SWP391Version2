@@ -1,0 +1,46 @@
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  */
+body {
+    font-size: 16px;
+}
+
+.container-box {
+    margin-top: 120px;
+}
+
+.float-end {
+    float: right;
+}
+
+.page-header .float-end .btn {
+    font-size: 18px;
+}
+
+
+.page-header h1 {
+    font-weight: 300;
+    font-size: 30px;
+    color: #4c4d5a;
+    margin-bottom: 15px;
+    text-shadow: 0 1px #fff;
+    margin-top: 10px;
+}
+
+.title-col td {
+    color: #1e91cf;
+    font-weight: 500;
+}
+
+.title-col td:hover {
+    color: #1874a6;
+}
+
+.notifications {
+    font-size: 16px;
+}

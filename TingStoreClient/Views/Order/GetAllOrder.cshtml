@@ -92,7 +92,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link @(ViewBag.SelectedStatusId == 1 ? "active" : "")"
                                         aria-current="page" asp-route-statusId="1" asp-action="GetAllOrder">Order
-                                        Spending</a>
+                                        Pending</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link @(ViewBag.SelectedStatusId == 2 ? "active" : "")"
@@ -102,8 +102,11 @@
                                     <a class="nav-link @(ViewBag.SelectedStatusId == 3 ? "active" : "")"
                                         asp-route-statusId="3" asp-action="GetAllOrder">Order Reject</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link @(ViewBag.SelectedStatusId == 4 ? "active" : "")"
+                                        asp-route-statusId="4" asp-action="GetAllOrder">Order Cancel</a>
+                                </li>
                             </ul>
-
                         </ul>
                     </div>
                 </div>
@@ -154,19 +157,24 @@
                             </table>
                             <div class="container mt-4">
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="alert alert-primary" role="alert">
                                             Total Orders: <strong>@ViewBag.countAllOrder</strong>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="alert alert-success" role="alert">
                                             Orders Successful: <strong>@ViewBag.countOrderSuccessful</strong>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="alert alert-danger" role="alert">
                                             Orders Rejected: <strong>@ViewBag.countOrderReject</strong>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="alert alert-danger" role="alert">
+                                            Orders Cancel: <strong>@ViewBag.countOrderCancel</strong>
                                         </div>
                                     </div>
                                 </div>

@@ -1201,24 +1201,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ACER\\.nuget\\packages\\": {}
+    "C:\\Users\\Dell\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
+      "projectUniqueName": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
       "projectName": "TingStoreClient",
-      "projectPath": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
-      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "H:\\Ky5\\SWP\\cccccc\\SWP391Version2\\TingStoreClient\\obj\\",
+      "projectPath": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
+      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "outputPath": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1269,7 +1271,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

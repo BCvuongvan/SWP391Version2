@@ -14,8 +14,7 @@ using TingStoreClient.Models;
 
 namespace TingStoreClient.Controllers
 {
-    [Route("[controller]")]
-    public class OrderController : Controller
+   public class OrderController : Controller
     {
         private readonly HttpClient client = null;
 
@@ -50,6 +49,7 @@ namespace TingStoreClient.Controllers
             ViewBag.countAllOrder = orderList.Count(x => x.orderStatusId == 1);
             ViewBag.countOrderSuccessful = orderList.Count(x => x.orderStatusId == 2);
             ViewBag.countOrderReject = orderList.Count(x => x.orderStatusId == 3);
+            ViewBag.countOrderCancel = orderList.Count(x => x.orderStatusId == 4);
             ViewBag.SelectedStatusId = statusId; // Gán giá trị statusId vào ViewBag
 
             return View(orderList);
@@ -140,12 +140,12 @@ namespace TingStoreClient.Controllers
             return Redirect("Home/Error");
         }
 
-        [HttpGet("{customerName}")]
+        [HttpGet]
         public async Task<IActionResult> GetOrderFiltered(string userName)
         {
             if (string.IsNullOrEmpty(userName))
             {
-                return BadRequest("Invalid customer name");
+                return NotFound("Invalid customer name");
             }
 
             // Call the API with the constructed query string
