@@ -375,7 +375,7 @@ img {
     display: block;
     margin-bottom: 15px;
     margin-top: 20px;
-    max-height: 500px;
+    max-height: 100vh;
     min-height: 0;
     text-align: justify;
 }

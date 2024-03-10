@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="~/Mobile_shop/css/venobox.css">
     <link rel="stylesheet" href="~/Mobile_shop/css/media.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         body {
             font-size: 16px;
@@ -187,6 +187,36 @@
         #specifications-container button {
             flex-grow: 1;
         }
+
+        .question {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            position: relative;
+            /* Cho phép absolute positioning bên trong */
+            /* Thêm padding phải để tạo khoảng trống cho mũi tên */
+            padding-right: 30px;
+        }
+
+        .question:after {
+            content: "\203A";
+            /* Sử dụng mã Unicode cho một dấu ">" đẹp hơn */
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+            color: #6c7279;
+            font-size: 24px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .answer {
+            padding: 10px;
+            margin: 5px 0;
+            display: none;
+        }
     </style>
 
     <title>Home Admin Page</title>
@@ -194,35 +224,71 @@
 
 <body>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('addSpecButton').addEventListener('click', function() {
-        var specName = document.getElementById('specName').value;
-        var specValue = document.getElementById('specValue').value;
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('addSpecButton').addEventListener('click', function () {
+                var specName = document.getElementById('specName').value;
+                var specValue = document.getElementById('specValue').value;
 
-        // Tạo một hàng mới cho bảng thông số kỹ thuật
-        var newRow = document.createElement('tr');
-        newRow.innerHTML = `
+                // Tạo một hàng mới cho bảng thông số kỹ thuật
+                var newRow = document.createElement('tr');
+                newRow.innerHTML = `
             <td><input type="text" name="specNames[]" value="${specName}" readonly></td>
             <td><input type="text" name="specValues[]" value="${specValue}" readonly></td>
             <td><button type="button" class="btn btn-danger removeSpec">Xóa</button></td>
         `;
 
-        // Thêm hàng mới vào bảng
-        document.getElementById('specsTable').querySelector('tbody').appendChild(newRow);
+                // Thêm hàng mới vào bảng
+                document.getElementById('specsTable').querySelector('tbody').appendChild(newRow);
 
-        // Xóa trường input sau khi thêm
-        document.getElementById('specName').value = '';
-        document.getElementById('specValue').value = '';
+                // Xóa trường input sau khi thêm
+                document.getElementById('specName').value = '';
+                document.getElementById('specValue').value = '';
 
-        // Thêm sự kiện click cho nút xóa thông số kỹ thuật
-        newRow.querySelector('.removeSpec').addEventListener('click', function() {
-            this.closest('tr').remove();
+                // Thêm sự kiện click cho nút xóa thông số kỹ thuật
+                newRow.querySelector('.removeSpec').addEventListener('click', function () {
+                    this.closest('tr').remove();
+                });
+            });
         });
-    });
-});
 
-</script>
+        //
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('addQuestionAndAnswerButton').addEventListener('click', function () {
+                var questionName = document.getElementById('questionName').value;
+                var answerValue = document.getElementById('answerValue').value;
+
+                // Tạo một hàng mới cho bảng thông số kỹ thuật
+                var newRow = document.createElement('tr');
+                newRow.innerHTML = `
+            <td><input type="text" name="questionName[]" value="${questionName}" readonly></td>
+            <td><input type="text" name="answerValue[]" value="${answerValue}" readonly></td>
+            <td><button type="button" class="btn btn-danger removeSpec">Xóa</button></td>
+        `;
+
+                // Thêm hàng mới vào bảng
+                document.getElementById('q&aTable').querySelector('tbody').appendChild(newRow);
+
+                // Xóa trường input sau khi thêm
+                document.getElementById('questionName').value = '';
+                document.getElementById('answerValue').value = '';
+
+                // Thêm sự kiện click cho nút xóa thông số kỹ thuật
+                newRow.querySelector('.removeSpec').addEventListener('click', function () {
+                    this.closest('tr').remove();
+                });
+            });
+        });
+        //phần hiển thị Q&A
+        function toggleAnswer(answerId) {
+            var answer = document.getElementById(answerId);
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
 
 
     <div class="container-xxl position-relative bg-white d-flex p-0">

@@ -1,0 +1,51 @@
+@model Product
+@{
+    ViewData["Title"] = "CreateQuestionAndAnswer";
+    Layout = "/Views/Shared/_ManagementProduct.cshtml";
+}
+<nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+    <div class="navbar-nav align-items-center ms-auto">
+        <div class="nav-item">
+            <a class="nav-link" style="margin-right: 20px;" asp-controller="Product" asp-action="ListProduct">
+                <i class="fa fa-sign-out-alt"></i>
+                <span class="d-none d-lg-inline-flex">Back</span>
+            </a>
+        </div>
+    </div>
+</nav>
+<section id="product_part" class="main">
+    <div class="container">
+        <h4 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">ADD NEW
+            QUESTION AND ANSWER</h4>
+        <div class="card-body" style="margin-bottom: 10px;">
+            <form asp-controller="Product" asp-action="CreateQuestionAndAnswer" method="post" id="productForm"
+                style="margin: 10px;" enctype="multipart/form-data">
+                <div id="technicalSpecsContainer" class="form-group">
+                    <label class="form-label">Question and answer: </label>
+                    <div id="specifications-container">
+                        <!-- Trong phần Specifications của form -->
+                        <input type="text" id="questionName" placeholder="Tên thông số" class="form-control" />
+                        <input type="text" id="answerValue" placeholder="Giá trị" class="form-control" />
+                        <button type="button" id="addQuestionAndAnswerButton" class="btn btn-primary">Thêm thông số</button>
+                    </div>
+                    <table id="q&aTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>Tên thông số</th>
+                                <th>Giá trị</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="button-container" style="text-align: center;">
+                    <button type="submit" style="font-size: 18px; padding: 10px 20px;"
+                        class="fancy-button">Create</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
