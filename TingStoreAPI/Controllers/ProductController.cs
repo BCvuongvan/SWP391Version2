@@ -122,6 +122,7 @@ namespace TingStoreAPI.Controllers
             this._db.SaveChanges();
             return CreatedAtRoute("GetProductById", new { id = productImage.proId }, productImage);
         }
+        
         [HttpGet("Picture/{id}", Name = "GetPictureById")]
         public IActionResult GetPicturetById(int id)
         {

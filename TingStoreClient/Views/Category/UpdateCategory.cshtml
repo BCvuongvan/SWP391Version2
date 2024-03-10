@@ -4,21 +4,21 @@
 }
 
 <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-    <div class="navbar-nav align-items-center ms-auto">
-        <div class="nav-item">
-            <a class="nav-link" style="margin-right: 20px;" asp-controller="Category" asp-action="GetAllCategory">
-                <i class="fa fa-sign-out-alt"></i>
-                <span class="d-none d-lg-inline-flex">Back</span>
-            </a>
-        </div>
-    </div>
+<div class="navbar-nav align-items-center ms-auto">
+<div class="nav-item">
+<a class="nav-link" style="margin-right: 20px;" asp-controller="Category" asp-action="GetAllCategory">
+<i class="fa fa-sign-out-alt"></i>
+<span class="d-none d-lg-inline-flex">Back</span>
+</a>
+</div>
+</div>
 </nav>
 
 <h2 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font">Update category</h2>
 <div class="card-body">
-    <form asp-controller="Category" asp-action="UpdateCategory" method="post" style="margin: 10px;" >
+    <form asp-controller="Category" asp-action="UpdateCategory" method="post" style="margin: 10px;">
         <div hidden>
-            <input type="text" asp-for="cateId" class="form-control" >
+            <input type="text" asp-for="cateId" class="form-control">
         </div>
         <div>
             <label class="form-label">Enter category name: </label>
@@ -30,10 +30,101 @@
             <input type="text" asp-for="cateDescribe" class="form-control large-input">
             <span asp-validation-for="cateDescribe" class="text-danger"></span>
         </div>
-        
+
         <div class="button-container">
             <button type="submit" class="btn btn-primary btn-lg" value="UpdateCategory"
                 style="font-size: 15px; padding: 10px 15px;">Update</button>
         </div>
     </form>
 </div>
+
+@* <head>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Mobile_shop/css/homeAdmin.css">
+    <link rel="stylesheet" href="~/Mobile_shop/css/Category.css">
+    <title>@ViewData["Title"]</title>
+</head>
+
+<body>
+    <script>
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 3000);
+    </script>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+
+        <!-- Sidebar -->
+        <!-- You can add your sidebar here -->
+
+        <!-- Main Content -->
+        <div class="container-fluid">
+            <div class="page-header">
+                @if (TempData["SystemNotificationError"] != null)
+                {
+                    <div id="systemNotification" class="alert alert-danger m-0 p-2">
+                        <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification:
+                            @TempData["SystemNotificationError"]
+                        </p>
+                    </div>
+                }
+                <h1>Category</h1>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-list"></i>
+                    <a asp-controller="Category" asp-action="GetAllCategory">Category List</a> / Update category
+                </div>
+                <div id="order" class="card-body mb-2 mt-2">
+                    <div id="newProfileContainer" class="container bg-white mt-5 mb-5">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="border-right">
+                                <div class="p-3 py-5" style="width: 1000px; text-center;">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h4 class="text-right">Update category</h4>
+                                    </div>
+                                    <form asp-controller="Category" asp-action="UpdateCategory" method="post">
+                                        <div hidden>
+                                        <input type="text" asp-for="cateId" class="form-control">
+
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label class="labels">Category name</label>
+                                            <input asp-for="cateName" type="text" class="form-control"
+                                                placeholder="cateName">
+                                            <span asp-validation-for="cateName" class="text-danger"></span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="labels">Category Describe</label>
+                                            <input asp-for="cateDescribe" type="text" class="form-control"
+                                                placeholder="cateDescribe">
+                                            <span asp-validation-for="cateDescribe" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="mt-5 text-center">
+                                            <button class="btn btn-primary profile-button" type="submit" value="UpdateCategory">
+                                                Update Category
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @section Scripts {
+                        @{
+                            <partial name="_ValidationScriptsPartial" />
+                        }
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html> *@

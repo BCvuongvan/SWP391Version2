@@ -21,6 +21,7 @@ namespace TingStoreClient.Controllers
         private readonly HttpClient client = null;
         private readonly IWebHostEnvironment _hostingEnvironment;
         private string api;
+        private string SearchApi;
 
         public HomeController(IWebHostEnvironment hostingEnvironment)
         {
@@ -30,6 +31,7 @@ namespace TingStoreClient.Controllers
             client.DefaultRequestHeaders.Accept.Add(contentType);
 
             this.api = "https://localhost:5001/api/Product";
+            this.SearchApi = "https://localhost:5001/api/SearchProduct";
         }
 
         private async Task GetCategoriesAsync()
@@ -50,7 +52,7 @@ namespace TingStoreClient.Controllers
             Product product = JsonSerializer.Deserialize<Product>(data, option);
             return product;
         }
-        
+
         private async Task GetDiscountProductAsync()
         {
             HttpResponseMessage response = await client.GetAsync("https://localhost:5001/api/DiscountProduct");
@@ -70,9 +72,10 @@ namespace TingStoreClient.Controllers
             }
             return null;
         }
-        public async Task<List<Product>> GetSimilarProduct(int cateId, int currentProductId){
+        public async Task<List<Product>> GetSimilarProduct(int cateId, int currentProductId)
+        {
             HttpResponseMessage response = await client.GetAsync(api);
-            if(!response.IsSuccessStatusCode) return new List<Product>();
+            if (!response.IsSuccessStatusCode) return new List<Product>();
             string data = await response.Content.ReadAsStringAsync();
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             List<Product> listSimilarProduct = JsonSerializer.Deserialize<List<Product>>(data, option);
@@ -102,6 +105,18 @@ namespace TingStoreClient.Controllers
             ViewBag.CurrentSortOrder = sortOrder;
             return View("Index", listProductByCategory);
         }
+        [HttpPost]
+        public async Task<IActionResult> SeachProduct(string userName)
+        {
+            HttpResponseMessage response = await client.GetAsync(SearchApi+"/"+userName);
+            string data = await response.Content.ReadAsStringAsync();
+            var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            List<Product> list = JsonSerializer.Deserialize<List<Product>>(data, option);
+            var techNews = ListTechNews();
+            ViewBag.TechNews = techNews;
+            return View("Index", list);
+        }
+
         public async Task<IActionResult> ProductsByPrice(decimal minPrice, decimal maxPrice, string sortOrder)
         {
             HttpResponseMessage response = await client.GetAsync(api);
@@ -134,6 +149,7 @@ namespace TingStoreClient.Controllers
             List<Product> list = JsonSerializer.Deserialize<List<Product>>(data, option);
             ViewBag.proList = list;
         }
+
         public async Task<IActionResult> Index(string sortOrder, bool redirectToHomePage = false)
         {
             HttpResponseMessage response = await client.GetAsync(api);

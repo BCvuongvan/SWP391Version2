@@ -2,92 +2,10 @@
 @{
     ViewData["Title"] = "CreateCategory";
 }
-
-@* @if (ViewBag.ErrorMessage != null)
-{
-<div class="alert alert-danger">
-@ViewBag.ErrorMessage
-</div>
-}
-
-<div class="page-header">
-<h2 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font">Create Category</h2>
-<div class="float-end" style="margin-top: -50px;">
-<a asp-controller="Category" asp-action="GetAllCategory" data-bs-toggle="tooltip" title class="btn btn-success"
-data-bs-original-title="Back" aria-label="Back"><i class="fas fa-reply"></i></a>
-</div>
-</div
-
-
-<div class="card-body">
-<form asp-controller="Category" asp-action="CreateCategory" method="post" style="margin: 10px;"
-enctype="multipart/form-data">
-<div class="form-group">
-<label class="form-label">Enter category name: </label>
-<input type="text" asp-for="cateName" class="form-control large-input">
-<span asp-validation-for="cateName" class="text-danger"></span>
-</div>
-<div class="form-group">
-<label class="form-label">Enter category description: </label>
-<input type="text" asp-for="cateDescribe" class="form-control large-input">
-<span asp-validation-for="cateDescribe" class="text-danger"></span>
-</div>
-
-<div class="btn">
-<input type="submit" value="Create" class="btn btn-primary btn-lg">
-</div>
-
-
-</form>
-</div>
-*@
-
-
-@* <div id="newProfileContainer" class="container bg-white mt-5 mb-5">
-<div class="d-flex justify-content-center align-items-center">
-<div class="border-right">
-<div class="p-3 py-5">
-<div class="d-flex justify-content-between align-items-center mb-3">
-<h4 class="text-right">Add Staff</h4>
-</div>
-<form asp-controller="Category" asp-action="CreateCategory" method="post">
-<div class="row mt-2">
-<div class="col-md-6">
-<label asp-for="cateName" class="labels"></label>
-<input asp-for="cateName" type="text" class="form-control" placeholder="Username">
-<span asp-validation-for="cateName" class="text-danger"></span>
-</div>
-<div class="col-md-6">
-<label class="labels">Full Name</label>
-<input asp-for="cateDescribe" type="text" class="form-control" placeholder="Staff fullname">
-<span asp-validation-for="cateDescribe" class="text-danger"></span>
-</div>
-</div>
-<div class="mt-5 text-center">
-<button class="btn btn-primary profile-button" type="submit" value="CreateCategory">
-Add new
-</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
-@section Scripts {
-@{
-<partial name="_ValidationScriptsPartial" />
-}
-} *@
-
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="~/Mobile_shop/css/homeAdmin.css">
     <link rel="stylesheet" href="~/Mobile_shop/css/Category.css">
-
     <title>@ViewData["Title"]</title>
 </head>
 
@@ -120,7 +38,8 @@ Add new
             </div>
             <div class="card">
                 <div class="card-header">
-                    <i class="fas fa-list"></i> Add New Category
+                    <i class="fas fa-list"></i> 
+                    <a asp-controller="Category" asp-action="GetAllCategory" >Category List</a> / Add New Category
                 </div>
                 <div id="order" class="card-body mb-2 mt-2">
                     <div id="newProfileContainer" class="container bg-white mt-5 mb-5">

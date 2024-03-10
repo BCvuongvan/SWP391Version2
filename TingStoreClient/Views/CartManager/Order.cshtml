@@ -334,6 +334,18 @@
                                 <p style="float: left;">@user.address</p>
                             }
                             <a type="button" style="float: right; color: #000000;" data-toggle="modal"data-target="#myModal"><i class="fa-regular fa-pen-to-square"></i></a>
+                            @if (TempData["SystemNotificationError"] != null)
+                            {
+    <div id="systemNotification" class="alert alert-danger m-0 p-2">
+        <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotificationError"]</p>
+    </div>
+}
+@if (TempData["SystemNotification"] != null)
+{
+    <div id="systemNotification" class="alert alert-success m-0 p-2">
+        <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotification"]</p>
+    </div>
+}
                         </div>
                     </div>
                 </div>
@@ -377,10 +389,11 @@ By placing an order, you agree to <a style="color: red;" href="">Ting Store's Te
             </div>
         <!-- Modal body -->
         <div class="modal-body container">
-            <form asp-controller="" asp-action="" id="AddressForm">
+            <form asp-controller="CartManager" asp-action="ChangeAddress" id="AddressForm" method="post">
                 <label for="inputPassword5" class="form-label">New Address</label>
-                <input style="width: 40%;" type="text" id="inputPassword5" class="control" aria-describedby="passwordHelpBlock">
+                <input name="address" style="width: 40%;" type="text" id="inputPassword5" class="control" aria-describedby="passwordHelpBlock">
                 <br>
+                <button type="submit">submit</button>
             </form>
         </div>
         <!-- Modal footer -->
