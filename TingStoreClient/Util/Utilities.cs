@@ -19,5 +19,28 @@ namespace TingStoreClient.Util
             }
             return false;
         }
+
+        public static bool validEmail(string email)
+        {
+            Regex regex = new Regex("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+            Match match = regex.Match(email);
+            if (match.Success)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool validPassword(string password)
+        {
+            Regex regex = new Regex("^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$");
+            Match match = regex.Match(password);
+            if (match.Success)
+            {
+                return true;
+            }
+            return false;
+        }
+
     }
 }

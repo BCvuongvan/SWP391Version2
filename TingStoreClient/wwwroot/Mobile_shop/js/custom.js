@@ -1,7 +1,6 @@
 
 $(function () {
 
-
   //scrollspy menu	
   $('body').scrollspy({
     target: '.navbar',

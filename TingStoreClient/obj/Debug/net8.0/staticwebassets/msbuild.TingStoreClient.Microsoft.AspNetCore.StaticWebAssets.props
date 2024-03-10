@@ -2608,6 +2608,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\User_Picture\z3404189359388_93e3c4335aa7299bb678947cbc96549d.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\User_Picture\z5025367475124_9048ced8512318b12e88aaba96ab336b.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>TingStoreClient</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TingStoreClient</BasePath>
+      <RelativePath>assets/User_Picture/z5025367475124_9048ced8512318b12e88aaba96ab336b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\User_Picture\z5025367475124_9048ced8512318b12e88aaba96ab336b.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\User_Picture\z5208514676796_9e03aa64e5bd6a1054c5e924aaea7111.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>TingStoreClient</SourceId>

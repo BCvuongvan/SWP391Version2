@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TingStoreClient.Models;
+using TingStoreClient.Util;
 
 
 namespace TingStoreClient.Controllers
@@ -54,7 +55,6 @@ namespace TingStoreClient.Controllers
             string id = HttpContext.Session.GetString("_user");
             // Chuyển chuổi id lấy được thành đối tượng User
             var user1 = JsonSerializer.Deserialize<User>(id);
-            // Ktra ảnh tải lên có tồn tại không
             if (UserPicture != null && UserPicture.Length > 0)
             {
                 // Lấy tên file ảnh
@@ -71,7 +71,6 @@ namespace TingStoreClient.Controllers
             }
             // Cập nhật userName từ session vào object user
             user.userName = user1.userName;
-            // Cập nhật thời gian hiện tại
             user.updateAt = DateTime.Now;
             // Chuyển đổi user thành chuỗi Json
             string data = JsonSerializer.Serialize(user);
@@ -81,6 +80,7 @@ namespace TingStoreClient.Controllers
             HttpResponseMessage response = await client.PutAsync(userApi + "/" + user1.userName, content);
             if (response.IsSuccessStatusCode)
             {
+                TempData["SystemNotification"] = "Your changes have been saved successfully!";
                 return RedirectToAction("CustomerProfile");
             }
             return RedirectToAction("Index", "Home");

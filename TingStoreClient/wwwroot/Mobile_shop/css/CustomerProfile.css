@@ -10,13 +10,28 @@ body {
     font-size: 18px;
 }
 
+
 .page-header .float-end {
     float: right;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 .page-header .float-end .btn {
     font-size: 18px;
+    float: right;
+}
+
+.notification {
+    margin-top: 120px;
+}
+
+#systemNotification {
+    background-color: #4CAF50;
+    color: #000;
+}
+
+.alert {
+    margin: 0;
 }
 
 .tab-content {
@@ -25,10 +40,13 @@ body {
 
 .img-account-profile {
     height: 15rem;
+    margin-top: 10px;
 }
 
 .rounded-circle {
-    border-radius: 50% !important;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
 }
 
 .choose-file {
@@ -58,6 +76,10 @@ body {
     padding: 0 10px 0 10px;
 }
 
+.tr_box {
+    font-weight: 600;
+}
+
 .form-control,
 .dataTable-input {
     display: block;
@@ -81,6 +103,12 @@ label {
     margin: 0;
 }
 
+.card-body .form-group .error {
+    font-style: italic;
+    font-size: 15px;
+    color: red;
+}
+
 .nav-borders .nav-link.active {
     color: #0061f2;
 }
@@ -98,9 +126,10 @@ label {
     margin-right: 1rem;
 }
 
-.btn {
-    margin-bottom: 10px;
+.btn_box .btn {
+    margin: 10px 10px 10px 600px;
 }
+
 
 .header {
     padding: 0 0 0 10px;
