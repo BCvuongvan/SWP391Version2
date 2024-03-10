@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj": {}
+    "H:\\Ky5\\SWP\\dddddddd\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj": {}
   },
   "projects": {
-    "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj": {
+    "H:\\Ky5\\SWP\\dddddddd\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
+        "projectUniqueName": "H:\\Ky5\\SWP\\dddddddd\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
         "projectName": "TingStoreClient",
-        "projectPath": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "E:\\FPT\\00_Ky_5\\SWP391\\1project\\SWP391Version2\\TingStoreClient\\obj\\",
+        "projectPath": "H:\\Ky5\\SWP\\dddddddd\\SWP391Version2\\TingStoreClient\\TingStoreClient.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "H:\\Ky5\\SWP\\dddddddd\\SWP391Version2\\TingStoreClient\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
