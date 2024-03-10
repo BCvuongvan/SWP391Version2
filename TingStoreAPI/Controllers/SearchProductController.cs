@@ -18,52 +18,23 @@ namespace TingStoreAPI.Controllers
         public SearchProductController(ApplicationDBContext db)
         {
             this._db = db;
-
         }
 
-        // [HttpGet("ProductsByCategoryName/{categoryName}")]
-        // public ActionResult<IEnumerable<object>> GetProductsByCategory(string categoryName)
-        // {
-        //     // Retrieve products along with their categories where the category name matches the provided value
-        //     var products = _db.products
-        //                        .Where(p => p.category.cateName == categoryName)
-        //                        .Select(p => new
-        //                        {
-        //                            p.proId,
-        //                            p.proName,
-        //                            p.proDescription,
-        //                            p.proPrice,
-        //                            p.proQuantity,
-        //                            p.proImage,
-        //                            p.proStatus,
-        //                            CategoryName = p.category.cateName // Include the category name in the response
-        //                        })
-        //                        .ToList();
-
-        //     if (products == null || !products.Any())
-        //     {
-        //         return NotFound();
-        //     }
-
-        //     return Ok(products);
-        // }
-
-
-
-        [HttpGet("{cateName}")]
-        public IActionResult GetOrdersFiltered(string cateName)
+        [HttpGet]
+        public IActionResult GetListProduct()
         {
-            IQueryable<Product> query = this._db.products
-            .Include(u => u.category);
-
-
-            if (!string.IsNullOrEmpty(cateName))
-            {
-                query = query.Where(o => o.category.cateName.Contains(cateName.Trim().ToLower()));
+            var listProduct = this._db.products.ToList();
+            return Ok(listProduct);
+        }
+        
+        [HttpGet("{IProductName}")]
+        public IActionResult GetOrdersFiltered(string IProductName)
+        {            
+            var listProduct = this._db.products.Include(p => p.category).Include(p => p.discountPercents).Where(p => p.proName.ToLower().StartsWith(IProductName.ToLower()));
+            if(!listProduct.Any()){
+                return BadRequest("Can't found this product "+ IProductName +"in stock"); 
             }
-            var productsList = query.ToList();
-            return Ok(productsList);
-
+            return Ok(listProduct);
         }
 
 

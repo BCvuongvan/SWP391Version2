@@ -1,7 +1,7 @@
 @model User
 @{
     ViewData["Title"] = "Index";
-        @* Layout = "/Views/Shared/_Layout.cshtml"; *@
+    @* Layout = "/Views/Shared/_Layout.cshtml"; *@
 
 }
 
@@ -32,6 +32,7 @@
         .form-group {
             margin-bottom: 15px;
         }
+
         .container1 {
             margin-left: 100px;
         }
@@ -68,13 +69,12 @@
                     <form class="form" action="##" method="post" id="registrationForm">
                         <div class="row">
                             <div class="col-md-6">
-
                                 <div class="mb-3">
                                     <label for="phone" class="form-label">
                                         <h4>Full Name</h4>
                                     </label>
-                                    <input readonly type="text" asp-for="fullName" placeholder="Full name" id="input-firstname"
-                                        class="form-control">
+                                    <input readonly type="text" asp-for="fullName" placeholder="Full name"
+                                        id="input-firstname" class="form-control">
                                     <div id="error-firstname" class="invalid-feedback">
                                         <span asp-validation-for="fullName"></span>
                                     </div>
@@ -91,18 +91,19 @@
                                     </div>
                                 </div>
 
-
                                 <div class="mb-3">
                                     <label for="password" class="form-label">
                                         <h4>Address</h4>
                                     </label>
-                                    <input readonly type="text" asp-for="address" placeholder="Address" id="input-firstname"
-                                        class="form-control">
+                                    <input readonly type="text" asp-for="address" placeholder="Address"
+                                        id="input-firstname" class="form-control">
                                     <div id="error-firstname" class="invalid-feedback">
                                         <span asp-validation-for="address"></span>
                                     </div>
                                 </div>
+                            </div>
 
+                            <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="confirm" class="form-label">
                                         <h4>Phone Number</h4>
@@ -114,9 +115,6 @@
                                     </div>
 
                                 </div>
-                            </div>
-
-                            <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="input-firstname" class="form-label">
                                         <h4>Username</h4>
@@ -138,7 +136,6 @@
                                     </div>
 
                                 </div>
-
                             </div>
                         </div>
                         <div class="row">
@@ -158,7 +155,3 @@
 </body>
 
 </html>
-
-
-
-

@@ -21,6 +21,7 @@ namespace TingStoreClient.Controllers
         private readonly HttpClient client = null;
         private readonly IWebHostEnvironment _hostingEnvironment;
         private string api;
+        private string SearchApi;
 
         public HomeController(IWebHostEnvironment hostingEnvironment)
         {
@@ -30,6 +31,7 @@ namespace TingStoreClient.Controllers
             client.DefaultRequestHeaders.Accept.Add(contentType);
 
             this.api = "https://localhost:5001/api/Product";
+            this.SearchApi = "https://localhost:5001/api/SearchProduct";
         }
 
         private async Task GetCategoriesAsync()
@@ -50,7 +52,7 @@ namespace TingStoreClient.Controllers
             Product product = JsonSerializer.Deserialize<Product>(data, option);
             return product;
         }
-        
+
         private async Task GetDiscountProductAsync()
         {
             HttpResponseMessage response = await client.GetAsync("https://localhost:5001/api/DiscountProduct");
@@ -70,9 +72,10 @@ namespace TingStoreClient.Controllers
             }
             return null;
         }
-        public async Task<List<Product>> GetSimilarProduct(int cateId, int currentProductId){
+        public async Task<List<Product>> GetSimilarProduct(int cateId, int currentProductId)
+        {
             HttpResponseMessage response = await client.GetAsync(api);
-            if(!response.IsSuccessStatusCode) return new List<Product>();
+            if (!response.IsSuccessStatusCode) return new List<Product>();
             string data = await response.Content.ReadAsStringAsync();
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             List<Product> listSimilarProduct = JsonSerializer.Deserialize<List<Product>>(data, option);
@@ -102,6 +105,18 @@ namespace TingStoreClient.Controllers
             ViewBag.CurrentSortOrder = sortOrder;
             return View("Index", listProductByCategory);
         }
+        [HttpPost]
+        public async Task<IActionResult> SeachProduct(string userName)
+        {
+            HttpResponseMessage response = await client.GetAsync(SearchApi+"/"+userName);
+            string data = await response.Content.ReadAsStringAsync();
+            var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            List<Product> list = JsonSerializer.Deserialize<List<Product>>(data, option);
+            var techNews = ListTechNews();
+            ViewBag.TechNews = techNews;
+            return View("Index", list);
+        }
+
         public async Task<IActionResult> ProductsByPrice(decimal minPrice, decimal maxPrice, string sortOrder)
         {
             HttpResponseMessage response = await client.GetAsync(api);
@@ -134,6 +149,7 @@ namespace TingStoreClient.Controllers
             List<Product> list = JsonSerializer.Deserialize<List<Product>>(data, option);
             ViewBag.proList = list;
         }
+
         public async Task<IActionResult> Index(string sortOrder, bool redirectToHomePage = false)
         {
             HttpResponseMessage response = await client.GetAsync(api);
@@ -196,10 +212,6 @@ namespace TingStoreClient.Controllers
                 var productInfoPath = Path.Combine(detailFilesPath, $"{product.proName}_Info.txt");
                 var highlightFeaturesPath = Path.Combine(detailFilesPath, $"{product.proName}_Features.txt");
                 var technicalSpecsPath = Path.Combine(detailFilesPath, $"{product.proName}_Specs.txt");
-                var detailFilesPathh = Path.Combine(_hostingEnvironment.WebRootPath, "assets/Product_Q&A");
-                var questionandanswerPath = Path.Combine(detailFilesPathh, $"{product.proName}_Q&A.txt");
-                
-                var questionAndAnswer = ReadFromFileQuestionAndAnswer(questionandanswerPath);
 
                 // Đọc nội dung từ file
                 var productInfo = ReadFromFile(productInfoPath);
@@ -210,7 +222,6 @@ namespace TingStoreClient.Controllers
                 ViewBag.ProductInfo = productInfo;
                 ViewBag.HighlightFeatures = highlightFeatures;
                 ViewBag.TechnicalSpecs = technicalSpecs;
-                ViewBag.QuestionAndAnswer = questionAndAnswer;
                 var similarProducts = await GetSimilarProduct(product.cateId, product.proId);
                 ViewBag.SimilarProducts = similarProducts;
                 return View(product);
@@ -256,48 +267,5 @@ namespace TingStoreClient.Controllers
             }
             return newsList;
         }
-
-        private void SaveToFileQuestionAndAnswer(string filePath, string content)
-        {
-            var directory = Path.GetDirectoryName(filePath);
-            if (!Directory.Exists(directory))
-            {
-                Directory.CreateDirectory(directory);
-            }
-
-            using (var streamWriter = new StreamWriter(filePath, true, Encoding.UTF8)) 
-            {
-                streamWriter.Write(content);
-            }
-        }
-
-        private string ReadFromFileQuestionAndAnswer(string filePath)
-        {
-            if (System.IO.File.Exists(filePath))
-            {
-                return System.IO.File.ReadAllText(filePath);
-            }
-            return "Information not available.";
-        }
-        [HttpGet("managementQuestionAndAnswer/{id}")]
-        public async Task<IActionResult> ManagementQuestionAndAnswer(int id)
-        {
-            HttpResponseMessage response = await client.GetAsync(api + "/" + id);
-            if (response.IsSuccessStatusCode)
-            {
-                var data = await response.Content.ReadAsStringAsync();
-                var product = JsonSerializer.Deserialize<Product>(data);
-
-                var detailFilesPath = Path.Combine(_hostingEnvironment.WebRootPath, "assets/Product_Q&A");
-                var questionandanswerPath = Path.Combine(detailFilesPath, $"{product.proName}_Q&A.txt");
-                
-                var questionAndAnswer = ReadFromFileQuestionAndAnswer(questionandanswerPath);
-
-                ViewBag.QuestionAndAnswer = questionAndAnswer;
-                return View(product);
-            }
-            return NotFound();
-        }
-
     }
 }
