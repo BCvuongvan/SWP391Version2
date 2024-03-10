@@ -10,15 +10,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 notification">
-                    @* @if (TempData["SystemNotification"] != null)
+                    @if (TempData["SystemNotification"] != null)
                     {
-                    <div id="systemNotification" class="alert alert-danger">
-                    <p class="text-dark">Notification:
-                    @TempData["SystemNotification"]
-                    </p>
-                    </div>
-                    } *@
-                    <div id="ajaxResponseMessage"></div>
+                        <div id="systemNotification" class="alert alert-danger">
+                            <p class="text-dark">Notification:
+                                @TempData["SystemNotification"]
+                            </p>
+                        </div>
+                    }
                 </div>
                 <div class="col-md-6 float-end">
                     <a asp-controller="Home" asp-action="Index" data-bs-toggle="tooltip" title class="btn btn-success"
@@ -48,10 +47,6 @@
                                         <!-- Profile picture image-->
                                         <img class="img-account-profile rounded-circle mb-2"
                                             src="~/assets/User_Picture/@Model.picture" alt="img customer">
-                                        <!-- Profile picture help block-->
-                                        <div class="small font-italic text-muted mb-4">JPG or PNG no
-                                            larger than 5 MB
-                                        </div>
                                         <!-- Profile picture upload button-->
                                         <input type="file" name="UserPicture" class="choose-file"
                                             value="Upload new image">
@@ -250,35 +245,11 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
     <script>
-        $(document).ready(function () {
-            $('.profile-button').click(function (event) {
-                event.preventDefault(); // Prevent the form from submitting via the browser
-                var formData = new FormData($('form')[0]); // Assuming 'form' is your form's class or ID
-
-                $.ajax({
-                    url: '@Url.Action("CustomerProfile", "CustomerProfile")', // Sử dụng Razor syntax để sinh URL
-                    type: 'POST',
-                    data: formData,
-                    contentType: false, // Important for forms with files
-                    processData: false, // Important for forms with files
-                    success: function (response) {
-                        // Handle success
-                        showAlert('Your changes have been saved successfully!', 'success');
-                    },
-                    error: function (xhr, status, error) {
-                        // Handle error
-                        showAlert('Error saving changes: ' + error, 'danger');
-                    }
-                });
-            });
-        });
-
-        function showAlert(message, type) {
-            var alertHtml = '<div class="alert alert-' + type + '">' + message + '</div>';
-            $('#ajaxResponseMessage').html(alertHtml); // Assuming you have a div with id 'alertContainer' where you want to show the alert
-            setTimeout(function () {
-                $('.alert').fadeOut('slow', function () { $(this).remove(); });
-            }, 6000); // Alert will disappear after 6 seconds
-        }
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 5000);
     </script>
 }

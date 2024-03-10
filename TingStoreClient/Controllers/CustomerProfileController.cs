@@ -80,6 +80,7 @@ namespace TingStoreClient.Controllers
             HttpResponseMessage response = await client.PutAsync(userApi + "/" + user1.userName, content);
             if (response.IsSuccessStatusCode)
             {
+                TempData["SystemNotification"] = "Your changes have been saved successfully!";
                 return RedirectToAction("CustomerProfile");
             }
             return RedirectToAction("Index", "Home");

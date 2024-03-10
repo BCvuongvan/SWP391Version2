@@ -25,6 +25,11 @@ body {
     margin-top: 120px;
 }
 
+#systemNotification {
+    background-color: #4CAF50;
+    color: #000;
+}
+
 .alert {
     margin: 0;
 }

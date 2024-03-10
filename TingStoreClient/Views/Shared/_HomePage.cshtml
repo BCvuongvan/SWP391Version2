@@ -1,6 +1,5 @@
 @using Microsoft.AspNetCore.Http
 @inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
-@model IEnumerable<Product>
 @using TingStoreClient.Controllers
 @{
     ViewData["Title"] = "_HomePage";
@@ -71,8 +70,7 @@
     </script>
 
     <style>
-        @*search*@
-        .autocomplete {
+        @*search*@.autocomplete {
             position: relative;
             display: inline-block;
         }
@@ -233,13 +231,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a id="brand" class="navbar-brand rounded" asp-action="Index">
+                <a id="brand" class="navbar-brand rounded" asp-action="Index" asp-controller="Home">
                     <img src="~/Mobile_shop/images/logo.png" alt="logo">
                 </a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a asp-action="Index">Home</a></li>
+                    <li class="active"><a asp-action="Index" asp-controller="Home">Home</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -359,14 +357,15 @@
                         <form autocomplete="off" asp-controller="Home" asp-action="SeachProduct"
                             class="navbar-form nav_margin autocomplete" role="search" method="post">
                             <div class="input-group">
-                                <input id="myInput" type="text" name="userName" class="form-control" placeholder="Search" >
+                                <input id="myInput" type="text" name="userName" class="form-control"
+                                    placeholder="Search">
                                 <div class="input-group-btn">
                                     <button class="btn btn-default" type="submit" value="Search"><i
                                             class="glyphicon glyphicon-search"></i></button>
                                 </div>
                             </div>
                         </form>
-                        
+
                     </li>
 
                     @if (@HttpContextAccessor.HttpContext.Session.GetString("_user") != null)
@@ -660,7 +659,7 @@
         }
 
         /*An array containing all the country names in the world:*/
-        var countries = @Html.Raw(Json.Serialize( await new SearchProductController().getListProductbyProName()));
+        var countries = @Html.Raw(Json.Serialize(await new SearchProductController().getListProductbyProName()));
 
 
         /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
