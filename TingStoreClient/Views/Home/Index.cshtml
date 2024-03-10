@@ -104,29 +104,22 @@
                     <option value="desc">Cao - thấp</option>
                 }
             </select>
-            @{
-    int displayedProductsCount = 0;
-}
             <div class="clent">
-@foreach (var product in Model)
-{
-    var originalPrice = product.proPrice;
-    var discountProduct = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now).FirstOrDefault();
-    var discountedPrice = originalPrice;
-    if (discountProduct != null)
-    {
-        var discount = originalPrice * discountProduct.discountPercentage / 100;
-        discountedPrice -= discount;
-    }
-    if (product.proStatus == true)
-    {
-        if (displayedProductsCount % 10 == 0 && displayedProductsCount != 0)
-        {
-            @:</div><div class="clent"> <!-- Close the current div and start a new one for the next 10 products -->
-        }
-        <div class="col-md-3 col-sm-6 col-xs-6 wow card_box">
-            <div class="card item-product text-center">
-                <div class="image">
+                @foreach (var product in Model)
+                {
+                    var originalPrice = product.proPrice;
+                    var discountProduct = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now).FirstOrDefault();
+                    var discountedPrice = originalPrice;
+                    if (discountProduct != null)
+                {
+                    var discount = originalPrice * discountProduct.discountPercentage / 100;
+                    discountedPrice -= discount;
+                }
+                    @if (product.proStatus == true)
+                    {
+                        <div class="col-md-3 col-sm-6 col-xs-6 wow card_box">
+                            <div class="card item-product text-center">
+                                <div class="image">
                                     <a asp-controller="Home" asp-action="ManagementProductDetail" asp-route-id=@product.proId>
                                         <img src="~/assets/Product_Images/@product.proImage"
                                             style="width: 200px; height: 200px;" alt="@product.proName">
@@ -157,14 +150,15 @@
                                     </div>
                                     }
                                 }
+                            </div>
+                        </div>
+                    }
+                }
             </div>
         </div>
-        displayedProductsCount++;
-    }
-}
-</div>
-        </div>
     </div>
+
+    
     <div class="container">
         <div class="row bg-light">
             <div><h2><strong>TIN CÔNG NGHỆ</strong></h2></div>
