@@ -3,6 +3,25 @@
     ViewData["Title"] = "Home Page";
     Layout = "/Views/Shared/_HomePage.cshtml";
 }
+<img class="text-center" src="https://cdn2.cellphones.com.vn/x/media/catalog/product/h/s/hs-cuoi-tuan-tet-text.png"
+        alt="hotsale">
+    <!-- Discount part Start -->
+    <section id="discount_part">
+        <div class="container discount">
+            <div class="row">
+                <div class="name_box" style="margin-top: 100px">
+                    <h2><strong class="name_box_title">PROMOTION AVAILABLE ONLY ONLINE</strong></h2>
+                </div>
+                <div class="discount_payonl">
+                    <div class="home_slider">
+                        <a href=""><img src="https://cdn.tgdd.vn/2023/09/banner/1200x150-tgdd-1200x150-1.png"
+                                alt="discount"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Discount part End -->
 
 <section id="product_part" class="main">
         <div class="container">
@@ -85,23 +104,23 @@
 <section id="product_part testimonial_part" class="main">
     <div class="container">
         <div class="row bg-light">
-            <div><h2><strong>SẢN PHẨM NỔI BẬT</strong></h2></div>
+            <div><h2><strong>FEATURED PRODUCTS</strong></h2></div>
             <div class="header box-title_title">
-                <p style="font-size: 18px;">Sắp xếp theo</p>
+                <p style="font-size: 18px; margin: 0;">Sorted by</p>
             </div>
             <select name="sortOrder" id="sortOrder" class="dropdown-toggle" onchange="updateSortOrder(this.value)">
                 @if(ViewBag.CurrentSortOrder == "asc")
                 {
-                    <option value="asc" selected="selected">Thấp - cao</option>
-                    <option value="desc">Cao - thấp</option>
+                    <option value="asc" selected="selected">Low - high</option>
+                    <option value="desc">High - low</option>
                 } else if(ViewBag.CurrentSortOrder == "desc")
                 {
-                    <option value="desc">Cao - thấp</option>
-                    <option value="asc">Thấp - cao</option>
+                    <option value="desc">High - low</option>
+                    <option value="asc">Low - high</option>
                 }else
                 {
-                    <option value="asc" selected="selected">Thấp - cao</option>
-                    <option value="desc">Cao - thấp</option>
+                    <option value="asc" selected="selected">Low - high</option>
+                    <option value="desc">High - low</option>
                 }
             </select>
             <div class="clent">
@@ -159,7 +178,7 @@
     </div>
     <div class="container">
         <div class="row bg-light">
-            <div><h2><strong>TIN CÔNG NGHỆ</strong></h2></div>
+            <div><h2><strong>TECH NEWS</strong></h2></div>
             <div class="clent">
                 @foreach(var technew in ViewBag.TechNews as IEnumerable<(string Title, string ImageUrl, string NewsId, string Link)>){
                 <div class="col-md-3 col-sm-6 col-xs-6 wow card_box">

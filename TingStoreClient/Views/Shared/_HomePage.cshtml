@@ -177,30 +177,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a id="brand" class="navbar-brand rounded" href="#">
+                <a id="brand" class="navbar-brand rounded" asp-action="Index">
                     <img src="~/Mobile_shop/images/logo.png" alt="logo">
                 </a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a>Home</a></li>
+                    <li class="active"><a asp-action="Index">Home</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                            Danh mục
+                            Category
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li class="dropdown-submenu dropright">
-                                <a class="dropdown-item" href="#" style="font-size: 17px; margin-bottom: -5px;"><i
+                                <a class="dropdown-item" href="#" style="margin-bottom: -5px;"><i
                                         class="fa fa-mobile-alt"
-                                        style="margin-left: -10px; margin-right: 10px;"></i>Điện Thoại
-                                    <i class="fa fa-angle-right" aria-hidden="true" style="float: right;"></i></a>
+                                        style="margin-left: -10px; margin-right: 10px;"></i>Phone
+                                    <i class="fa fa-angle-right" aria-hidden="true"
+                                        style="float: right; margin-top: 4px;"></i></a>
                                 <ul class="dropdown-menu" style="width: 700px;">
                                     <div style="display: flex; flex-wrap: wrap; margin-left: 15px;">
                                         <div style="flex: 1;">
                                             <li>
-                                                <p style="font-size: 17px;"><strong>Thương hiệu điện thoại</strong>
+                                                <p style="font-size: 17px;"><strong>Phone brand</strong>
                                                 </p>
                                             </li>
                                             @if (ViewBag.cateList != null)
@@ -214,8 +215,8 @@
                                                 }
                                             }
                                             <li><a asp-controller="Home" asp-action="Index" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Tất
-                                                    cả thương hiệu</a>
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">All
+                                                    brand</a>
                                             </li>
                                         </div>
 
@@ -239,43 +240,42 @@
                                         style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color:
                                         #626060;">21tr-25tr</a>
                                         </li>
-
                                         </div> *@
 
                                         <div style="flex: 1;">
                                             <li>
-                                                <p style="font-size: 17px;"><strong>Mức giá điện thoại</strong></p>
+                                                <p style="font-size: 17px;"><strong>Phone Price</strong></p>
                                             </li>
                                             <li><a href="/Home/ProductsByPrice?minPrice=5000000&maxPrice=10000000"
                                                     class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
-                                                    5-10 triệu</a>
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">From
+                                                    5-10 milion</a>
                                             </li>
                                             <li><a href="/Home/ProductsByPrice?minPrice=10000000&maxPrice=15000000"
                                                     class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
-                                                    10-15 triệu</a>
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">From
+                                                    10-15 milion</a>
                                             </li>
                                             <li><a href="/Home/ProductsByPrice?minPrice=15000000&maxPrice=20000000"
                                                     class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
-                                                    15-20 triệu</a>
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">From
+                                                    15-20 milion</a>
                                             </li>
                                             <li><a href="/Home/ProductsByPrice?minPrice=20000000&maxPrice=25000000"
                                                     class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
-                                                    20-25 triệu</a>
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">From
+                                                    20-25 milion</a>
                                             </li>
                                             <li><a href="/Home/ProductsByPrice?minPrice=25000000&maxPrice=30000000000000000"
                                                     class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
-                                                    25 triệu</a>
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">From
+                                                    25 milion</a>
                                             </li>
 
                                         </div>
                                         <div style="flex: 1;">
                                             <li>
-                                                <p style="font-size: 17px;"><strong>Sản phẩm bán chạy</strong></p>
+                                                <p style="font-size: 17px;"><strong>Best-selling products</strong></p>
                                             </li>
                                             @if (ViewBag.proList != null)
                                             {
@@ -333,27 +333,9 @@
     <!-- Navbar part end-->
     <!--Banner part start-->
 
-    <img class="text-center" src="https://cdn2.cellphones.com.vn/x/media/catalog/product/h/s/hs-cuoi-tuan-tet-text.png"
-        alt="hotsale">
-    <!-- Discount part Start -->
-    <section id="discount_part">
-        <div class="container discount">
-            <div class="row">
-                <div class="name_box" style="margin-top: 100px">
-                    <h2><strong class="name_box_title">KHUYẾN MÃI CHỈ CÓ TRÊN ONLINE</strong></h2>
-                </div>
-                <div class="discount_payonl">
-                    <div class="home_slider">
-                        <a href=""><img src="https://cdn.tgdd.vn/2023/09/banner/1200x150-tgdd-1200x150-1.png"
-                                alt="discount"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Discount part End -->
     <!-- banner part End -->
     @RenderBody() <!-- This is where the content of the specific view will be rendered -->
+    @await RenderSectionAsync("Scripts", required: false)
 
     <!-- product part End -->
 
@@ -366,7 +348,7 @@
                     <div class="col-md-12">
                         <i class="fa fa-paper-plane"></i>
                         <span>Newsletter</span>
-                        <p>Sting store shop</p>
+                        <p style="color: rgb(47, 69, 173);">Ting store shop</p>
                     </div>
                     <hr class="">
                 </div>
@@ -419,9 +401,9 @@
                         <div class="email_part">
                             <h3>Email contact</h3>
                             <div class="email">
-                                <p>Customer support: <br><span><a href="">cskh@4lua.fpt.vn</a></span></p>
-                                <p>Contact for quote: <br><span> <a href="">baogia@4lua.fpt.vn</a></span></p>
-                                <p>Development cooperation:<span> <a href="">hoptac@4lua@fpt.vn</a></span></p>
+                                <p>Customer support: <br><span><a href="">cskh@tingstore.fpt.vn</a></span></p>
+                                <p>Contact for quote: <br><span> <a href="">baogia@tingstore.fpt.vn</a></span></p>
+                                <p>Development cooperation:<span> <a href="">hoptac@tingstore@fpt.vn</a></span></p>
                             </div>
                         </div>
                     </div>

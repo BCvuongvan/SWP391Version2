@@ -19,7 +19,7 @@ namespace TingStoreAPI.Controllers
             this._db = db;
         }
 
-        [HttpGet]
+        [HttpGet("orderId")]
         public ActionResult GetAllOrderDetail(int orderId)
         {
             var orderDetails = _db.orderDetails
@@ -33,5 +33,5 @@ namespace TingStoreAPI.Controllers
             return Ok(orderDetails);
         }
         
-    }
+    } 
 }

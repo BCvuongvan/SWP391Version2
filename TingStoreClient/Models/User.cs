@@ -15,10 +15,12 @@ namespace TingStoreClient.Models
         public String userName { get; set; }
 
         [Required(ErrorMessage = "Please enter your email!")]
+        [RegularExpression(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$", ErrorMessage = "Please enter a valid email address")]
         [DisplayName("Email")]
         public String email { get; set; }
 
         [Required(ErrorMessage = ("Please enter your password!"))]
+        [RegularExpression(@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$", ErrorMessage = "Please enter a password with at least 8 characters including lowercase letters and special characters!")]
         [DisplayName("Password")]
         public String password { get; set; }
 
@@ -27,6 +29,7 @@ namespace TingStoreClient.Models
         public String fullName { get; set; }
 
         [Required(ErrorMessage = ("Please enter your Phonenumber!"))]
+        [RegularExpression(@"^0[1-9]{2}[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}$", ErrorMessage = "Please enter a 10-digit phone number beginning with the number '0'!")]
         [DisplayName("Phone number")]
         public String phoneNumber { get; set; }
 
@@ -52,7 +55,7 @@ namespace TingStoreClient.Models
 
         public User()
         {
-            
+
         }
         public User(String userName, String email, String password, String fullName, String phoneNumber, String address, String picture, DateTime createdAt, DateTime updateAt, int userType)
         {
