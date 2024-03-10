@@ -72,9 +72,11 @@ namespace TingStoreClient
 
             app.UseSession();
 
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
+
+              endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
