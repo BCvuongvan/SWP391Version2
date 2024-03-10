@@ -1,0 +1,12 @@
+Screen size: 6.4 inches
+Screen technology: Dynamic AMOLED 2X
+Rear camera: 50 MP & 12 MP Spare, 8 MP
+Front camera: 10 MP
+Chipsets: 8-core Exynos 2200
+Amount of RAM: 8 GB
+Internal memory: 128 GB
+Battery: 4500 mAh
+SIM card: 2 Nano SIM or 1 Nano + 1 eSIM
+Operating system: Android 13
+Screen resolution: 1080 x 2340 pixels (FullHD+)
+Screen features: 120 Hz refresh rate, 1450 nits, Corning Gorilla Glass 5

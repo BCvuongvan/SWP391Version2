@@ -196,6 +196,10 @@ namespace TingStoreClient.Controllers
                 var productInfoPath = Path.Combine(detailFilesPath, $"{product.proName}_Info.txt");
                 var highlightFeaturesPath = Path.Combine(detailFilesPath, $"{product.proName}_Features.txt");
                 var technicalSpecsPath = Path.Combine(detailFilesPath, $"{product.proName}_Specs.txt");
+                var detailFilesPathh = Path.Combine(_hostingEnvironment.WebRootPath, "assets/Product_Q&A");
+                var questionandanswerPath = Path.Combine(detailFilesPathh, $"{product.proName}_Q&A.txt");
+                
+                var questionAndAnswer = ReadFromFileQuestionAndAnswer(questionandanswerPath);
 
                 // Đọc nội dung từ file
                 var productInfo = ReadFromFile(productInfoPath);
@@ -206,6 +210,7 @@ namespace TingStoreClient.Controllers
                 ViewBag.ProductInfo = productInfo;
                 ViewBag.HighlightFeatures = highlightFeatures;
                 ViewBag.TechnicalSpecs = technicalSpecs;
+                ViewBag.QuestionAndAnswer = questionAndAnswer;
                 var similarProducts = await GetSimilarProduct(product.cateId, product.proId);
                 ViewBag.SimilarProducts = similarProducts;
                 return View(product);
@@ -251,5 +256,48 @@ namespace TingStoreClient.Controllers
             }
             return newsList;
         }
+
+        private void SaveToFileQuestionAndAnswer(string filePath, string content)
+        {
+            var directory = Path.GetDirectoryName(filePath);
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            using (var streamWriter = new StreamWriter(filePath, true, Encoding.UTF8)) 
+            {
+                streamWriter.Write(content);
+            }
+        }
+
+        private string ReadFromFileQuestionAndAnswer(string filePath)
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                return System.IO.File.ReadAllText(filePath);
+            }
+            return "Information not available.";
+        }
+        [HttpGet("managementQuestionAndAnswer/{id}")]
+        public async Task<IActionResult> ManagementQuestionAndAnswer(int id)
+        {
+            HttpResponseMessage response = await client.GetAsync(api + "/" + id);
+            if (response.IsSuccessStatusCode)
+            {
+                var data = await response.Content.ReadAsStringAsync();
+                var product = JsonSerializer.Deserialize<Product>(data);
+
+                var detailFilesPath = Path.Combine(_hostingEnvironment.WebRootPath, "assets/Product_Q&A");
+                var questionandanswerPath = Path.Combine(detailFilesPath, $"{product.proName}_Q&A.txt");
+                
+                var questionAndAnswer = ReadFromFileQuestionAndAnswer(questionandanswerPath);
+
+                ViewBag.QuestionAndAnswer = questionAndAnswer;
+                return View(product);
+            }
+            return NotFound();
+        }
+
     }
 }

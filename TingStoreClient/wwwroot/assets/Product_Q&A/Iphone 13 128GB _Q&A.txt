@@ -1,0 +1,9 @@
+﻿Q: abc
+A: a
+
+Q: v
+A: v
+
+Question: How is the main screen of the Galaxy Z Fold5?
+Anawer: The internal screen of the Galaxy Z Fold 5 has a size of 7.6 inches, works on a 2X Dynamic AMOLED panel with the ability to adjust the refresh rate of 1 - 120 Hz. In particular, this screen also has a maximum brightness of 1,750 nits. With these parameters, Galaxy Z Fold 5 can bring an eye-catching display experience with clear image quality in all lighting conditions.
+
