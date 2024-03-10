@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,7 +26,7 @@ namespace TingStoreAPI.Controllers
             return Ok(ListOfUser);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name ="GetUserByUsername")]
         public IActionResult GetUserByUsername(string id)
         {
             var user = this._db.users
@@ -68,6 +69,18 @@ namespace TingStoreAPI.Controllers
             // return CreatedAtRoute("GetUserByUsername", new { id = user.userName }, user);
             return Ok(user);
         }
+        [HttpGet("ChangeAddress/{Iusername}/{Iaddress}")]
+        public IActionResult ChangeAddress(string Iusername, string Iaddress)
+        {
+            var user = this._db.users.SingleOrDefault(u => u.userName.Equals(Iusername));
+            if(user == null){
+                return NotFound();
+            }
+            user.address = Iaddress;
+            this._db.SaveChanges();
+            return CreatedAtRoute("GetUserByUsername", new { id = user.userName }, user);
+        }
+
 
 
     }

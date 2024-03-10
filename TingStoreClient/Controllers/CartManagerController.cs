@@ -21,6 +21,8 @@ namespace TingStoreClient.Controllers
         private string cartApi;
         private string handleOrderApi;
         private string productApi;
+        private string userApi;
+        private string authAPI;
         public CartManagerController()
         {
             client = new HttpClient();
@@ -29,6 +31,8 @@ namespace TingStoreClient.Controllers
             this.cartApi = "https://localhost:5001/api/CartManager";
             this.handleOrderApi = "https://localhost:5001/api/HandlingCart";
             this.productApi = "https://localhost:5001/api/Product";
+            this.userApi = "https://localhost:5001/api/UserManager";
+            this.authAPI = "https://localhost:5001/api/Auth";
         }
 
         public async Task<IActionResult> Index()
@@ -134,17 +138,42 @@ namespace TingStoreClient.Controllers
                 if (item.quantity > product.proQuantity)
                 {
                     count++;
-                    error += (count == 1) ? product.proName + " product is out of stock" : ", " + product.proName + " product is out of stock";
+                    error += (count == 1) ? product.proName + "Sorry, product is out of stock" : ", " + product.proName + " product is out of stock";
                 }
             }
             if (count != 0)
             {
-                TempData["SystemNotification"] = "Edited the object successfully";
+                TempData["SystemNotification"] = error;
                 return RedirectToAction("Index");
             }
             return View(list);
         }
+        [HttpPost]
+        public async Task<IActionResult> ChangeAddress(string address)
+        {
+            if (address == null)
+            {
+                return NotFound();
+            }
 
+            string userJson = HttpContext.Session.GetString("_user");
+            var user = JsonSerializer.Deserialize<User>(userJson);
+
+            HttpResponseMessage response = await client.GetAsync(userApi + "/ChangeAddress/" + user.userName + "/" + address);
+
+            if (response.IsSuccessStatusCode)
+            {
+                TempData["SystemNotification"] = "Change Address sucessfully";
+                HttpResponseMessage responseSession = await client.GetAsync(authAPI + "/GetUser/" + user.userName + "/" + user.password);
+                string data = await responseSession.Content.ReadAsStringAsync();
+                const string _user = "_user";
+                // string userDataJson = JsonConvert.SerializeObject(user);
+                HttpContext.Session.SetString(_user, data);
+                return RedirectToAction("Order");
+            }
+            TempData["SystemNotificationError"] = "There was an error when you changed your address, please try again later";
+            return RedirectToAction("Order");
+        }
 
     }
 }
