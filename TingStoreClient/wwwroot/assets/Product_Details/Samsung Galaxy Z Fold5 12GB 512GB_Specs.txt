@@ -1,7 +1,6 @@
-Kích thước màn hình: 7.6 inches
-Công nghệ màn hình: Dynamic AMOLED 2X
+Screen size: 7.6 inches
+Screen technology: Dynamic AMOLED 2X
 Camera sau: Camera siêu rộng: 12MP F2.2, 123°, 1.12μm
-Camera góc rộng: 50MP, F1.8, Dual Pixel AF, OIS, 2.0μm
-Camera Tele: 10 MP, F2.4, PDAF, OIS, 1.0μm, zoom 3X, zoom kỹ thuật số 30X
-Camera trước: Camera bên ngoài:10 MP, f/2.2
-Camera bên trong: 4 MP, F1.8
+Rear camera: Ultra-wide camera: 12MP F2.2, 123°, 1.12μm.Wide-angle camera: 50MP, F1.8, Dual Pixel AF, OIS, 2.0μm.Telephoto camera: 10 MP, F2.4, PDAF, OIS, 1.0μm, 3X zoom, 30X digital zoom
+Front camera: External camera:10 MP, f/2.2. Inner camera: 4 MP, F1.8
+Chipsets: Snapdragon 8 Gen 2 for Galaxy (4nm) 8-core

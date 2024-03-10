@@ -1,0 +1,41 @@
+@model Product
+@{
+    ViewData["Title"] = "UpdateQuestionAndAnswer";
+    Layout = "/Views/Shared/_ManagementProduct.cshtml";
+}
+<nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+    <div class="navbar-nav align-items-center ms-auto">
+        <div class="nav-item">
+            <a class="nav-link" style="margin-right: 20px;" asp-controller="Product"
+                asp-action="ManagementQuestionAndAnswer" asp-route-id="@Model.proId">
+                <i class="fa fa-sign-out-alt"></i>
+                <span class="d-none d-lg-inline-flex">Back</span>
+            </a>
+        </div>
+    </div>
+</nav>
+<section id="product_part" class="main">
+    <div class="container">
+        <h2 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">UPDATE PRODUCT HIGHLIGHTSUPDATE PRODUCT HIGHLIGHTS</h2>
+        <div class="card-body">
+            <form asp-controller="Product" asp-action="UpdateQuestionAndAnswer" method="post"
+                style="margin: 10px;" enctype="multipart/form-data">
+                <div hidden>
+                    <input type="text" asp-for="proId" class="form-control">
+                </div>
+                <div hidden>
+                    <input type="text" asp-for="proName" class="form-control">
+                </div>
+                <div>
+                    <label class="form-label">QUestion and Answer: </label>
+                    <textarea name="questionAndAnswer" class="form-control large-input" rows="10">@ViewBag.QuestionAndAnswer</textarea>
+                </div> <br>
+                <div class="button-container" style="text-align: center;">
+                    <button type="submit" style="font-size: 18px; padding: 10px 20px;"
+                        class="fancy-button">Update</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>

@@ -489,5 +489,139 @@ namespace TingStoreClient.Controllers
             SaveToFile(Path.Combine(detailFilesPath, $"{pro.proName}_Specs.txt"), technicalSpecs);
             return RedirectToAction("ManagementProductDetail", new { id = id });
         }
+
+        [HttpGet("createQuestionAndAnswer/{proId}")]
+        public async Task<IActionResult> CreateQuestionAndAnswer(int proId)
+        {
+            HttpResponseMessage response = await client.GetAsync(api + "/" + proId);
+            if (response.IsSuccessStatusCode)
+            {
+                var data = await response.Content.ReadAsStringAsync();
+                var product = JsonSerializer.Deserialize<Product>(data);
+                return View(product);
+            }
+            return NotFound();
+        }
+
+        [HttpPost("createQuestionAndAnswer/{proId}")]
+        public async Task<IActionResult> CreateQuestionAndAnswer(int proId, List<string> questionName, List<string> answerValue)
+        {
+            if (questionName == null || answerValue == null || questionName.Count != answerValue.Count)
+            {
+                ViewBag.ErrorMessage = "Câu hỏi và câu trả lời phải được điền đầy đủ và tương ứng với nhau.";
+                return View();
+            }
+            var product = await GetProductById(proId);
+            if (product == null)
+            {
+                ViewBag.ErrorMessage = "Không tìm thấy sản phẩm.";
+                return View();
+            }
+            var productName = product.proName;
+            var qaFilesPath = Path.Combine(_hostingEnvironment.WebRootPath, "assets/Product_Q&A");
+            Directory.CreateDirectory(qaFilesPath); // Đảm bảo rằng thư mục tồn tại
+            var fileName = $"{productName}_Q&A.txt"; // Đặt tên file theo tên sản phẩm
+            var filePath = Path.Combine(qaFilesPath, fileName);
+
+            // Chuẩn bị nội dung và lưu vào file
+            var qaContent = new StringBuilder();
+            for (int i = 0; i < questionName.Count; i++)
+            {
+                qaContent.AppendLine($"Question: {questionName[i]}");
+                qaContent.AppendLine($"Anawer: {answerValue[i]}");
+                qaContent.AppendLine(); // Thêm dòng trống giữa các cặp Q&A
+            }
+
+            // Sử dụng SaveToFileQuestionAndAnswer để thêm nội dung vào cuối file
+            SaveToFileQuestionAndAnswer(filePath, qaContent.ToString());
+
+            return RedirectToAction("ManagementQuestionAndAnswer", new { id = proId });
+        }
+
+
+        private void SaveToFileQuestionAndAnswer(string filePath, string content)
+        {
+            var directory = Path.GetDirectoryName(filePath);
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            using (var streamWriter = new StreamWriter(filePath, true, Encoding.UTF8)) 
+            {
+                streamWriter.Write(content);
+            }
+        }
+
+        private string ReadFromFileQuestionAndAnswer(string filePath)
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                return System.IO.File.ReadAllText(filePath);
+            }
+            return "Information not available.";
+        }
+        [HttpGet("managementQuestionAndAnswer/{id}")]
+        public async Task<IActionResult> ManagementQuestionAndAnswer(int id)
+        {
+            HttpResponseMessage response = await client.GetAsync(api + "/" + id);
+            if (response.IsSuccessStatusCode)
+            {
+                var data = await response.Content.ReadAsStringAsync();
+                var product = JsonSerializer.Deserialize<Product>(data);
+
+                var detailFilesPath = Path.Combine(_hostingEnvironment.WebRootPath, "assets/Product_Q&A");
+                var questionandanswerPath = Path.Combine(detailFilesPath, $"{product.proName}_Q&A.txt");
+
+                var questionAndAnswer = ReadFromFileQuestionAndAnswer(questionandanswerPath);
+
+                ViewBag.QuestionAndAnswer = questionAndAnswer;
+                return View(product);
+            }
+            return NotFound();
+        }
+
+        [HttpGet("updatequestionandanswer/{proId}")]
+        public async Task<IActionResult> UpdateQuestionAndAnswer(int proId)
+        {
+            HttpResponseMessage response = await client.GetAsync(api + "/" + proId);
+            if (response.IsSuccessStatusCode)
+            {
+                var data = response.Content.ReadAsStringAsync().Result;
+                var product = JsonSerializer.Deserialize<Product>(data);
+
+                var qaFilesPath = Path.Combine(_hostingEnvironment.WebRootPath, "assets/Product_Q&A");
+                var qaPath = Path.Combine(qaFilesPath, $"{product.proName}_Q&A.txt");
+
+                var questionAndAnswer = ReadFromFile(qaPath);
+
+                ViewBag.QuestionAndAnswer = questionAndAnswer;
+                return View(product);
+            }
+            return NotFound();
+        }
+
+        [HttpPost("updatequestionandanswer/{proId}")]
+        public async Task<IActionResult> UpdateQuestionAndAnswer(int proId, Product pro, string questionAndAnswer)
+        {
+            pro.proId = proId;
+            string data = JsonSerializer.Serialize(pro);
+            var content = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
+            HttpResponseMessage response = await client.PutAsync(api + "/" + proId, content);
+            if (response == null)
+            {
+                return NotFound();
+            }
+            var product = await GetProductById(proId);
+            if (product == null)
+            {
+                ViewBag.ErrorMessage = "Không tìm thấy sản phẩm.";
+                return View();
+            }
+            var productName = product.proName;
+            var qaFilesPath = Path.Combine(_hostingEnvironment.WebRootPath, "assets/Product_Q&A");
+            SaveToFile(Path.Combine(qaFilesPath, $"{productName}_Q&A.txt"), questionAndAnswer);
+            return RedirectToAction("ManagementQuestionAndAnswer", new { id = proId });
+        }
     }
 }

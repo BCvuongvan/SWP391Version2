@@ -32,10 +32,146 @@
 
 
     <title>Product Detail</title>
+    <style>
+        .question {
+            background-color: #f0f0f0;
+            padding: 25px;
+            /* Tăng padding lên */
+            margin: 10px 0;
+            /* Tăng margin lên */
+            cursor: pointer;
+            position: relative;
+            padding-right: 40px;
+            font-size: 20px;
+            font-weight: bold;
+            /* Tăng kích thước font */
+        }
+
+        .question:after {
+            content: "\203A";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+            color: #6c7279;
+            font-size: 48px;
+            /* Đã được tăng lên */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .question:after {
+            content: "\203A";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+            color: #6c7279;
+            font-size: 24px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .answer {
+            padding: 10px;
+            margin: 5px 0;
+            display: none;
+            font-size: 18px;
+        }
+
+        .comment {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .comment-user-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .comment-user-img img {
+            width: 100%;
+            height: auto;
+        }
+
+        .comment-content {
+            flex: 1;
+        }
+
+        .rating .fa-star {
+            color: #FFD700;
+            /* Màu sao đánh giá */
+        }
+
+        .checked {
+            color: orange;
+        }
+
+        /* Định dạng cho phần đánh giá */
+        #product_ratings_reviews .rating-line {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .rating-bar {
+            width: 70%;
+            height: 10px;
+            background-color: #ccc;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .rating-fill {
+            height: 100%;
+            background-color: red;
+            position: absolute;
+        }
+
+        .star-rating {
+            width: 60px;
+        }
+
+        .rating-count {
+            width: 40px;
+        }
+        .rating-bar {
+    width: 100%;
+    background-color: #ccc; /* Màu xám cho thanh nền */
+    height: 10px;
+}
+
+.rating-fill {
+    height: 100%;
+    background-color: #f00; /* Màu đỏ mặc định cho thanh đánh giá */
+    width: 0%; /* Mặc định không hiển thị */
+}
+
+/* Thêm các class tùy chỉnh cho màu sắc khác nếu cần */
+.rating-fill.no-rating {
+    background-color: #ccc; /* Màu xám nếu không có đánh giá */
+}
+
+    </style>
 
 </head>
 
-<body>  
+<body>
+    <script>
+        //phần hiển thị Q&A
+        function toggleAnswer(answerId) {
+            var answer = document.getElementById(answerId);
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+
+    </script>
     <!-- preloader start  -->
     <div id="spinners">
         <div id="preloader_1">
@@ -103,23 +239,35 @@
                                             <li>
                                                 <p style="font-size: 17px;"><strong>Mức giá điện thoại</strong></p>
                                             </li>
-                                            <li><a href="/Home/ProductsByPrice?minPrice=5000000&maxPrice=10000000" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ 5-10 triệu</a>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=5000000&maxPrice=10000000"
+                                                    class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
+                                                    5-10 triệu</a>
                                             </li>
-                                            <li><a href="/Home/ProductsByPrice?minPrice=10000000&maxPrice=15000000" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ 10-15 triệu</a>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=10000000&maxPrice=15000000"
+                                                    class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
+                                                    10-15 triệu</a>
                                             </li>
-                                            <li><a href="/Home/ProductsByPrice?minPrice=15000000&maxPrice=20000000" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ 15-20 triệu</a>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=15000000&maxPrice=20000000"
+                                                    class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
+                                                    15-20 triệu</a>
                                             </li>
-                                            <li><a href="/Home/ProductsByPrice?minPrice=20000000&maxPrice=25000000" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ 20-25 triệu</a>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=20000000&maxPrice=25000000"
+                                                    class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
+                                                    20-25 triệu</a>
                                             </li>
-                                            <li><a href="/Home/ProductsByPrice?minPrice=25000000&maxPrice=30000000" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ 25-30 triệu</a>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=25000000&maxPrice=30000000"
+                                                    class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
+                                                    25-30 triệu</a>
                                             </li>
-                                            <li><a href="/Home/ProductsByPrice?minPrice=30000000&maxPrice=35000000" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ 30-35 triệu</a>
+                                            <li><a href="/Home/ProductsByPrice?minPrice=30000000&maxPrice=35000000"
+                                                    class="dropdown-item"
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
+                                                    30-35 triệu</a>
                                             </li>
 
                                         </div>
