@@ -17,7 +17,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="~/Mobile_shop/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -223,7 +223,7 @@
 </head>
 
 <body>
-
+    <script src="https://kit.fontawesome.com/8143c9cd7e.js" crossorigin="anonymous"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('addSpecButton').addEventListener('click', function () {
@@ -331,14 +331,8 @@
                             class="fa fa-table me-2"></i>Manage Orders</a>
                     <a asp-controller="Revenue" asp-action="Index" class="nav-item nav-link"><i
                             class="fa-solid fa-chart-simple"></i>Revenue Chart</a>
-
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
-                                class="fa-solid fa-gear"></i>Setting</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a asp-controller="" asp-action="" class="dropdown-item">Logout</a>
-                        </div>
-                    </div>
+                    <a asp-controller="Home" asp-action="Index" class="nav-item nav-link"><i
+                            class="fa-solid fa-house"></i>Home page</a>
                 </div>
             </nav>
         </div>

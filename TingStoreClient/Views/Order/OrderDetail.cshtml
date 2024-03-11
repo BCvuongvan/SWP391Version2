@@ -80,8 +80,8 @@
                                             <td class="text-center">@count</td>
                                             <td>@item.product.proName</td>
                                             <td class="text-end">@item.quantity</td>
-                                            <td class="text-end">@item.product.proPrice</td>
-                                            <td class="text-end">@item.subTotal</td>
+                                            <td class="text-end"> <span class="giamoi">@String.Format("{0:0,0VND}", @item.product.proPrice).Replace(",", ".")</span></td>
+                                            <td class="text-end"> <span class="giamoi">@String.Format("{0:0,0VND}", @item.subTotal).Replace(",", ".")</span></td>
                                         </tr>
                                     count++;
                                 }
@@ -94,7 +94,7 @@
                                         <td class=" text-end">
                                             <strong>Total Amount</strong>
                                         </td>
-                                        <td class="text-end" style="width: 1px;">@Model.TotalAmount</td>
+                                        <td class="text-end" style="width: 1px;"> <span class="giamoi">@String.Format("{0:0,0VND}",@Model.TotalAmount ).Replace(",", ".")</span></td>
                                     </tr>
                                 </tbody>
                             </table>

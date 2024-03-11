@@ -447,16 +447,6 @@
                             </div>
                         </div>
                     </div>
-
-                    @{
-    var searchProductController = new SearchProductController();
-}
-
-                    @foreach(var productName in await Task.Run(async () => await searchProductController.getListProductbyProName()))
-                    {
-    <p>@productName</p>
-}
-
                     <div class="col-md-3">
                         <div class="info-part">
                             <h3>Information and policies</h3>

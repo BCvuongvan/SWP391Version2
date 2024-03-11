@@ -78,7 +78,7 @@
                                                 <td class="text-start">@item.userName</td>
                                                 <td class="text-start">@item.orderStatus.statusName</td>
                                                 <td class="text-start">@item.orderDate</td>
-                                                <td class="text-end">@item.TotalAmount</td>
+                                                <td class="text-end"> <span class="giamoi">@String.Format("{0:0,0VND}", @item.TotalAmount).Replace(",", ".")</span></td>
                                                 <td class="text-center"><a asp-action="orderDetail"
                                                         asp-route-id="@item.orderId"><i class="fas fa-eye"></i></a></td>
                                             </tr>

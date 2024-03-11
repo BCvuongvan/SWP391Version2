@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Http
 @inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@using TingStoreClient.Controllers
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +39,7 @@
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar navbar-light">
-                <a href="" class="navbar-brand mx-4 mb-3">
+                <a asp-controller="HomeAdmin" asp-action="Index" class="navbar-brand mx-4 mb-3">
                     <img src="~/Mobile_shop/images/logo_web.png" alt="Logo web" style="width: 175px; height: 60px;">
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
@@ -81,13 +82,8 @@
                             class="fa fa-table me-2"></i>Manage Orders</a>
                     <a asp-controller="Revenue" asp-action="Index" class="nav-item nav-link"><i
                             class="fa-solid fa-chart-simple"></i> Revenue Chart</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
-                                class="fa-solid fa-gear"></i> Setting</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a asp-controller="Auth" asp-action="Logout" class="dropdown-item">Logout</a>
-                        </div>
-                    </div>
+                    <a asp-controller="Home" asp-action="Index" class="nav-item nav-link"><i
+                            class="fa-solid fa-house"></i>Home page</a>
                 </div>
             </nav>
         </div>
@@ -104,10 +100,37 @@
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
                 </a>
-                <form class="d-none d-md-flex ms-4" method="" action="">
-                    <input class="form-control border-0" type="search" placeholder="Search">
-                </form>
                 <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-bell me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Notificatin</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            @{
+                                var searchProductController = new SearchProductController();
+                                int count = 0;
+                            }
+                            @foreach (var item in await Task.Run(async () => await
+                            searchProductController.GetListPendingOrder()))
+                            {
+                                count++;
+                                <a asp-controller="Order" asp-action="orderDetail" asp-route-id="@item.orderId"
+                                    class="dropdown-item">
+                                    <h6 class="fw-normal mb-0"><span>Order: </span>@item.orderId</h6>
+                                    <small>@item.userName <span>(pending)</span></small>
+                                </a>
+                                <hr class="dropdown-divider">
+                                if (count == 5)
+                                {
+                                    break;
+                                }
+                            }
+                            @* <hr class="dropdown-divider"> *@
+                            <a asp-controller="Order" asp-action="GetAllOrder" class="dropdown-item text-center">See all
+                                notifications</a>
+                        </div>
+                    </div>
                     <div class="nav-item">
                         <a href="#" class="nav-link " data-bs-toggle="dropdown">
                             <img class="rounded-circle" src="~/assets/User_Picture/@user.picture" alt="admin picture"
