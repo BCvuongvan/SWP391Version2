@@ -83,7 +83,6 @@
         }
 
         input[type=text] {
-            background-color: #f1f1f1;
             width: 100%;
         }
 
@@ -153,11 +152,8 @@
 
         .dropdown-item {
             text-decoration: none;
-            /* Loại bỏ gạch chân */
             font-size: 18px;
-            /* Chữ to hơn */
             margin-bottom: 10px;
-            /* Khoảng cách giữa các mục */
         }
 
         .box-time {
@@ -165,16 +161,13 @@
             justify-content: center;
             align-items: center;
             font-size: 20px;
-            /* Điều chỉnh kích thước font chữ theo ý muốn */
         }
 
         .time {
             background: rgb(244, 199, 0);
             color: rgb(34, 34, 34);
             padding: 5px 10px;
-            /* Điều chỉnh padding để tạo khoảng cách */
             border-radius: 5px;
-            /* Làm tròn góc nếu muốn */
         }
 
         .box-time {
@@ -186,22 +179,15 @@
 
         .time-segment {
             width: 35px;
-            /* Chiều rộng của ô */
             height: 35px;
-            /* Chiều cao của ô */
             background-color: #ebef28;
-            /* Màu nền */
             color: #0f0909;
-            /* Màu chữ */
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 5px;
-            /* Bo góc */
             font-size: 15px;
-            /* Kích thước font */
             font-weight: bold;
-            /* Độ đậm */
         }
 
         .box-time {
@@ -221,7 +207,7 @@
     <!-- preloader end  -->
 
     <!--  Navbar start-->
-    <nav id="header" class="navbar navbar-fixed-top" style="background: #a54747">
+    <nav id="header" class="navbar navbar-fixed-top">
         <div id="header-container" class="container navbar-container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -348,10 +334,10 @@
 
                         </ul>
                     </li>
-                    <li><a href="product.html">Product</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="">Sale</a></li>
+                    <li><a asp-action="" asp-controller="">Product</a></li>
+                    <li><a asp-action="" asp-controller="">About</a></li>
+                    <li><a asp-action="" asp-controller="">Contact</a></li>
+                    <li><a asp-action="" asp-controller="">Sale</a></li>
                     <li><a href="">News</a></li>
                     <li>
                         <form autocomplete="off" asp-controller="Home" asp-action="SeachProduct"
@@ -387,9 +373,7 @@
         </div>
     </nav>
     <!-- Navbar part end-->
-    <!--Banner part start-->
 
-    <!-- banner part End -->
     @RenderBody() <!-- This is where the content of the specific view will be rendered -->
     @await RenderSectionAsync("Scripts", required: false)
 
