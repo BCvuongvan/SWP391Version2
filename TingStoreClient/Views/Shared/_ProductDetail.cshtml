@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="~/Mobile_shop/css/slick.css">
     <link rel="stylesheet" href="~/Mobile_shop/css/navbar_styleSheet.css">
     <link rel="stylesheet" type="text/css" href="~/Mobile_shop/fonts/font/flaticon.css">
-
+    
 
     <title>Product Detail</title>
     <style>
@@ -201,24 +201,26 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a>Home</a></li>
+                    <li class="active"><a asp-action="Index" asp-controller="Home">Home</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                            Danh mục
+                            Category
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li class="dropdown-submenu dropright">
-                                <a class="dropdown-item" href="#" style="font-size: 17px; margin-bottom: -5px;"><i
+                                <a class="dropdown-item" href="#" style="margin-bottom: -5px;"><i
                                         class="fa fa-mobile-alt"
-                                        style="margin-left: -10px; margin-right: 10px;"></i>Điện Thoại
-                                    <i class="fa fa-angle-right" aria-hidden="true" style="float: right;"></i></a>
-                                <ul class="dropdown-menu" style="width: 450px;">
+                                        style="margin-left: -10px; margin-right: 10px;"></i>Phone
+                                    <i class="fa fa-angle-right" aria-hidden="true"
+                                        style="float: right; margin-top: 4px;"></i></a>
+                                <ul class="dropdown-menu" style="width: 700px;">
                                     <div style="display: flex; flex-wrap: wrap; margin-left: 15px;">
                                         <div style="flex: 1;">
                                             <li>
-                                                <p style="font-size: 17px;"><strong>Thương hiệu điện thoại</strong></p>
+                                                <p style="font-size: 17px;"><strong>Phone brand</strong>
+                                                </p>
                                             </li>
                                             @if (ViewBag.cateList != null)
                                             {
@@ -231,45 +233,56 @@
                                                 }
                                             }
                                             <li><a asp-controller="Home" asp-action="Index" class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Tất
-                                                    cả thương hiệu</a>
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">All
+                                                    brand</a>
                                             </li>
                                         </div>
-                                        <div style="flex: 1; margin-right: -100px;">
+
+                                        <div style="flex: 1;">
                                             <li>
-                                                <p style="font-size: 17px;"><strong>Mức giá điện thoại</strong></p>
+                                                <p style="font-size: 17px;"><strong>Phone Price</strong></p>
                                             </li>
                                             <li><a href="/Home/ProductsByPrice?minPrice=5000000&maxPrice=10000000"
                                                     class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
-                                                    5-10 triệu</a>
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">From
+                                                    5-10 milion</a>
                                             </li>
                                             <li><a href="/Home/ProductsByPrice?minPrice=10000000&maxPrice=15000000"
                                                     class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
-                                                    10-15 triệu</a>
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">From
+                                                    10-15 milion</a>
                                             </li>
                                             <li><a href="/Home/ProductsByPrice?minPrice=15000000&maxPrice=20000000"
                                                     class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
-                                                    15-20 triệu</a>
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">From
+                                                    15-20 milion</a>
                                             </li>
                                             <li><a href="/Home/ProductsByPrice?minPrice=20000000&maxPrice=25000000"
                                                     class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
-                                                    20-25 triệu</a>
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">From
+                                                    20-25 milion</a>
                                             </li>
-                                            <li><a href="/Home/ProductsByPrice?minPrice=25000000&maxPrice=30000000"
+                                            <li><a href="/Home/ProductsByPrice?minPrice=25000000&maxPrice=30000000000000000"
                                                     class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
-                                                    25-30 triệu</a>
-                                            </li>
-                                            <li><a href="/Home/ProductsByPrice?minPrice=30000000&maxPrice=35000000"
-                                                    class="dropdown-item"
-                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">Từ
-                                                    30-35 triệu</a>
+                                                    style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">From
+                                                    25 milion</a>
                                             </li>
 
+                                        </div>
+                                        <div style="flex: 1;">
+                                            <li>
+                                                <p style="font-size: 17px;"><strong>Best-selling products</strong></p>
+                                            </li>
+                                            @if (ViewBag.proList != null)
+                                            {
+                                                foreach (var product in ViewBag.proList)
+                                                {
+                                                    <li><a class="dropdown-item"
+                                                            href="@Url.Action("ManagementProductDetail", "Home", new { id = product.proId })"
+                                                            style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color: #626060;">@product.proName</a>
+                                                    </li>
+                                                }
+                                            }
                                         </div>
                                     </div>
                                 </ul>
@@ -283,26 +296,31 @@
                     <li><a href="">Sale</a></li>
                     <li><a href="">News</a></li>
                     <li>
-                        <form class="navbar-form nav_margin" role="search">
+                        <form autocomplete="off" asp-controller="Home" asp-action="SeachProduct"
+                            class="navbar-form nav_margin autocomplete" role="search" method="post">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search" name="">
+                                <input id="myInput" type="text" name="userName" class="form-control"
+                                    placeholder="Search">
                                 <div class="input-group-btn">
-                                    <button class="btn btn-default" type="submit"><i
+                                    <button class="btn btn-default" type="submit" value="Search"><i
                                             class="glyphicon glyphicon-search"></i></button>
                                 </div>
                             </div>
                         </form>
+
                     </li>
+
                     @if (@HttpContextAccessor.HttpContext.Session.GetString("_user") != null)
                     {
-                        <li><a href="signup.html"><i class="fas fa-shopping-cart" style="margin-top: 4px;"></i></a></li>
-                        <li><a href="login.html"><i class="fa-solid fa-user" style="margin-top: 4px;"></i> <br></a></li>
-                        <li><a asp-controller="Auth" asp-action="Logout">Logout <i class="fa-solid fa-right-from-bracket"
-                                    style="margin-top: 4px;"></i> <br></a></li>
+                        <li><a asp-controller="CartManager" asp-action="Index"><i class="fas fa-shopping-cart"
+                                    style="margin-top: 4px;"></i></a></li>
+                        <li><a asp-controller="CustomerProfile" asp-action="CustomerProfile"><i class="fa-solid fa-user"
+                                    style="margin-top: 4px;"></i></a></li>
+                        <li><a asp-controller="Auth" asp-action="Logout"><i class="fa fa-sign-out"
+                                    style="margin-top: 4px;"></i> Logout</a></li>
                     }
                     else
                     {
-
                         <li><a asp-controller="Auth" asp-action="Login"><i class="fa-solid fa-right-to-bracket"
                                     style="margin-top: 4px;"></i> Login</a></li>
                     }

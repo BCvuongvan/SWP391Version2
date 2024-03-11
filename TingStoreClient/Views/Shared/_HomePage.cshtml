@@ -67,6 +67,21 @@
             updateCountdown();
             const interval = setInterval(updateCountdown, 1000);
         });
+        //thanh đánh giá
+        document.addEventListener("DOMContentLoaded", function () {
+            // Giả sử bạn có một cách nào đó để lấy được tỷ lệ phần trăm đánh giá từ dữ liệu
+            var ratingFills = document.querySelectorAll('.rating-fill');
+
+            ratingFills.forEach(function (fill) {
+                var ratingPercent = fill.getAttribute('data-rating-percent');
+                if (ratingPercent > 0) {
+                    fill.style.width = ratingPercent + '%';
+                } else {
+                    // Nếu không có đánh giá, thay đổi màu sắc và không hiển thị thanh đánh giá
+                    fill.classList.add('no-rating');
+                }
+            });
+        });
     </script>
 
     <style>
@@ -207,6 +222,36 @@
         .box-time {
             margin-right: -70px;
         }
+
+        .sort-box {
+            display: flex;
+            list-style: none;
+        }
+
+        .sort-box a {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .sort-box .icon {
+            background: #f3f4f6;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            color: #444;
+            cursor: pointer;
+            display: flex;
+            font-size: 14px;
+            height: 34px;
+            margin: 0 10px 10px 0;
+            padding: 5px 10px;
+            white-space: nowrap;
+        }
+
+        .sort-box .icon:active {
+            background: #fef2f2;
+            border: 1px solid #d70018;
+            color: #d70018;
+        }
     </style>
     <!-- preloader start  -->
     <div id="spinners">
@@ -273,28 +318,6 @@
                                                     brand</a>
                                             </li>
                                         </div>
-
-                                        @* <div style="flex: 1; margin-right: -100px;">
-                                        <li>
-                                        <p style="font-size: 17px;"><strong>Mức giá điện thoại</strong></p>
-                                        </li>
-                                        <li><a href="#" class="dropdown-item"
-                                        style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color:
-                                        #626060;">5tr-10tr</a>
-                                        </li>
-                                        <li><a href="#" class="dropdown-item"
-                                        style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color:
-                                        #626060;">11tr-15tr</a>
-                                        </li>
-                                        <li><a href="#" class="dropdown-item"
-                                        style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color:
-                                        #626060;">16tr-20tr</a>
-                                        </li>
-                                        <li><a href="#" class="dropdown-item"
-                                        style="text-decoration: none; font-size: 17px; margin-bottom: 10px; color:
-                                        #626060;">21tr-25tr</a>
-                                        </li>
-                                        </div> *@
 
                                         <div style="flex: 1;">
                                             <li>

@@ -26,12 +26,10 @@ namespace TingStoreAPI.Controllers
             var productList = _db.products.Include(p => p.category).Include(p => p.discountPercents).ToList();
             return Ok(productList);
         }
-
-
         [HttpGet("{id}", Name = "GetProductById")]
         public IActionResult GetProductById(int id)
         {
-            var pro = this._db.products.Include(p => p.productImages).FirstOrDefault(p => p.proId == id);
+            var pro = this._db.products.Include(u => u.feedbacks).ThenInclude(f => f.user).Include(p => p.productImages).FirstOrDefault(p => p.proId == id);
             if (pro == null)
             {
                 return NotFound();
@@ -122,7 +120,7 @@ namespace TingStoreAPI.Controllers
             this._db.SaveChanges();
             return CreatedAtRoute("GetProductById", new { id = productImage.proId }, productImage);
         }
-        
+
         [HttpGet("Picture/{id}", Name = "GetPictureById")]
         public IActionResult GetPicturetById(int id)
         {
@@ -147,9 +145,11 @@ namespace TingStoreAPI.Controllers
         }
 
         [HttpGet("Hot")]
-        public ActionResult<IEnumerable<Product>> GetHotProducts(){
-            var hotProducts = this._db.orderDetails.GroupBy(od => od.proId).Select(g => new { proId = g.Key, TotalQuantity = g.Sum(od => od.quantity)}).OrderByDescending(g => g.TotalQuantity).Take(4).Join(this._db.products, g => g.proId, p => p.proId, (g, p) => p).ToList();
-            if(hotProducts == null){
+        public ActionResult<IEnumerable<Product>> GetHotProducts()
+        {
+            var hotProducts = this._db.orderDetails.GroupBy(od => od.proId).Select(g => new { proId = g.Key, TotalQuantity = g.Sum(od => od.quantity) }).OrderByDescending(g => g.TotalQuantity).Take(4).Join(this._db.products, g => g.proId, p => p.proId, (g, p) => p).ToList();
+            if (hotProducts == null)
+            {
                 return NotFound();
             }
             return hotProducts;
