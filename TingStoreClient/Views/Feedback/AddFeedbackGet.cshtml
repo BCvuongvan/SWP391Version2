@@ -23,7 +23,7 @@
 
 <body>
     <td>
-        <a asp-action="AddNew" asp-controller="Feedback" class="btn btn-primary">Add Feedback</a>
+
     </td>
     <h2>Products Bought By User:</h2>
 
@@ -32,6 +32,7 @@
             <th>Product ID</th>
             <th>Product Name</th>
             <th>Product Image</th>
+            <th>Feedback</th>
         </tr>
         @foreach (var product in Model)
         {
@@ -39,8 +40,8 @@
                 <td>@product.proId</td>
                 <td>@product.proName</td>
                 <td><img src="@product.proImage" alt="@product.proName" style="max-width: 100px; max-height: 100px;" /></td>
-                <td>
-                </td>
+                <td><a asp-controller="HandleFeedback" asp-action="CreateFeedback"
+                        asp-route-id="@product.proId">Feedback</a></td>
             </tr>
         }
 
@@ -86,9 +87,10 @@
                         <td><img src="${product.proImage}" alt="${product.proName}" style="max-width: 100px; max-height: 100px;" /></td>
                         <td>
                             <form asp-action="AddFeedback" asp-controller="Feedback" method="post" onsubmit="return submitFeedback()">
-                                <input type="hidden" name="proId" value="${product.proId}" />
+                                <input type="" name="proId" value="${product.proId}" />
                             </form>
                         </td>
+                        <td><a asp-controller="HandleFeedback" asp-action="CreateFeedback" asp-route-id="${product.proId}">Feedback</a></td>
                     `;
                     productList.appendChild(tr);
                 });
