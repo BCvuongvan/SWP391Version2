@@ -52,6 +52,11 @@ namespace TingStoreAPI.Controllers
             {
                 return BadRequest("Category cannot be null");
             }
+            var existedName = this._db.categories.FirstOrDefault(c => c.cateName == category.cateName); //check từ phần tử đầu tiên với tên đầu vào 
+            if (existedName != null)
+            {
+                return BadRequest("Name category already exists.");
+            }
             category.cateStatus = true;
             this._db.categories.Add(new Category(category.cateName, category.cateDescribe));
             this._db.SaveChanges();
@@ -71,6 +76,7 @@ namespace TingStoreAPI.Controllers
             {
                 return NotFound($"Category with ID {id} not found.");
             }
+            category.cateStatus = true;
             existingCategory.cateName = category.cateName;
             existingCategory.cateDescribe = category.cateDescribe;
             existingCategory.cateStatus = category.cateStatus; 

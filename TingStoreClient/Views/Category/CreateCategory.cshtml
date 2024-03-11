@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "CreateCategory";
 }
+
 <head>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="~/Mobile_shop/css/homeAdmin.css">
@@ -38,9 +39,15 @@
             </div>
             <div class="card">
                 <div class="card-header">
-                    <i class="fas fa-list"></i> 
-                    <a asp-controller="Category" asp-action="GetAllCategory" >Category List</a> / Add New Category
+                    <i class="fas fa-list"></i>
+                    <a asp-controller="Category" asp-action="GetAllCategory">Category List</a> / Add New Category
                 </div>
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="alert alert-danger">
+                        @ViewBag.ErrorMessage
+                    </div>
+                }
                 <div id="order" class="card-body mb-2 mt-2">
                     <div id="newProfileContainer" class="container bg-white mt-5 mb-5">
                         <div class="d-flex justify-content-center align-items-center">

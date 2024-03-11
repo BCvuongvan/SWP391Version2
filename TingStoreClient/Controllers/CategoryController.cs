@@ -58,9 +58,8 @@ namespace TingStoreClient.Controllers
                 else
                 {
                     var errorMessage = await response.Content.ReadAsStringAsync();
-                    // ViewBag.ErrorMessage = errorMessage;
-                    TempData["SystemNotificationError"] = errorMessage;
-                    return View("CreateCategory");
+                    ViewBag.ErrorMessage = errorMessage;
+                    return View(category);
                 }
             }
 

@@ -30,7 +30,7 @@ namespace TingStoreClient.Controllers
             var contentType = new MediaTypeWithQualityHeaderValue("application/json");
             client.DefaultRequestHeaders.Accept.Add(contentType);
 
-            this.api = "https://localhost:5001/api/SaleProduct";
+            this.api = "https://localhost:5001/api/DiscountProduct";
         }
 
         private async Task GetProductAsync()
@@ -40,17 +40,27 @@ namespace TingStoreClient.Controllers
 
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             List<Product> products = JsonSerializer.Deserialize<List<Product>>(data, option);
-            var activeProducts = products.Where(p => p.proStatus == true).ToList();
+            List<int> activeDiscountProductIds = await GetActiveDiscountProductIds();
+            var activeProducts = products.Where(p => p.proStatus == true && !activeDiscountProductIds.Contains(p.proId)).ToList();
             ViewBag.proList = activeProducts;
         }
         private async Task<DiscountPercent> GetSaleProductById(int saleId)
         {
-            HttpResponseMessage response = await client.GetAsync($"https://localhost:5001/api/SaleProduct/{saleId}");
+            HttpResponseMessage response = await client.GetAsync($"https://localhost:5001/api/DiscountProduct/{saleId}");
             String data = await response.Content.ReadAsStringAsync();
 
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             DiscountPercent disPer = JsonSerializer.Deserialize<DiscountPercent>(data, option);
             return disPer;
+        }
+        private async Task<List<int>> GetActiveDiscountProductIds()
+        {
+            HttpResponseMessage response = await client.GetAsync($"https://localhost:5001/api/DiscountProduct/active");
+            String data = await response.Content.ReadAsStringAsync();
+
+            var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            List<DiscountPercent> discounts = JsonSerializer.Deserialize<List<DiscountPercent>>(data, option);
+            return discounts.Where(d => d.isActive && d.proId.HasValue).Select(d => d.proId.Value).ToList();
         }
 
         [HttpGet("list")]
