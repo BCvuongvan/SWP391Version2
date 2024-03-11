@@ -17,6 +17,7 @@ namespace TingStoreClient.Controllers
     {
         private readonly HttpClient client = null;
         private string SearchApi;
+        private string OrderApi;
 
         public SearchProductController()
         {
@@ -24,6 +25,7 @@ namespace TingStoreClient.Controllers
             var contentType = new MediaTypeWithQualityHeaderValue("application/json");
             client.DefaultRequestHeaders.Accept.Add(contentType);
             this.SearchApi = "https://localhost:5001/api/SearchProduct";
+            this.OrderApi = "https://localhost:5001/api/Order";
         }
 
         public async Task<List<string>> getListProductbyProName()
@@ -47,5 +49,30 @@ namespace TingStoreClient.Controllers
                 return new List<string>();
             }
         }
-}
+
+        public async Task<List<Order>> GetListPendingOrder()
+        {
+            HttpResponseMessage response = await client.GetAsync(OrderApi);
+            if (response.IsSuccessStatusCode)
+            {
+                string data = await response.Content.ReadAsStringAsync();
+                var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                var ListProduct = JsonSerializer.Deserialize<List<Order>>(data, option);
+                List<Order> ListPendingOrder = new List<Order>();
+                foreach (var item in ListProduct)
+                {
+                    if(item.orderStatusId == 1){
+                        ListPendingOrder.Add(item);
+                    }
+                }
+                return ListPendingOrder;
+            }
+            else
+            {
+                // Handle error if needed
+                return new List<Order>();
+            }
+        }
+        
+    }
 }

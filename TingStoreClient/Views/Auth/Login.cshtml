@@ -41,8 +41,6 @@
 
                                     <div class="logo">
                                         <img src="~/Mobile_shop/images/logo.png" alt="Logo img">
-
-
                                     </div>
 
 
@@ -63,7 +61,7 @@
                                                 class="form-control" placeholder="Enter your password" />
                                             <span id="passError"></span>
                                         </div>
-                                        <a class="forgot" href="">Forgot Password?</a>
+                                        <a class="forgot" asp-action="ForgotPassword">Forgot Password?</a>
 
                                         @if (ViewBag.errorMessage != null)
                                         {

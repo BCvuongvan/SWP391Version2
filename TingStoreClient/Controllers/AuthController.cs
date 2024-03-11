@@ -20,6 +20,7 @@ namespace TingStoreClient.Controllers
     {
         private readonly HttpClient client = null;
         private string api;
+        private string ResetPassapi;
 
         public AuthController()
         {
@@ -27,6 +28,7 @@ namespace TingStoreClient.Controllers
             var contentType = new MediaTypeWithQualityHeaderValue("application/json");
             client.DefaultRequestHeaders.Accept.Add(contentType);
             this.api = "https://localhost:5001/api/Auth";
+            this.ResetPassapi = "https://localhost:5001/api/ForgotPassword";
         }
 
         public IActionResult Login()
@@ -78,7 +80,7 @@ namespace TingStoreClient.Controllers
 
         }
 
-        public  IActionResult Logout()
+        public IActionResult Logout()
         {
             HttpContext.Session.Clear();
             return RedirectToAction("Index", "Home");
@@ -111,11 +113,85 @@ namespace TingStoreClient.Controllers
             return View(user);
         }
 
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(string username)
+        {
+            if (username == null)
+            {
+                TempData["SystemNotificationError"] = "Invalid Input, Please try again!";
+                return View("ForgotPassword");
+            }
+            HttpResponseMessage response = await client.GetAsync(api);
+            string data = await response.Content.ReadAsStringAsync();
 
+            var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            var Listuser = JsonSerializer.Deserialize<List<User>>(data, option);
+            User user = null;
+            foreach (var item in Listuser)
+            {
+                if (item.userName.Equals(username))
+                {
+                    user = item;
+                }
+            }
 
+            // User user = list.FirstOrDefault(u => u.userName.Equals(username) && u.password.Equals(password));
+            if (user == null)
+            {
+                TempData["SystemNotificationError"] = "Your username does not exist";
+                return View("ForgotPassword");
+            }
+            System.Console.WriteLine(user.email);
+            response = await client.GetAsync(ResetPassapi + "/SendMail/" + user.email);
+            if (response.IsSuccessStatusCode)
+            {
+                const string _user = "username";
+                // string userDataJson = JsonConvert.SerializeObject(user);
+                HttpContext.Session.SetString(_user, user.userName);
 
+                var dataCode = response.Content.ReadAsStringAsync().Result;
+                var requestCode = JsonSerializer.Deserialize<string>(dataCode);
+                TempData["RequestCode"] = requestCode;
+            }
+            return View("ConfirmEmail");
+        }
 
+        private IActionResult ConfirmEmail()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ConfirmEmail(string code)
+        {
+            string requestCode = TempData["RequestCode"] as string;
+            if (requestCode.Equals(code))
+            {
+                return View("ResetPassword");
+            }
+            return RedirectToAction("Login");
+        }
 
+        private IActionResult ResetPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(string pass)
+        {
+            string username = HttpContext.Session.GetString("username");
 
+            HttpResponseMessage response = await client.GetAsync(ResetPassapi + "/ResetPass/" + username + "/" + pass);
+            if (response.IsSuccessStatusCode)
+            {
+                HttpContext.Session.Clear();
+                return RedirectToAction("Login");
+            }
+            HttpContext.Session.Clear();
+            return View();
+        }
     }
 }

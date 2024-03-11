@@ -28,5 +28,17 @@ namespace TingStoreClient.Models
         [DisplayName("Rate")]
         [Range(0, 5, ErrorMessage = "rating  must be between 0 and 5.")]
         public int rating { get; set; }
+
+         public Feedback(String userName, int proId, String comment, int rating)
+        {
+            this.userName = userName;
+            this.proId = proId;
+            this.comment = comment;
+            this.rating = rating;
+        }
+        public Feedback()
+        {
+            
+        }
     }
 }
