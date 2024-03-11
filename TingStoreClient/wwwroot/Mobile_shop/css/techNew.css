@@ -1,0 +1,49 @@
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  */
+.page-header {
+    margin-top: 20px;
+}
+
+.page-header h1 {
+    font-weight: 300;
+    font-size: 30px;
+    color: #4c4d5a;
+    margin-bottom: 15px;
+    text-shadow: 0 1px #fff;
+    margin-left: 5px;
+}
+
+.title-col td {
+    color: #1e91cf;
+    font-weight: 500;
+}
+
+.title-col td:hover {
+    color: #1874a6;
+}
+
+.add_new .btn {
+    background-color: DodgerBlue;
+    color: #fff;
+    cursor: pointer;
+}
+
+.text-end .btn {
+    background-color: DodgerBlue;
+    color: #fff;
+    cursor: pointer;
+}
+
+.add_new {
+    width: 91px;
+}
+
+img {
+    width: 100%;
+}

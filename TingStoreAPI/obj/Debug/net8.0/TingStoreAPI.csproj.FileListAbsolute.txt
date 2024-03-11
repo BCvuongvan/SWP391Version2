@@ -504,3 +504,6 @@ H:\Ky5\SWP\dddddddd\SWP391Version2\TingStoreAPI\bin\Debug\net8.0\MimeKit.dll
 D:\SWP391_PROJECT_VERSIONX\SWP391Version2\TingStoreAPI\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 D:\SWP391_PROJECT_VERSIONX\SWP391Version2\TingStoreAPI\bin\Debug\net8.0\MailKit.dll
 D:\SWP391_PROJECT_VERSIONX\SWP391Version2\TingStoreAPI\bin\Debug\net8.0\MimeKit.dll
+D:\SP24\SWP391_V3\SWP391Version2\TingStoreAPI\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\SP24\SWP391_V3\SWP391Version2\TingStoreAPI\bin\Debug\net8.0\MailKit.dll
+D:\SP24\SWP391_V3\SWP391Version2\TingStoreAPI\bin\Debug\net8.0\MimeKit.dll

@@ -7,10 +7,10 @@
 }
 
 .navbar.navbar-fixed-top.fixed-theme {
-    background-color: #222;
-    border-color: #080808;
-	padding: 10px 0px;
-    box-shadow: 0 0 5px rgba(0,0,0,.8);
+    background-color: rgba(112, 111, 158, 0.89);
+    /* border-color: #080808; */
+    padding: 10px 0px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .8);
 }
 
 .navbar-brand.fixed-theme {
@@ -25,8 +25,7 @@
 .navbar-container.fixed-theme,
 .navbar.navbar-fixed-top.fixed-theme,
 .navbar-brand,
-.navbar-container{
+.navbar-container {
     transition: 0.8s;
-    -webkit-transition:  0.8s;
+    -webkit-transition: 0.8s;
 }
-

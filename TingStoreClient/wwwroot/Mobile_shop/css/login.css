@@ -19,11 +19,11 @@
 /* Left-side */
 .logo {
     text-align: center;
+    margin: 50px 0 50px 0;
 }
 
 .logo img {
-    width: 200px;
-    height: 200px;
+    width: 50%;
 }
 
 input[type=text] {
@@ -97,15 +97,19 @@ a {
 }
 
 .img_box {
-    position: relative; /* Ensure relative positioning for the container */
+    position: relative;
+    /* Ensure relative positioning for the container */
 }
 
 .fa.fa-times {
     position: absolute;
     top: 0;
     right: 0;
-    color: #fff; /* Adjust color as needed */
-    cursor: pointer; /* Add cursor style to indicate it's clickable */
+    color: #fff;
+    /* Adjust color as needed */
+    cursor: pointer;
+    /* Add cursor style to indicate it's clickable */
     font-size: 20px;
-    z-index: 999; /* Ensure it's above other elements */
+    z-index: 999;
+    /* Ensure it's above other elements */
 }

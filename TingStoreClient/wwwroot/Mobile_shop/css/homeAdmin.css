@@ -28,7 +28,7 @@
     Header CSS 
 ===============*/
 .navbar {
-    background: aliceblue;
+    background: #a7d5f4;
 }
 
 .content .navbar .navbar-nav .nav-link i {
@@ -83,6 +83,10 @@
 /*================ 
     Section-left CSS 
 ===============*/
+.type {
+    color: #222;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -91,12 +95,27 @@
     width: 250px;
     height: 100vh;
     overflow-y: auto;
-    background: lightblue;
+    background: rgb(54, 107, 159);
     transition: 0.5s;
     z-index: 999;
 }
 
 /*** Navbar ***/
+.nav-item {
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover {
+    transform: translateY(-3px);
+}
+
+input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+}
+
 .sidebar .navbar .navbar-nav .nav-link {
     padding: 7px 20px;
     color: var(--dark);
@@ -398,4 +417,9 @@
 
 .btn-lg-square:hover {
     background-color: #353535;
+}
+
+/* footer */
+.border-top .container {
+    margin-left: 310px;
 }

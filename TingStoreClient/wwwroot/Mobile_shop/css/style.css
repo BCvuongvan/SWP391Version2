@@ -101,7 +101,7 @@ main {
 }
 
 .dropdown-submenu .dropdown-menu {
-    top: 0;
+    top: 0;  
     left: 100%;
     margin-top: -1px;
 }
@@ -133,7 +133,7 @@ main {
 
 .banner_text {
     z-index: 2;
-    margin-top: 60px;
+    margin-top: 120px;
 }
 
 .banner_text h2 {
@@ -197,6 +197,13 @@ main {
 .purchase:hover {
     background: rgba(255, 255, 255, 1.00) !important;
     color: #5f3213 !important;
+}
+
+/*================ 
+ Discount CSS
+===============*/
+#discount_part .name_box {
+    margin-top: 50px;
 }
 
 /*================ 
