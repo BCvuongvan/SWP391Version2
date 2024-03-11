@@ -64,7 +64,7 @@ namespace TingStoreClient.Controllers
         }
         private async Task<DateTime?> GetLatestDiscountEndTimeAsync()
         {
-            HttpResponseMessage response = await client.GetAsync("https://localhost:5001/api/SaleProduct/DiscountProduct/Latest");
+            HttpResponseMessage response = await client.GetAsync("https://localhost:5001/api/DiscountProduct/discountProduct/Latest");
             if (response.IsSuccessStatusCode)
             {
                 String data = await response.Content.ReadAsStringAsync();
@@ -101,19 +101,24 @@ namespace TingStoreClient.Controllers
                     break;
                 default: break;
             }
+            var techNews = ListTechNews();
+            ViewBag.TechNews = techNews;
             await GetCategoriesAsync();
+            await GetHotProducts();
             ViewBag.CurrentSortOrder = sortOrder;
             return View("Index", listProductByCategory);
         }
         [HttpPost]
         public async Task<IActionResult> SeachProduct(string userName)
         {
-            HttpResponseMessage response = await client.GetAsync(SearchApi+"/"+userName);
+            HttpResponseMessage response = await client.GetAsync(SearchApi + "/" + userName);
             string data = await response.Content.ReadAsStringAsync();
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             List<Product> list = JsonSerializer.Deserialize<List<Product>>(data, option);
             var techNews = ListTechNews();
             ViewBag.TechNews = techNews;
+            await GetCategoriesAsync();
+            await GetHotProducts();
             return View("Index", list);
         }
 
@@ -135,7 +140,10 @@ namespace TingStoreClient.Controllers
                     break;
                 default: break;
             }
+            var techNews = ListTechNews();
+            ViewBag.TechNews = techNews;
             await GetCategoriesAsync();
+            await GetHotProducts();
             ViewBag.CurrentSortOrder = sortOrder;
             return View("Index", listProductByCategory);
         }
@@ -148,6 +156,8 @@ namespace TingStoreClient.Controllers
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             List<Product> list = JsonSerializer.Deserialize<List<Product>>(data, option);
             ViewBag.proList = list;
+            var techNews = ListTechNews();
+            ViewBag.TechNews = techNews;
         }
 
         public async Task<IActionResult> Index(string sortOrder, bool redirectToHomePage = false)
@@ -165,10 +175,10 @@ namespace TingStoreClient.Controllers
                 case "desc":
                     productList = productList.OrderByDescending(p => p.proPrice).ToList();
                     break;
-                default: break;
+                default:
+                    break;
             }
             var endDate = await GetLatestDiscountEndTimeAsync();
-            Console.WriteLine($"End Date: {endDate}"); // Thêm dòng này để debug
             ViewBag.LatestDiscountEndDate = endDate?.ToString("o") ?? string.Empty;
 
             await GetCategoriesAsync();
@@ -207,11 +217,34 @@ namespace TingStoreClient.Controllers
             {
                 var data = await response.Content.ReadAsStringAsync();
                 var product = JsonSerializer.Deserialize<Product>(data);
-
+                ViewBag.Feedback = product.feedbacks.Select(f => new
+                {
+                    UserImage = f.user.picture,
+                    UserName = f.userName,
+                    Comment = f.comment,
+                    Rating = f.rating
+                }).ToList();
+                Dictionary<int, int> startCounts = new Dictionary<int, int>();
+                for (int i = 1; i <= 5; i++)
+                {
+                    startCounts[i] = 0;
+                }
+                foreach (var feedback in product.feedbacks)
+                {
+                    if (startCounts.ContainsKey(feedback.rating))
+                    {
+                        startCounts[feedback.rating] += 1;
+                    }
+                }
+                ViewBag.StartCounts = startCounts;
                 var detailFilesPath = Path.Combine(_hostingEnvironment.WebRootPath, "assets/Product_Details");
                 var productInfoPath = Path.Combine(detailFilesPath, $"{product.proName}_Info.txt");
                 var highlightFeaturesPath = Path.Combine(detailFilesPath, $"{product.proName}_Features.txt");
                 var technicalSpecsPath = Path.Combine(detailFilesPath, $"{product.proName}_Specs.txt");
+                var detailFilesPathh = Path.Combine(_hostingEnvironment.WebRootPath, "assets/Product_Q&A");
+                var questionandanswerPath = Path.Combine(detailFilesPathh, $"{product.proName}_Q&A.txt");
+
+                var questionAndAnswer = ReadFromFileQuestionAndAnswer(questionandanswerPath);
 
                 // Đọc nội dung từ file
                 var productInfo = ReadFromFile(productInfoPath);
@@ -222,8 +255,11 @@ namespace TingStoreClient.Controllers
                 ViewBag.ProductInfo = productInfo;
                 ViewBag.HighlightFeatures = highlightFeatures;
                 ViewBag.TechnicalSpecs = technicalSpecs;
+                ViewBag.QuestionAndAnswer = questionAndAnswer;
                 var similarProducts = await GetSimilarProduct(product.cateId, product.proId);
                 ViewBag.SimilarProducts = similarProducts;
+                await GetCategoriesAsync();
+                await GetHotProducts();
                 return View(product);
             }
             return NotFound();
@@ -266,6 +302,47 @@ namespace TingStoreClient.Controllers
                 }
             }
             return newsList;
+        }
+        private void SaveToFileQuestionAndAnswer(string filePath, string content)
+        {
+            var directory = Path.GetDirectoryName(filePath);
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            using (var streamWriter = new StreamWriter(filePath, true, Encoding.UTF8))
+            {
+                streamWriter.Write(content);
+            }
+        }
+
+        private string ReadFromFileQuestionAndAnswer(string filePath)
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                return System.IO.File.ReadAllText(filePath);
+            }
+            return "Information not available.";
+        }
+        [HttpGet("managementQuestionAndAnswer/{id}")]
+        public async Task<IActionResult> ManagementQuestionAndAnswer(int id)
+        {
+            HttpResponseMessage response = await client.GetAsync(api + "/" + id);
+            if (response.IsSuccessStatusCode)
+            {
+                var data = await response.Content.ReadAsStringAsync();
+                var product = JsonSerializer.Deserialize<Product>(data);
+
+                var detailFilesPath = Path.Combine(_hostingEnvironment.WebRootPath, "assets/Product_Q&A");
+                var questionandanswerPath = Path.Combine(detailFilesPath, $"{product.proName}_Q&A.txt");
+
+                var questionAndAnswer = ReadFromFileQuestionAndAnswer(questionandanswerPath);
+
+                ViewBag.QuestionAndAnswer = questionAndAnswer;
+                return View(product);
+            }
+            return NotFound();
         }
     }
 }

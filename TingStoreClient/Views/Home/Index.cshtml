@@ -77,10 +77,15 @@
                     <h2><strong class="name_box_title">PROMOTION AVAILABLE ONLY ONLINE</strong></h2>
                 </div>
                 <div class="discount_payonl">
+                    @if(ViewBag.discountproductList != null && ViewBag.discountproductList.Count > 0){
                     <div class="home_slider">
-                        <a href=""><img src="https://cdn.tgdd.vn/2023/09/banner/1200x150-tgdd-1200x150-1.png"
-                                alt="discount"></a>
+                        @foreach(var disImage in ViewBag.discountproductList){
+                            @if(disImage.isActive == true){
+                        <a href=""><img src="~/assets/SaleProduct_Images/@disImage.discountImage" alt="discount"></a>
+                                }
+                                }
                     </div>
+                    }
                 </div>
             </div>
         </div>
@@ -99,17 +104,16 @@
                             alt="hotsale">
                     </div>
                     <div class="hotsale_timer col-md-4">
-                        
-                     <div class="box-time">
-                        <div style="color: #ebef28; font-size: 18px;">Kết thúc sau : </div>
-    <div class="time-segment" id="hours"></div>
-    <span class="time-divider">:</span>
-    <div class="time-segment" id="minutes"></div>
-    <span class="time-divider">:</span>
-    <div class="time-segment" id="seconds"></div>
-</div>
-        </div>
-                </div>
+                        <div class="box-time">
+                            <div style="color: #ebef28; font-size: 18px;">Kết thúc sau : </div>
+                                <div class="time-segment" id="hours"></div>
+                                <span class="time-divider">:</span>
+                                <div class="time-segment" id="minutes"></div>
+                                <span class="time-divider">:</span>
+                                <div class="time-segment" id="seconds"></div>
+                            </div>
+                        </div>
+                    </div>
                 <div class="clent">
                     @foreach (var product in Model)
                 {
@@ -172,37 +176,45 @@
             <div class="header box-title_title">
                 <p style="font-size: 18px; margin: 0;">Sorted by</p>
             </div>
-            <select name="sortOrder" id="sortOrder" class="dropdown-toggle" onchange="updateSortOrder(this.value)">
-                @if(ViewBag.CurrentSortOrder == "asc")
-                {
-                    <option value="asc" selected="selected">Low - high</option>
-                    <option value="desc">High - low</option>
-                } else if(ViewBag.CurrentSortOrder == "desc")
-                {
-                    <option value="desc">High - low</option>
-                    <option value="asc">Low - high</option>
-                }else
-                {
-                    <option value="asc" selected="selected">Low - high</option>
-                    <option value="desc">High - low</option>
-                }
-            </select>
+            <div class="sort-box">
+                    <div class="sort-filter" id="asc" onclick="updateSortOrder('asc')">
+                        <a class="btn-sort">
+                            <div class="icon"><i class="fa-solid fa-arrow-down-wide-short" style="margin-top: 3px; margin-right: 3px;"></i>
+                                 High - Low
+                            </div>
+                        </a>
+                    </div>
+                    <div class="sort-filter" id="desc" onclick="updateSortOrder('desc')">
+                        <a class="btn-sort">
+                            <div class="icon"><i class="fa-solid fa-arrow-up-wide-short" style="margin-top: 3px; margin-right: 3px;"></i>
+                                Low - High
+                            </div>
+                        </a>
+                    </div>
+            </div>
+            @{
+    int displayedProductsCount = 0;
+}
             <div class="clent">
-                @foreach (var product in Model)
-                {
-                    var originalPrice = product.proPrice;
-                    var discountProduct = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now).FirstOrDefault();
-                    var discountedPrice = originalPrice;
-                    if (discountProduct != null)
-                {
-                    var discount = originalPrice * discountProduct.discountPercentage / 100;
-                    discountedPrice -= discount;
-                }
-                    @if (product.proStatus == true)
-                    {
-                        <div class="col-md-3 col-sm-6 col-xs-6 wow card_box">
-                            <div class="card item-product text-center">
-                                <div class="image">
+@foreach (var product in Model)
+{
+    var originalPrice = product.proPrice;
+    var discountProduct = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now).FirstOrDefault();
+    var discountedPrice = originalPrice;
+    if (discountProduct != null)
+    {
+        var discount = originalPrice * discountProduct.discountPercentage / 100;
+        discountedPrice -= discount;
+    }
+    if (product.proStatus == true)
+    {
+        if (displayedProductsCount % 10 == 0 && displayedProductsCount != 0)
+        {
+            @:</div><div class="clent"> <!-- Close the current div and start a new one for the next 10 products -->
+        }
+        <div class="col-md-3 col-sm-6 col-xs-6 wow card_box">
+            <div class="card item-product text-center">
+                <div class="image">
                                     <a asp-controller="Home" asp-action="ManagementProductDetail" asp-route-id=@product.proId>
                                         <img src="~/assets/Product_Images/@product.proImage"
                                             style="width: 200px; height: 200px;" alt="@product.proName">
@@ -233,14 +245,14 @@
                                     </div>
                                     }
                                 }
-                            </div>
-                        </div>
-                    }
-                }
             </div>
         </div>
+        displayedProductsCount++;
+    }
+}
+</div>
+        </div>
     </div>
-
     
     <div class="container">
         <div class="row bg-light">
