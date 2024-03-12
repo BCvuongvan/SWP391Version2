@@ -10,3 +10,12 @@
     margin-top: 200px;
     font-size: 16px;
 }
+
+#header{
+    background: #222;
+}
+
+
+.float-end{
+    float: right;
+}

@@ -58,13 +58,14 @@ namespace TingStoreClient.Controllers
             }
             const string _user = "_user";
             // string userDataJson = JsonConvert.SerializeObject(user);
-            HttpContext.Session.SetString(_user, data);
             if (user.userType == 1 || user.userType == 2)
             {
+                HttpContext.Session.SetString(_user, data);
                 return RedirectToAction("Index", "HomeAdmin");
             }
             else if (user.userType == 3)
             {
+            HttpContext.Session.SetString(_user, data);
                 return RedirectToAction("Index", "Home");
             }
             else if (user.userType == 0)

@@ -9,98 +9,106 @@
         @ViewBag.ErrorMessage
     </div>
 }
-<nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-    <div class="navbar-nav align-items-center ms-auto">
-        <div class="nav-item">
-            <a class="nav-link" style="margin-right: 20px;" asp-controller="Product" asp-action="ListProduct">
-                <i class="fa fa-sign-out-alt"></i>
-                <span class="d-none d-lg-inline-flex">Back</span>
-            </a>
-        </div>
+
+<body>
+    <div class="containe">
+        <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+            <div class="navbar-nav align-items-center ms-auto">
+                <div class="nav-item">
+                    <a class="nav-link" style="margin-right: 20px;" asp-controller="Product" asp-action="ListProduct">
+                        <i class="fa fa-sign-out-alt"></i>
+                        <span class="d-none d-lg-inline-flex">Back</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <section id="product_part" class="main">
+            <div class="container">
+                <h4 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">ADD
+                    NEW
+                    PRODUCT</h4>
+                <div class="card-body" style="margin-bottom: 10px;">
+                    <form asp-controller="Product" asp-action="CreateProduct" method="post" id="productForm"
+                        style="margin: 10px;" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label class="form-label">Product Name: </label>
+                            <input type="text" asp-for="proName" class="form-control large-input">
+                            <span asp-validation-for="proName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Product Description: </label>
+                            <input type="text" asp-for="proDescription" class="form-control large-input">
+                            <span asp-validation-for="proDescription" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Product Price: </label>
+                            <input type="text" asp-for="proPrice" class="form-control large-input">
+                            <span asp-validation-for="proPrice" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="proQuantity" class="form-label">Number Of Products: </label>
+                            <input type="text" asp-for="proQuantity" class="form-control large-input">
+                            <span asp-validation-for="proQuantity" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="productInfo" class="form-label">Product Information: </label>
+                            <textarea name="productInfo" class="form-control large-input" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Distinctive features: </label>
+                            <textarea name="highlightFeatures" class="form-control large-input" rows="3"></textarea>
+                        </div>
+                        <div id="technicalSpecsContainer" class="form-group">
+                            <label class="form-label">Specifications: </label>
+                            <div id="specifications-container">
+                                <input type="text" id="specName" placeholder="Tên thông số" class="form-control" />
+                                <input type="text" id="specValue" placeholder="Giá trị" class="form-control" />
+
+
+                                <button type="button" id="addSpecButton" class="btn btn-primary">Thêm thông số</button>
+                            </div>
+                            <table id="specsTable" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Tên thông số</th>
+                                        <th>Giá trị</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label asp-for="proImage" class="form-label">Product Picture </label>
+                            <div class="custom-file">
+                                <input type="file" name="proImageFile" class="form-control large-input">
+                            </div>
+                            <span asp-validation-for="proImage" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="cateId" class="form-label">Product Type: </label>
+                            <select asp-for="cateId"
+                                asp-items="@(new SelectList(ViewBag.cateList, "cateId", "cateName"))"
+                                class="form-control large-input">
+                            </select>
+                            <span asp-validation-for="cateId" class="text-danger"></span>
+                        </div>
+
+                        <div class="button-container" style="text-align: center;">
+                            <button type="submit" style="font-size: 18px; padding: 10px 20px;"
+                                class="fancy-button">Create</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </div>
-</nav>
-<section id="product_part" class="main">
-    <div class="container">
-        <h4 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">ADD NEW
-            PRODUCT</h4>
-        <div class="card-body" style="margin-bottom: 10px;">
-            <form asp-controller="Product" asp-action="CreateProduct" method="post" id="productForm"
-                style="margin: 10px;" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label class="form-label">Product Name: </label>
-                    <input type="text" asp-for="proName" class="form-control large-input">
-                    <span asp-validation-for="proName" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">Product Description: </label>
-                    <input type="text" asp-for="proDescription" class="form-control large-input">
-                    <span asp-validation-for="proDescription" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Product Price: </label>
-                    <input type="text" asp-for="proPrice" class="form-control large-input">
-                    <span asp-validation-for="proPrice" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="proQuantity" class="form-label">Number Of Products: </label>
-                    <input type="text" asp-for="proQuantity" class="form-control large-input">
-                    <span asp-validation-for="proQuantity" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label for="productInfo" class="form-label">Product Information: </label>
-                    <textarea name="productInfo" class="form-control large-input" rows="3"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">Distinctive features: </label>
-                    <textarea name="highlightFeatures" class="form-control large-input" rows="3"></textarea>
-                </div>
-                <div id="technicalSpecsContainer" class="form-group">
-                    <label class="form-label">Specifications: </label>
-                    <div id="specifications-container">
-                        <input type="text" id="specName" placeholder="Tên thông số" class="form-control" />
-                        <input type="text" id="specValue" placeholder="Giá trị" class="form-control" />
-
-
-                        <button type="button" id="addSpecButton" class="btn btn-primary">Thêm thông số</button>
-                    </div>
-                    <table id="specsTable" class="table">
-                        <thead>
-                            <tr>
-                                <th>Tên thông số</th>
-                                <th>Giá trị</th>
-                                <th>Hành động</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-
-
-                <div class="form-group">
-                    <label asp-for="proImage" class="form-label">Product Picture </label>
-                    <div class="custom-file">
-                        <input type="file" name="proImageFile" class="form-control large-input">
-                    </div>
-                    <span asp-validation-for="proImage" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <label asp-for="cateId" class="form-label">Product Type: </label>
-                    <select asp-for="cateId" asp-items="@(new SelectList(ViewBag.cateList, "cateId", "cateName"))"
-                        class="form-control large-input">
-                    </select>
-                    <span asp-validation-for="cateId" class="text-danger"></span>
-                </div>
-
-                <div class="button-container" style="text-align: center;">
-                    <button type="submit" style="font-size: 18px; padding: 10px 20px;"
-                        class="fancy-button">Create</button>
-                </div>
-
-            </form>
-        </div>
-    </div>
-</section>
+</body>

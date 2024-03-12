@@ -7,7 +7,7 @@
 }
 
 .navbar.navbar-fixed-top.fixed-theme {
-    background-color: rgba(112, 111, 158, 0.89);
+    background-color: #222;
     /* border-color: #080808; */
     padding: 10px 0px;
     box-shadow: 0 0 5px rgba(0, 0, 0, .8);

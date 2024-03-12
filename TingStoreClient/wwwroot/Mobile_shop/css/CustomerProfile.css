@@ -10,6 +10,9 @@ body {
     font-size: 18px;
 }
 
+#header{
+    background: #222;
+}
 
 .page-header .float-end {
     float: right;

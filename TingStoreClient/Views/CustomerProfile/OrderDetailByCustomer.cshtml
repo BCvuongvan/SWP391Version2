@@ -40,9 +40,9 @@
                                 <tr class="title-col">
                                     <td class="text-center">No.</td>
                                     <td class="text-center">Product Name</td>
-                                    <td class="text-end">Quantity</td>
-                                    <td class="text-end">Unit Price</td>
-                                    <td class="text-end ">Total</td>
+                                    <td class="text-right">Quantity</td>
+                                    <td class="text-right">Unit Price</td>
+                                    <td class="text-right ">Total</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,9 +54,12 @@
                                     <tr>
                                         <td class="text-center">@count</td>
                                         <td>@item.product.proName</td>
-                                        <td class="text-end">@item.quantity</td>
-                                        <td class="text-end">@item.product.proPrice</td>
-                                        <td class="text-end">@item.subTotal</td>
+                                        <td class="text-right">@item.quantity</td>
+                                        <td class="text-right"><span>@String.Format("{0:0,0VND}", @item.product.proPrice
+                                            ).Replace(",", ".")</span></td>
+                                        @* <td class="text-end">@item.subTotal</td> *@
+                                        <td class="text-right"><span>@String.Format("{0:0,0VND}", @item.subTotal
+                                            ).Replace(",", ".")</span></td>
                                     </tr>
                                     count++;
                                 }
@@ -69,7 +72,9 @@
                                     <td class=" text-end">
                                         <strong>Total Amount</strong>
                                     </td>
-                                    <td class="text-end" style="width: 1px;">@Model.TotalAmount</td>
+                                    <td class="text-end" style="width: 1px;"><span
+                                            class="giamoi">@String.Format("{0:0,0VND}", @Model.TotalAmount
+                                            ).Replace(",", ".")</span></td>
                                 </tr>
                             </tbody>
                         </table>

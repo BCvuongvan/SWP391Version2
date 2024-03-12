@@ -1,92 +1,112 @@
 @model IEnumerable<Product>
 @{
     ViewData["Title"] = "ListProduct";
-    Layout = "/Views/Shared/_ListProduct.cshtml";
 }
-<script src="https://kit.fontawesome.com/8143c9cd7e.js" crossorigin="anonymous"></script>
-<div class="page-header">
-    <h3 style="margin-top:20px; text-align: center;">LIST PRODUCT</h3>
-    <div style="text-align: center;">
-        <a asp-controller="Product" asp-action="CreateProduct" class="fancy-button">Add new product</a>
-    </div>
-</div>
-<div class="container">
-    <div class="dropdown">
-        <button class="no-border-button" type="button" data-bs-toggle="dropdown"> <i class="fa-solid fa-list "></i>
-            Product classification
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" asp-controller="Product" asp-action="ListProduct">All product</a></li>
-            @foreach (var category in ViewBag.cateList)
-            {
-                <a class="dropdown-item" asp-for="cateId" asp-controller="Product" asp-action="ProductsByCategoryID"
-                    asp-route-id="@category.cateId"
-                    asp-items="@(new SelectList(ViewBag.cateList, "cateId", "cateName"))">@category.cateName</a>
-            }
+
+<link rel="stylesheet" href="~/Mobile_shop/css/ProductList.css">
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>List of Products</h1>
+            <div class="float-end" style="margin-top: -50px;">
+                <a asp-controller="HomeAdmin" asp-action="Index" data-bs-toggle="tooltip" title class="btn btn-success"
+                    data-bs-original-title="Back" aria-label="Back"><i class="fas fa-reply"></i></a>
+            </div>
+            <div class="btn_addnew">
+                <a asp-controller="Product" asp-action="CreateProduct" class="btn btn-primary">Add new product</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="dropdown card-header">
+                    <button class="no-border-button" type="button" data-bs-toggle="dropdown"> <i
+                            class="fa-solid fa-list "></i>
+                        Product classification
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" asp-controller="Product" asp-action="ListProduct">All product</a>
+                        </li>
+                        @foreach (var category in ViewBag.cateList)
+                        {
+                            <a class="dropdown-item" asp-for="cateId" asp-controller="Product"
+                                asp-action="ProductsByCategoryID" asp-route-id="@category.cateId"
+                                asp-items="@(new SelectList(ViewBag.cateList, "cateId", "cateName"))">@category.cateName</a>
+                        }
+                    </div>
+                </div>
+                <div id="order" class="card-body mb-2 mt-2">
+                    <form action="" id="form-order" method="">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr class="title-col">
+                                        <td>Product Name</td>
+                                        <td>Product Description</td>
+                                        <td class="text-end">Product Price</td>
+                                        <td class="text-end">Number Of Products</td>
+                                        <td class="text-center">Product Photo</td>
+                                        <td>Product Type</td>
+                                        <td><span>Action</span></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var product in Model)
+                                    {
+                                        @if (product.proStatus == true)
+                                        {
+                                            <tr>
+                                                <td>@product.proName</td>
+                                                <td class="text-start">@product.proDescription</td>
+                                                <td class="text-end">@String.Format("{0:0,0VND}", product.proPrice).Replace(",",
+                                            ".")
+                                                </td>
+                                                <td class="text-end">@product.proQuantity</td>
+                                                <td class="text-center d-none d-lg-table-cell"><img
+                                                        src="~/assets/Product_Images/@product.proImage"
+                                                        style="width: 200px; height: 200px;" alt="@product.proName"></td>
+                                                <td class="d-none d-lg-table-cell">@product.category.cateName</td>
+                                                <td class="text-end">
+                                                    <div class="btn-group dropdown">
+                                                        <a class="btn" aria-label="Edit"><i class="fas fa-pencil-alt"></i></a>
+                                                        <button type="button" class="btn dropdown-toggle dropdown-toggle-split"
+                                                            data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                                        <ul class="dropdown-menu dropdown-menu-right">
+                                                            <li>
+                                                                <h4 class="dropdown-header">Options</h4>
+                                                            </li>
+                                                            <li><a class="dropdown-item" asp-controller="Product"
+                                                                    asp-action="UpdateProduct" asp-route-id=@product.proId><i
+                                                                        class="fas fa-edit"></i> Update</a></li>
+                                                            <li><a class="dropdown-item" asp-controller="Product"
+                                                                    asp-action="DeleteProduct" asp-route-id=@product.proId><i
+                                                                        class="fas fa-trash-alt"></i> Delete</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" asp-controller="Product"
+                                                                    asp-action="ManagementProductDetail"
+                                                                    asp-route-id=@product.proId><i
+                                                                        class="fas fa-info-circle"></i> Detail</a></li>
+                                                            <li><a class="dropdown-item" asp-controller="Product"
+                                                                    asp-action="ManagementQuestionAndAnswer"
+                                                                    asp-route-id=@product.proId><i
+                                                                        class="fa-solid fa-comments"></i> Q&A</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-end" style="margin-right: 10px;">
+                            <h4>Total Product: @Model.Count(p => p.proStatus)</span></h4>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="order" class="card-body mb-2 mt-2">
-        <form action="" id="form-order" method="">
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover">
-                    <thead>
-                        <tr class="title-col">
-                            <td style="width: 18%; text-align: center;">Product Name</td>
-                            <td style="width: 25%; text-align: center;">Product Description</td>
-                            <td style="text-align: center;">Product Price</td>
-                            <td style="text-align: center;">Number Of Products</td>
-                            <td style="text-align: center;">Product Photo</td>
-                            <td style="text-align: center;">Product Type</td>
-                            <td style="text-align: center;"><span>Action</span></td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var product in Model)
-                        {
-                            @if (product.proStatus == true)
-                            {
-                                <tr>
-                                    <td>@product.proName</td>
-                                    <td class="text-start">@product.proDescription</td>
-                                    <td class="text-end">@String.Format("{0:0,0VND}", product.proPrice).Replace(",", ".")
-                                    </td>
-                                    <td class="text-start">@product.proQuantity</td>
-                                    <td class="text-end d-none d-lg-table-cell"><img
-                                            src="~/assets/Product_Images/@product.proImage" style="width: 200px; height: 200px;"
-                                            alt="@product.proName"></td>
-                                    <td class="d-none d-lg-table-cell">@product.category.cateName</td>
-                                    <td class="text-end">
-                                        <div class="btn-group dropdown">
-                                            <a class="btn" aria-label="Edit"><i class="fas fa-pencil-alt"></i></a>
-                                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split"
-                                                data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li>
-                                                    <h6 class="dropdown-header">Options</h6>
-                                                </li>
-                                                <li><a class="dropdown-item" asp-controller="Product" asp-action="UpdateProduct"
-                                                        asp-route-id=@product.proId><i class="fas fa-edit"></i> Update</a></li>
-                                                <li><a class="dropdown-item" asp-controller="Product" asp-action="DeleteProduct"
-                                                        asp-route-id=@product.proId><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </li>
-                                                <li><a class="dropdown-item" asp-controller="Product"
-                                                        asp-action="ManagementProductDetail" asp-route-id=@product.proId><i
-                                                            class="fas fa-info-circle"></i> Detail</a></li>
-                                                <li><a class="dropdown-item" asp-controller="Product"
-                                                        asp-action="ManagementQuestionAndAnswer" asp-route-id=@product.proId><i
-                                                            class="fa-solid fa-comments"></i> Q&A</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                            }
-                        }
-                    </tbody>
-                </table>
-            </div>
-            <div class="text-end" style="margin-right: 10px;">
-                <h5>Total Product: @Model.Count(p => p.proStatus)</span></h5>
-            </div>
-        </form>
-    </div>
-</div>
+    <script src="https://kit.fontawesome.com/8143c9cd7e.js" crossorigin="anonymous"></script>
+
+</body>
