@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     font-size: 16px;
 }
 
@@ -425,5 +425,5 @@ input {
 
 /* footer */
 .border-top .container {
-    margin-left: 120px;
+    margin-left: 200px;
 }

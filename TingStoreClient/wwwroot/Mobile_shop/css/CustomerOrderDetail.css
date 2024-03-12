@@ -10,6 +10,10 @@ body {
     font-size: 16px;
 }
 
+#header {
+    background: #222;
+}
+
 .container-box {
     margin-top: 130px;
 }

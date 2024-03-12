@@ -13,9 +13,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TingStoreClient.Models;
+using TingStoreClient.Filters;
+
 
 namespace TingStoreClient.Controllers
 {
+    [StaffAuthenticationRedirect]
     [Route("[controller]")]
     public class ProductController : Controller
     {
@@ -547,7 +550,7 @@ namespace TingStoreClient.Controllers
                 Directory.CreateDirectory(directory);
             }
 
-            using (var streamWriter = new StreamWriter(filePath, true, Encoding.UTF8)) 
+            using (var streamWriter = new StreamWriter(filePath, true, Encoding.UTF8))
             {
                 streamWriter.Write(content);
             }

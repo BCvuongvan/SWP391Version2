@@ -5,9 +5,12 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using TingStoreClient.Models;
+using TingStoreClient.Filters;
+
 
 namespace TingStoreClient.Controllers
 {
+    [StaffAuthenticationRedirect]
     public class RevenueController : Controller
     {
         private readonly HttpClient _httpClient;

@@ -5,6 +5,14 @@
 <link rel="stylesheet" href="~/Mobile_shop/css/totalOrders.css">
 
 <body>
+    @if (TempData["SystemNotification"] != null)
+    {
+        <div id="systemNotification" class="alert alert-success m-0 p-2">
+            <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification:
+                @TempData["SystemNotification"]
+            </p>
+        </div>
+    }
     <div class="container">
         <div class="page-header">
             <div class="page-header">
@@ -78,7 +86,8 @@
                                                 <td class="text-start">@item.userName</td>
                                                 <td class="text-start">@item.orderStatus.statusName</td>
                                                 <td class="text-start">@item.orderDate</td>
-                                                <td class="text-end"> <span class="giamoi">@String.Format("{0:0,0VND}", @item.TotalAmount).Replace(",", ".")</span></td>
+                                                <td class="text-end"> <span class="giamoi">@String.Format("{0:0,0VND}",
+                                                @item.TotalAmount).Replace(",", ".")</span></td>
                                                 <td class="text-center"><a asp-action="orderDetail"
                                                         asp-route-id="@item.orderId"><i class="fas fa-eye"></i></a></td>
                                             </tr>
@@ -139,4 +148,12 @@
             </div>
         </div>
     </div>
+    <script>
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 3000);
+    </script>
 </body>

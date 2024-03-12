@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using TingStoreClient.Filters;
 
 namespace TingStoreClient.Controllers
 {
+    [StaffAuthenticationRedirect]
     [Route("[controller]")]
     public class TechNewController : Controller
     {

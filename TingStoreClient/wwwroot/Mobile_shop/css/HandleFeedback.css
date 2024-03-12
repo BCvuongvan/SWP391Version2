@@ -1,0 +1,38 @@
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#header {
+    background: #222;
+}
+
+.card {
+    margin-top: 140px;
+    font-size: 16px;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.img img {
+    width: 40%;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn_feedback {
+    margin-top: 30px;
+}

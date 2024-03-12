@@ -13,10 +13,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TingStoreClient.Models;
 using TingStoreClient.Util;
+using TingStoreClient.Filters;
 
 
 namespace TingStoreClient.Controllers
 {
+    [AuthenticationRedirect]
     public class CustomerProfileController : Controller
     {
         private readonly HttpClient client = null;
@@ -68,6 +70,10 @@ namespace TingStoreClient.Controllers
                 }
                 // Cập nhật đường dẫn vào user
                 user.picture = fileName;
+            }
+            else
+            {
+                user.picture = user1.picture;
             }
             // Cập nhật userName từ session vào object user
             user.userName = user1.userName;

@@ -5,9 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TingStoreClient.Models;
 using Newtonsoft.Json;
+using TingStoreClient.Filters;
+
 
 namespace TingStoreClient.Controllers
 {
+    [StaffAuthenticationRedirect]
     [Route("[controller]")]
     public class TotalInformationController : Controller
     {

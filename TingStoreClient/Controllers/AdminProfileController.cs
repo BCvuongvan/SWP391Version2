@@ -11,9 +11,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TingStoreClient.Models;
+using TingStoreClient.Filters;
 
 namespace TingStoreClient.Controllers
 {
+    [StaffAuthenticationRedirect]
     public class AdminProfileController : Controller
     {
         private readonly HttpClient client = null;
