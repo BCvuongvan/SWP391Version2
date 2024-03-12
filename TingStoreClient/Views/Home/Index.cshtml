@@ -55,7 +55,8 @@
                         <div class="banner_text">
                             <div class="col-md-6">
                                 <h2>iPhone 15 series</h2>
-                                <p>The iPhone is a smartphone made by Apple that combines a computer, iPod, digital camera and cellular phone into one device with a touchscreen interface.</p>
+                                <p>iPhone 15 Pro is the first iPhone to feature an aerospace‑grade titanium design, using the same alloy that spacecraft use for missions to Mars.
+Titanium has one of the best strength-to-weight ratios of any metal, making these our lightest Pro models ever. You’ll notice the difference the moment you pick one up</p>
                                 <a  href="@Url.Action("ProductsByCategoryID", "Home", new { cateId = 1 })">Know More</a>
                                 <a href="#" class="purchase">Purchase</a>
                             </div>
@@ -103,7 +104,7 @@
                     </div>
                     <div class="hotsale_timer col-md-4">
                         <div class="box-time">
-                            <div style="color: #ebef28; font-size: 18px;">Kết thúc sau : </div>
+                            <div style="color: #ebef28; font-size: 18px;">Finished after: </div>
                                 <div class="time-segment" id="hours"></div>
                                 <span class="time-divider">:</span>
                                 <div class="time-segment" id="minutes"></div>
@@ -113,53 +114,53 @@
                         </div>
                     </div>
                 <div class="clent">
-                    @foreach (var product in Model)
-                {
-                    var originalPrice = product.proPrice;
-                    var discountProduct = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now).FirstOrDefault();
-                    var discountedPrice = originalPrice;
-                    if (discountProduct != null)
-                {
-                    var discount = originalPrice * discountProduct.discountPercentage / 100;
-                    discountedPrice -= discount;
-                }
+                            @foreach (var product in Model)
+                        {
+                            var originalPrice = product.proPrice;
+                            var discountProduct = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now).FirstOrDefault();
+                            var discountedPrice = originalPrice;
+                            if (discountProduct != null)
+                        {
+                            var discount = originalPrice * discountProduct.discountPercentage / 100;
+                            discountedPrice -= discount;
+                        }
                     @if(product.proStatus == true){
                         @if(product.discountPercents.Any(dp => dp.discountPercentage >= 40 && dp.isActive == true)){
-                    <div class="col-md-3 col-sm-6 col-xs-6 wow card_box">
-                        <div class="card item-product_sale text-center">
-                            <div class="image">
-                                    <a asp-controller="Home" asp-action="ManagementProductDetail" asp-route-id=@product.proId>
-                                        <img src="~/assets/Product_Images/@product.proImage"
-                                            style="width: 200px; height: 200px;" alt="@product.proName">
-                                    </a>
-                                    <h4>@product.proName</h4>
-                                </div>
-                            <div class="price-c">
-                                    <p class="price">
-                                        @if(discountProduct != null){
-                                            <s class="giacu">@String.Format("{0:0,0VND}", originalPrice).Replace(",", ".")</s>
+                            <div class="col-md-3 col-sm-6 col-xs-6 wow card_box">
+                                <div class="card item-product_sale text-center">
+                                    <div class="image">
+                                            <a asp-controller="Home" asp-action="ManagementProductDetail" asp-route-id=@product.proId>
+                                                <img src="~/assets/Product_Images/@product.proImage"
+                                                    style="width: 200px; height: 200px;" alt="@product.proName">
+                                            </a>
+                                            <h4>@product.proName</h4>
+                                        </div>
+                                    <div class="price-c">
+                                            <p class="price">
+                                                @if(discountProduct != null){
+                                                    <s class="giacu">@String.Format("{0:0,0VND}", originalPrice).Replace(",", ".")</s>
+                                                    }
+                                                <br><span class="giamoi">@String.Format("{0:0,0VND}", discountedPrice).Replace(",", ".")</span>
+                                            </p>
+                                        </div>
+                                        <a href=""><button type="button" class="btn btn-danger">Add to cart</button></a>
+                                        <div class="star_rate">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                        </div>
+                                    @{
+                                            var discountPrice = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now && dc.isActive == true).FirstOrDefault();
+                                            if(discountPrice != null){
+                                            <div class="install-0-tag">
+                                                <span> Discount @discountPrice.discountPercentage % </span>
+                                            </div>
                                             }
-                                        <br><span class="giamoi">@String.Format("{0:0,0VND}", discountedPrice).Replace(",", ".")</span>
-                                    </p>
+                                        }
                                 </div>
-                                <a href=""><button type="button" class="btn btn-danger">Thêm vào giỏ hàng</button></a>
-                                <div class="star_rate">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                </div>
-                            @{
-                                    var discountPrice = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now && dc.isActive == true).FirstOrDefault();
-                                    if(discountPrice != null){
-                                    <div class="install-0-tag">
-                                        <span> Giảm @discountPrice.discountPercentage % </span>
-                                    </div>
-                                    }
-                                }
-                        </div>
-                    </div>
+                            </div>
                     }
                     }
                     }
@@ -227,7 +228,7 @@
                                         <br><span class="giamoi">@String.Format("{0:0,0VND}", discountedPrice).Replace(",", ".")</span>
                                     </p>
                                 </div>
-                                <a asp-controller="CartManager" asp-action="AddToCart" asp-route-id="@product.proId">Thêm vào giỏ hàng</a>
+                                <a asp-controller="CartManager" asp-action="AddToCart" asp-route-id="@product.proId" class="btn btn-danger">Add to cart</a>
                                 <div class="star_rate">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -239,7 +240,7 @@
                                     var discountPrice = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now && dc.isActive == true).FirstOrDefault();
                                     if(discountPrice != null){
                                     <div class="install-0-tag">
-                                        <span> Giảm @discountPrice.discountPercentage % </span>
+                                        <span> Discount @discountPrice.discountPercentage % </span>
                                     </div>
                                     }
                                 }

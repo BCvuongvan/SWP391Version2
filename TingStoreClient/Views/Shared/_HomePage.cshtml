@@ -150,17 +150,28 @@
 
                         </ul>
                     </li>
-                    <li><a asp-action="" asp-controller="">Product</a></li>
                     <li><a asp-action="" asp-controller="">About</a></li>
                     <li><a asp-action="" asp-controller="">Contact</a></li>
                     <li><a asp-action="" asp-controller="">Sale</a></li>
-                    <li><a href="">News</a></li>
+                    @if (@HttpContextAccessor.HttpContext.Session.GetString("_user") != null)
+                    {
+
+                        // Lấy dữ liệu JSON từ Session
+                        string userDataJson = @HttpContextAccessor.HttpContext.Session.GetString("_user");
+                        // Giải mã dữ liệu JSON thành đối tượng User
+                        var option = new System.Text.Json.JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                        var user = System.Text.Json.JsonSerializer.Deserialize<User>(userDataJson, option);
+                        if (user.userType == 1 || user.userType == 2)
+                        {
+                            <li><a asp-action="Index" asp-controller="HomeAdmin">Manager</a></li>
+                        }
+                    }
                     <li>
                         <form autocomplete="off" asp-controller="Home" asp-action="SeachProduct"
                             class="navbar-form nav_margin autocomplete" role="search" method="post">
                             <div class="input-group">
                                 <input id="myInput" type="text" name="userName" class="form-control"
-                                    placeholder="Search" style="color: #fff;">
+                                    placeholder="Search" style="color: #fff;" required>
                                 <div class="input-group-btn">
                                     <button class="btn btn-default" type="submit" value="Search"><i
                                             class="glyphicon glyphicon-search"></i></button>

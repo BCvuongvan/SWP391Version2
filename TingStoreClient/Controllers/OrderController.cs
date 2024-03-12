@@ -11,10 +11,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TingStoreClient.Models;
+using TingStoreClient.Filters;
+
 
 namespace TingStoreClient.Controllers
 {
-   public class OrderController : Controller
+    [StaffAuthenticationRedirect]
+    public class OrderController : Controller
     {
         private readonly HttpClient client = null;
 
@@ -111,6 +114,7 @@ namespace TingStoreClient.Controllers
             response = await client.PutAsync(orderApi + "/" + id, content);
             if (response.IsSuccessStatusCode)
             {
+                TempData["SystemNotification"] = "Order confirmation successful!";
                 return RedirectToAction("GetAllOrder");
             }
             return Redirect("Home/Error");
@@ -135,6 +139,7 @@ namespace TingStoreClient.Controllers
             response = await client.PutAsync(orderApi + "/" + id, content);
             if (response.IsSuccessStatusCode)
             {
+                TempData["SystemNotification"] = "Order reject successful!";
                 return RedirectToAction("GetAllOrder");
             }
             return Redirect("Home/Error");

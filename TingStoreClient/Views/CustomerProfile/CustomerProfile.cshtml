@@ -5,6 +5,7 @@
 }
 
 <link rel="stylesheet" href="~/Mobile_shop/css/CustomerProfile.css">
+
 <div id="content">
     <div class="page-header">
         <div class="container">
@@ -156,9 +157,7 @@
                                                 <tr class="td_box">
                                                     <td class="text-center">@count</td>
                                                     <td class="text-start">@item.orderDate</td>
-                                                    @* <td class="text-start">@item.TotalAmount</td> *@
-                                                    <td class="text-start"> <span
-                                                            class="giamoi">@String.Format("{0:0,0VND}",
+                                                    <td class="text-start"> <span>@String.Format("{0:0,0VND}",
                                                         @item.TotalAmount).Replace(",", ".")</span></td>
                                                     <td class="text-start">
                                                         <a asp-controller="CustomerProfile"
@@ -190,7 +189,8 @@
                     <div id="tab-transaction" class="tab-pane">
                         <fieldset>
                             <legend class="header">My Feedback (@Model.feedbacks.Count)
-                                 <a asp-controller="HandleFeedback" asp-action="GetListProduct" class="btn btn-info">Feedback</a>
+                                <a asp-controller="HandleFeedback" asp-action="GetListProduct"
+                                    class="btn btn-info">Feedback</a>
                             </legend>
                             <div id="transaction">
                                 <div class="table-responsive">
@@ -199,7 +199,7 @@
                                             <tr class="tr_box">
                                                 <td class="text-center">No.</td>
                                                 <td class="text-start">Product</td>
-                                                <td class="text-right">Product Picture</td>
+                                                <td class="text-center">Product Picture</td>
                                                 <td class="text-start">Feedback</td>
                                                 <td class="text-start">Rating</td>
                                             </tr>
@@ -212,13 +212,13 @@
                                                 <tr class="td_box">
                                                     <td class="text-center">@count</td>
                                                     <td class="text-start">@item.product.proName</td>
-                                                    <td class="text-right d-none d-lg-table-cell"><img
+                                                    <td class="text-center d-none d-lg-table-cell"><img
                                                             src="~/assets/Product_Images/@item.product.proImage"
                                                             style="width: 200px; height: 200px;"
                                                             alt="@item.product.proImage">
                                                     </td>
                                                     <td class="text-start">@item.comment</td>
-                                                    <td>@for (int i = 0; i < item.rating; i++)
+                                                    <td style="color: #f59e0b;">@for (int i = 0; i < item.rating; i++)
                                                             {
                                                             <span class="fa fa-star checked"></span>
                                                             }

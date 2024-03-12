@@ -7,24 +7,13 @@
 <html lang="en">
 
 <head>
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="~/Mobile_shop/css/homeAdmin.css">
     <link rel="stylesheet" href="~/Mobile_shop/css/Category.css">
-
     <title>@ViewData["Title"]</title>
 </head>
 
 <body>
-
-    <script>
-        setTimeout(function () {
-            var systemNotification = document.getElementById('systemNotification');
-            if (systemNotification) {
-                systemNotification.style.display = 'none';
-            }
-        }, 3000);
-    </script>
     @if (TempData["SystemNotification"] != null)
     {
         <div id="systemNotification" class="alert alert-success m-0 p-2">
@@ -34,20 +23,25 @@
     }
     <div class="container-xxl position-relative bg-white d-flex p-0">
 
-        <!-- Sidebar -->
-        <!-- You can add your sidebar here -->
-
         <!-- Main Content -->
         <div class="container-fluid">
             <div class="page-header">
                 <h1>Category</h1>
+                <div class="float-end" style="margin-top: -50px;">
+                    <a asp-controller="HomeAdmin" asp-action="Index" data-bs-toggle="tooltip" title
+                        class="btn btn-success" data-bs-original-title="Back" aria-label="Back"><i
+                            class="fas fa-reply"></i></a>
+                </div>
             </div>
             <div class="card">
                 <div class="card-header">
                     <i class="fas fa-list"></i> Category List
+                    <div class="btn bg-primary" style="float: right;">
+                        <a asp-controller="Category" asp-action="CreateCategory"><i
+                                class="fa-solid fa-plus text-white"></i></a>
+                    </div>
                 </div>
                 <div id="order" class="card-body mb-2 mt-2">
-                                            <a asp-controller="Category" asp-action="CreateCategory"><i class="fa-solid fa-user-plus"></i></a>
 
                     <form id="form-order">
                         <div class="table-responsive">
@@ -111,6 +105,12 @@
         </div>
     </div>
 
+    <script>
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 3000);
+    </script>
 </body>
-
-</html>

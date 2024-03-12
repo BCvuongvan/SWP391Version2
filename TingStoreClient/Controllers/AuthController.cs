@@ -45,6 +45,11 @@ namespace TingStoreClient.Controllers
                 return View("Login");
             }
             HttpResponseMessage response = await client.GetAsync(api + "/GetUser/" + username + "/" + password);
+            if (!response.IsSuccessStatusCode)
+            {
+                ViewBag.errorMessage = ("User doesn't exit");
+                return View("Login");
+            }
             string data = await response.Content.ReadAsStringAsync();
 
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
@@ -65,7 +70,7 @@ namespace TingStoreClient.Controllers
             }
             else if (user.userType == 3)
             {
-            HttpContext.Session.SetString(_user, data);
+                HttpContext.Session.SetString(_user, data);
                 return RedirectToAction("Index", "Home");
             }
             else if (user.userType == 0)

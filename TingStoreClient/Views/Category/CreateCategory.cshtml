@@ -11,6 +11,87 @@
 </head>
 
 <body>
+    <style>
+        .card {
+            padding: 10px;
+        }
+
+        .page-header {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            font-weight: 500;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .form-label {
+            margin: 0;
+        }
+
+        button {
+            float: right;
+        }
+    </style>
+    @if (TempData["SystemNotificationError"] != null)
+    {
+        <div id="systemNotification" class="alert alert-danger m-0 p-2">
+            <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification:
+                @TempData["SystemNotificationError"]
+            </p>
+        </div>
+    }
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <!-- Main Content -->
+        <div class="container-fluid">
+            <div class="page-header">
+                <div class="page-header">
+                    <h1>Create Category</h1>
+                    <div class="float-end" style="margin-top: -50px;">
+                        <a asp-controller="Category" asp-action="GetAllCategory" data-bs-toggle="tooltip" title
+                            class="btn btn-success" data-bs-original-title="Back" aria-label="Back"><i
+                                class="fas fa-reply"></i></a>
+                    </div>
+                </div>
+            </div>
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger">
+                    @ViewBag.ErrorMessage
+                </div>
+            }
+
+            <div class="card">
+                <form asp-controller="Category" asp-action="CreateCategory" method="post">
+                    <div class="form-group">
+                        <label class="labels">Category name</label>
+                        <input asp-for="cateName" type="text" class="form-control" placeholder="cateName">
+                        <span asp-validation-for="cateName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="labels">Category Describe</label>
+                        <input asp-for="cateDescribe" type="text" class="form-control" placeholder="cateDescribe">
+                        <span asp-validation-for="cateDescribe" class="text-danger"></span>
+                    </div>
+
+                    <div class="mt-5 text-center">
+                        <button class="btn btn-primary profile-button" type="submit">
+                            Add new
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    @section Scripts {
+        @{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    }
+
     <script>
         setTimeout(function () {
             var systemNotification = document.getElementById('systemNotification');
@@ -19,78 +100,4 @@
             }
         }, 3000);
     </script>
-    <div class="container-xxl position-relative bg-white d-flex p-0">
-
-        <!-- Sidebar -->
-        <!-- You can add your sidebar here -->
-
-        <!-- Main Content -->
-        <div class="container-fluid">
-            <div class="page-header">
-                @if (TempData["SystemNotificationError"] != null)
-                {
-                    <div id="systemNotification" class="alert alert-danger m-0 p-2">
-                        <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification:
-                            @TempData["SystemNotificationError"]
-                        </p>
-                    </div>
-                }
-                <h1>Category</h1>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <i class="fas fa-list"></i>
-                    <a asp-controller="Category" asp-action="GetAllCategory">Category List</a> / Add New Category
-                </div>
-                @if (ViewBag.ErrorMessage != null)
-                {
-                    <div class="alert alert-danger">
-                        @ViewBag.ErrorMessage
-                    </div>
-                }
-                <div id="order" class="card-body mb-2 mt-2">
-                    <div id="newProfileContainer" class="container bg-white mt-5 mb-5">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <div class="border-right">
-                                <div class="p-3 py-5" style="width: 1000px; text-center;">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h4 class="text-right">Create Category</h4>
-                                    </div>
-                                    <form asp-controller="Category" asp-action="CreateCategory" method="post">
-                                        <div class="col-md-6">
-                                            <label class="labels">Category name</label>
-                                            <input asp-for="cateName" type="text" class="form-control"
-                                                placeholder="cateName">
-                                            <span asp-validation-for="cateName" class="text-danger"></span>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="labels">Category Describe</label>
-                                            <input asp-for="cateDescribe" type="text" class="form-control"
-                                                placeholder="cateDescribe">
-                                            <span asp-validation-for="cateDescribe" class="text-danger"></span>
-                                        </div>
-
-                                        <div class="mt-5 text-center">
-                                            <button class="btn btn-primary profile-button" type="submit">
-                                                Add new
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @section Scripts {
-                        @{
-                            <partial name="_ValidationScriptsPartial" />
-                        }
-                    }
-
-                </div>
-            </div>
-        </div>
-    </div>
-
 </body>
-
-</html>

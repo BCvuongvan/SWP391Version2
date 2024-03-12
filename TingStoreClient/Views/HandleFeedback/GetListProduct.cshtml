@@ -3,71 +3,43 @@
     ViewData["Title"] = "GetListProduct";
     Layout = "/Views/Shared/_HomePage.cshtml";
 }
+<link rel="stylesheet" href="~/Mobile_shop/css/HandleFeedback.css">
 
-@Model.userName
-<style>
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        border-radius: 10px;
-        overflow: hidden;
-    }
 
-    th,
-    td {
-        padding: 12px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h3>List Product Bought</h3>
+                <div class="float-end">
+                    <a asp-controller="CustomerProfile" asp-action="CustomerProfile" data-bs-toggle="tooltip" title
+                        class="btn btn-success" data-bs-original-title="Back" aria-label="Back"><i
+                            class="fas fa-reply"></i></a>
+                </div>
+            </div>
+            <table class="table table-responsive table-bordered">
+                <tr>
+                    <th class="text-right">Product ID</th>
+                    <th>Product's Name</th>
+                    <th class="text-center">Image</th>
+                    <th class="text-center">Feedback</th>
+                </tr>
+                @foreach (var item in @Model.orders)
+                {
+                    @foreach (var item2 in @item.orderDetails)
+                    {
+                        <tr>
+                            <td class="text-right">@item2.product.proId</td>
+                            <td>@item2.product.proName</td>
+                            <td class="text-center img"><img src="~/assets/Product_Images/@item2.product.proImage"
+                                    alt="@item2.product.proName" /></td>
+                            <td class="text-center"><a asp-action="CreateFeedback" asp-route-id="@item2.product.proId"
+                                    class="btn btn-primary btn_feedback">Feedback</a></td>
+                        </tr>
+                    }
+                }
+            </table>
+        </div>
 
-    th {
-        background-color: #007bff;
-        color: #fff;
-    }
-
-    td {
-        background-color: #f9f9f9;
-        color: #555;
-    }
-
-    tr:hover {
-        background-color: #f5f5f5;
-    }
-
-    img {
-        max-width: 100px;
-        max-height: 100px;
-        border-radius: 5px;
-    }
-
-    a {
-        color: #007bff;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-</style>
-
-<h3>List Product Bought</h3>
-<table style="margin-top: 250px;">
-    <tr>
-        <th>Id Product</th>
-        <th>Name Product</th>
-        <th>Image Product</th>
-        <th>Feedback</th>
-    </tr>
-    @foreach (var item in @Model.orders)
-    {
-        @foreach (var item2 in @item.orderDetails)
-        {
-            <tr>
-                <td>@item2.product.proId</td>
-                <td>@item2.product.proName</td>
-                <td><img src="~/assets/Product_Images/@item2.product.proImage" alt="@item2.product.proName" /></td>
-                <td><a asp-action="CreateFeedback" asp-route-id="@item2.product.proId">Feedback</a></td>
-            </tr>
-        }
-    }
-</table>
+    </div>
+</body>

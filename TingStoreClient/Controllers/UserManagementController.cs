@@ -16,10 +16,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TingStoreClient.Models;
 using TingStoreClient.Util;
+using TingStoreClient.Filters;
+
 
 namespace TingStoreClient.Controllers
 {
-
+    [StaffAuthenticationRedirect]
     public class UserManagementController : Controller
     {
         private readonly HttpClient client = null;
@@ -82,7 +84,7 @@ namespace TingStoreClient.Controllers
             }
             return NotFound();
         }
-        
+
         [HttpPost]
         public async Task<IActionResult> UserDetails(string id, User user, IFormFile UserPicture)
         {
