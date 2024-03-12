@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\CustomerProfile.css"
     },
     {
+      "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\ProductList.css",
+      "PackagePath": "staticwebassets\\Mobile_shop\\css\\ProductList.css"
+    },
+    {
       "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\UpdateTechNews.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\UpdateTechNews.css"
     },
@@ -87,6 +91,10 @@
     {
       "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\totalOrders.css",
       "PackagePath": "staticwebassets\\Mobile_shop\\css\\totalOrders.css"
+    },
+    {
+      "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\updateProduct.css",
+      "PackagePath": "staticwebassets\\Mobile_shop\\css\\updateProduct.css"
     },
     {
       "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\css\\venobox.css",
@@ -179,6 +187,14 @@
     {
       "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\banner3.jpg",
       "PackagePath": "staticwebassets\\Mobile_shop\\images\\banner3.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\banner_new.jpg",
+      "PackagePath": "staticwebassets\\Mobile_shop\\images\\banner_new.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\banner_new1.jpg",
+      "PackagePath": "staticwebassets\\Mobile_shop\\images\\banner_new1.jpg"
     },
     {
       "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\Mobile_shop\\images\\logo.png",
@@ -545,6 +561,14 @@
       "PackagePath": "staticwebassets\\assets\\Product_Details\\eeeeeeeee_Specs.txt"
     },
     {
+      "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\iPhone 15 Pro Max 256GB_Features.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\iPhone 15 Pro Max 256GB_Features.txt"
+    },
+    {
+      "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\iPhone 15 Pro Max 256GB_Info.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Details\\iPhone 15 Pro Max 256GB_Info.txt"
+    },
+    {
       "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\iphone1_Features.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\iphone1_Features.txt"
     },
@@ -651,6 +675,10 @@
     {
       "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Details\\woaaaâ_Specs.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Details\\woaaaâ_Specs.txt"
+    },
+    {
+      "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\12_3_8_2_8.webp",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\12_3_8_2_8.webp"
     },
     {
       "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\418025021_1073057710697656_6950206025922473540_n.jpg",
@@ -867,6 +895,10 @@
     {
       "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Q&A\\Samsung Galaxy Z Fold5 12GB 512GB_Q&A.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Q&A\\Samsung Galaxy Z Fold5 12GB 512GB_Q&A.txt"
+    },
+    {
+      "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Q&A\\iPhone 14 Pro Max 256GB_Q&A.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Q&A\\iPhone 14 Pro Max 256GB_Q&A.txt"
     },
     {
       "Id": "D:\\FPT\\Summer2024_SE1708\\TingStore\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\Flash Sale.jpg",

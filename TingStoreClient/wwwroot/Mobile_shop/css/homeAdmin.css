@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+body{
+    font-size: 16px;
+}
+
 /*================ 
     Templete CSS 
 ===============*/
@@ -421,5 +425,5 @@ input {
 
 /* footer */
 .border-top .container {
-    margin-left: 310px;
+    margin-left: 120px;
 }

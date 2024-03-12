@@ -156,7 +156,10 @@
                                                 <tr class="td_box">
                                                     <td class="text-center">@count</td>
                                                     <td class="text-start">@item.orderDate</td>
-                                                    <td class="text-start">@item.TotalAmount</td>
+                                                    @* <td class="text-start">@item.TotalAmount</td> *@
+                                                    <td class="text-start"> <span
+                                                            class="giamoi">@String.Format("{0:0,0VND}",
+                                                        @item.TotalAmount).Replace(",", ".")</span></td>
                                                     <td class="text-start">
                                                         <a asp-controller="CustomerProfile"
                                                             asp-action="OrderDetailByCustomer"
@@ -186,7 +189,9 @@
                     </div>
                     <div id="tab-transaction" class="tab-pane">
                         <fieldset>
-                            <legend class="header">My Feedback (@Model.feedbacks.Count)</legend>
+                            <legend class="header">My Feedback (@Model.feedbacks.Count)
+                                 <a asp-controller="HandleFeedback" asp-action="GetListProduct" class="btn btn-info">Feedback</a>
+                            </legend>
                             <div id="transaction">
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-hover">
