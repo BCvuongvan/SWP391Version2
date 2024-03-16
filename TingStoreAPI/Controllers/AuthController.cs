@@ -27,7 +27,8 @@ namespace TingStoreAPI.Controllers
         public IActionResult GetUser(string username, string pass)
         {
             var user = this._db.users.FirstOrDefault(u => u.userName.Equals(username) && u.password.Equals(pass));
-            if(user == null){
+            if (user == null)
+            {
                 return NotFound();
             }
             return Ok(user);
@@ -37,14 +38,16 @@ namespace TingStoreAPI.Controllers
         {
             if (user == null)
             {
-                return BadRequest ("Account is exited");
+                return BadRequest("User data is required");
+            }
+            var existingUser = this._db.users.FirstOrDefault(u => u.userName.Equals(user.userName));
+            if (existingUser != null)
+            {
+                return BadRequest("Username already exists. Please choose a different username.");
             }
             this._db.users.Add(new User(user.userName, user.email, user.password, user.fullName, user.phoneNumber, user.address, user.picture, user.createdAt, user.updateAt, user.userType));
             this._db.SaveChanges();
             return Ok(user);
         }
-        
-
-
     }
 }

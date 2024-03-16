@@ -5,9 +5,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"] - TingStoreClient</title>
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +23,7 @@
 
     <!-- link css custom -->
     <link rel="stylesheet" href="~/Mobile_shop/css/homeAdmin.css">
+    <link rel="stylesheet" href="~/Mobile_shop/css/totalCustomer.css">
 </head>
 
 <body>
@@ -97,7 +99,7 @@
         string userDataJson = @HttpContextAccessor.HttpContext.Session.GetString("_user");
         // Giải mã dữ liệu JSON thành đối tượng User
         var option = new System.Text.Json.JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-        var user = System.Text.Json.JsonSerializer.Deserialize<User>(userDataJson, option);
+        var user = System.Text.Json.JsonSerializer.Deserialize<TingStoreClient.Models.User>(userDataJson, option);
     }
 
     <div class="container-fluid position-relative bg-white d-flex p-0">
@@ -149,7 +151,7 @@
                     <a asp-controller="Revenue" asp-action="Index" class="nav-item nav-link"><i
                             class="fa-solid fa-chart-simple"></i> Revenue Chart</a>
                     <a asp-controller="Home" asp-action="Index" class="nav-item nav-link"><i
-                            class="fa-solid fa-house"></i>Home page</a>
+                            class="fa-solid fa-house"></i> Home page</a>
                 </div>
             </nav>
         </div>
@@ -184,7 +186,7 @@
                                 <a asp-controller="Order" asp-action="orderDetail" asp-route-id="@item.orderId"
                                     class="dropdown-item">
                                     <h6 class="fw-normal mb-0"><span>Order: </span>@item.orderId</h6>
-                                    <small>@item.userName <span>(pending)</span></small>
+                                    <small>@item.userName <span>(Pending)</span></small>
                                 </a>
                                 <hr class="dropdown-divider">
                                 if (count == 5)
@@ -198,10 +200,9 @@
                         </div>
                     </div>
                     <div class="nav-item">
-                        <a href="#" class="nav-link " data-bs-toggle="dropdown">
-                            <img class="rounded-circle" src="~/assets/User_Picture/@user.picture" alt="admin picture"
+                        <a asp-controller="AdminProfile" asp-action="Index" class="nav-link">
+                            <img class="rounded-circle" src="~/assets/User_Picture/@user.picture" alt="Admin Picture"
                                 style="width: 40px; height: 40px;">
-
                             <span class="d-none d-lg-inline-flex">@user.fullName</span>
                         </a>
                     </div>
@@ -244,10 +245,6 @@
     </footer>
     <!-- Template Javascript -->
     <script src="https://kit.fontawesome.com/8143c9cd7e.js" crossorigin="anonymous"></script>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

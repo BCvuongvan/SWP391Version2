@@ -24,20 +24,42 @@
                     <th class="text-center">Image</th>
                     <th class="text-center">Feedback</th>
                 </tr>
-                @foreach (var item in @Model.orders)
+                @if (@Model.orders != null && @Model.orders.Any())
                 {
-                    @foreach (var item2 in @item.orderDetails)
+                    foreach (var item in @Model.orders)
                     {
-                        <tr>
-                            <td class="text-right">@item2.product.proId</td>
-                            <td>@item2.product.proName</td>
-                            <td class="text-center img"><img src="~/assets/Product_Images/@item2.product.proImage"
-                                    alt="@item2.product.proName" /></td>
-                            <td class="text-center"><a asp-action="CreateFeedback" asp-route-id="@item2.product.proId"
-                                    class="btn btn-primary btn_feedback">Feedback</a></td>
-                        </tr>
+                        if (item.orderDetails != null && item.orderDetails.Any())
+                        {
+                            foreach (var item2 in item.orderDetails)
+                            {
+                                <tr>
+                                    <td class="text-right">@item2.product.proId</td>
+                                    <td>@item2.product.proName</td>
+                                    <td class="text-center img">
+                                        <img src="~/assets/Product_Images/@item2.product.proImage" alt="@item2.product.proName" />
+                                    </td>
+                                    <td class="text-center">
+                                        <a asp-action="CreateFeedback" asp-route-id="@item2.product.proId"
+                                            class="btn btn-primary btn_feedback">Feedback</a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="4" class="text-center">No result!</td>
+                            </tr>
+                        }
                     }
                 }
+                else
+                {
+                    <tr>
+                        <td colspan="4" class="text-center">No result!</td>
+                    </tr>
+                }
+
             </table>
         </div>
 

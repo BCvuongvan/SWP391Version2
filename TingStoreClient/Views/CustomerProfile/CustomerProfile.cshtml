@@ -13,7 +13,7 @@
                 <div class="col-md-6 notification">
                     @if (TempData["SystemNotification"] != null)
                     {
-                        <div id="systemNotification" class="alert alert-danger">
+                        <div id="systemNotification" class="alert alert-success">
                             <p class="text-dark">Notification:
                                 @TempData["SystemNotification"]
                             </p>
@@ -31,7 +31,7 @@
         <!-- Account page navigation-->
         <nav class="nav nav-borders">
             <a class="nav-link active ms-0" data-toggle="tab" href="#tab-profile">Profile</a>
-            <a class="nav-link" data-toggle="tab" href="#tab-history">History my Order</a>
+            <a class="nav-link" data-toggle="tab" href="#tab-history">History of orders</a>
             <a class="nav-link" data-toggle="tab" href="#tab-transaction">Feedbacks</a>
         </nav>
         <div class="card">
@@ -190,7 +190,7 @@
                         <fieldset>
                             <legend class="header">My Feedback (@Model.feedbacks.Count)
                                 <a asp-controller="HandleFeedback" asp-action="GetListProduct"
-                                    class="btn btn-info">Feedback</a>
+                                    class="btn btn-info">Feedback now</a>
                             </legend>
                             <div id="transaction">
                                 <div class="table-responsive">

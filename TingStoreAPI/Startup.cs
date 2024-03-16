@@ -38,7 +38,7 @@ namespace TingStoreAPI
 
             services.AddControllersWithViews()
             .AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
-
+            
             services.AddControllers();
             
             services.AddCors(options =>

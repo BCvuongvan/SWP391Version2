@@ -19,21 +19,21 @@ namespace TingStoreClient.Models
         [DisplayName("Email")]
         public String email { get; set; }
 
-        [Required(ErrorMessage = ("Please enter your password!"))]
+        [Required(ErrorMessage = "Please enter your password!")]
         [RegularExpression(@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$", ErrorMessage = "Please enter a password with at least 8 characters including lowercase letters and special characters!")]
         [DisplayName("Password")]
         public String password { get; set; }
 
-        [Required(ErrorMessage = ("Please enter your Fullname!"))]
+        [Required(ErrorMessage = "Please enter your Fullname!")]
         [DisplayName("Fullname")]
         public String fullName { get; set; }
 
-        [Required(ErrorMessage = ("Please enter your Phonenumber!"))]
+        [Required(ErrorMessage = "Please enter your Phonenumber!")]
         [RegularExpression(@"^0[1-9]{2}[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}$", ErrorMessage = "Please enter a 10-digit phone number beginning with the number '0'!")]
         [DisplayName("Phone number")]
         public String phoneNumber { get; set; }
 
-        [Required(ErrorMessage = ("Please enter Address!"))]
+        [Required(ErrorMessage = "Please enter Address!")]
         [DisplayName("Address")]
         public String address { get; set; }
 

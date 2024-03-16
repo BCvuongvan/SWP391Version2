@@ -21,7 +21,7 @@ namespace TingStoreClient.Models
         [ForeignKey("proId")]
         public Product product { get; set; }
 
-        [Required(ErrorMessage = ("Please enter quantity!"))]
+        [Required(ErrorMessage = "Please enter quantity!")]
         [DisplayName("Quantity")]
         public int quantity { get; set; }
     }

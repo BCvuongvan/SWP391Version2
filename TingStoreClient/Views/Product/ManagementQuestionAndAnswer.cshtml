@@ -4,21 +4,27 @@
 }
 
 <body>
-<style>
-.question {
+    <style>
+        .card {
+            padding: 10px;
+        }
+
+        .btn_addnew {
+            margin: 40px 0px 10px 0;
+        }
+
+        .question {
+
             background-color: #f0f0f0;
             padding: 10px;
             margin: 5px 0;
             cursor: pointer;
             position: relative;
-            /* Cho phép absolute positioning bên trong */
-            /* Thêm padding phải để tạo khoảng trống cho mũi tên */
             padding-right: 30px;
         }
 
         .question:after {
             content: "\203A";
-            /* Sử dụng mã Unicode cho một dấu ">" đẹp hơn */
             position: absolute;
             right: 10px;
             top: 50%;
@@ -34,60 +40,79 @@
             margin: 5px 0;
             display: none;
         }
-</style>
+    </style>
+
     <div class="container">
         <div class="page-header">
-            <div class="float-end" style="margin-top: -30px;">
+            <h1>List questions and anwsers</h1>
+            <div class="float-end" style="margin-top: -40px;">
                 <a asp-controller="Product" asp-action="ListProduct" data-bs-toggle="tooltip" title
                     class="btn btn-success" data-bs-original-title="Back" aria-label="Back"><i
                         class="fas fa-reply"></i></a>
             </div>
         </div>
-        <div>
-        @if (TempData["SystemNotification"] != null)
-    {
-        <div id="systemNotification" class="alert alert-success m-0 p-2">
-            <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotification"]
-            </p>
-        </div>
-    }
-            <h3 style="margin-top:40px; text-align: center;"><strong>LIST QUESTION AND ANSWER</strong></h3>
-            <div style="text-align: center;">
-                <a asp-controller="Product" asp-action="CreateQuestionAndAnswer" asp-route-id="@Model.proId"
-                    class="fancy-button" style="text-decoration: none;">Add new question and answer</a>
-            </div> </br>
-        </div>
-        <div id="qa-section">
-            @{
-                if (ViewBag.QuestionAndAnswer != null)
+        <div class="btn_addnew">
+            <a asp-controller="Product" asp-action="CreateQuestionAndAnswer" asp-route-id="@Model.proId"
+                class="btn btn-primary" style="text-decoration: none;">Add new question and answer</a>
+            <a asp-controller="Product" asp-action="UpdateQuestionAndAnswer" asp-route-id="@Model.proId"
+                class="btn btn-primary" style="text-decoration: none; float: right;">Edit</a>
+
+            <div>
+                @if (TempData["SystemNotification"] != null)
                 {
-                    var qas = ViewBag.QuestionAndAnswer.ToString().Split(new string[] { "\r\n\r\n", "\n\n" },
-                    StringSplitOptions.RemoveEmptyEntries);
-                    int qNum = 1;
-                    foreach (var qa in qas)
-                    {
-                        var parts = qa.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
-                        if (parts.Length >= 2)
+                    <div id="systemNotification" class="alert alert-success m-0 p-2">
+                        <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification:
+                            @TempData["SystemNotification"]
+                        </p>
+                    </div>
+                }
+                <h3 style="margin-top:40px; text-align: center;"><strong>LIST QUESTION AND ANSWER</strong></h3>
+                <div style="text-align: center;">
+                    <a asp-controller="Product" asp-action="CreateQuestionAndAnswer" asp-route-id="@Model.proId"
+                        class="fancy-button" style="text-decoration: none;">Add new question and answer</a>
+                </div> </br>
+            </div>
+            <div id="qa-section">
+                <div class="card">
+                    @{
+                        if (ViewBag.QuestionAndAnswer != null)
                         {
-                            <div class="question" onclick="toggleAnswer('answer@(qNum)')">@(parts[0].Replace("Q: ", ""))</div>
-                            <div class="answer" id="answer@(qNum)" style="display:none;">@(parts[1].Replace("A: ", ""))</div>
+                            var qas = ViewBag.QuestionAndAnswer.ToString().Split(new string[] { "\r\n\r\n", "\n\n" },
+                            StringSplitOptions.RemoveEmptyEntries);
+                            int qNum = 1;
+                            foreach (var qa in qas)
+                            {
+                                var parts = qa.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+                                if (parts.Length >= 2)
+                                {
+                                    <div class="question" onclick="toggleAnswer('answer@(qNum)')">@(parts[0].Replace("Q: ", ""))</div>
+                                    <div class="answer" id="answer@(qNum)" style="display:none;">@(parts[1].Replace("A: ", ""))</div>
+                                }
+                                qNum++;
+                            }
                         }
-                        qNum++;
                     }
+                </div>
+            </div>
+        </div>
+
+        <script>
+            //phần hiển thị Q&A
+            function toggleAnswer(answerId) {
+                var answer = document.getElementById(answerId);
+                if (answer.style.display === "none") {
+                    answer.style.display = "block";
+                } else {
+                    answer.style.display = "none";
                 }
             }
-        </div>
-        <div style="text-align: center; margin-top: 20px;">
-            <a asp-controller="Product" asp-action="UpdateQuestionAndAnswer" asp-route-id="@Model.proId"
-                class="fancy-button" style="text-decoration: none;">Edit</a>
-        </div>
-    </div>
+        </script>
 </body>
 <script>
-        setTimeout(function () {
-            var systemNotification = document.getElementById('systemNotification');
-            if (systemNotification) {
-                systemNotification.style.display = 'none';
-            }
-        }, 3000);
-    </script>
+    setTimeout(function () {
+        var systemNotification = document.getElementById('systemNotification');
+        if (systemNotification) {
+            systemNotification.style.display = 'none';
+        }
+    }, 3000);
+</script>

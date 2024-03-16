@@ -14,7 +14,7 @@ namespace TingStoreClient.Models
         [DisplayName("ID")]
         public int orderId { get; set; }
 
-        [Required(ErrorMessage = ("Please enter Username!"))]
+        [Required(ErrorMessage = "Please enter Username!")]
         [DisplayName("Username")]
         public String userName { get; set; }
 

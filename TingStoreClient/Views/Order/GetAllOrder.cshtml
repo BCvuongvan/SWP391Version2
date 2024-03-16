@@ -63,7 +63,7 @@
                     <div class="card-header">
                         <i class="fas fa-list"></i> Order List
                     </div>
-                    <div id="order" class="card-body mb-2 mt-2">
+                    <div id="order" class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover">
                                 <thead>
@@ -138,7 +138,7 @@
                             <form autocomplete="off" asp-action="GetOrderFiltered" method="get">
                                 <div class=" mb-3 autocomplete" style="width: 100%;">
                                     <input id="myInput" type="text" name="userName" placeholder="Enter username"
-                                        class="form-control">
+                                        class="form-control" required>
                                 </div>
                                 <input type="submit" value="Search" class="btn btn-primary">
                             </form>

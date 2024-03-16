@@ -20,16 +20,16 @@ namespace TingStoreClient.Models
         [ForeignKey("proId")]
         public Product product { get; set; }
 
-        [Required(ErrorMessage = ("Please enter comment!"))]
+        [Required(ErrorMessage = "Please enter comment!")]
         [DisplayName("Comment")]
         public String comment { get; set; }
 
-        [Required(ErrorMessage = ("Please vote rating!"))]
+        [Required(ErrorMessage = "Please vote rating!")]
         [DisplayName("Rate")]
         [Range(0, 5, ErrorMessage = "rating  must be between 0 and 5.")]
         public int rating { get; set; }
 
-         public Feedback(String userName, int proId, String comment, int rating)
+        public Feedback(String userName, int proId, String comment, int rating)
         {
             this.userName = userName;
             this.proId = proId;
@@ -38,7 +38,7 @@ namespace TingStoreClient.Models
         }
         public Feedback()
         {
-            
+
         }
     }
 }

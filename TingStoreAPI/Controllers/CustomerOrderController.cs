@@ -50,11 +50,23 @@ namespace TingStoreAPI.Controllers
         [HttpGet("CancelOrder/{id}")]
         public IActionResult CancelOrder(int id)
         {
-            if (id == null)
+            if (id <= 0)
             {
-                return BadRequest("can't cancel order");
+                return BadRequest("Invalid order ID");
             }
             var order = this._db.orders.FirstOrDefault(o => o.orderId == id);
+            if (order == null)
+            {
+                return NotFound("Order not found");
+            }
+            // Lấy thời gian hiện tại
+            var currentTime = DateTime.Now;
+
+            // Kiểm tra nếu đơn hàng đã được tạo ra từ hơn 24 giờ trước
+            if ((currentTime - order.orderDate).TotalMinutes > 1)
+            {
+                return BadRequest("Order can't be cancelled after 24 hours");
+            }
             order.orderStatusId = 4;
             this._db.SaveChanges();
             return Ok(order);
