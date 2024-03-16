@@ -7,6 +7,13 @@
 <link rel="stylesheet" href="~/Mobile_shop/css/techNew.css">
 
 <body>
+@if (TempData["SystemNotification"] != null)
+    {
+        <div id="systemNotification" class="alert alert-success m-0 p-2">
+            <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotification"]
+            </p>
+        </div>
+    }
     <div class="container">
         <div class="page-header">
             <h1 style="margin-top:20px;">Tech news List</h1>
@@ -73,3 +80,11 @@
 
     </div>
 </body>
+<script>
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 3000);
+    </script>

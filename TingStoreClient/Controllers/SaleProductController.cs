@@ -97,6 +97,21 @@ namespace TingStoreClient.Controllers
         [HttpPost("create")]
         public async Task<IActionResult> CreateSaleProduct(DiscountPercent disPer, IFormFile proImageFile, List<int> selectedProducts)
         {
+            bool checkFlashSale = false;
+            HttpResponseMessage response = await client.GetAsync($"https://localhost:5001/api/DiscountProduct/active");
+            String data = await response.Content.ReadAsStringAsync();
+            var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            List<DiscountPercent> discounts = JsonSerializer.Deserialize<List<DiscountPercent>>(data, option);
+            foreach(var dis in discounts){
+                if(dis.discountPercentage >= 40 && dis.isActive == true){
+                    checkFlashSale = true;
+                    break;
+                }
+            }
+            if(checkFlashSale && disPer.discountPercentage >= 40){
+                TempData["SystemNotification"] = "The Flash Sale period has not ended yet, products cannot be added at the Flash Sale discount!";
+                return RedirectToAction("ListSaleProduct");
+            }
             if (proImageFile != null)
             {
                 var fileName = Path.GetFileName(proImageFile.FileName);
@@ -120,18 +135,19 @@ namespace TingStoreClient.Controllers
                     isActive = true
                 };
 
-                string data = JsonSerializer.Serialize(newDisPer);
-                var content = new StringContent(data, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = await client.PostAsync(api, content);
-                if (response.StatusCode != System.Net.HttpStatusCode.Created)
+                string dataa = JsonSerializer.Serialize(newDisPer);
+                var content = new StringContent(dataa, Encoding.UTF8, "application/json");
+                HttpResponseMessage responsee = await client.PostAsync(api, content);
+                if (responsee.StatusCode != System.Net.HttpStatusCode.Created)
                 {
-                    var errorMessage = await response.Content.ReadAsStringAsync();
+                    var errorMessage = await responsee.Content.ReadAsStringAsync();
                     ViewBag.ErrorMessage = errorMessage;
                     await GetProductAsync();
                     return View(disPer);
                 }
             }
 
+            TempData["SystemNotification"] = "Add sale product sucessfully!";
             return RedirectToAction("ListSaleProduct");
         }
         [HttpGet("update/{id}")]
@@ -185,6 +201,7 @@ namespace TingStoreClient.Controllers
 
             if (response.IsSuccessStatusCode)
             {
+                TempData["SystemNotification"] = "Update sale product sucessfully!";
                 return RedirectToAction("ListSaleProduct");
             }
             else
@@ -223,6 +240,7 @@ namespace TingStoreClient.Controllers
                     var json = JsonSerializer.Serialize(disPer); // Serialize đối tượng Product đã cập nhật trở lại thành JSON.
                     var content = new StringContent(data, System.Text.Encoding.UTF8, "application/json"); // Tạo một StringContent chứa dữ liệu JSON, sử dụng UTF8 và kiểu nội dung là application/json.
                     HttpResponseMessage updateResponse = await client.PostAsync(api + "/" + discountId, content); //gửi đi
+                    TempData["SystemNotification"] = "Delete sale product sucessfully!";
                     return RedirectToAction("ListSaleProduct");
                 }
             }

@@ -68,6 +68,9 @@ namespace TingStoreClient.Controllers
             if (response.IsSuccessStatusCode)
             {
                 String data = await response.Content.ReadAsStringAsync();
+                var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                // DiscountPercent list = JsonSerializer.Deserialize<DiscountPercent>(data, option);
+                // ViewBag.imageFlashSale = list;
                 return JsonSerializer.Deserialize<DateTime>(data);
             }
             return null;

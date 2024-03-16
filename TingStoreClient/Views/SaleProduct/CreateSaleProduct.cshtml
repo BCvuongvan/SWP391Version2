@@ -14,6 +14,13 @@
         </div>
     </div>
 </nav>
+@if (TempData["SystemNotification"] != null)
+    {
+        <div id="systemNotification" class="alert alert-danger">
+            <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotification"]
+            </p>
+        </div>
+    }
 <section id="product_part" class="main">
     <div class="container">
         <h4 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">ADD DISCOUNTED PRODUCTS</h4>
@@ -32,7 +39,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">Discount Value:</label>
+                    <label class="form-label">Discount Value (Value Flash Sale is greater than or equal to 40%):</label>
                     <input type="text" asp-for="discountPercentage" class="form-control large-input">
                     <span asp-validation-for="discountPercentage" class="text-danger"></span>
                 </div>
@@ -63,3 +70,17 @@
         </div>
     </div>
 </section>
+@section Scripts {
+        @{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    }
+
+    <script>
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 3000);
+    </script>

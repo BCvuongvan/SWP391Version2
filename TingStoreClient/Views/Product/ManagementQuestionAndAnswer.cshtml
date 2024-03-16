@@ -4,6 +4,37 @@
 }
 
 <body>
+<style>
+.question {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            position: relative;
+            /* Cho phép absolute positioning bên trong */
+            /* Thêm padding phải để tạo khoảng trống cho mũi tên */
+            padding-right: 30px;
+        }
+
+        .question:after {
+            content: "\203A";
+            /* Sử dụng mã Unicode cho một dấu ">" đẹp hơn */
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+            color: #6c7279;
+            font-size: 24px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .answer {
+            padding: 10px;
+            margin: 5px 0;
+            display: none;
+        }
+</style>
     <div class="container">
         <div class="page-header">
             <div class="float-end" style="margin-top: -30px;">
@@ -13,6 +44,13 @@
             </div>
         </div>
         <div>
+        @if (TempData["SystemNotification"] != null)
+    {
+        <div id="systemNotification" class="alert alert-success m-0 p-2">
+            <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotification"]
+            </p>
+        </div>
+    }
             <h3 style="margin-top:40px; text-align: center;"><strong>LIST QUESTION AND ANSWER</strong></h3>
             <div style="text-align: center;">
                 <a asp-controller="Product" asp-action="CreateQuestionAndAnswer" asp-route-id="@Model.proId"
@@ -45,3 +83,11 @@
         </div>
     </div>
 </body>
+<script>
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 3000);
+    </script>

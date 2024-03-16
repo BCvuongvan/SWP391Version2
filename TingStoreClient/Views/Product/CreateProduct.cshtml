@@ -5,7 +5,7 @@
 }
 @if (ViewBag.ErrorMessage != null)
 {
-    <div class="alert alert-danger">
+    <div id="systemNotification" class="alert alert-danger">
         @ViewBag.ErrorMessage
     </div>
 }
@@ -112,3 +112,17 @@
 
     </div>
 </body>
+@section Scripts {
+        @{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    }
+
+    <script>
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 3000);
+    </script>

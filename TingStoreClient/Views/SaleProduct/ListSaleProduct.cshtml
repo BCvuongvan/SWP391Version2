@@ -3,6 +3,13 @@
     ViewData["Title"] = "ListSaleProduct";
     Layout = "/Views/Shared/_ListProduct.cshtml";
 }
+@if (TempData["SystemNotification"] != null)
+    {
+        <div id="systemNotification" class="alert alert-success m-0 p-2">
+            <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotification"]
+            </p>
+        </div>
+    }
 <div class="page-header">
     <h3 style="margin-top:20px; text-align: center;">LIST OF PRODUCTS ON SALE</h3>
     <div style="text-align: center;">
@@ -97,3 +104,11 @@
         </form>
     </div>
 </div>
+<script>
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 3000);
+    </script>
