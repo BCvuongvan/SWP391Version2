@@ -953,8 +953,16 @@
       "PackagePath": "staticwebassets\\assets\\Product_Q&A\\iPhone 14 Pro Max 256GB_Q&A.txt"
     },
     {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\Flash Sale.jpg",
+      "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\Flash Sale.jpg"
+    },
+    {
       "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\Tech new Galaxy S24.webp",
       "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\Tech new Galaxy S24.webp"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\Tech new galaxy-z-fold-5-open-screen-front.webp",
+      "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\Tech new galaxy-z-fold-5-open-screen-front.webp"
     },
     {
       "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\avatar-chill.jpg",
@@ -963,6 +971,10 @@
     {
       "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\sale.png",
       "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\sale.png"
+    },
+    {
+      "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\samsung galaxy foild5 12GB 1TB_detail2.webp",
+      "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\samsung galaxy foild5 12GB 1TB_detail2.webp"
     },
     {
       "Id": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\samsung galaxy foild5 12GB 1TB_detail3.webp",
