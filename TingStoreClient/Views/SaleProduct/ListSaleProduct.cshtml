@@ -17,158 +17,143 @@
                 <a asp-controller="SaleProduct" asp-action="CreateSaleProduct" class="btn_addnew btn btn-primary"> Add
                     new </a>
             </div>
-@if (TempData["SystemNotification"] != null)
-    {
-        <div id="systemNotification" class="alert alert-success m-0 p-2">
-            <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotification"]
-            </p>
-        </div>
-    }
-<div class="page-header">
-    <h3 style="margin-top:20px; text-align: center;">LIST OF PRODUCTS ON SALE</h3>
-    <div style="text-align: center;">
-        <a asp-controller="SaleProduct" asp-action="CreateSaleProduct" class="fancy-button"> Add a new discount product</a>
-    </div>
-</div>
-<div class="container">
-    <div class="dropdown">
-        <button class="no-border-button" type="button" data-bs-toggle="dropdown"> <i class="fa-solid fa-list "></i>
-            Sort discount values
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            @if (ViewBag.CurrentSortOrder == "asc")
+            @if (TempData["SystemNotification"] != null)
             {
-                <li><a class="dropdown-item" href="?sortOrder=asc" selected="selected">Low - high</a></li>
-                <li><a class="dropdown-item" href="?sortOrder=desc">High - low</a></li>
-            }
-            else if (ViewBag.CurrentSortOrder == "desc")
-            {
-                <li><a class="dropdown-item" href="?sortOrder=desc">Cao - thấp</a></li>
-                <li><a class="dropdown-item" href="?sortOrder=asc">High - low</a></li>
-            }
-            else
-            {
-                <li><a class="dropdown-item" href="?sortOrder=asc" selected="selected">Low - high</a></li>
-                <li><a class="dropdown-item" href="?sortOrder=desc">High - low</a></li>
-            }
-        </div>
-        <div class="container">
-            <div class="card">
-                <div class="dropdown card-header">
-                    <button class="no-border-button" type="button" data-bs-toggle="dropdown"> <i
-                            class="fa-solid fa-list "></i>
-                        Sort discount values
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        @if (ViewBag.CurrentSortOrder == "asc")
-                        {
-                            <li><a class="dropdown-item" href="?sortOrder=asc" selected="selected">Low - high</a></li>
-                            <li><a class="dropdown-item" href="?sortOrder=desc">High - low</a></li>
-                        }
-                        else if (ViewBag.CurrentSortOrder == "desc")
-                        {
-                            <li><a class="dropdown-item" href="?sortOrder=desc">High - low</a></li>
-                            <li><a class="dropdown-item" href="?sortOrder=asc">Low - high</a></li>
-                        }
-                        else
-                        {
-                            <li><a class="dropdown-item" href="?sortOrder=asc" selected="selected">Low - high</a></li>
-                            <li><a class="dropdown-item" href="?sortOrder=desc">High - low</a></li>
-                        }
-                    </div>
+                <div id="systemNotification" class="alert alert-success m-0 p-2">
+                    <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification:
+                        @TempData["SystemNotification"]
+                    </p>
                 </div>
-                <div id="order" class="card-body">
-                    <form action="" id="form-order" method="">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr class="title-col">
-                                        <td class="text-start">Product Name</td>
-                                        <td class="text-center">Product Picture</td>
-                                        <td class="text-end">Discount (%)</td>
-                                        <td class="text-end">Original price</td>
-                                        <td class="text-end">Price after drop</td>
-                                        <td class="text-start">Start Date</td>
-                                        <td class="text-start">End Date</td>
-                                        <td class="text-center"><span>Action</span></td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @{
-                                        bool hasActiveProducts = false;
-                                    }
-                                    @if (Model != null && Model.Any())
+            }
+            <div class="container">
+                <div class="dropdown">
+                    <div class="container">
+                        <div class="card">
+                            <div class="dropdown card-header">
+                                <button class="no-border-button" type="button" data-bs-toggle="dropdown"> <i
+                                        class="fa-solid fa-list "></i>
+                                    Sort discount values
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    @if (ViewBag.CurrentSortOrder == "asc")
                                     {
-                                        @foreach (var saleProduct in Model)
-                                        {
-                                            @if (saleProduct.isActive == true)
-                                            {
-                                                hasActiveProducts = true;
-                                                <tr>
-                                                    <td>@saleProduct.product.proName</td>
-                                                    <td class="text-center"><img
-                                                            src="~/assets/Product_Images/@saleProduct.product.proImage"
-                                                            style="width: 180px; height: 180px;" alt="@saleProduct.product.proName">
-                                                    </td>
-                                                    <td class="text-end">@saleProduct.discountPercentage%</td>
-                                                    <td class="text-end">@String.Format("{0:0,0VND}",
-                                                saleProduct.product.proPrice).Replace(",", ".")</td>
-                                                    <td class="text-end">@String.Format("{0:0,0VND}",
-                                                (saleProduct.product.proPrice - (saleProduct.product.proPrice *
-                                                saleProduct.discountPercentage / 100))).Replace(",", ".")</td>
-                                                    <td class="text-start">@saleProduct.startDate.ToString("MM/dd/yyyy")
-                                                    </td>
-                                                    <td class="text-start">@saleProduct.endDate.ToString("MM/dd/yyyy")</td>
-                                                    <td class="text-center">
-                                                        <div class="btn-group dropdown">
-                                                            <a class="btn" aria-label="Edit"><i class="fas fa-pencil-alt"></i></a>
-                                                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split"
-                                                                data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                                <li>
-                                                                    <h6 class="dropdown-header">Options</h6>
-                                                                </li>
-                                                                <li><a class="dropdown-item" asp-controller="SaleProduct"
-                                                                        asp-action="UpdateSaleProduct"
-                                                                        asp-route-id=@saleProduct.discountId><i
-                                                                            class="fas fa-edit"></i>
-                                                                        Edit</a></li>
-                                                                <li><a class="dropdown-item" asp-controller="SaleProduct"
-                                                                        asp-action="DeleteSaleProduct"
-                                                                        asp-route-id=@saleProduct.discountId><i
-                                                                            class="fas fa-trash-alt"></i> Delete</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </td>
+                                        <li><a class="dropdown-item" href="?sortOrder=asc" selected="selected">Low -
+                                                high</a></li>
+                                        <li><a class="dropdown-item" href="?sortOrder=desc">High - low</a></li>
+                                    }
+                                    else if (ViewBag.CurrentSortOrder == "desc")
+                                    {
+                                        <li><a class="dropdown-item" href="?sortOrder=desc">High - low</a></li>
+                                        <li><a class="dropdown-item" href="?sortOrder=asc">Low - high</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li><a class="dropdown-item" href="?sortOrder=asc" selected="selected">Low -
+                                                high</a></li>
+                                        <li><a class="dropdown-item" href="?sortOrder=desc">High - low</a></li>
+                                    }
+                                </div>
+                            </div>
+                            <div id="order" class="card-body">
+                                <form action="" id="form-order" method="">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover">
+                                            <thead>
+                                                <tr class="title-col">
+                                                    <td class="text-start">Product Name</td>
+                                                    <td class="text-center">Product Picture</td>
+                                                    <td class="text-end">Discount (%)</td>
+                                                    <td class="text-end">Original price</td>
+                                                    <td class="text-end">Price after drop</td>
+                                                    <td class="text-start">Start Date</td>
+                                                    <td class="text-start">End Date</td>
+                                                    <td class="text-center"><span>Action</span></td>
                                                 </tr>
-                                            }
-                                        }
-                                    }
-                                    @if (!hasActiveProducts)
-                                    {
-                                        <tr>
-                                            <td colspan="8" class="text-center">No results!</td>
-                                        </tr>
-                                    }
-                                </tbody>
-                            </table>
+                                            </thead>
+                                            <tbody>
+                                                @{
+                                                    bool hasActiveProducts = false;
+                                                }
+                                                @if (Model != null && Model.Any())
+                                                {
+                                                    @foreach (var saleProduct in Model)
+                                                    {
+                                                        @if (saleProduct.isActive == true)
+                                                        {
+                                                            hasActiveProducts = true;
+                                                            <tr>
+                                                                <td>@saleProduct.product.proName</td>
+                                                                <td class="text-center"><img
+                                                                        src="~/assets/Product_Images/@saleProduct.product.proImage"
+                                                                        style="width: 180px; height: 180px;"
+                                                                        alt="@saleProduct.product.proName">
+                                                                </td>
+                                                                <td class="text-end">@saleProduct.discountPercentage%</td>
+                                                                <td class="text-end">@String.Format("{0:0,0VND}",
+                                                            saleProduct.product.proPrice).Replace(",", ".")</td>
+                                                                <td class="text-end">@String.Format("{0:0,0VND}",
+                                                            (saleProduct.product.proPrice - (saleProduct.product.proPrice *
+                                                            saleProduct.discountPercentage / 100))).Replace(",", ".")</td>
+                                                                <td class="text-start">@saleProduct.startDate.ToString("MM/dd/yyyy")
+                                                                </td>
+                                                                <td class="text-start">@saleProduct.endDate.ToString("MM/dd/yyyy")
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    <div class="btn-group dropdown">
+                                                                        <a class="btn" aria-label="Edit"><i
+                                                                                class="fas fa-pencil-alt"></i></a>
+                                                                        <button type="button"
+                                                                            class="btn dropdown-toggle dropdown-toggle-split"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false"></button>
+                                                                        <ul class="dropdown-menu dropdown-menu-right">
+                                                                            <li>
+                                                                                <h6 class="dropdown-header">Options</h6>
+                                                                            </li>
+                                                                            <li><a class="dropdown-item"
+                                                                                    asp-controller="SaleProduct"
+                                                                                    asp-action="UpdateSaleProduct"
+                                                                                    asp-route-id=@saleProduct.discountId><i
+                                                                                        class="fas fa-edit"></i>
+                                                                                    Edit</a></li>
+                                                                            <li><a class="dropdown-item"
+                                                                                    asp-controller="SaleProduct"
+                                                                                    asp-action="DeleteSaleProduct"
+                                                                                    asp-route-id=@saleProduct.discountId><i
+                                                                                        class="fas fa-trash-alt"></i> Delete</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        }
+                                                    }
+                                                }
+                                                @if (!hasActiveProducts)
+                                                {
+                                                    <tr>
+                                                        <td colspan="8" class="text-center">No results!</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="text-end" style="margin-right: 10px;">
+                                        <h5>Discounted gross product: @Model.Count(p => p.isActive)</span></h5>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <div class="text-end" style="margin-right: 10px;">
-                            <h5>Discounted gross product: @Model.Count(p => p.isActive)</span></h5>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+                    </div>
 
-    </div>
+                </div>
 </body>
 </div>
 <script>
-        setTimeout(function () {
-            var systemNotification = document.getElementById('systemNotification');
-            if (systemNotification) {
-                systemNotification.style.display = 'none';
-            }
-        }, 3000);
-    </script>
+    setTimeout(function () {
+        var systemNotification = document.getElementById('systemNotification');
+        if (systemNotification) {
+            systemNotification.style.display = 'none';
+        }
+    }, 3000);
+</script>

@@ -40,133 +40,83 @@
                     class="btn btn-success" data-bs-original-title="Back" aria-label="Back"><i
                         class="fas fa-reply"></i></a>
             </div>
-<nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-    <div class="navbar-nav align-items-center ms-auto">
-        <div class="nav-item">
-            <a class="nav-link" style="margin-right: 20px;" asp-controller="SaleProduct" asp-action="ListSaleProduct">
-                <i class="fa fa-sign-out-alt"></i>
-                <span class="d-none d-lg-inline-flex">Back</span>
-            </a>
-        </div>
-    </div>
-</nav>
-@if (TempData["SystemNotification"] != null)
-    {
-        <div id="systemNotification" class="alert alert-danger">
-            <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotification"]
-            </p>
-        </div>
-    }
-<section id="product_part" class="main">
-    <div class="container">
-        <h4 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">ADD DISCOUNTED PRODUCTS</h4>
-        <div class="card-body" style="margin-bottom: 10px;">
-            <form asp-controller="SaleProduct" asp-action="CreateSaleProduct" method="post" id="productForm"
-                style="margin: 10px;" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label class="form-label">Choose a discounted product:</label>
-                    @foreach (var product in ViewBag.proList as List<TingStoreClient.Models.Product>)
-                    {
-                        <div class="form-check">
-                            <input type="checkbox" name="selectedProducts" value="@product.proId" class="form-check-input">
-                            <label class="form-check-label">@product.proName</label>
-                        </div>
-                    }
-                </div>
 
-                <div class="form-group">
-                    <label class="form-label">Discount Value (Value Flash Sale is greater than or equal to 40%):</label>
-                    <input type="text" asp-for="discountPercentage" class="form-control large-input">
-                    <span asp-validation-for="discountPercentage" class="text-danger"></span>
+            @if (TempData["SystemNotification"] != null)
+            {
+                <div id="systemNotification" class="alert alert-danger">
+                    <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification:
+                        @TempData["SystemNotification"]
+                    </p>
                 </div>
-                <div class="form-group">
-                    <label class="form-label">Start Date </label>
-                    <input type="datetime-local" asp-for="startDate" class="form-control large-input">
-                    <span asp-validation-for="startDate" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">End Date </label>
-                    <input type="datetime-local" asp-for="endDate" class="form-control large-input">
-                    <span asp-validation-for="endDate" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="discountImage" class="form-label">Discount product photo: </label>
-                    <div class="custom-file">
-                        <input type="file" name="proImageFile" class="form-control large-input">
-                    </div>
-                    <span asp-validation-for="discountImage" class="text-danger"></span>
-                </div>
+            }
+            <section id="product_part" class="main">
+                <div class="container">
+                    <section id="product_part" class="main">
+                        <div class="container">
+                            <div class="card" style="margin-bottom: 10px;">
+                                <form asp-controller="SaleProduct" asp-action="CreateSaleProduct" method="post"
+                                    id="productForm" enctype="multipart/form-data" style="padding: 10px;">
+                                    <div class="form-group">
+                                        <label class="form-label">Choose a discounted product:</label>
+                                        @foreach (var product in ViewBag.proList as
+                                        List<TingStoreClient.Models.Product>)
+                                        {
+                                            <div class="form-check">
+                                                <input type="checkbox" name="selectedProducts" value="@product.proId"
+                                                    class="form-check-input">
+                                                <label class="form-check-label">@product.proName</label>
+                                            </div>
+                                        }
+                                    </div>
 
-                <div class="button-container" style="text-align: center;">
-                    <button type="submit" style="font-size: 18px; padding: 10px 20px;"
-                        class="fancy-button">Create</button>
-                </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Discount Value:</label>
+                                        <input type="text" asp-for="discountPercentage"
+                                            class="form-control large-input">
+                                        <span asp-validation-for="discountPercentage" class="error text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Start Date </label>
+                                        <input type="datetime-local" asp-for="startDate"
+                                            class="form-control large-input">
+                                        <span asp-validation-for="startDate" class="error text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">End Date </label>
+                                        <input type="datetime-local" asp-for="endDate" class="form-control large-input">
+                                        <span asp-validation-for="endDate" class=" error text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="discountImage" class="form-label">Discount product photo:
+                                        </label>
+                                        <div class="custom-file">
+                                            <input type="file" name="proImageFile" class="form-control large-input">
+                                        </div>
+                                        <span asp-validation-for="discountImage" class="error text-danger"></span>
+                                    </div>
 
-            </form>
+                                    <div class="button" style="text-align: end;">
+                                        <button type="submit" class="btn btn-primary">Create</button>
+                                    </div>
 
-        </div>
-        <section id="product_part" class="main">
-            <div class="container">
-                <div class="card" style="margin-bottom: 10px;">
-                    <form asp-controller="SaleProduct" asp-action="CreateSaleProduct" method="post" id="productForm"
-                        enctype="multipart/form-data" style="padding: 10px;">
-                        <div class="form-group">
-                            <label class="form-label">Choose a discounted product:</label>
-                            @foreach (var product in ViewBag.proList as List<TingStoreClient.Models.Product>)
-                            {
-                                <div class="form-check">
-                                    <input type="checkbox" name="selectedProducts" value="@product.proId"
-                                        class="form-check-input">
-                                    <label class="form-check-label">@product.proName</label>
-                                </div>
-                            }
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Discount Value:</label>
-                            <input type="text" asp-for="discountPercentage" class="form-control large-input">
-                            <span asp-validation-for="discountPercentage" class="error text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Start Date </label>
-                            <input type="datetime-local" asp-for="startDate" class="form-control large-input">
-                            <span asp-validation-for="startDate" class="error text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">End Date </label>
-                            <input type="datetime-local" asp-for="endDate" class="form-control large-input">
-                            <span asp-validation-for="endDate" class=" error text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="discountImage" class="form-label">Discount product photo: </label>
-                            <div class="custom-file">
-                                <input type="file" name="proImageFile" class="form-control large-input">
+                                </form>
                             </div>
-                            <span asp-validation-for="discountImage" class="error text-danger"></span>
                         </div>
-
-                        <div class="button" style="text-align: end;">
-                            <button type="submit" class="btn btn-primary">Create</button>
-                        </div>
-
-                    </form>
+                    </section>
                 </div>
-            </div>
-        </section>
-    </div>
-</section>
+            </section>
 </body>
 @section Scripts {
-        @{
-            <partial name="_ValidationScriptsPartial" />
-        }
+    @{
+        <partial name="_ValidationScriptsPartial" />
     }
+}
 
-    <script>
-        setTimeout(function () {
-            var systemNotification = document.getElementById('systemNotification');
-            if (systemNotification) {
-                systemNotification.style.display = 'none';
-            }
-        }, 3000);
-    </script>
+<script>
+    setTimeout(function () {
+        var systemNotification = document.getElementById('systemNotification');
+        if (systemNotification) {
+            systemNotification.style.display = 'none';
+        }
+    }, 3000);
+</script>
