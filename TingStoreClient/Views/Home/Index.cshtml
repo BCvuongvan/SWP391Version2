@@ -76,9 +76,9 @@ Titanium has one of the best strength-to-weight ratios of any metal, making thes
                     <h2><strong class="name_box_title">PROMOTION AVAILABLE ONLY ONLINE</strong></h2>
                 </div>
                 <div class="discount_payonl">
-                    @if(ViewBag.discountproductList != null && ViewBag.discountproductList.Count > 0){
+                    @if(ViewBag.imageFlashSale != null && ViewBag.imageFlashSale > 0){
                     <div class="home_slider">
-                        @foreach(var disImage in ViewBag.discountproductList){
+                        @foreach(var disImage in ViewBag.imageFlashSale){
                             @if(disImage.isActive == true){
                         <a href=""><img src="~/assets/SaleProduct_Images/@disImage.discountImage" alt="discount"></a>
                                 }

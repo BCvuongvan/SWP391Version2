@@ -16,6 +16,13 @@
         </div>
     </div>
 </nav>
+@if (TempData["SystemNotification"] != null)
+    {
+        <div id="systemNotification" class="alert alert-success m-0 p-2">
+            <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotification"]
+            </p>
+        </div>
+    }
 <div class="card" style="margin-top: -10px;" enctype="multipart/form-data">
     <div class="container-fliud">
         <div class="wrapper row">
@@ -160,3 +167,11 @@
 
 </div>
 </div>
+<script>
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 3000);
+    </script>

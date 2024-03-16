@@ -20,6 +20,7 @@
                 <div class="card">
                     <form asp-controller="TechNew" asp-action="Delete" method="post" style="margin: 10px;"
                         enctype="multipart/form-data">
+                        <input type="hidden" name="NewsId" value="@ViewBag.NewsId" />
                         <div class="form-group">
                             <label class="form-label">Technology News Headlines: </label>
                             <input name="title" class="form-control large-input" value="@ViewBag.TitleTechNew"
@@ -30,9 +31,6 @@
                             <img src="@Url.Content($"~/assets/TechNews/{@ViewBag.NewsId}/image.jpg")" alt="News Image"
                                 readonly>
                             <br> <br>
-                            <label>New image:</label>
-                            <input type="file" class="form-control" id="newImageTechNew" name="newImageTechNew"
-                                class="form-control large-input" readonly>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Technology News Link: </label>
