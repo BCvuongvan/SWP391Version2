@@ -8,128 +8,132 @@
 }
 <style>
     .card.item-product {
-    height: 430px; /* Ví dụ cố định chiều cao */
-    width: 250px; /* Ví dụ cố định chiều rộng */
-}
-
-
+        height: 430px;
+        width: 250px;
+    }
 </style>
 <section id="product_part" class="main">
-<div class="container">
-    <div class="card">
-        <div class="container-fliud">
-            <div class="wrapper row">
-                <div class="preview col-md-6">
-                    <div class="preview-pic tab-content">
-                        <div class="tab-pane active" id="pic-1">
-                            <img src="~/assets/Product_Images/@Model.proImage" style="width: 2000px; height: 500px;"
-                                alt="@Model.proName">
-                        </div>
-                        @for (int i = 0; i < productImagesList.Count; i++)
-                        {
-                            var subPicture = productImagesList[i];
-                            var panId = $"pic-{i + 2}";
-                            <div class="tab-pane" id="@panId">
-                                <img src="~/assets/Product_Images/@subPicture.imageUrl"
-                                    style="width: 2000px; height: 500px;" alt="@Model.proName">
+    <div class="container">
+        <div class="card">
+            <div class="container-fliud">
+                <div class="wrapper row">
+                    <div class="preview col-md-6">
+                        <div class="preview-pic tab-content">
+                            <div class="tab-pane active" id="pic-1">
+                                <img src="~/assets/Product_Images/@Model.proImage" style="width: 2000px; height: 500px;"
+                                    alt="@Model.proName">
                             </div>
-                        }
-
-                    </div>
-
-                    <ul class="preview-thumbnail nav nav-tabs">
-                    <li class="active"><a data-target="#pic-1" data-toggle="tab"><img
-                                src="~/assets/Product_Images/@Model.proImage" alt="@Model.proName" ></a>
-                    </li>
-
-                    @for (int i = 0; i < productImagesList.Count; i++)
-                    {
-                        var subPicture = productImagesList[i];
-                        var targetId = $"pic-{i + 2}";
-
-                       @if(@subPicture.imageStatus == true){
-                        <li class="image-container">
-                            <a data-target="#@targetId" data-toggle="tab">
-                                <img src="~/assets/Product_Images/@subPicture.imageUrl" alt="@Model.proName"
-                                    class="img-thumbnail" >
-                            </a>
-                        </li>
-                        }
-                    }
-                </ul>
-                </div>
-                <div class="details col-md-6">
-                    <h3 class="product-title">@Model.proName</h3>
-                    <div class="rating">
-                        <div class="stars">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                        </div>
-                        <span class="review-no">31 reviews</span>
-                    </div>
-                    <p class="product-description">@Model.proDescription</p>
-                    <h4 class="price"><span>@String.Format("{0:0,0VND}", Model.proPrice).Replace(",", ".")</span></h4>
-                    <p class="vote"><strong>91%</strong> người mua rất thích sản phẩm này! <strong>(87
-                            votes)</strong>
-                    </p>
-                    <div class="box_info">
-                        <div class="box_title">
-                            <p>Product Information</p>
-                        </div>
-                        <div class="box_content">
-                            <div class="item_info d-flex">
-                                <div class="icon"><i class="fa fa-mobile"></i></div>
-                                <div class="description">
-                                    @ViewBag.ProductInfo
+                            @for (int i = 0; i < productImagesList.Count; i++)
+                            {
+                                var subPicture = productImagesList[i];
+                                var panId = $"pic-{i + 2}";
+                                <div class="tab-pane" id="@panId">
+                                    <img src="~/assets/Product_Images/@subPicture.imageUrl"
+                                        style="width: 2000px; height: 500px;" alt="@Model.proName">
                                 </div>
+                            }
 
+                        </div>
+
+                        <ul class="preview-thumbnail nav nav-tabs">
+                            <li class="active"><a data-target="#pic-1" data-toggle="tab"><img
+                                        src="~/assets/Product_Images/@Model.proImage" alt="@Model.proName"></a>
+                            </li>
+
+                            @for (int i = 0; i < productImagesList.Count; i++)
+                            {
+                                var subPicture = productImagesList[i];
+                                var targetId = $"pic-{i + 2}";
+
+                                @if (@subPicture.imageStatus == true)
+                                {
+                                    <li class="image-container">
+                                        <a data-target="#@targetId" data-toggle="tab">
+                                            <img src="~/assets/Product_Images/@subPicture.imageUrl" alt="@Model.proName"
+                                                class="img-thumbnail">
+                                        </a>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                    <div class="details col-md-6">
+                        <h3 class="product-title">@Model.proName</h3>
+                        <div class="rating">
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                            <span class="review-no">31 reviews</span>
+                        </div>
+                        <p class="product-description">@Model.proDescription</p>
+                        <h4 class="price"><span>@String.Format("{0:0,0VND}", Model.proPrice).Replace(",", ".")</span>
+                        </h4>
+                        <p class="vote"><strong>91%</strong> Buyers really like this product! <strong>(87
+                                votes)</strong>
+                        </p>
+                        <div class="box_info">
+                            <div class="box_title">
+                                <p>Product Information</p>
+                            </div>
+                            <div class="box_content">
+                                <div class="item_info d-flex">
+                                    <div class="icon"><i class="fa fa-mobile"></i></div>
+                                    <div class="description">
+                                        @ViewBag.ProductInfo
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="action">
-                        <a asp-controller="CartManager" asp-action="AddToCart" asp-route-id="@Model.proId">Thêm vào giỏ hàng</a>
+                        <div class="action">
+                            <a asp-controller="CartManager" asp-action="AddToCart" asp-route-id="@Model.proId"
+                                class="btn btn-primary"
+                                style="margin-top: 200px; margin-left: 200px; width: 120px; font-size: 20px;">Add to
+                                cart</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="block_content_product">
-        <div class="col-md-8 block_content_product_left" style="marrgin-right: 20px;">
-            <h2 class="text-center">DISTINCTIVE FEATURES</h2>
-            <div class="ul">
-                @ViewBag.HighlightFeatures
+        <div class="block_content_product">
+            <div class="col-md-8 block_content_product_left" style="marrgin-right: 20px;">
+                <h2 class="text-center">DISTINCTIVE FEATURES</h2>
+                <div class="ul">
+                    @ViewBag.HighlightFeatures
+                </div>
             </div>
-        </div>
-    <div class="col-md-4 block_content_product_right">
-    <p class="title">Specifications</p>
-    @if (!string.IsNullOrEmpty(ViewBag.TechnicalSpecs))
-    {
-        <table class="table">
-            <tbody>
-            @{
-                var lines = ViewBag.TechnicalSpecs.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
-                foreach (var line in lines)
+            <div class="col-md-4 block_content_product_right">
+                <p class="title">Specifications</p>
+                @if (!string.IsNullOrEmpty(ViewBag.TechnicalSpecs))
                 {
-                    var parts = line.Split(new string[] { ": " }, 2, StringSplitOptions.RemoveEmptyEntries);
-                    if (parts.Length == 2)
-                    {
-                        <tr>
-                            <th>@parts[0]</th>
-                            <td>@parts[1]</td>
-                        </tr>
-                    }
+                    <table class="table">
+                        <tbody>
+                            @{
+                                var lines = ViewBag.TechnicalSpecs.Split(new string[] { "\n" },
+                                StringSplitOptions.RemoveEmptyEntries);
+                                foreach (var line in lines)
+                                {
+                                    var parts = line.Split(new string[] { ": " }, 2, StringSplitOptions.RemoveEmptyEntries);
+                                    if (parts.Length == 2)
+                                    {
+                                        <tr>
+                                            <th>@parts[0]</th>
+                                            <td>@parts[1]</td>
+                                        </tr>
+                                    }
+                                }
+                            }
+                        </tbody>
+                    </table>
                 }
-            }
-            </tbody>
-        </table>
-    }
-</div>
+            </div>
 
+        </div>
     </div>
-</div>
 </section>
 <section id="product_part testimonial_part" class="main">
     <div class="container">
@@ -137,66 +141,71 @@
     color: #dd1414; margin-bottom: 20px;">FREQUENTLY ASKED QUESTIONS</h2>
         <div class="row bg-light ">
             <div id="qa-section">
-    @{
-        if (ViewBag.QuestionAndAnswer != null)
-        {
-            var qas = ViewBag.QuestionAndAnswer.ToString().Split(new string[] { "\r\n\r\n", "\n\n" }, StringSplitOptions.RemoveEmptyEntries);
-            int qNum = 1;
-            foreach (var qa in qas)
-            {
-                var parts = qa.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
-                if (parts.Length >= 2)
-                {
-                    <div class="question" onclick="toggleAnswer('answer@(qNum)')">@(parts[0].Replace("Q: ", ""))</div>
-                    <div class="answer" id="answer@(qNum)" style="display:none;">@(parts[1].Replace("A: ", ""))</div>
+                @{
+                    if (ViewBag.QuestionAndAnswer != null)
+                    {
+                        var qas = ViewBag.QuestionAndAnswer.ToString().Split(new string[] { "\r\n\r\n", "\n\n" },
+                        StringSplitOptions.RemoveEmptyEntries);
+                        int qNum = 1;
+                        foreach (var qa in qas)
+                        {
+                            var parts = qa.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+                            if (parts.Length >= 2)
+                            {
+                                <div class="question" onclick="toggleAnswer('answer@(qNum)')">@(parts[0].Replace("Q: ", ""))</div>
+                                <div class="answer" id="answer@(qNum)" style="display:none;">@(parts[1].Replace("A: ", ""))</div>
+                            }
+                            qNum++;
+                        }
+                    }
                 }
-                qNum++;
-            }
-        }
-    }
-</div>
             </div>
+        </div>
     </div>
 </section>
 
 <section id="product_part testimonial_part" class="main">
     <div class="container">
         <h2 class="text-center" style="font-size: 28px;font-family: 'Arial', sans-serif; font-weight: bold; 
-    color: #333; margin-bottom: 20px;">Sản phẩm tương tự</h2>
+    color: #333; margin-bottom: 20px;">Similar product</h2>
         <div class="row bg-light ">
             <div class="clent">
-                
-                @foreach (var product in  ViewBag.SimilarProducts as List<Product>)
+
+                @foreach (var product in ViewBag.SimilarProducts as List<Product>)
                 {
                     var originalPrice = product.proPrice;
-                    var discountProduct = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now).FirstOrDefault();
+                    var discountProduct = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >=
+                    DateTime.Now).FirstOrDefault();
                     var discountedPrice = originalPrice;
                     if (discountProduct != null)
-                {
-                    var discount = originalPrice * discountProduct.discountPercentage / 100;
-                    discountedPrice -= discount;
-                }
+                    {
+                        var discount = originalPrice * discountProduct.discountPercentage / 100;
+                        discountedPrice -= discount;
+                    }
                     @if (product.proStatus == true)
                     {
                         <div class="col-md-3 col-sm-6 col-xs-6 wow card_box" style="margin-top: -180px;">
                             <div class="card item-product text-center">
                                 <div class="image">
                                     <a asp-controller="Home" asp-action="ManagementProductDetail" asp-route-id=@product.proId>
-                                        <img src="~/assets/Product_Images/@product.proImage"
-    style="width: 300px !important; height: 200px !important;" alt="@product.proName">
+                                        <img src="~/assets/Product_Images/@product.proImage" style="width: 100%;" alt="
+                                        @product.proName">
 
                                     </a>
                                     <h4>@product.proName</h4>
                                 </div>
-                                <div class="price-c" >
+                                <div class="price-c">
                                     <p class="price">
-                                        @if(discountProduct != null){
+                                        @if (discountProduct != null)
+                                        {
                                             <s class="giacu">@String.Format("{0:0,0VND}", originalPrice).Replace(",", ".")</s>
-                                            }
-                                        <br><span class="giamoi">@String.Format("{0:0,0VND}", discountedPrice).Replace(",", ".")</span>
+                                        }
+                                        <br><span class="giamoi" style="border: none;">@String.Format("{0:0,0VND}",
+                                    discountedPrice).Replace(",", ".")</span>
                                     </p>
                                 </div>
-                                <a asp-controller="CartManager" asp-action="AddToCart" asp-route-id="@product.proId">Thêm vào giỏ hàng</a>
+                                <a asp-controller="CartManager" asp-action="AddToCart" asp-route-id="@product.proId"
+                                    class="btn btn-danger">Add to cart</a>
                                 <div class="star_rate">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -205,42 +214,46 @@
                                     <span class="fa fa-star checked"></span>
                                 </div>
                                 @{
-                                    var discountPrice = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now && dc.endDate >= DateTime.Now && dc.isActive == true).FirstOrDefault();
-                                    if(discountPrice != null){
-                                    <div class="install-0-tag">
-                                        <span> Giảm @discountPrice.discountPercentage % </span>
-                                    </div>
+                                    var discountPrice = product.discountPercents.Where(dc => dc.startDate <= DateTime.Now &&
+                                    dc.endDate >= DateTime.Now && dc.isActive == true).FirstOrDefault();
+                                    if (discountPrice != null)
+                                    {
+                                        <div class="install-0-tag">
+                                            <span> Giảm @discountPrice.discountPercentage % </span>
+                                        </div>
                                     }
                                 }
                             </div>
                         </div>
                     }
                 }
+            </div>
         </div>
-    </div>
 </section>
 <section id="product_ratings_reviews" class="main" style="padding-top: 20px;">
     <div class="container">
         <h2 class="text-center" style="font-size: 28px;font-family: 'Arial', sans-serif; font-weight: bold; 
-    color: #333; margin-bottom: 20px;">Đánh Giá & Nhận Xét @Model.proName</h2>
+                            color: #333; margin-bottom: 20px;">Ratings & Reviews @Model.proName</h2>
         <div class="row">
             <div class="col-md-6">
-                <h4>Tổng số đánh giá</h4>
-                <p>@ViewBag.Feedback.Count đánh giá</p> 
+                <h4>Total number of reviews</h4>
+                <p>@ViewBag.Feedback.Count reviews</p>
             </div>
             <div class="col-md-6">
-                <h4>Đánh giá chi tiết</h4>
+                <h4>Detailed review</h4>
                 <ul class="ratings-detail">
                     @for (int star = 5; star >= 1; star--)
                     {
                         <li class="rating-line">
                             <span class="star-rating">Sao @star: </span>
                             <div class="rating-bar">
-                                <div class="rating-fill" style="width: @(((double)ViewBag.StartCounts[star]/ViewBag.Feedback.Count * 100).ToString("0.00"))%"> <!-- Giả sử thuộc tính data-rating-percent chứa tỷ lệ phần trăm đánh giá -->
+                                <div class="rating-fill"
+                                    style="width: @(((double)ViewBag.StartCounts[star]/ViewBag.Feedback.Count * 100).ToString("0.00"))%">
+                                    <!-- Giả sử thuộc tính data-rating-percent chứa tỷ lệ phần trăm đánh giá -->
                                 </div>
                             </div>
 
-                            <span class="rating-count">@ViewBag.StartCounts[star]</span> 
+                            <span class="rating-count">@ViewBag.StartCounts[star]</span>
                         </li>
                     }
                 </ul>
@@ -252,39 +265,43 @@
     <div class="container">
         <h2 class="text-center" style="margin-bottom: 20px;"> Reviews</h2>
         <div class="row">
-        @if(ViewBag.Feedback != null && ViewBag.Feedback.Count > 0){
-             @foreach (var feedback in ViewBag.Feedback)
-            { 
-                <div class="col-md-12 comment">
-                    <div class="comment-user-img">
-                        <img src="~/assets/User_Picture/@feedback.UserImage" style="width: 70px !important; height: 70px !important;">
-                    </div>
-                    <div class="comment-content">
-                        <h5> @feedback.UserName</h5>
-                        <div class="rating">
-                             @for (int i = 0; i < feedback.Rating; i++)
-                            { 
-                                <span class="fa fa-star checked"></span>
-                             }
-                            @for (int i = 0; i < (5 - feedback.Rating); i++)
-                            { 
-                                <span class="fa fa-star"></span>
-                            } 
+            @if (ViewBag.Feedback != null && ViewBag.Feedback.Count > 0)
+            {
+                @foreach (var feedback in ViewBag.Feedback)
+                {
+                    <div class="col-md-12 comment">
+                        <div class="comment-user-img">
+                            <img src="~/assets/User_Picture/@feedback.UserImage"
+                                style="width: 70px !important; height: 70px !important;">
                         </div>
-                        <p> @feedback.Comment</p>
+                        <div class="comment-content">
+                            <h5> @feedback.UserName</h5>
+                            <div class="rating">
+                                @for (int i = 0; i < feedback.Rating; i++)
+                                {
+                                    <span class="fa fa-star checked"></span>
+                                }
+                                @for (int i = 0; i < (5 - feedback.Rating); i++)
+                                {
+                                    <span class="fa fa-star"></span>
+                                }
+                            </div>
+                            <p> @feedback.Comment</p>
+                        </div>
                     </div>
+                }
+            }
+            else
+            {
+                <div style="text-align: center;">
+                    <img src="~/Mobile_shop/images/No comment.png"
+                        style="width: 300px !important; height: 300px !important;">
                 </div>
-            } 
-        }
-        else {
-            <div style="text-align: center;">
-            <img src="~/Mobile_shop/images/No comment.png" style="width: 300px !important; height: 300px !important;">
-            </div>
-            <div style="text-align: center;">Hiện chưa có đánh giá nào</div>
+                <div style="text-align: center;">There are currently no reviews!</div>
             }
         </div>
     </div>
 </section>
 <section id="product_comments" class="main">
     <div class="container">
-<div>
+        <div>

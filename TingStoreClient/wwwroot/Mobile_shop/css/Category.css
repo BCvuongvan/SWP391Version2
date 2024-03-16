@@ -24,12 +24,12 @@
     }
 }
 
-.title-col td {
+.title-col th {
     color: #1e91cf;
     font-weight: 500;
 }
 
-.title-col td:hover {
+.title-col th:hover {
     color: #1874a6;
 }
 
@@ -59,4 +59,13 @@
     color: #fff;
     background-color: rgba(234, 9, 9, 0.813);
     border-color: #f81904;
+}
+
+
+.error {
+    color: red;
+    font-weight: normal;
+    font-size: 15px;
+    font-style: italic;
+    margin-left: 13px;
 }

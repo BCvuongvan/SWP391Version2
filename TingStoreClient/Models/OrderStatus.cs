@@ -13,7 +13,7 @@ namespace TingStoreClient.Models
         [DisplayName("Status ID")]
         public int orderStatusId { get; set; }
 
-        [Required(ErrorMessage = ("Please enter status name!"))]
+        [Required(ErrorMessage = "Please enter status name!")]
         [DisplayName("Status Name")]
         [MaxLength(100)]
         public String statusName { get; set; }

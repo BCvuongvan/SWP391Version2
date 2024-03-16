@@ -12,6 +12,14 @@
         <!-- Selection Right Start -->
         <div class="container container-box mt-5">
             <div class="page-header">
+                @if (TempData["SystemNotificationCancel"] != null)
+                {
+                    <div id="systemNotification" class="alert alert-success">
+                        <p class="text-dark">Notification:
+                            @TempData["SystemNotificationCancel"]
+                        </p>
+                    </div>
+                }
                 <h1></i>Your Orders Detail</h1>
                 <div class="float-end" style="margin-top: -50px;">
                     <a asp-controller="CustomerProfile" asp-action="CustomerProfile" data-bs-toggle="tooltip" title
@@ -57,7 +65,6 @@
                                         <td class="text-right">@item.quantity</td>
                                         <td class="text-right"><span>@String.Format("{0:0,0VND}", @item.product.proPrice
                                             ).Replace(",", ".")</span></td>
-                                        @* <td class="text-end">@item.subTotal</td> *@
                                         <td class="text-right"><span>@String.Format("{0:0,0VND}", @item.subTotal
                                             ).Replace(",", ".")</span></td>
                                     </tr>
@@ -104,3 +111,15 @@
         </div>
     </div>
 </body>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 5000);
+    </script>
+}

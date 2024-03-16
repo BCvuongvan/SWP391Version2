@@ -45,28 +45,26 @@
                                         <!--<p>Please login to your account</p>-->
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="username">User name *</label>
-                                            <input required="enter" type="text" id="username" name="username"
-                                                class="form-control" placeholder="Enter your user name" />
+                                            <input type="text" id="username" name="username" class="form-control"
+                                                placeholder="Enter your user name" />
                                             <span id="phoneError"></span>
                                         </div>
 
                                         <div class="form-outline mb-1">
                                             <label class="form-label" for="password">Password *</label>
 
-                                            <input required="enter" type="password" id="password" name="password"
-                                                class="form-control" placeholder="Enter your password" />
+                                            <input type="password" id="password" name="password" class="form-control"
+                                                placeholder="Enter your password" />
                                             <span id="passError"></span>
                                         </div>
                                         <a class="forgot" asp-action="ForgotPassword">Forgot Password?</a>
-
-                                        @if (ViewBag.errorMessage != null)
-                                        {
-                                            <p>@ViewBag.errorMessage</p>
-
-                                        }
                                         <div class="btn_box text-center">
                                             <button class="btn text-white btn-block fa-lg gradient-custom-2 mb-1"
                                                 type="submit">Log in</button>
+                                            @if (ViewBag.errorMessage != null)
+                                            {
+                                                <p style="color: red; font-style: italic;">@ViewBag.errorMessage</p>
+                                            }
                                         </div>
                                         <p style="color: red;" id="errorMessage" class="error-message text-center"
                                             name="error"></p>

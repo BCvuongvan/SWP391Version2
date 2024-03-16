@@ -6,16 +6,16 @@
 @{
     var productImagesList = Model.productImages.ToList();
 }
-<nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-    <div class="navbar-nav align-items-center ms-auto">
-        <div class="nav-item">
-            <a class="nav-link" style="margin-right: 20px;" asp-controller="Product" asp-action="ListProduct">
-                <i class="fa fa-sign-out-alt"></i>
-                <span class="d-none d-lg-inline-flex">Back</span>
-            </a>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>Product Details</h1>
+            <div class="float-end" style="margin-top: -50px;">
+                <a asp-controller="Product" asp-action="ListProduct" data-bs-toggle="tooltip" title
+                    class="btn btn-success" data-bs-original-title="Back" aria-label="Back"><i
+                        class="fas fa-reply"></i></a>
+            </div>
         </div>
-    </div>
-</nav>
 <div class="card" style="margin-top: -10px;" enctype="multipart/form-data">
     <div class="container-fliud">
         <div class="wrapper row">
@@ -34,10 +34,7 @@
                                 alt="@Model.proName">
                         </div>
                     }
-
                 </div>
-
-
                 <ul class="preview-thumbnail nav nav-tabs">
                     <li class="active"><a data-target="#pic-1" data-toggle="tab"><img
                                 src="~/assets/Product_Images/@Model.proImage" alt="@Model.proName"
@@ -81,7 +78,7 @@
             <div class="details col-md-6">
                 <h3 class="product-title">@Model.proName</h3>
                 <div class="rating">
-                    <div class="stars">
+                    <div class="stars" style="color: #f59e0b;>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -92,7 +89,7 @@
                 </div>
                 <p class="product-description">@Model.proDescription</p>
                 <h4 class="price"><span>@String.Format("{0:0,0VND}", Model.proPrice).Replace(",", ".")</span></h4>
-                <p class="vote"><strong>91%</strong> người mua rất thích sản phẩm này! <strong>(87
+                <p class="vote"><strong>91%</strong> Buyers really like this product! <strong>(87
                         votes)</strong>
                 </p>
                 <div class="box_info">
@@ -160,3 +157,5 @@
 
 </div>
 </div>
+    </div>
+</body>

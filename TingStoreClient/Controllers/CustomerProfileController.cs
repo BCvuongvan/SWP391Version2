@@ -154,9 +154,35 @@ namespace TingStoreClient.Controllers
             HttpResponseMessage response = await client.GetAsync(customerOrderApi + "/CancelOrder/" + id);
             if (response.IsSuccessStatusCode)
             {
-                return RedirectToAction("CustomerProfile");
+                TempData["SystemNotificationCancel"] = "You have successfully canceled the order!";
+                return RedirectToAction("OrderDetailByCustomer", new { id = id });
             }
-            return RedirectToAction("Index", "Home");
+            TempData["SystemNotificationCancel"] = "Failed to cancel the order. Please try again later.";
+            return RedirectToAction("OrderDetailByCustomer", new { id = id });
         }
+        // public async Task<IActionResult> CustomerCancelOrder(int id)
+        // {
+        //     HttpResponseMessage response = await client.GetAsync(customerOrderApi + "/CancelOrder/" + id);
+        //     if (response.IsSuccessStatusCode)
+        //     {
+        //         TempData["SystemNotificationCancel"] = "You have successfully canceled the order!";
+        //     }
+        //     else
+        //     {
+        //         var responseContent = await response.Content.ReadAsStringAsync();
+
+        //         // Cố gắng lấy thông điệp lỗi từ phản hồi, nếu có
+        //         var errorMessage = "Failed to cancel the order. Please try again later.";
+        //         if (!string.IsNullOrEmpty(responseContent))
+        //         {
+        //             // Giả sử phản hồi là một chuỗi văn bản đơn giản. Trong thực tế, bạn có thể cần phân tích cú pháp JSON hoặc định dạng khác
+        //             errorMessage = responseContent;
+        //         }
+
+        //         TempData["SystemNotificationCancel"] = errorMessage;
+        //     }
+        //     return RedirectToAction("OrderDetailByCustomer", new { id = id });
+        // }
+
     }
 }

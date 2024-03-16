@@ -1,7 +1,6 @@
 @model DiscountPercent
 @{
     ViewData["Title"] = "DeleteSaleProduct";
-    Layout = "/Views/Shared/_ManagementProduct.cshtml";
 }
 @if (ViewBag.ErrorMessage != null)
 {
@@ -9,61 +8,97 @@
         @ViewBag.ErrorMessage
     </div>
 }
-<nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-    <div class="navbar-nav align-items-center ms-auto">
-        <div class="nav-item">
-            <a class="nav-link" style="margin-right: 20px;" asp-controller="Product" asp-action="ListProduct">
-                <i class="fa fa-sign-out-alt"></i>
-                <span class="d-none d-lg-inline-flex">Back</span>
-            </a>
-        </div>
-    </div>
-</nav>
-<section id="product_part" class="main">
+
+<body>
+    <style>
+        .page-header {
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-left: 15px;
+        }
+
+        #product_part {
+            margin-bottom: 10px;
+        }
+
+        .card {
+            padding: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: 500;
+        }
+
+        .form-group .form-label {
+            margin: 0;
+        }
+
+        .error {
+            color: red;
+            font-size: 15px;
+            font-style: italic;
+        }
+    </style>
     <div class="container">
-        <h2 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">REMOVE DISCOUNT PRODUCTS</h2>
-        <div class="card-body" style="margin-bottom: 10px;">
-            <form asp-controller="SaleProduct" asp-action="Delete" method="post" style="margin: 10px;"
-                enctype="multipart/form-data">
-                <div hidden>
-                    <input type="text" asp-for="discountId" class="form-control">
-                </div>
-                <div hidden>
-                    <input type="text" asp-for="proId" class="form-control">
-                </div>
-                <div>
-                    <label class="form-label">Product Name: </label>
-                    <input type="text" class="form-control large-input" value="@Model.product.proName" disabled>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Product Picture: </label> </br>
-                    <img src="~/assets/Product_Images/@Model.product.proImage" style="width: 180px; height: 180px;" />
-                </div>
-                <div class="form-group">
-                    <label asp-for="discountPercentage" class="form-label">Discounted Price: </label>
-                    <input type="text" asp-for="discountPercentage" class="form-control large-input" disabled>
-                    <span asp-validation-for="discountPercentage" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="startDate" class="form-label">Start Date: </label>
-                    <input type="text" asp-for="startDate" class="form-control large-input" disabled>
-                    <span asp-validation-for="startDate" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="endDate" class="form-label">End Date: </label>
-                    <input type="text" asp-for="endDate" class="form-control large-input" disabled>
-                    <span asp-validation-for="endDate" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="discountImage" class="form-label">Discount Picture:</label> <br>
-                    <img src="~/assets/Product_Images/@Model.discountImage" style="width: 200px; height: 200px;"
-                        alt="@Model.discountId"><br> <br>
-                </div>
-                <div class="button-container" style="text-align: center;">
-                    <button type="submit" style="font-size: 18px; padding: 10px 20px;"
-                        class="fancy-button">Delete</button>
-                </div>
-            </form>
+        <div class="page-header">
+            <h1>Remove discounted products</h1>
+            <div class="float-end" style="margin-top: -50px;">
+                <a asp-controller="SaleProduct" asp-action="ListSaleProduct" data-bs-toggle="tooltip" title
+                    class="btn btn-success" data-bs-original-title="Back" aria-label="Back"><i
+                        class="fas fa-reply"></i></a>
+            </div>
         </div>
+        <section id="product_part" class="main">
+            <div class="container">
+                <div class="card">
+                    <form asp-controller="SaleProduct" asp-action="Delete" method="post" enctype="multipart/form-data">
+                        <div hidden>
+                            <input type="text" asp-for="discountId" class="form-control">
+                        </div>
+                        <div hidden>
+                            <input type="text" asp-for="proId" class="form-control">
+                        </div>
+                        <div>
+                            <label class="form-label">Product Name: </label>
+                            <input type="text" class="form-control large-input" value="@Model.product.proName" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Product Picture: </label> </br>
+                            <img src="~/assets/Product_Images/@Model.product.proImage"
+                                style="width: 180px; height: 180px;" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="discountPercentage" class="form-label">Discounted Price: </label>
+                            <input type="text" asp-for="discountPercentage" class="form-control large-input" disabled>
+                            <span asp-validation-for="discountPercentage" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="startDate" class="form-label">Start Date: </label>
+                            <input type="text" asp-for="startDate" class="form-control large-input" disabled>
+                            <span asp-validation-for="startDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="endDate" class="form-label">End Date: </label>
+                            <input type="text" asp-for="endDate" class="form-control large-input" disabled>
+                            <span asp-validation-for="endDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="discountImage" class="form-label">Discount Picture:</label> <br>
+                            <img src="~/assets/Product_Images/@Model.discountImage" style="width: 200px; height: 200px;"
+                                alt="@Model.discountId"><br> <br>
+                        </div>
+                        <div class="button-container" style="text-align: end;">
+                            <button type="submit" class="btn btn-primary">Delete</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </div>
-</section>
+</body>

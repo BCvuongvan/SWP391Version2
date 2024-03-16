@@ -14,30 +14,30 @@ namespace TingStoreClient.Models
         [DisplayName("ID")]
         public int proId { get; set; }
 
-        [Required(ErrorMessage = ("Please enter product name!"))]
+        [Required(ErrorMessage = "Please enter product name!")]
         [DisplayName("Product Name")]
         public String proName { get; set; }
 
-        [Required(ErrorMessage = ("Please enter description!"))]
+        [Required(ErrorMessage = "Please enter description!")]
         [DisplayName("Description")]
         public String proDescription { get; set; }
 
 
-        [Required(ErrorMessage = ("Please enter price!"))]
+        [Required(ErrorMessage = "Please enter price!")]
         [DisplayName("Price")]
         public Decimal proPrice { set; get; }
 
-        [Required(ErrorMessage = ("Please enter quantity!"))]
+        [Required(ErrorMessage = "Please enter quantity!")]
         [DisplayName("Quantity")]
         public int proQuantity { get; set; }
 
-        [Required(ErrorMessage = ("Please enter product image!"))]
+        [Required(ErrorMessage = "Please enter product image!")]
         [DisplayName("Image")]
         public String proImage { get; set; }
         [DisplayName("Status")]
         public bool proStatus { get; set; }
 
-        [Required(ErrorMessage = ("Please enter cate Id!"))]
+        [Required(ErrorMessage = "Please enter cate Id!")]
         [DisplayName("Category ID")]
         public int cateId { get; set; }
         [ForeignKey("cateId")]

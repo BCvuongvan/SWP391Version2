@@ -22,6 +22,14 @@
         button {
             float: right;
         }
+
+        .error {
+            color: red;
+            font-weight: normal;
+            font-size: 15px;
+            font-style: italic;
+            margin-left: 13px;
+        }
     </style>
     <div class="container">
         <div class="page-header">
@@ -40,12 +48,12 @@
                 <div class="form-group">
                     <label class="form-label">Enter category name: </label>
                     <input type="text" asp-for="cateName" class="form-control large-input">
-                    <span asp-validation-for="cateName" class="text-danger"></span>
+                    <span asp-validation-for="cateName" class="error text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Enter category description: </label>
                     <input type="text" asp-for="cateDescribe" class="form-control large-input">
-                    <span asp-validation-for="cateDescribe" class="text-danger"></span>
+                    <span asp-validation-for="cateDescribe" class="error text-danger"></span>
                 </div>
 
                 <div class="button">
@@ -55,94 +63,3 @@
         </div>
     </div>
 </body>
-
-@* <head>
-<!-- Custom CSS -->
-<link rel="stylesheet" href="~/Mobile_shop/css/homeAdmin.css">
-<link rel="stylesheet" href="~/Mobile_shop/css/Category.css">
-<title>@ViewData["Title"]</title>
-</head>
-
-<body>
-<script>
-setTimeout(function () {
-var systemNotification = document.getElementById('systemNotification');
-if (systemNotification) {
-systemNotification.style.display = 'none';
-}
-}, 3000);
-</script>
-<div class="container-xxl position-relative bg-white d-flex p-0">
-
-<!-- Sidebar -->
-<!-- You can add your sidebar here -->
-
-<!-- Main Content -->
-<div class="container-fluid">
-<div class="page-header">
-@if (TempData["SystemNotificationError"] != null)
-{
-<div id="systemNotification" class="alert alert-danger m-0 p-2">
-<p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification:
-@TempData["SystemNotificationError"]
-</p>
-</div>
-}
-<h1>Category</h1>
-</div>
-<div class="card">
-<div class="card-header">
-<i class="fas fa-list"></i>
-<a asp-controller="Category" asp-action="GetAllCategory">Category List</a> / Update category
-</div>
-<div id="order" class="card-body mb-2 mt-2">
-<div id="newProfileContainer" class="container bg-white mt-5 mb-5">
-<div class="d-flex justify-content-center align-items-center">
-<div class="border-right">
-<div class="p-3 py-5" style="width: 1000px; text-center;">
-<div class="d-flex justify-content-between align-items-center mb-3">
-<h4 class="text-right">Update category</h4>
-</div>
-<form asp-controller="Category" asp-action="UpdateCategory" method="post">
-<div hidden>
-<input type="text" asp-for="cateId" class="form-control">
-
-</div>
-
-<div class="col-md-6">
-<label class="labels">Category name</label>
-<input asp-for="cateName" type="text" class="form-control"
-placeholder="cateName">
-<span asp-validation-for="cateName" class="text-danger"></span>
-</div>
-<div class="col-md-6">
-<label class="labels">Category Describe</label>
-<input asp-for="cateDescribe" type="text" class="form-control"
-placeholder="cateDescribe">
-<span asp-validation-for="cateDescribe" class="text-danger"></span>
-</div>
-
-<div class="mt-5 text-center">
-<button class="btn btn-primary profile-button" type="submit" value="UpdateCategory">
-Update Category
-</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
-@section Scripts {
-@{
-<partial name="_ValidationScriptsPartial" />
-}
-}
-
-</div>
-</div>
-</div>
-</div>
-
-</body>
-
-</html> *@

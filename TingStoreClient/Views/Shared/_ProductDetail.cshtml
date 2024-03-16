@@ -29,22 +29,28 @@
     <link rel="stylesheet" href="~/Mobile_shop/css/slick.css">
     <link rel="stylesheet" href="~/Mobile_shop/css/navbar_styleSheet.css">
     <link rel="stylesheet" type="text/css" href="~/Mobile_shop/fonts/font/flaticon.css">
-    
+
 
     <title>Product Detail</title>
     <style>
+        #header {
+            padding: 0;
+        }
+
+        .navbar-brand>img {
+            margin-top: -15px;
+            width: 120px;
+        }
+
         .question {
             background-color: #f0f0f0;
             padding: 25px;
-            /* Tăng padding lên */
             margin: 10px 0;
-            /* Tăng margin lên */
             cursor: pointer;
             position: relative;
             padding-right: 40px;
             font-size: 20px;
             font-weight: bold;
-            /* Tăng kích thước font */
         }
 
         .question:after {
@@ -103,14 +109,12 @@
 
         .rating .fa-star {
             color: #FFD700;
-            /* Màu sao đánh giá */
         }
 
         .checked {
             color: orange;
         }
 
-        /* Định dạng cho phần đánh giá */
         #product_ratings_reviews .rating-line {
             display: flex;
             align-items: center;
@@ -138,23 +142,22 @@
         .rating-count {
             width: 40px;
         }
+
         .rating-bar {
-    width: 100%;
-    background-color: #ccc; /* Màu xám cho thanh nền */
-    height: 10px;
-}
+            width: 100%;
+            background-color: #ccc;
+            height: 10px;
+        }
 
-.rating-fill {
-    height: 100%;
-    background-color: #f00; /* Màu đỏ mặc định cho thanh đánh giá */
-    width: 0%; /* Mặc định không hiển thị */
-}
+        .rating-fill {
+            height: 100%;
+            background-color: #f00;
+            width: 0%;
+        }
 
-/* Thêm các class tùy chỉnh cho màu sắc khác nếu cần */
-.rating-fill.no-rating {
-    background-color: #ccc; /* Màu xám nếu không có đánh giá */
-}
-
+        .rating-fill.no-rating {
+            background-color: #ccc;
+        }
     </style>
 
 </head>
@@ -185,7 +188,7 @@
     <!-- preloader end  -->
 
     <!--  Navbar start-->
-    <nav id="header" class="navbar navbar-fixed-top" style="background: #a54747">
+    <nav id="header" class="navbar navbar-fixed-top">
         <div id="header-container" class="container navbar-container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -195,8 +198,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a id="brand" class="navbar-brand rounded" href="#">
-                    <img src="~/Mobile_shop/images/logo.png" alt="logo">
+                <a id="brand" class="navbar-brand rounded" asp-action="Index" asp-controller="Home">
+                    <img src="~/Mobile_shop/images/logo_web.png" alt="logo">
                 </a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
@@ -290,11 +293,8 @@
 
                         </ul>
                     </li>
-                    <li><a href="product.html">Product</a></li>
                     <li><a href="">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                     <li><a href="">Sale</a></li>
-                    <li><a href="">News</a></li>
                     <li>
                         <form autocomplete="off" asp-controller="Home" asp-action="SeachProduct"
                             class="navbar-form nav_margin autocomplete" role="search" method="post">
@@ -340,19 +340,20 @@
                     <div class="col-md-12">
                         <i class="fa fa-paper-plane"></i>
                         <span>Newsletter</span>
-                        <p style="color: rgb(47, 69, 173);">Ting Store shop</p>
+                        <p style="color: rgb(47, 69, 173);">Ting store shop</p>
                     </div>
+                    <hr class="">
                 </div>
                 <div class="footer row">
                     <div class="col-md-3">
                         <div class="support_part">
-                            <h3>Hỗ Trợ - Dịch Vụ</h3>
-                            <i><span>Gọi mua hàng<a href="">1800.1080</a> (7h30 - 22h00)</span></i></p>
-                            <i><span>Gọi khiếu nại <a href="">1800.2024</a> (8h00 - 21h30)</span></i></p>
-                            <i><span>Gọi bảo hành <a href="">1800.2064</a> (8h00 - 21h00)</span></i></p>
+                            <h3>Free support hotline</h3>
+                            <i><span>Call to buy <a href="">1800.1080</a> (7h30 - 22h00)</span></i></p>
+                            <i><span>Call to complain <a href="">1800.2024</a> (8h00 - 21h30)</span></i></p>
+                            <i><span>Call for warranty <a href="">1800.2064</a> (8h00 - 21h00)</span></i></p>
                         </div>
                         <div class="pay_part">
-                            <h3>Hỗ trợ thanh toán</h3>
+                            <h3>Payment support</h3>
                             <div class="d-flex">
                                 <li><a href="">
                                         <img src="https://cdn2.cellphones.com.vn/x35,webp/media/wysiwyg/apple-pay-og.png"
@@ -375,24 +376,25 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-3">
                         <div class="info-part">
-                            <h3>Thông tin và chính sách</h3>
-                            <p><a href="">Qui định bảo hành</a></p>
-                            <p><a href="">Thông tin hóa đơn mua hàng</a></p>
-                            <p><a href="">Trung tâm bảo hành chính hãng</a></p>
+                            <h3>Information and policies</h3>
+                            <p><a href="">Look up warranty information</a></p>
+                            <p><a href="">Look up electronic invoices</a></p>
+                            <p><a href="">Purchase invoice information</a></p>
+                            <p><a href="">Genuine warranty center</a></p>
+                            <p><a href="">Regulations on data backup</a></p>
 
                         </div>
                     </div>
 
                     <div class="col-md-3 col-sm-6">
                         <div class="email_part">
-                            <h3>Email liên hệ </h3>
+                            <h3>Email contact</h3>
                             <div class="email">
-                                <p>Hỗ trợ khách hàng: <br><span><a href="">cskh@tingstore.fpt.vn</a></span></p>
-                                <p>Liên hệ báo giá: <br><span> <a href="">baogia@tingstore.fpt.vn</a></span></p>
-                                <p>Liên hệ hợp tác:<span> <a href="">hoptac@tingstore@fpt.vn</a></span></p>
+                                <p>Customer support: <br><span><a href="">cskh@tingstore.fpt.vn</a></span></p>
+                                <p>Contact for quote: <br><span> <a href="">baogia@tingstore.fpt.vn</a></span></p>
+                                <p>Development cooperation:<span> <a href="">hoptac@tingstore@fpt.vn</a></span></p>
                             </div>
                         </div>
                     </div>
@@ -406,7 +408,7 @@
                                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                             <div class="mxh_part">
-                                <p>Kết nối với Ting Store</p>
+                                <p>Connect with Sting Store</p>
                                 <div class="social_logo">
                                     <a href=""><img src="https://fptshop.com.vn/Content/v4/images/icon-facebook.png"
                                             alt="Facebook logo"></a>
@@ -427,7 +429,6 @@
         <!-- Copyright -->
     </footer>
     <!-- Footer part end -->
-
 
     <script type="text/javascript" src="~/Mobile_shop/js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="~/Mobile_shop/js/bootstrap.min.js"></script>

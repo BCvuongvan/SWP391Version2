@@ -90,7 +90,8 @@
                                         <input hidden type="text" asp-for="picture" placeholder="Address"
                                             id="input-firstname" class="form-control">
                                         <input type="file" name="UserPicture" id="input-firstname" class="form-control">
-                                        <img src="~/assets/User_Picture/@Model.picture" alt="">
+                                        <img src="~/assets/User_Picture/@Model.picture" alt="Image User"
+                                            style="width: 200px;">
                                         <div id="error-firstname" class="invalid-feedback">
                                             <span asp-validation-for="picture"></span>
                                         </div>
@@ -141,7 +142,7 @@
                                     <div class="col-sm-10">
                                         <div class="form-check form-switch form-switch-lg">
                                             <select asp-for="userType">
-                                                <option selected="@(Model.userType == -1)" value="-1">account Delete
+                                                <option selected="@(Model.userType == -1)" value="-1">Account Delete
                                                 </option>
                                                 <option selected="@(Model.userType == 0)" value="0">Ban account</option>
                                                 <option selected="@(Model.userType == 1)" value="1">Admin</option>
@@ -152,7 +153,7 @@
                                     </div>
                                 </div>
                             </fieldset>
-                            <div class="save-button-container">
+                            <div class="save-button-container text-end">
                                 <button type="submit" class="btn btn-primary">Save</button>
                             </div>
                         </form>
@@ -164,31 +165,32 @@
                                 <div class="table-responsive">
                                     <table class="table table-bordered">
                                         <thead>
-                                            <tr>
-                                                <td class="text-start">No.</td>
-                                                <td class="text-start">Order Id</td>
+                                            <tr class="title-col">
+                                                <td class="text-center">No.</td>
+                                                <td class="text-end">Order Id</td>
                                                 <td class="text-start">Date Added</td>
-                                                <td class="text-start">Toltal Amount</td>
+                                                <td class="text-end">Toltal Amount</td>
                                                 <td class="text-start">Status</td>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @{
-                                                int count = 0;
+                                                int count = 1;
                                             }
                                             @foreach (var item in @Model.orders)
                                             {
                                                 <tr>
-                                                    count++;
-                                                    <td class="text-start">@count</td>
-                                                    <td class="text-start">@item.orderId</td>
+                                                    <td class="text-center">@count</td>
+                                                    <td class="text-end">@item.orderId</td>
                                                     <td class="text-start">@item.orderDate</td>
-                                                    <td class="text-start"> <span class="giamoi">@String.Format("{0:0,0VND}", @item.TotalAmount).Replace(",", ".")</span></td>
+                                                    <td class="text-end"> <span class="giamoi">@String.Format("{0:0,0VND}",
+                                                        @item.TotalAmount).Replace(",", ".")</span></td>
                                                     <td class="text-start"><a asp-controller="Order"
                                                             asp-action="orderDetail"
                                                             asp-route-id="@item.orderId">@item.orderStatus.statusName </a>
                                                     </td>
                                                 </tr>
+                                                count++;
                                             }
                                             @if (count == 0)
                                             {
@@ -216,10 +218,10 @@
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-hover">
                                         <thead>
-                                            <tr>
-                                                <td class="text-start">No.</td>
+                                            <tr class="title-col">
+                                                <td class="text-center">No.</td>
                                                 <td class="text-start">Product</td>
-                                                <td class="text-start">Product Picture</td>
+                                                <td class="text-center">Product Picture</td>
                                                 <td class="text-start">Feedback</td>
                                                 <td class="text-start">Rating</td>
                                             </tr>
@@ -230,15 +232,15 @@
                                                 @foreach (var item in Model.feedbacks)
                                                 {
                                                     count++;
-                                                    <td class="text-start">@count</td>
+                                                    <td class="text-center">@count</td>
                                                     <td class="text-start">@item.product.proName</td>
-                                                    <td class="text-start d-none d-lg-table-cell"><img
+                                                    <td class="text-center d-none d-lg-table-cell"><img
                                                             src="~/assets/Product_Images/@item.product.proImage"
                                                             style="width: 200px; height: 200px;"
                                                             alt="@item.product.proImage">
                                                     </td>
                                                     <td class="text-start">@item.comment</td>
-                                                    <td>@for (int i = 0; i < item.rating; i++)
+                                                    <td style="color: #f59e0b">@for (int i = 0; i < item.rating; i++)
                                                         {
                                                             <span class="fa fa-star checked"></span>
                                                         }

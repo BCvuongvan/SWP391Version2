@@ -19,21 +19,21 @@
     margin-left: 5px;
 }
 
-.btn_addnew{
+.btn_addnew {
     margin: 0 0 10px 10px;
     text-align: start;
 }
 
-.card-header button:hover{
+.card-header button:hover {
     color: rgb(47, 69, 173);
 }
 
-.no-border-button{
+.no-border-button {
     border: none;
-    background-color: #fff;
+    background: #F3F6F9;
 }
 
-.dropdown-menu a:hover{
+.dropdown-menu a:hover {
     background-color: rgb(47, 69, 173);
     color: #fff;
 }

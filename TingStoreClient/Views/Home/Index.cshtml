@@ -69,7 +69,7 @@ Titanium has one of the best strength-to-weight ratios of any metal, making thes
     </section>
     <!-- banner part End -->
     <!-- Discount part Start -->
-    <section id="discount_part">
+    @* <section id="discount_part">
         <div class="container discount">
             <div class="row">
                 <div class="name_box">
@@ -80,7 +80,7 @@ Titanium has one of the best strength-to-weight ratios of any metal, making thes
                     <div class="home_slider">
                         @foreach(var disImage in ViewBag.discountproductList){
                             @if(disImage.isActive == true){
-                        <a href=""><img src="~/assets/SaleProduct_Images/@disImage.discountImage" alt="discount"></a>
+                        <a href=""><img src="~/assets/SaleProduct_Images/@disImage.discountImage" alt="discount" style="width: 10%;"></a>
                                 }
                                 }
                     </div>
@@ -88,7 +88,7 @@ Titanium has one of the best strength-to-weight ratios of any metal, making thes
                 </div>
             </div>
         </div>
-    </section>
+    </section> *@
     <!-- Discount part End -->
 
 <section id="product_part" class="main">
@@ -179,7 +179,7 @@ Titanium has one of the best strength-to-weight ratios of any metal, making thes
                     <div class="sort-filter" id="asc" onclick="updateSortOrder('asc')">
                         <a class="btn-sort">
                             <div class="icon"><i class="fa-solid fa-arrow-down-wide-short" style="margin-top: 3px; margin-right: 3px;"></i>
-                                 High - Low
+                                High - Low
                             </div>
                         </a>
                     </div>
@@ -252,7 +252,6 @@ Titanium has one of the best strength-to-weight ratios of any metal, making thes
 </div>
         </div>
     </div>
-    
     <div class="container">
         <div class="row bg-light">
             <div><h2><strong>TECH NEWS</strong></h2></div>
@@ -272,5 +271,4 @@ Titanium has one of the best strength-to-weight ratios of any metal, making thes
             </div>
         </div>
     </div>
-    
 </section>

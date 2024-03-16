@@ -1,7 +1,6 @@
 @model Product
 @{
     ViewData["Title"] = "CreateProduct";
-    Layout = "/Views/Shared/_ManagementProduct.cshtml";
 }
 @if (ViewBag.ErrorMessage != null)
 {
@@ -11,23 +10,41 @@
 }
 
 <body>
+    <style>
+        .page-header {
+            margin-top: 20px;
+        }
+
+        .page-header h1 {
+            margin-left: 15px;
+        }
+
+        .form-label {
+            margin: 0;
+        }
+
+        label {
+            font-weight: 500;
+        }
+
+
+        .text-danger {
+            color: red;
+            font-size: 14px;
+            font-style: italic;
+        }
+    </style>
     <div class="containe">
-        <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-            <div class="navbar-nav align-items-center ms-auto">
-                <div class="nav-item">
-                    <a class="nav-link" style="margin-right: 20px;" asp-controller="Product" asp-action="ListProduct">
-                        <i class="fa fa-sign-out-alt"></i>
-                        <span class="d-none d-lg-inline-flex">Back</span>
-                    </a>
-                </div>
+        <div class="page-header">
+            <h1>Add new products</h1>
+            <div class="float-end" style="margin-top: -50px;">
+                <a asp-controller="HomeAdmin" asp-action="Index" data-bs-toggle="tooltip" title class="btn btn-success"
+                    data-bs-original-title="Back" aria-label="Back"><i class="fas fa-reply"></i></a>
             </div>
-        </nav>
+        </div>
         <section id="product_part" class="main">
             <div class="container">
-                <h4 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">ADD
-                    NEW
-                    PRODUCT</h4>
-                <div class="card-body" style="margin-bottom: 10px;">
+                <div class="card" style="margin-bottom: 10px;">
                     <form asp-controller="Product" asp-action="CreateProduct" method="post" id="productForm"
                         style="margin: 10px;" enctype="multipart/form-data">
                         <div class="form-group">
@@ -36,38 +53,38 @@
                             <span asp-validation-for="proName" class="text-danger"></span>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                             <label class="form-label">Product Description: </label>
                             <input type="text" asp-for="proDescription" class="form-control large-input">
                             <span asp-validation-for="proDescription" class="text-danger"></span>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                             <label class="form-label">Product Price: </label>
                             <input type="text" asp-for="proPrice" class="form-control large-input">
                             <span asp-validation-for="proPrice" class="text-danger"></span>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                             <label asp-for="proQuantity" class="form-label">Number Of Products: </label>
                             <input type="text" asp-for="proQuantity" class="form-control large-input">
                             <span asp-validation-for="proQuantity" class="text-danger"></span>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                             <label for="productInfo" class="form-label">Product Information: </label>
                             <textarea name="productInfo" class="form-control large-input" rows="3"></textarea>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                             <label class="form-label">Distinctive features: </label>
                             <textarea name="highlightFeatures" class="form-control large-input" rows="3"></textarea>
                         </div>
-                        <div id="technicalSpecsContainer" class="form-group">
+                        <div id="technicalSpecsContainer" class="form-group mt-2">
                             <label class="form-label">Specifications: </label>
                             <div id="specifications-container">
-                                <input type="text" id="specName" placeholder="Tên thông số" class="form-control" />
+                                <input type="text" id="specName" placeholder="Tên thông số" class="form-control mb-2" />
                                 <input type="text" id="specValue" placeholder="Giá trị" class="form-control" />
 
-
-                                <button type="button" id="addSpecButton" class="btn btn-primary">Thêm thông số</button>
+                                <button type="button" id="addSpecButton" class="btn btn-primary mt-2">Thêm thông
+                                    số</button>
                             </div>
                             <table id="specsTable" class="table">
                                 <thead>
@@ -81,9 +98,7 @@
                                 </tbody>
                             </table>
                         </div>
-
-
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                             <label asp-for="proImage" class="form-label">Product Picture </label>
                             <div class="custom-file">
                                 <input type="file" name="proImageFile" class="form-control large-input">
@@ -91,7 +106,7 @@
                             <span asp-validation-for="proImage" class="text-danger"></span>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                             <label asp-for="cateId" class="form-label">Product Type: </label>
                             <select asp-for="cateId"
                                 asp-items="@(new SelectList(ViewBag.cateList, "cateId", "cateName"))"
@@ -100,9 +115,8 @@
                             <span asp-validation-for="cateId" class="text-danger"></span>
                         </div>
 
-                        <div class="button-container" style="text-align: center;">
-                            <button type="submit" style="font-size: 18px; padding: 10px 20px;"
-                                class="fancy-button">Create</button>
+                        <div class="button-container text-end mt-2">
+                            <button type="submit" class="btn btn-primary">Create</button>
                         </div>
 
                     </form>
@@ -111,4 +125,78 @@
         </section>
 
     </div>
+
+    @section Scripts {
+        @{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    }
+
+    <script src="https://kit.fontawesome.com/8143c9cd7e.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('addSpecButton').addEventListener('click', function () {
+                var specName = document.getElementById('specName').value;
+                var specValue = document.getElementById('specValue').value;
+
+                // Tạo một hàng mới cho bảng thông số kỹ thuật
+                var newRow = document.createElement('tr');
+                newRow.innerHTML = `
+            <td><input type="text" name="specNames[]" value="${specName}" readonly></td>
+            <td><input type="text" name="specValues[]" value="${specValue}" readonly></td>
+            <td><button type="button" class="btn btn-danger removeSpec">Xóa</button></td>
+        `;
+
+                // Thêm hàng mới vào bảng
+                document.getElementById('specsTable').querySelector('tbody').appendChild(newRow);
+
+                // Xóa trường input sau khi thêm
+                document.getElementById('specName').value = '';
+                document.getElementById('specValue').value = '';
+
+                // Thêm sự kiện click cho nút xóa thông số kỹ thuật
+                newRow.querySelector('.removeSpec').addEventListener('click', function () {
+                    this.closest('tr').remove();
+                });
+            });
+        });
+
+        //
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('addQuestionAndAnswerButton').addEventListener('click', function () {
+                var questionName = document.getElementById('questionName').value;
+                var answerValue = document.getElementById('answerValue').value;
+
+                // Tạo một hàng mới cho bảng thông số kỹ thuật
+                var newRow = document.createElement('tr');
+                newRow.innerHTML = `
+            <td><input type="text" name="questionName[]" value="${questionName}" readonly></td>
+            <td><input type="text" name="answerValue[]" value="${answerValue}" readonly></td>
+            <td><button type="button" class="btn btn-danger removeSpec">Xóa</button></td>
+        `;
+
+                // Thêm hàng mới vào bảng
+                document.getElementById('q&aTable').querySelector('tbody').appendChild(newRow);
+
+                // Xóa trường input sau khi thêm
+                document.getElementById('questionName').value = '';
+                document.getElementById('answerValue').value = '';
+
+                // Thêm sự kiện click cho nút xóa thông số kỹ thuật
+                newRow.querySelector('.removeSpec').addEventListener('click', function () {
+                    this.closest('tr').remove();
+                });
+            });
+        });
+        //phần hiển thị Q&A
+        function toggleAnswer(answerId) {
+            var answer = document.getElementById(answerId);
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>

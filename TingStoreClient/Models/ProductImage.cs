@@ -14,13 +14,13 @@ namespace TingStoreClient.Models
         [DisplayName("ID")]
         public int imageId { get; set; }
 
-        [Required(ErrorMessage = ("Please enter product id!"))]
+        [Required(ErrorMessage = "Please enter product id!")]
         [DisplayName("Product ID")]
         public int proId { get; set; }
         [ForeignKey("proId")]
         public Product product { get; set; }
 
-        [Required(ErrorMessage = ("Please enter image URL!"))]
+        [Required(ErrorMessage = "Please enter image URL!")]
         [DisplayName("URL")]
         public String imageUrl { get; set; }
 

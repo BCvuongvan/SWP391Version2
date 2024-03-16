@@ -41,13 +41,13 @@ namespace TingStoreClient.Controllers
         {
             if (username == null || password == null)
             {
-                ViewBag.errorMessage = ("User doesn't enter");
+                ViewBag.errorMessage = ("Please enter your username and password!");
                 return View("Login");
             }
             HttpResponseMessage response = await client.GetAsync(api + "/GetUser/" + username + "/" + password);
             if (!response.IsSuccessStatusCode)
             {
-                ViewBag.errorMessage = ("User doesn't exit");
+                ViewBag.errorMessage = ("User doesn't exist");
                 return View("Login");
             }
             string data = await response.Content.ReadAsStringAsync();
@@ -58,7 +58,7 @@ namespace TingStoreClient.Controllers
             // User user = list.FirstOrDefault(u => u.userName.Equals(username) && u.password.Equals(password));
             if (user == null)
             {
-                ViewBag.errorMessage = ("User doesn't exit");
+                ViewBag.errorMessage = ("User doesn't exist");
                 return View("Login");
             }
             const string _user = "_user";
@@ -75,12 +75,12 @@ namespace TingStoreClient.Controllers
             }
             else if (user.userType == 0)
             {
-                ViewBag.errorMessage = ("Your Account is ban");
+                ViewBag.errorMessage = ("Your account is ban");
                 return View("Login");
             }
             else
             {
-                ViewBag.errorMessage = ("Your Account does not exit");
+                ViewBag.errorMessage = ("Your account does not exit");
                 return View("Login");
             }
 

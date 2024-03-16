@@ -138,12 +138,6 @@
             });
         }
     }
-    @* setTimeout(function () {
-        var systemNotification = document.getElementById('systemNotification');
-        if (systemNotification) {
-        systemNotification.style.display = 'none';
-        }
-        }, 3000); *@
 </script>
 @if (TempData["SystemNotificationError"] != null)
 {
@@ -163,7 +157,7 @@
     <div class="page-header">
         <h1><a style="text-decoration: none; color: #000;" asp-action="Index" asp-route-id="3">Account Management</a>
         </h1>
-        <nav style="z-index: 9999;" class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-action="Index" asp-route-id="3"><i class="fa-solid fa-users"></i></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -185,7 +179,7 @@
                             <a asp-action="Index" asp-route-id="0"
                                 class="nav-link @(ViewBag.userType == 0 ? "active" : "")">Ban account</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown" style="z-index: 99;">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 More
@@ -203,25 +197,25 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="card col-md-9">
+            <div class="card col-md-9" style="padding: 0;">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <div><i class="fas fa-list"></i> @ViewBag.nametable List</div>
+                    <div><i class="fas fa-list"></i> @ViewBag.nametable list</div>
                     @if (@ViewBag.userType == 2)
                     {
                         <a asp-action="Create"><i class="fa-solid fa-user-plus"></i></a>
                     }
                 </div>
-                <div id="order" class="card-body mb-2 mt-2">
+                <div id="order" class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr class="title-col">
-                                    <th class="text-start">No.</th>
+                                    <th class="text-center">No.</th>
                                     <th class="text-start">UserName</th>
                                     <th class="text-start">E-Mail</th>
                                     <th class="text-start">Phone</th>
-                                    <th class="text-start">Create date</th>
-                                    <th class="text-end"><span>Action</span></th>
+                                    <th class="text-start">Date Added</th>
+                                    <th class="text-center"><span>Action</span></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -234,12 +228,12 @@
                                     {
                                         Count++;
                                         <tr>
-                                            <td class="text-start">@Count</td>
+                                            <td class="text-center">@Count</td>
                                             <td class="text-start">@Item.userName</td>
                                             <td class="text-start">@Item.email</td>
                                             <td class="text-start">@Item.phoneNumber</td>
-                                            <td class="text-end d-none d-lg-table-cell">@Item.createdAt</td>
-                                            <td class="text-end">
+                                            <td class="text-start d-none d-lg-table-cell">@Item.createdAt</td>
+                                            <td class="text-center">
                                                 <div class="btn-group dropdown">
                                                     <a asp-action="UserDetails" asp-route-id="@Item.userName" class="btn"
                                                         aria-label="Edit"><i class="fas fa-pencil-alt"></i></a>
@@ -253,25 +247,25 @@
                                                         {
                                                             <li><a class="dropdown-item" href="#"
                                                                     onclick="doBanOrUnban('@Item.userName', 0)"><i
-                                                                        class="fas fa-ban"></i>Ban account</a></li>
+                                                                        class="fas fa-ban"></i> Ban account</a></li>
                                                         }
                                                         @if (@Item.userType == 3 || @Item.userType == 2 || @Item.userType == 1)
                                                         {
                                                             <li><a class="dropdown-item" href="#"
                                                                     onclick="doBanOrUnban('@Item.userName', -1)"><i
-                                                                        class="fas fa-ban"></i>Delete</a></li>
+                                                                        class="fas fa-trash"></i> Delete</a></li>
                                                         }
                                                         @if (@Item.userType == 0)
                                                         {
                                                             <li><a class="dropdown-item" href="#"
                                                                     onclick="doBanOrUnban('@Item.userName', 3)"><i
-                                                                        class="fas fa-ban"></i>UnBan account</a></li>
+                                                                        class="fas fa-ban"></i> UnBan account</a></li>
                                                         }
                                                         @if (@Item.userType == -1)
                                                         {
                                                             <li><a class="dropdown-item" href="#"
                                                                     onclick="doBanOrUnban('@Item.userName', 3)"><i
-                                                                        class="fas fa-ban"></i>Retore account</a></li>
+                                                                        class="fas fa-trash-restore"></i> Retore account</a></li>
                                                         }
                                                     </ul>
                                                 </div>
@@ -316,102 +310,102 @@
 </div>
 <script>
 
-        function autocomplete(inp, arr) {
-            /*the autocomplete function takes two arguments,
-            the text field element and an array of possible autocompleted values:*/
-            var currentFocus;
-            /*execute a function when someone writes in the text field:*/
-            inp.addEventListener("input", function (e) {
-                var a, b, i, val = this.value;
-                /*close any already open lists of autocompleted values*/
-                closeAllLists();
-                if (!val) { return false; }
-                currentFocus = -1;
-                /*create a DIV element that will contain the items (values):*/
-                a = document.createElement("DIV");
-                a.setAttribute("id", this.id + "autocomplete-list");
-                a.setAttribute("class", "autocomplete-items");
-                /*append the DIV element as a child of the autocomplete container:*/
-                this.parentNode.appendChild(a);
-                /*for each item in the array...*/
-                for (i = 0; i < arr.length; i++) {
-                    /*check if the item starts with the same letters as the text field value:*/
-                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                        /*create a DIV element for each matching element:*/
-                        b = document.createElement("DIV");
-                        /*make the matching letters bold:*/
-                        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                        b.innerHTML += arr[i].substr(val.length);
-                        /*insert a input field that will hold the current array item's value:*/
-                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                        /*execute a function when someone clicks on the item value (DIV element):*/
-                        b.addEventListener("click", function (e) {
-                            /*insert the value for the autocomplete text field:*/
-                            inp.value = this.getElementsByTagName("input")[0].value;
-                            /*close the list of autocompleted values,
-                            (or any other open lists of autocompleted values:*/
-                            closeAllLists();
-                        });
-                        a.appendChild(b);
-                    }
-                }
-            });
-            /*execute a function presses a key on the keyboard:*/
-            inp.addEventListener("keydown", function (e) {
-                var x = document.getElementById(this.id + "autocomplete-list");
-                if (x) x = x.getElementsByTagName("div");
-                if (e.keyCode == 40) {
-                    /*If the arrow DOWN key is pressed,
-                    increase the currentFocus variable:*/
-                    currentFocus++;
-                    /*and and make the current item more visible:*/
-                    addActive(x);
-                } else if (e.keyCode == 38) { //up
-                    /*If the arrow UP key is pressed,
-                    decrease the currentFocus variable:*/
-                    currentFocus--;
-                    /*and and make the current item more visible:*/
-                    addActive(x);
-                } else if (e.keyCode == 13) {
-                    /*If the ENTER key is pressed, prevent the form from being submitted,*/
-                    e.preventDefault();
-                    if (currentFocus > -1) {
-                        /*and simulate a click on the "active" item:*/
-                        if (x) x[currentFocus].click();
-                    }
-                }
-            });
-            function addActive(x) {
-                /*a function to classify an item as "active":*/
-                if (!x) return false;
-                /*start by removing the "active" class on all items:*/
-                removeActive(x);
-                if (currentFocus >= x.length) currentFocus = 0;
-                if (currentFocus < 0) currentFocus = (x.length - 1);
-                /*add class "autocomplete-active":*/
-                x[currentFocus].classList.add("autocomplete-active");
-            }
-            function removeActive(x) {
-                /*a function to remove the "active" class from all autocomplete items:*/
-                for (var i = 0; i < x.length; i++) {
-                    x[i].classList.remove("autocomplete-active");
+    function autocomplete(inp, arr) {
+        /*the autocomplete function takes two arguments,
+        the text field element and an array of possible autocompleted values:*/
+        var currentFocus;
+        /*execute a function when someone writes in the text field:*/
+        inp.addEventListener("input", function (e) {
+            var a, b, i, val = this.value;
+            /*close any already open lists of autocompleted values*/
+            closeAllLists();
+            if (!val) { return false; }
+            currentFocus = -1;
+            /*create a DIV element that will contain the items (values):*/
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            /*append the DIV element as a child of the autocomplete container:*/
+            this.parentNode.appendChild(a);
+            /*for each item in the array...*/
+            for (i = 0; i < arr.length; i++) {
+                /*check if the item starts with the same letters as the text field value:*/
+                if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                    /*create a DIV element for each matching element:*/
+                    b = document.createElement("DIV");
+                    /*make the matching letters bold:*/
+                    b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                    b.innerHTML += arr[i].substr(val.length);
+                    /*insert a input field that will hold the current array item's value:*/
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    /*execute a function when someone clicks on the item value (DIV element):*/
+                    b.addEventListener("click", function (e) {
+                        /*insert the value for the autocomplete text field:*/
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        /*close the list of autocompleted values,
+                        (or any other open lists of autocompleted values:*/
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
                 }
             }
-            function closeAllLists(elmnt) {
-                /*close all autocomplete lists in the document,
-                except the one passed as an argument:*/
-                var x = document.getElementsByClassName("autocomplete-items");
-                for (var i = 0; i < x.length; i++) {
-                    if (elmnt != x[i] && elmnt != inp) {
-                        x[i].parentNode.removeChild(x[i]);
-                    }
+        });
+        /*execute a function presses a key on the keyboard:*/
+        inp.addEventListener("keydown", function (e) {
+            var x = document.getElementById(this.id + "autocomplete-list");
+            if (x) x = x.getElementsByTagName("div");
+            if (e.keyCode == 40) {
+                /*If the arrow DOWN key is pressed,
+                increase the currentFocus variable:*/
+                currentFocus++;
+                /*and and make the current item more visible:*/
+                addActive(x);
+            } else if (e.keyCode == 38) { //up
+                /*If the arrow UP key is pressed,
+                decrease the currentFocus variable:*/
+                currentFocus--;
+                /*and and make the current item more visible:*/
+                addActive(x);
+            } else if (e.keyCode == 13) {
+                /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                e.preventDefault();
+                if (currentFocus > -1) {
+                    /*and simulate a click on the "active" item:*/
+                    if (x) x[currentFocus].click();
                 }
             }
-            /*execute a function when someone clicks in the document:*/
-            document.addEventListener("click", function (e) {
-                closeAllLists(e.target);
-            });
+        });
+        function addActive(x) {
+            /*a function to classify an item as "active":*/
+            if (!x) return false;
+            /*start by removing the "active" class on all items:*/
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = (x.length - 1);
+            /*add class "autocomplete-active":*/
+            x[currentFocus].classList.add("autocomplete-active");
         }
+        function removeActive(x) {
+            /*a function to remove the "active" class from all autocomplete items:*/
+            for (var i = 0; i < x.length; i++) {
+                x[i].classList.remove("autocomplete-active");
+            }
+        }
+        function closeAllLists(elmnt) {
+            /*close all autocomplete lists in the document,
+            except the one passed as an argument:*/
+            var x = document.getElementsByClassName("autocomplete-items");
+            for (var i = 0; i < x.length; i++) {
+                if (elmnt != x[i] && elmnt != inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                }
+            }
+        }
+        /*execute a function when someone clicks in the document:*/
+        document.addEventListener("click", function (e) {
+            closeAllLists(e.target);
+        });
+    }
 
     /*An array containing all the country names in the world:*/
     var countries = @Html.Raw(Json.Serialize(@ViewBag.UserListName));

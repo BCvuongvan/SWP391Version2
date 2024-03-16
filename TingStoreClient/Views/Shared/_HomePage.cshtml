@@ -31,7 +31,11 @@
 </head>
 
 <body>
-
+    <style>
+        #header {
+            background-color: #222;
+        }
+    </style>
     <!-- preloader start  -->
     <div id="spinners">
         <div id="preloader_1">
@@ -151,7 +155,6 @@
                         </ul>
                     </li>
                     <li><a asp-action="" asp-controller="">About</a></li>
-                    <li><a asp-action="" asp-controller="">Contact</a></li>
                     <li><a asp-action="" asp-controller="">Sale</a></li>
                     @if (@HttpContextAccessor.HttpContext.Session.GetString("_user") != null)
                     {
@@ -160,10 +163,11 @@
                         string userDataJson = @HttpContextAccessor.HttpContext.Session.GetString("_user");
                         // Giải mã dữ liệu JSON thành đối tượng User
                         var option = new System.Text.Json.JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-                        var user = System.Text.Json.JsonSerializer.Deserialize<User>(userDataJson, option);
+                        var user = System.Text.Json.JsonSerializer.Deserialize<TingStoreClient.Models.User>(userDataJson,
+                        option);
                         if (user.userType == 1 || user.userType == 2)
                         {
-                            <li><a asp-action="Index" asp-controller="HomeAdmin">Manager</a></li>
+                            <li><a asp-action="Index" asp-controller="HomeAdmin">Manage</a></li>
                         }
                     }
                     <li>

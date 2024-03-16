@@ -12,26 +12,8 @@
 
 <body>
     <style>
-        .card {
-            padding: 10px;
-        }
-
-        .page-header {
-            margin-top: 20px;
-        }
-
-        .form-group {
+        label {
             font-weight: 500;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .form-label {
-            margin: 0;
-        }
-
-        button {
-            float: right;
         }
     </style>
     @if (TempData["SystemNotificationError"] != null)
@@ -63,19 +45,21 @@
             }
 
             <div class="card">
-                <form asp-controller="Category" asp-action="CreateCategory" method="post">
+                <form asp-controller="Category" asp-action="CreateCategory" method="post" style="padding: 10px;">
                     <div class="form-group">
-                        <label class="labels">Category name</label>
-                        <input asp-for="cateName" type="text" class="form-control" placeholder="cateName">
-                        <span asp-validation-for="cateName" class="text-danger"></span>
+                        <label class="labels">Category Name</label>
+                        <input asp-for="cateName" type="text" class="form-control"
+                            placeholder="Enter new category name">
+                        <span asp-validation-for="cateName" class="error text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label class="labels">Category Describe</label>
-                        <input asp-for="cateDescribe" type="text" class="form-control" placeholder="cateDescribe">
-                        <span asp-validation-for="cateDescribe" class="text-danger"></span>
+                        <input asp-for="cateDescribe" type="text" class="form-control"
+                            placeholder="Enter new category describe">
+                        <span asp-validation-for="cateDescribe" class="error text-danger"></span>
                     </div>
 
-                    <div class="mt-5 text-center">
+                    <div class="mt-2 text-end">
                         <button class="btn btn-primary profile-button" type="submit">
                             Add new
                         </button>

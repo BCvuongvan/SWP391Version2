@@ -13,11 +13,11 @@ namespace TingStoreClient.Models
         [DisplayName("ID")]
         public int cateId { get; set; }
 
-        [Required(ErrorMessage = ("Please enter category name!"))]
+        [Required(ErrorMessage = "Please enter category name!")]
         [DisplayName("Category Name")]
         public String cateName { get; set; }
 
-        [Required(ErrorMessage = ("Please enter description!"))]
+        [Required(ErrorMessage = "Please enter description!")]
         [DisplayName("Description")]
         public String cateDescribe { get; set; }
 
