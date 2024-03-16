@@ -32,6 +32,12 @@ namespace TingStoreAPI.Controllers
             .ToList();
             return Ok(categoryList);
         }
+        [HttpGet("active")]
+        public IActionResult GetAllCategoryActiceTrue()
+        {
+            var categoryList = this._db.categories.Include(c => c.Products).Where(c => c.cateStatus == true).ToList();
+            return Ok(categoryList);
+        }
         [HttpGet("{cateId}", Name = "GetCategoryById")]
         public IActionResult GetCategoryById(int cateId)
         {

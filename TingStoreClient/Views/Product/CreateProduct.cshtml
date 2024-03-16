@@ -4,7 +4,7 @@
 }
 @if (ViewBag.ErrorMessage != null)
 {
-    <div class="alert alert-danger">
+    <div id="systemNotification" class="alert alert-danger">
         @ViewBag.ErrorMessage
     </div>
 }
@@ -125,12 +125,13 @@
         </section>
 
     </div>
-
-    @section Scripts {
+</body>
+@section Scripts {
         @{
             <partial name="_ValidationScriptsPartial" />
         }
     }
+
 
     <script src="https://kit.fontawesome.com/8143c9cd7e.js" crossorigin="anonymous"></script>
     <script>
@@ -199,4 +200,12 @@
         }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</body>
+    
+    <script>
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 3000);
+    </script>

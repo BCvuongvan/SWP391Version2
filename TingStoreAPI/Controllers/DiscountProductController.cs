@@ -31,6 +31,18 @@ namespace TingStoreAPI.Controllers
             var discountList = _db.discountPercents.Include(p => p.product).Where(d => d.isActive == true).ToList();
             return Ok(discountList);
         }
+        [HttpGet("flashsale")]
+        public async Task<IActionResult> GetAllDiscounActiveTrueAndFlashSale()
+        {
+            var discountList = await _db.discountPercents.OrderBy(d => d.discountImage).Where(d => d.isActive == true)
+                                        .FirstOrDefaultAsync();
+            if (discountList == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(discountList.discountImage);
+        }
         [HttpGet("{id}", Name = "GetSaleProductById")]
         public IActionResult GetSaleProductById(int id)
         {

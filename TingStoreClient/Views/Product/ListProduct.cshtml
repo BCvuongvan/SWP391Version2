@@ -6,6 +6,13 @@
 <link rel="stylesheet" href="~/Mobile_shop/css/ProductList.css">
 
 <body>
+@if (TempData["SystemNotification"] != null)
+    {
+        <div id="systemNotification" class="alert alert-success m-0 p-2">
+            <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotification"]
+            </p>
+        </div>
+    }
     <div class="container">
         <div class="page-header">
             <h1>List of Products</h1>
@@ -110,3 +117,12 @@
     <script src="https://kit.fontawesome.com/8143c9cd7e.js" crossorigin="anonymous"></script>
 
 </body>
+
+<script>
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 3000);
+    </script>

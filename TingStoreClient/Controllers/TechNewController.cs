@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using TingStoreClient.Filters;
 
 namespace TingStoreClient.Controllers
 {
-    [StaffAuthenticationRedirect]
     [Route("[controller]")]
     public class TechNewController : Controller
     {
@@ -29,6 +27,7 @@ namespace TingStoreClient.Controllers
                 var newsId = Guid.NewGuid().ToString();
                 await SaveTechNew(title, image, newsId, link);
             }
+            TempData["SystemNotification"] = "Add tech new sucessfully!";
             return RedirectToAction("ListTechNew");
         }
         private async Task SaveTechNew(string title, IFormFile image, string newsId, string link)
@@ -123,6 +122,7 @@ namespace TingStoreClient.Controllers
             var linkPath = Path.Combine(newsDir, "link.txt");
             System.IO.File.WriteAllText(titlePath, title);
             await System.IO.File.WriteAllTextAsync(linkPath, link);
+            TempData["SystemNotification"] = "Update tech new sucessfully!";
             return RedirectToAction("ListTechNew");
         }
 
@@ -154,7 +154,7 @@ namespace TingStoreClient.Controllers
             {
                 Directory.Delete(newsDir, true);
             }
-
+            TempData["SystemNotification"] = "Delete tech new sucessfully!";
             return RedirectToAction("ListTechNew");
         }
 

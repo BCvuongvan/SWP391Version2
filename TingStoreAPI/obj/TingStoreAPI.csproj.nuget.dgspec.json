@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj": {}
+    "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj": {}
   },
   "projects": {
-    "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj": {
+    "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
+        "projectUniqueName": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
         "projectName": "TingStoreAPI",
-        "projectPath": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreAPI\\obj\\",
+        "projectPath": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\TingStoreAPI.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\SWP391_PROJECT_VERSIONX\\SWP391Version2\\TingStoreAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

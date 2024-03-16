@@ -14,6 +14,7 @@
         }
 
         .question {
+
             background-color: #f0f0f0;
             padding: 10px;
             margin: 5px 0;
@@ -40,6 +41,7 @@
             display: none;
         }
     </style>
+
     <div class="container">
         <div class="page-header">
             <h1>List questions and anwsers</h1>
@@ -54,6 +56,20 @@
                 class="btn btn-primary" style="text-decoration: none;">Add new question and answer</a>
             <a asp-controller="Product" asp-action="UpdateQuestionAndAnswer" asp-route-id="@Model.proId"
                 class="btn btn-primary" style="text-decoration: none; float: right;">Edit</a>
+
+        <div>
+        @if (TempData["SystemNotification"] != null)
+    {
+        <div id="systemNotification" class="alert alert-success m-0 p-2">
+            <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotification"]
+            </p>
+        </div>
+    }
+            <h3 style="margin-top:40px; text-align: center;"><strong>LIST QUESTION AND ANSWER</strong></h3>
+            <div style="text-align: center;">
+                <a asp-controller="Product" asp-action="CreateQuestionAndAnswer" asp-route-id="@Model.proId"
+                    class="fancy-button" style="text-decoration: none;">Add new question and answer</a>
+            </div> </br>
         </div>
         <div id="qa-section">
             <div class="card">
@@ -91,3 +107,11 @@
         }
     </script>
 </body>
+<script>
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 3000);
+    </script>

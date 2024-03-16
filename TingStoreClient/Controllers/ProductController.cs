@@ -38,7 +38,7 @@ namespace TingStoreClient.Controllers
 
         private async Task GetCategoriesAsync()
         {
-            HttpResponseMessage response = await client.GetAsync("https://localhost:5001/api/Category");
+            HttpResponseMessage response = await client.GetAsync("https://localhost:5001/api/Category/active");
             String data = await response.Content.ReadAsStringAsync();
 
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
@@ -148,6 +148,7 @@ namespace TingStoreClient.Controllers
             HttpResponseMessage response = await client.PostAsync(api, content);
             if (response.IsSuccessStatusCode)
             {
+                TempData["SystemNotification"] = "Add product sucessfully!";
                 return RedirectToAction("ListProduct");
             }
             else
@@ -251,7 +252,7 @@ namespace TingStoreClient.Controllers
             {
                 return System.IO.File.ReadAllText(filePath);
             }
-            return "Không có thông tin.";
+            return "Don't have information";
         }
 
         [HttpGet("update/{id}")]
@@ -306,6 +307,7 @@ namespace TingStoreClient.Controllers
 
             if (response.IsSuccessStatusCode)
             {
+                TempData["SystemNotification"] = "Update product sucessfully!";
                 return RedirectToAction("ListProduct");
             }
             else
@@ -351,6 +353,7 @@ namespace TingStoreClient.Controllers
                     var json = JsonSerializer.Serialize(product); // Serialize đối tượng Product đã cập nhật trở lại thành JSON.
                     var content = new StringContent(data, System.Text.Encoding.UTF8, "application/json"); // Tạo một StringContent chứa dữ liệu JSON, sử dụng UTF8 và kiểu nội dung là application/json.
                     HttpResponseMessage updateResponse = await client.PostAsync(api + "/" + proId, content); //gửi đi
+                    TempData["SystemNotification"] = "Delete product sucessfully!";
                     return RedirectToAction("ListProduct");
                 }
             }
@@ -418,6 +421,7 @@ namespace TingStoreClient.Controllers
             }
             var detailFilesPath = Path.Combine(_hostingEnvironment.WebRootPath, "assets/Product_Details");
             SaveToFile(Path.Combine(detailFilesPath, $"{pro.proName}_Info.txt"), productInfo);
+            TempData["SystemNotification"] = "Update product information sucessfully!";
             return RedirectToAction("ManagementProductDetail", new { id = id });
         }
 
@@ -454,6 +458,7 @@ namespace TingStoreClient.Controllers
             }
             var detailFilesPath = Path.Combine(_hostingEnvironment.WebRootPath, "assets/Product_Details");
             SaveToFile(Path.Combine(detailFilesPath, $"{pro.proName}_Features.txt"), highlightFeatures);
+            TempData["SystemNotification"] = "Update product Highlight Features sucessfully!";
             return RedirectToAction("ManagementProductDetail", new { id = id });
         }
 
@@ -490,6 +495,7 @@ namespace TingStoreClient.Controllers
             }
             var detailFilesPath = Path.Combine(_hostingEnvironment.WebRootPath, "assets/Product_Details");
             SaveToFile(Path.Combine(detailFilesPath, $"{pro.proName}_Specs.txt"), technicalSpecs);
+            TempData["SystemNotification"] = "Update product specifications sucessfully!";
             return RedirectToAction("ManagementProductDetail", new { id = id });
         }
 
@@ -509,15 +515,15 @@ namespace TingStoreClient.Controllers
         [HttpPost("createQuestionAndAnswer/{proId}")]
         public async Task<IActionResult> CreateQuestionAndAnswer(int proId, List<string> questionName, List<string> answerValue)
         {
-            if (questionName == null || answerValue == null || questionName.Count != answerValue.Count)
+            if (questionName == null || answerValue == null || questionName.Count != answerValue.Count || questionName.Count == 0)
             {
-                ViewBag.ErrorMessage = "Câu hỏi và câu trả lời phải được điền đầy đủ và tương ứng với nhau.";
-                return View();
+                TempData["ErrorMessage"] = "Questions and answers must be filled out completely and correspond to each other.";
+                return RedirectToAction("CreateQuestionAndAnswer");
             }
             var product = await GetProductById(proId);
             if (product == null)
             {
-                ViewBag.ErrorMessage = "Không tìm thấy sản phẩm.";
+                TempData["ErrorMessage"] = "Not found product.";
                 return View();
             }
             var productName = product.proName;
@@ -537,7 +543,7 @@ namespace TingStoreClient.Controllers
 
             // Sử dụng SaveToFileQuestionAndAnswer để thêm nội dung vào cuối file
             SaveToFileQuestionAndAnswer(filePath, qaContent.ToString());
-
+            TempData["SystemNotification"] = "Add question and answer of product sucessfully!";
             return RedirectToAction("ManagementQuestionAndAnswer", new { id = proId });
         }
 
@@ -618,12 +624,14 @@ namespace TingStoreClient.Controllers
             var product = await GetProductById(proId);
             if (product == null)
             {
-                ViewBag.ErrorMessage = "Không tìm thấy sản phẩm.";
+                ViewBag.ErrorMessage = "Not found product.";
                 return View();
             }
             var productName = product.proName;
             var qaFilesPath = Path.Combine(_hostingEnvironment.WebRootPath, "assets/Product_Q&A");
             SaveToFile(Path.Combine(qaFilesPath, $"{productName}_Q&A.txt"), questionAndAnswer);
+
+            TempData["SystemNotification"] = "Update question and answer of product sucessfully!";
             return RedirectToAction("ManagementQuestionAndAnswer", new { id = proId });
         }
     }

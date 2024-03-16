@@ -17,6 +17,40 @@
                 <a asp-controller="SaleProduct" asp-action="CreateSaleProduct" class="btn_addnew btn btn-primary"> Add
                     new </a>
             </div>
+@if (TempData["SystemNotification"] != null)
+    {
+        <div id="systemNotification" class="alert alert-success m-0 p-2">
+            <p class="text-dark" style="margin-top: 5px; margin-bottom: 5px;">Notification: @TempData["SystemNotification"]
+            </p>
+        </div>
+    }
+<div class="page-header">
+    <h3 style="margin-top:20px; text-align: center;">LIST OF PRODUCTS ON SALE</h3>
+    <div style="text-align: center;">
+        <a asp-controller="SaleProduct" asp-action="CreateSaleProduct" class="fancy-button"> Add a new discount product</a>
+    </div>
+</div>
+<div class="container">
+    <div class="dropdown">
+        <button class="no-border-button" type="button" data-bs-toggle="dropdown"> <i class="fa-solid fa-list "></i>
+            Sort discount values
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            @if (ViewBag.CurrentSortOrder == "asc")
+            {
+                <li><a class="dropdown-item" href="?sortOrder=asc" selected="selected">Low - high</a></li>
+                <li><a class="dropdown-item" href="?sortOrder=desc">High - low</a></li>
+            }
+            else if (ViewBag.CurrentSortOrder == "desc")
+            {
+                <li><a class="dropdown-item" href="?sortOrder=desc">Cao - thấp</a></li>
+                <li><a class="dropdown-item" href="?sortOrder=asc">High - low</a></li>
+            }
+            else
+            {
+                <li><a class="dropdown-item" href="?sortOrder=asc" selected="selected">Low - high</a></li>
+                <li><a class="dropdown-item" href="?sortOrder=desc">High - low</a></li>
+            }
         </div>
         <div class="container">
             <div class="card">
@@ -129,3 +163,12 @@
 
     </div>
 </body>
+</div>
+<script>
+        setTimeout(function () {
+            var systemNotification = document.getElementById('systemNotification');
+            if (systemNotification) {
+                systemNotification.style.display = 'none';
+            }
+        }, 3000);
+    </script>

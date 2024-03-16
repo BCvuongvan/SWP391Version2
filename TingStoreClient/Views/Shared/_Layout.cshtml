@@ -24,10 +24,76 @@
     <!-- link css custom -->
     <link rel="stylesheet" href="~/Mobile_shop/css/homeAdmin.css">
     <link rel="stylesheet" href="~/Mobile_shop/css/totalCustomer.css">
-
 </head>
 
 <body>
+<script src="https://kit.fontawesome.com/8143c9cd7e.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('addSpecButton').addEventListener('click', function () {
+                var specName = document.getElementById('specName').value;
+                var specValue = document.getElementById('specValue').value;
+
+                // Tạo một hàng mới cho bảng thông số kỹ thuật
+                var newRow = document.createElement('tr');
+                newRow.innerHTML = `
+            <td><input type="text" name="specNames[]" value="${specName}" readonly></td>
+            <td><input type="text" name="specValues[]" value="${specValue}" readonly></td>
+            <td><button type="button" class="btn btn-danger removeSpec">Xóa</button></td>
+        `;
+
+                // Thêm hàng mới vào bảng
+                document.getElementById('specsTable').querySelector('tbody').appendChild(newRow);
+
+                // Xóa trường input sau khi thêm
+                document.getElementById('specName').value = '';
+                document.getElementById('specValue').value = '';
+
+                // Thêm sự kiện click cho nút xóa thông số kỹ thuật
+                newRow.querySelector('.removeSpec').addEventListener('click', function () {
+                    this.closest('tr').remove();
+                });
+            });
+        });
+
+        //
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('addQuestionAndAnswerButton').addEventListener('click', function () {
+                var questionName = document.getElementById('questionName').value;
+                var answerValue = document.getElementById('answerValue').value;
+
+                // Tạo một hàng mới cho bảng thông số kỹ thuật
+                var newRow = document.createElement('tr');
+                newRow.innerHTML = `
+            <td><input type="text" name="questionName[]" value="${questionName}" readonly></td>
+            <td><input type="text" name="answerValue[]" value="${answerValue}" readonly></td>
+            <td><button type="button" class="btn btn-danger removeSpec">Xóa</button></td>
+        `;
+
+                // Thêm hàng mới vào bảng
+                document.getElementById('q&aTable').querySelector('tbody').appendChild(newRow);
+
+                // Xóa trường input sau khi thêm
+                document.getElementById('questionName').value = '';
+                document.getElementById('answerValue').value = '';
+
+                // Thêm sự kiện click cho nút xóa thông số kỹ thuật
+                newRow.querySelector('.removeSpec').addEventListener('click', function () {
+                    this.closest('tr').remove();
+                });
+            });
+        });
+        //phần hiển thị Q&A
+        function toggleAnswer(answerId) {
+            var answer = document.getElementById(answerId);
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+
     @{
         // Lấy dữ liệu JSON từ Session
         string userDataJson = @HttpContextAccessor.HttpContext.Session.GetString("_user");

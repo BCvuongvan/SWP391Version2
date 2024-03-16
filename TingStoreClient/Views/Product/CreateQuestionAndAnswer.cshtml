@@ -1,39 +1,63 @@
 @model Product
 @{
     ViewData["Title"] = "CreateQuestionAndAnswer";
-    Layout = "/Views/Shared/_ManagementProduct.cshtml";
 }
-<nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-    <div class="navbar-nav align-items-center ms-auto">
-        <div class="nav-item">
-            <a class="nav-link" style="margin-right: 20px;" asp-controller="Product" asp-action="ListProduct">
-                <i class="fa fa-sign-out-alt"></i>
-                <span class="d-none d-lg-inline-flex">Back</span>
-            </a>
-        </div>
+<body>
+<style>
+    .card-body {
+        border: 1px solid rgb(208, 198, 198);
+        border-radius: 10px;
+    }
+    
+    .btn-custom {
+    padding: 10px 20px; 
+    font-size: 0.9rem; 
+    line-height: 1; 
+    text-align: left; 
+    display: inline-block; 
+    white-space: nowrap;
+}
+
+}
+
+</style>
+
+<div class="container">
+    <div class="page-header">
+            <div class="float-end" style="margin-top: -30px;">
+                <a asp-controller="Product" asp-action="ManagementQuestionAndAnswer" asp-route-id="@Model.proId" data-bs-toggle="tooltip" title
+                    class="btn btn-success" data-bs-original-title="Back" aria-label="Back" ><i
+                        class="fas fa-reply"></i></a>
+            </div>
     </div>
-</nav>
-<section id="product_part" class="main">
-    <div class="container">
-        <h4 class="text-center font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading">ADD NEW
-            QUESTION AND ANSWER</h4>
+    @if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+    <div>
+        <h4 style="margin-top:40px; text-align: center;"><strong>ADD NEW
+            QUESTION AND ANSWER</strong></h4>
+            </div>
         <div class="card-body" style="margin-bottom: 10px;">
             <form asp-controller="Product" asp-action="CreateQuestionAndAnswer" method="post" id="productForm"
                 style="margin: 10px;" enctype="multipart/form-data">
                 <div id="technicalSpecsContainer" class="form-group">
                     <label class="form-label">Question and answer: </label>
-                    <div id="specifications-container">
-                        <!-- Trong phần Specifications của form -->
-                        <input type="text" id="questionName" placeholder="Tên thông số" class="form-control" />
-                        <input type="text" id="answerValue" placeholder="Giá trị" class="form-control" />
-                        <button type="button" id="addQuestionAndAnswerButton" class="btn btn-primary">Thêm thông số</button>
-                    </div>
+                    <div id="specifications-container" style="display: flex; align-items: center; gap: 10px;">
+                    <!-- Adjusted part: Use flexbox for alignment -->
+                    <input type="text" id="questionName" placeholder="Question" class="form-control" />
+                    <input type="text" id="answerValue" placeholder="Answer" class="form-control" />
+                    <button type="button" id="addQuestionAndAnswerButton" class="btn btn-primary btn-custom">Add</button>
+                </div>
                     <table id="q&aTable" class="table">
                         <thead>
                             <tr>
-                                <th>Tên thông số</th>
-                                <th>Giá trị</th>
-                                <th>Hành động</th>
+                                <th>Question</th>
+                                <th>Answer</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -48,4 +72,4 @@
             </form>
         </div>
     </div>
-</section>
+</body>
