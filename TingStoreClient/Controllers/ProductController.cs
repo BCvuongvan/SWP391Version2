@@ -252,7 +252,7 @@ namespace TingStoreClient.Controllers
             {
                 return System.IO.File.ReadAllText(filePath);
             }
-            return "Không có thông tin.";
+            return "Don't have information";
         }
 
         [HttpGet("update/{id}")]

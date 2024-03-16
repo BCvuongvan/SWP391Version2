@@ -31,6 +31,58 @@
 </head>
 
 <body>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const endDateStr = '@Html.Raw(ViewBag.LatestDiscountEndDate)';
+            console.log("endDateStr:", endDateStr); // Debug
+            const endDate = new Date(endDateStr);
+            const boxTime = document.querySelector('.box-time');
+
+            if (isNaN(endDate.getTime())) {
+                console.error('Invalid endDate:', endDateStr);
+                boxTime.innerHTML = "Invalid countdown time.";
+                return;
+            }
+
+            function updateCountdown() {
+                const now = new Date();
+                const diff = endDate - now;
+
+                if (diff <= 0) {
+                    boxTime.innerHTML = "<div class='time-segment'>The</div><div class='time-segment'>discount</div><div class='time-segment'>ended.</div>";
+                    clearInterval(interval);
+                    return;
+                }
+
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('hours').innerHTML = `${hours}`;
+                document.getElementById('minutes').innerHTML = `${minutes}`;
+                document.getElementById('seconds').innerHTML = `${seconds}`;
+            }
+
+            updateCountdown();
+            const interval = setInterval(updateCountdown, 1000);
+        });
+        //thanh đánh giá
+        document.addEventListener("DOMContentLoaded", function () {
+            // Giả sử bạn có một cách nào đó để lấy được tỷ lệ phần trăm đánh giá từ dữ liệu
+            var ratingFills = document.querySelectorAll('.rating-fill');
+
+            ratingFills.forEach(function (fill) {
+                var ratingPercent = fill.getAttribute('data-rating-percent');
+                if (ratingPercent > 0) {
+                    fill.style.width = ratingPercent + '%';
+                } else {
+                    // Nếu không có đánh giá, thay đổi màu sắc và không hiển thị thanh đánh giá
+                    fill.classList.add('no-rating');
+                }
+            });
+        });
+    </script>
+
 
     <!-- preloader start  -->
     <div id="spinners">
