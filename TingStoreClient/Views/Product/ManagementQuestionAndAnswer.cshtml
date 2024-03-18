@@ -5,16 +5,11 @@
 
 <body>
     <style>
-        .card {
-            padding: 10px;
-        }
-
         .btn_addnew {
             margin: 40px 0px 10px 0;
         }
 
         .question {
-
             background-color: #f0f0f0;
             padding: 10px;
             margin: 5px 0;
@@ -66,14 +61,9 @@
                         </p>
                     </div>
                 }
-                <h3 style="margin-top:40px; text-align: center;"><strong>LIST QUESTION AND ANSWER</strong></h3>
-                <div style="text-align: center;">
-                    <a asp-controller="Product" asp-action="CreateQuestionAndAnswer" asp-route-id="@Model.proId"
-                        class="fancy-button" style="text-decoration: none;">Add new question and answer</a>
-                </div> </br>
             </div>
             <div id="qa-section">
-                <div class="card">
+                <div class="card mt-3 p-3">
                     @{
                         if (ViewBag.QuestionAndAnswer != null)
                         {

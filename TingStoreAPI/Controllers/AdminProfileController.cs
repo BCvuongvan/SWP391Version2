@@ -18,15 +18,15 @@ namespace TingStoreAPI.Controllers
             this._db = db;
         }
         [HttpGet]
-public IActionResult GetAllOfUser()
-{
-    var ListOfUser = this._db.users
-                        .Where(u => u.userType == 1 || u.userType == 2)
-                        .Include(u => u.orders)
-                        .Include(u => u.feedbacks);
+        public IActionResult GetAllOfUser()
+        {
+            var ListOfUser = this._db.users
+                                .Where(u => u.userType == 1 || u.userType == 2)
+                                .Include(u => u.orders)
+                                .Include(u => u.feedbacks);
 
-    return Ok(ListOfUser);
-}
+            return Ok(ListOfUser);
+        }
 
 
 

@@ -789,6 +789,10 @@
       "PackagePath": "staticwebassets\\assets\\Product_Images\\Iphone-13-128GB.jpg"
     },
     {
+      "Id": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Modified_SWT301_TestCase_ResetPassword.xlsx",
+      "PackagePath": "staticwebassets\\assets\\Product_Images\\Modified_SWT301_TestCase_ResetPassword.xlsx"
+    },
+    {
       "Id": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\OIP.jpg",
       "PackagePath": "staticwebassets\\assets\\Product_Images\\OIP.jpg"
     },
@@ -1025,6 +1029,14 @@
       "PackagePath": "staticwebassets\\assets\\Product_Q&A\\Phone XX_Q&A.txt"
     },
     {
+      "Id": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Q&A\\Phone X_Q&A.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Q&A\\Phone X_Q&A.txt"
+    },
+    {
+      "Id": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Q&A\\Samsung Galaxy S24_Q&A.txt",
+      "PackagePath": "staticwebassets\\assets\\Product_Q&A\\Samsung Galaxy S24_Q&A.txt"
+    },
+    {
       "Id": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Q&A\\Samsung Galaxy Z Fold5 12GB 512GB_Q&A.txt",
       "PackagePath": "staticwebassets\\assets\\Product_Q&A\\Samsung Galaxy Z Fold5 12GB 512GB_Q&A.txt"
     },
@@ -1055,6 +1067,10 @@
     {
       "Id": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\Samsung Galaxy S24 Ultra.jpg",
       "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\Samsung Galaxy S24 Ultra.jpg"
+    },
+    {
+      "Id": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\Samsung galaxy S22 Ultra.webp",
+      "PackagePath": "staticwebassets\\assets\\SaleProduct_Images\\Samsung galaxy S22 Ultra.webp"
     },
     {
       "Id": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\Tech new Galaxy S24.webp",
