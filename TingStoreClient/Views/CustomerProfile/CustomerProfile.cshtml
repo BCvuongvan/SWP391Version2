@@ -94,7 +94,8 @@
                                         </div>
                                         <div class="col-md-6 form-group">
                                             <label asp-for="password" class="labels"></label>
-                                            <input type="text" class="form-control" asp-for="password">
+                                            <input type="password" class="form-control" asp-for="password"
+                                                value="@Model.password">
                                             <span asp-validation-for="password" class="error"></span>
                                         </div>
                                         <div class="col-md-6 form-group">
@@ -135,7 +136,7 @@
                     </div>
                     <div id="tab-history" class="tab-pane">
                         <fieldset>
-                            <legend class="header">My Order (@Model.orders.Count)</legend>
+                            <legend class="header" style="padding: 5px;">My Order (@Model.orders.Count)</legend>
                             <div id="history">
                                 <div class="table-responsive">
                                     <table class="table table-bordered">
@@ -188,7 +189,7 @@
                     </div>
                     <div id="tab-transaction" class="tab-pane">
                         <fieldset>
-                            <legend class="header">My Feedback (@Model.feedbacks.Count)
+                            <legend class="header" style="padding: 5px;">My Feedback (@Model.feedbacks.Count)
                                 <a asp-controller="HandleFeedback" asp-action="GetListProduct"
                                     class="btn btn-info">Feedback now</a>
                             </legend>

@@ -63,7 +63,7 @@ namespace TingStoreAPI.Controllers
             var currentTime = DateTime.Now;
 
             // Kiểm tra nếu đơn hàng đã được tạo ra từ hơn 24 giờ trước
-            if ((currentTime - order.orderDate).TotalMinutes > 1)
+            if ((currentTime - order.orderDate).TotalHours > 24)
             {
                 return BadRequest("Order can't be cancelled after 24 hours");
             }

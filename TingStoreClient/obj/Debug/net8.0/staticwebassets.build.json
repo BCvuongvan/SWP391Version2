@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9ZexU0BBOQCR/JmJF5HOGrU6oUpjqptJbkLMg17ZHd8=",
+  "Hash": "KGc3Sf9l+29t9F5g22GOYhOuLETqaRq+AJWa9eR6cao=",
   "Source": "TingStoreClient",
   "BasePath": "_content/TingStoreClient",
   "Mode": "Default",
@@ -2487,6 +2487,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\kanna5.webp"
     },
     {
+      "Identity": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\Modified_SWT301_TestCase_ResetPassword.xlsx",
+      "SourceId": "TingStoreClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "BasePath": "_content/TingStoreClient",
+      "RelativePath": "assets/Product_Images/Modified_SWT301_TestCase_ResetPassword.xlsx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\Product_Images\\Modified_SWT301_TestCase_ResetPassword.xlsx"
+    },
+    {
       "Identity": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Images\\money.jpg",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
@@ -3380,6 +3399,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\Product_Q&A\\OPPO Reno10 5G 8GB 256GB_Q&A.txt"
     },
     {
+      "Identity": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Q&A\\Phone X_Q&A.txt",
+      "SourceId": "TingStoreClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "BasePath": "_content/TingStoreClient",
+      "RelativePath": "assets/Product_Q&A/Phone X_Q&A.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\Product_Q&A\\Phone X_Q&A.txt"
+    },
+    {
       "Identity": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Q&A\\Phone XX_Q&A.txt",
       "SourceId": "TingStoreClient",
       "SourceType": "Discovered",
@@ -3397,6 +3435,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\Product_Q&A\\Phone XX_Q&A.txt"
+    },
+    {
+      "Identity": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Q&A\\Samsung Galaxy S24_Q&A.txt",
+      "SourceId": "TingStoreClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "BasePath": "_content/TingStoreClient",
+      "RelativePath": "assets/Product_Q&A/Samsung Galaxy S24_Q&A.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\Product_Q&A\\Samsung Galaxy S24_Q&A.txt"
     },
     {
       "Identity": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\Product_Q&A\\Samsung Galaxy Z Fold5 12GB 512GB_Q&A.txt",
@@ -3701,6 +3758,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\SaleProduct_Images\\samsung galaxy foild5 12GB 1TB_detail4.webp"
+    },
+    {
+      "Identity": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\Samsung galaxy S22 Ultra.webp",
+      "SourceId": "TingStoreClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\",
+      "BasePath": "_content/TingStoreClient",
+      "RelativePath": "assets/SaleProduct_Images/Samsung galaxy S22 Ultra.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\SaleProduct_Images\\Samsung galaxy S22 Ultra.webp"
     },
     {
       "Identity": "D:\\SP24\\SWP391_V3\\SWP391Version2\\TingStoreClient\\wwwroot\\assets\\SaleProduct_Images\\Samsung Galaxy S24 8GB 256GB.webp",
