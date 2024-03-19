@@ -44,6 +44,7 @@ namespace TingStoreAPI.Controllers
             {
                 return BadRequest("Product cannot be null.");
             }
+            
             var existedName = this._db.products.FirstOrDefault(p => p.proName == product.proName); //check từ phần tử đầu tiên với tên đầu vào 
             if (existedName != null)
             {

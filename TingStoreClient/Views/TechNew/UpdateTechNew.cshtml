@@ -7,6 +7,12 @@
 <link rel="stylesheet" href="~/Mobile_shop/css/UpdateTechNews.css">
 
 <body>
+ @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @TempData["Error"]
+            </div>
+        }
     <div class="container content_box">
         <div class="page-header">
             <h1>Update Tech news</h1>

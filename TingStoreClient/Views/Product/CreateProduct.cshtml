@@ -33,6 +33,19 @@
             font-size: 14px;
             font-style: italic;
         }
+        .card-body {
+        border: 1px solid rgb(208, 198, 198);
+        border-radius: 10px;
+    }
+    
+    .btn-custom {
+    padding: 10px 20px; 
+    font-size: 0.9rem; 
+    line-height: 1; 
+    text-align: left; 
+    display: inline-block; 
+    white-space: nowrap;
+}
     </style>
     <div class="containe">
         <div class="page-header">
@@ -77,33 +90,33 @@
                             <label class="form-label">Distinctive features: </label>
                             <textarea name="highlightFeatures" class="form-control large-input" rows="3"></textarea>
                         </div>
-                        <div id="technicalSpecsContainer" class="form-group mt-2">
-                            <label class="form-label">Specifications: </label>
-                            <div id="specifications-container">
-                                <input type="text" id="specName" placeholder="Tên thông số" class="form-control mb-2" />
-                                <input type="text" id="specValue" placeholder="Giá trị" class="form-control" />
+                        <div id="technicalSpecsContainer" class="form-group">
+                    <label class="form-label">Specifications: </label>
+                    <div id="specifications-container" style="display: flex; align-items: center; gap: 10px;">
+                        <input type="text" id="specificationName" placeholder="Name Specifications" class="form-control" />
+                        <input type="text" id="specificationValue" placeholder="Value Specifications" class="form-control" />
 
-                                <button type="button" id="addSpecButton" class="btn btn-primary mt-2">Thêm thông
-                                    số</button>
-                            </div>
-                            <table id="specsTable" class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Tên thông số</th>
-                                        <th>Giá trị</th>
-                                        <th>Hành động</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </div>
+
+                        <button type="button" id="addSpecButton" class="btn btn-primary btn-custom">Add Specifications</button>
+                    </div>
+                    <table id="specsTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>Name Specifications</th>
+                                <th>Value Specifications</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
                         <div class="form-group mt-2">
-                            <label asp-for="proImage" class="form-label">Product Picture </label>
+                            <label for="proImageFile" class="form-label">Product Picture </label>
                             <div class="custom-file">
-                                <input type="file" name="proImageFile" class="form-control large-input">
+                                <input type="file" name="proImageFile" id="proImageFile" class="form-control large-input">
                             </div>
-                            <span asp-validation-for="proImage" class="text-danger"></span>
+                            <span id="imageError" class="text-danger"></span>
                         </div>
 
                         <div class="form-group mt-2">
@@ -137,8 +150,8 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('addSpecButton').addEventListener('click', function () {
-                var specName = document.getElementById('specName').value;
-                var specValue = document.getElementById('specValue').value;
+                var specName = document.getElementById('specificationName').value;
+                var specValue = document.getElementById('specificationValue').value;
 
                 // Tạo một hàng mới cho bảng thông số kỹ thuật
                 var newRow = document.createElement('tr');
@@ -152,36 +165,8 @@
                 document.getElementById('specsTable').querySelector('tbody').appendChild(newRow);
 
                 // Xóa trường input sau khi thêm
-                document.getElementById('specName').value = '';
-                document.getElementById('specValue').value = '';
-
-                // Thêm sự kiện click cho nút xóa thông số kỹ thuật
-                newRow.querySelector('.removeSpec').addEventListener('click', function () {
-                    this.closest('tr').remove();
-                });
-            });
-        });
-
-        //
-        document.addEventListener('DOMContentLoaded', function () {
-            document.getElementById('addQuestionAndAnswerButton').addEventListener('click', function () {
-                var questionName = document.getElementById('questionName').value;
-                var answerValue = document.getElementById('answerValue').value;
-
-                // Tạo một hàng mới cho bảng thông số kỹ thuật
-                var newRow = document.createElement('tr');
-                newRow.innerHTML = `
-            <td><input type="text" name="questionName[]" value="${questionName}" readonly></td>
-            <td><input type="text" name="answerValue[]" value="${answerValue}" readonly></td>
-            <td><button type="button" class="btn btn-danger removeSpec">Xóa</button></td>
-        `;
-
-                // Thêm hàng mới vào bảng
-                document.getElementById('q&aTable').querySelector('tbody').appendChild(newRow);
-
-                // Xóa trường input sau khi thêm
-                document.getElementById('questionName').value = '';
-                document.getElementById('answerValue').value = '';
+                document.getElementById('specificationName').value = '';
+                document.getElementById('specificationValue').value = '';
 
                 // Thêm sự kiện click cho nút xóa thông số kỹ thuật
                 newRow.querySelector('.removeSpec').addEventListener('click', function () {
@@ -209,3 +194,16 @@
             }
         }, 3000);
     </script>
+    <script>
+        $(document).ready(function () {
+            $('#productForm').submit(function (e) {
+                var fileInput = $('#proImageFile')[0];
+                var filePath = fileInput.value;
+                if (filePath === '') {
+                    e.preventDefault(); // Ngăn chặn form không được submit nếu không chọn file
+                    alert('Please select an image file.'); // Thông báo cho người dùng
+                }
+            });
+        });
+    </script>
+

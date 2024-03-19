@@ -62,15 +62,6 @@ namespace TingStoreClient.Controllers
             List<DiscountPercent> list = JsonSerializer.Deserialize<List<DiscountPercent>>(data, option);
             ViewBag.discountproductList = list;
         }
-        private async Task GetDiscountProductFlashSaleAsync()
-        {
-            HttpResponseMessage response = await client.GetAsync("https://localhost:5001/api/DiscountProduct/flashsale");
-            String data = await response.Content.ReadAsStringAsync();
-
-            var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-            string image = JsonSerializer.Deserialize<string>(data, option);
-            ViewBag.flashSale = image;
-        }
         private async Task<DateTime?> GetLatestDiscountEndTimeAsync()
         {
             HttpResponseMessage response = await client.GetAsync("https://localhost:5001/api/DiscountProduct/discountProduct/Latest");
@@ -78,6 +69,8 @@ namespace TingStoreClient.Controllers
             {
                 String data = await response.Content.ReadAsStringAsync();
                 var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                // DiscountPercent list = JsonSerializer.Deserialize<DiscountPercent>(data, option);
+                // ViewBag.imageFlashSale = list;
                 return JsonSerializer.Deserialize<DateTime>(data);
             }
             return null;
@@ -192,7 +185,6 @@ namespace TingStoreClient.Controllers
             ViewBag.LatestDiscountEndDate = endDate?.ToString("o") ?? string.Empty;
 
             await GetCategoriesAsync();
-            await GetDiscountProductFlashSaleAsync();
             await GetHotProducts();
             await GetDiscountProductAsync();
             var techNews = ListTechNews();
@@ -218,7 +210,7 @@ namespace TingStoreClient.Controllers
             {
                 return System.IO.File.ReadAllText(filePath);
             }
-            return "Don't have information";
+            return "Không có thông tin.";
         }
         [HttpGet]
         public async Task<IActionResult> ManagementProductDetail(int id)

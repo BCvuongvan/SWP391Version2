@@ -22,6 +22,12 @@ namespace TingStoreClient.Controllers
         [HttpPost("create")]
         public async Task<IActionResult> CreateTechNew(string title, IFormFile image, string link)
         {
+            if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(link))
+            {
+                var newsId = Guid.NewGuid().ToString();
+                TempData["Error"] = "Title and Link must not be empty.";
+                return RedirectToAction("CreateTechNew", new { NewsId = newsId });
+            }
             if (image != null && image.Length > 0)
             {
                 var newsId = Guid.NewGuid().ToString();
@@ -99,6 +105,11 @@ namespace TingStoreClient.Controllers
         [HttpPost("updatetechnew/{NewsId}")]
         public async Task<IActionResult> UpdateTechNew(string newsId, string title, string link, IFormFile newImageTechNew)
         {
+            if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(link))
+            {
+                TempData["Error"] = "Title and Link must not be empty.";
+                return RedirectToAction("UpdateTechNew", new { NewsId = newsId });
+            }
             var newsDir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/TechNews", newsId);
             if (!Directory.Exists(newsDir))
             {
