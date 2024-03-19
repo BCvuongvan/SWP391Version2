@@ -25,10 +25,10 @@
                 </div>
                 <div class="tile-body">
                     <i class="fas fa-credit-card"></i>
-                    <h2 class="float-end">$1000</h2>
+                    <h2 class="float-end">@ViewBag.CalculateTotalRevenue</h2>
                 </div>
                 <div class="tile-footer">
-                    <a href="" class="text-decoration-none text-white">View more...</a>
+                    <a asp-controller="Revenue" asp-action="Index"  class="text-decoration-none text-white">View more...</a>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="tile-body">
                     <i class="fas fa-user"></i>
-                    <h2 class="float-end">10</h2>
+                    <h2 class="float-end">@ViewBag.TotalUser</h2>
                 </div>
                 <div class="tile-footer">
                     <a href="totalCustomer.html" class="text-decoration-none text-white">View more...</a>

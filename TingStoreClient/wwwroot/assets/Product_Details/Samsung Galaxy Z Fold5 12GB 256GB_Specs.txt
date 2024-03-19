@@ -1,5 +1,3 @@
 Screen size: 7.6 inches
 Screen technology: Dynamic AMOLED 2X
-Rear cameraRear camera: Ultra-wide camera: 12MP F2.2, 123°, 1.12μm Wide-angle camera: 50MP, F1.8, Dual Pixel AF, OIS, 2.0μm Telephoto camera: 10 MP, F2.4, PDAF, OIS, 1.0μm, zoom 3X, 30X digital zoom
-Front camera: External camera: 10 MP, f/2.2 Internal camera: 4 MP, F1.8
-Chipset: Snapdragon 8 Gen 2 for Galaxy (4nm) 8 cores
+Camera or: Ultra-wide camera: 12MP F2.2, 123°, 1.12μm Wide-angle camera: 50MP, F1.8, Dual Pixel AF, OIS, 2.0μm Telephoto camera: 10 MP, F2.4, PDAF, OIS, 1.0μm, 3X zoom, 30X digital zoom

@@ -537,7 +537,7 @@ namespace TingStoreClient.Controllers
             for (int i = 0; i < questionName.Count; i++)
             {
                 qaContent.AppendLine($"Question: {questionName[i]}");
-                qaContent.AppendLine($"Anawer: {answerValue[i]}");
+                qaContent.AppendLine($"Answer: {answerValue[i]}");
                 qaContent.AppendLine(); // Thêm dòng trống giữa các cặp Q&A
             }
 

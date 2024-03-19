@@ -80,18 +80,17 @@
                         <div id="technicalSpecsContainer" class="form-group mt-2">
                             <label class="form-label">Specifications: </label>
                             <div id="specifications-container">
-                                <input type="text" id="specName" placeholder="Tên thông số" class="form-control mb-2" />
-                                <input type="text" id="specValue" placeholder="Giá trị" class="form-control" />
+                                <input type="text" id="specName" placeholder="Parameter name" class="form-control mb-2" />
+                                <input type="text" id="specValue" placeholder="Value" class="form-control" />
 
-                                <button type="button" id="addSpecButton" class="btn btn-primary mt-2">Thêm thông
-                                    số</button>
+                                <button type="button" id="addSpecButton" class="btn btn-primary mt-2">Add parameters</button>
                             </div>
                             <table id="specsTable" class="table">
                                 <thead>
                                     <tr>
-                                        <th>Tên thông số</th>
-                                        <th>Giá trị</th>
-                                        <th>Hành động</th>
+                                        <th>Parameter name</th>
+                                        <th>Value</th>
+                                        <th>Act</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -173,7 +172,7 @@
                 newRow.innerHTML = `
             <td><input type="text" name="questionName[]" value="${questionName}" readonly></td>
             <td><input type="text" name="answerValue[]" value="${answerValue}" readonly></td>
-            <td><button type="button" class="btn btn-danger removeSpec">Xóa</button></td>
+            <td><button type="button" class="btn btn-danger removeSpec">Delete</button></td>
         `;
 
                 // Thêm hàng mới vào bảng

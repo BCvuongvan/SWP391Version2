@@ -1,0 +1,8 @@
+Screen size: 6.1 inches
+Screen technology: Super Retina XDR OLED
+Rear camera: Main camera: 48MP, 26mm, ƒ/1.6,Camerra wide-angle: 12MP, 13mm, ƒ/2.4 2x telephoto camera: 12MP, 52mm, ƒ/1.6
+Front camera: 12MP, ƒ/1.9
+Chipsets: Apple A16 Bionic 6-core
+Amount of RAM: 6 GB
+Internal memory: 128 GB
+Battery: 3349 mAh

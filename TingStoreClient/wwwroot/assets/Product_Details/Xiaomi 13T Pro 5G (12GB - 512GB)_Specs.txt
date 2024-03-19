@@ -1,0 +1,8 @@
+Screen size: 6.67 inches
+Screen technology: OLED
+Rear camera: Wide-angle main camera: 50 MP, 1/1.22
+Front camera:  20 MP
+Chipsets: Dimensity 9200+
+Amount of RAM: 12 GB
+Internal memory: 512 GB
+Battery: 5,000 mAh

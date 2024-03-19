@@ -1,0 +1,8 @@
+Screen size: 6.7 inches
+Screen technology: Dynamic AMOLED 2X
+Rear camera: Ultra-wide camera: 12MP, F2.2, 123°, 1.12μm, FF Main camera: 12MP, F1.8, Dual Pixel, 1.8μm, OIS
+Front camera: 10MP, F2.4, 1.22μm
+Chipsets: Snapdragon 8 Gen 2 for Galaxy
+Amount of RAM: 8 GB
+Internal memory: 512 GB
+Battery: 3700 mAh

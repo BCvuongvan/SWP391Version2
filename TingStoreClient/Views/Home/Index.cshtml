@@ -143,7 +143,7 @@ Titanium has one of the best strength-to-weight ratios of any metal, making thes
                                                 <br><span class="giamoi">@String.Format("{0:0,0VND}", discountedPrice).Replace(",", ".")</span>
                                             </p>
                                         </div>
-                                        <a href=""><button type="button" class="btn btn-danger">Add to cart</button></a>
+                                        <a asp-controller="CartManager" asp-action="AddToCart" asp-route-id="@product.proId" ><button type="button" class="btn btn-danger">Add to cart</button></a>
                                         <div class="star_rate">
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>

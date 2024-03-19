@@ -1,0 +1,8 @@
+Screen size: 6.67 inches
+Screen technology: AMOLED
+Rear camera: Main 200 MP & Secondary 8 MP, 2 MP
+Front camera: 16 MP
+Chipsets: Mediatek Dimensity 7200 Ultra (4 nm)
+Amount of RAM: 8 GB
+Internal memory: 256 GB
+Battery:  5000 mAh

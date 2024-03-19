@@ -34,10 +34,14 @@ namespace TingStoreClient.Controllers
                 var moreYear = await GetYearlyRevenues(DateTime.Today.Year);
 
                 // Gán giá trị vào ViewBag
-                ViewBag.DailyRevenue = dailyRevenue;
-                ViewBag.MonthlyRevenue = monthlyRevenue;
-                ViewBag.YearlyRevenue = yearlyRevenue;
-                ViewBag.CalculateTotalRevenue = totalRevenue;
+                ViewBag.DailyRevenue = @String.Format("{0:0,0VND}", dailyRevenue).Replace(",",
+                                            "."); ;
+                ViewBag.MonthlyRevenue = @String.Format("{0:0,0VND}", monthlyRevenue).Replace(",",
+                                            ".");
+                ViewBag.YearlyRevenue = @String.Format("{0:0,0VND}", yearlyRevenue).Replace(",",
+                                            ".");
+                ViewBag.CalculateTotalRevenue = @String.Format("{0:0,0VND}", totalRevenue).Replace(",",
+                                            ".");
                 ViewBag.MonthlyRevenuesForYear = moreMonthlyRevenues;
                 ViewBag.MoreYear = moreYear;
                 return View();

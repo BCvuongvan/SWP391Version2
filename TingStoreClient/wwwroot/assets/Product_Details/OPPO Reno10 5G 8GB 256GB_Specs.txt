@@ -1,5 +1,3 @@
-Screen size :6.7 inches.
-Screen technology: AMOLED.
-Camera orWide-angle camera: 64MP; f/1.7, PDAF
-Telephoto portrait: 32 MP, f/2.0.
-Ultra wide-angle camera: 8 MP, f/2.2, 2X Hybrid Optical Zoom× and 20X Digital Xoom.
+Screen size: 6.7 inches
+Screen technology: AMOLED
+Rear camera: Wide-angle camera: 64MP; f/1.7, PDAF Telephoto portrait: 32 MP, f/2.0 Ultra wide-angle camera: 8 MP, f/2.2, 2X Hybrid Optical Zoom× and 20X Digital Xoom

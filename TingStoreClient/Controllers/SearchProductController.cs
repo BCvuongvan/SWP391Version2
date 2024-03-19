@@ -72,7 +72,6 @@ namespace TingStoreClient.Controllers
                 // Handle error if needed
                 return new List<Order>();
             }
-        }
-        
+        }    
     }
 }

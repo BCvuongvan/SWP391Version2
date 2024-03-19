@@ -76,7 +76,7 @@
     string userDataJson = @HttpContextAccessor.HttpContext.Session.GetString("_user");
     // Giải mã dữ liệu JSON thành đối tượng User
     var option = new System.Text.Json.JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-    var user = System.Text.Json.JsonSerializer.Deserialize<User>(userDataJson, option);
+    var user = System.Text.Json.JsonSerializer.Deserialize<TingStoreClient.Models.User>(userDataJson, option);
 }
 <div class="container-fluid" style="margin-top: 100px;">
 
@@ -393,11 +393,11 @@ By placing an order, you agree to <a style="color: red;" href="">Ting Store's Te
                 <label for="inputPassword5" class="form-label">New Address</label>
                 <input name="address" style="width: 40%;" type="text" id="inputPassword5" class="control" aria-describedby="passwordHelpBlock">
                 <br>
-                <button type="submit">submit</button>
+                <button type="submit" class="btn btn-danger">Submit</button>
             </form>
         </div>
         <!-- Modal footer -->
-            <div class="modal-footer"><button type="submit" form="AddressForm" class="btn btn-danger"data-dismiss="modal">Submit</button></div>
+            @* <div class="modal-footer"><button type="submit" form="AddressForm" class="btn btn-danger"data-dismiss="modal">Submit</button></div> *@
             <div class="modal-footer"><button type="reset" form="AddressForm" class="btn btn-danger"data-dismiss="modal">Cancel</button></div>
         </div>
     </div>

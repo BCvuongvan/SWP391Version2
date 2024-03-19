@@ -25,10 +25,12 @@ namespace TingStoreClient.Models
 
         [Required(ErrorMessage = "Please enter price!")]
         [DisplayName("Price")]
+        [Range(0, double.MaxValue, ErrorMessage = "Price must be greater than or equal to 0.")]
         public Decimal proPrice { set; get; }
 
         [Required(ErrorMessage = "Please enter quantity!")]
         [DisplayName("Quantity")]
+        [Range(0, int.MaxValue, ErrorMessage = "Quantity must be greater than or equal to 0.")]
         public int proQuantity { get; set; }
 
         [Required(ErrorMessage = "Please enter product image!")]

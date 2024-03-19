@@ -1,0 +1,5 @@
+Screen size: 6.8 inches
+Screen technology: Dynamic AMOLED 2X
+Rear camera: Ultra-wide: 12MP, F2.2 (Dual Pixel AF) Main: 200MP, F1.7 OIS ±3° (Super Quad Pixel AF) Telephoto 1: 10MP, F4.9 (10X, Dual Pixel AF) OIS,Telephoto 2: 10MP, F2.4 (3X, Dual Pixel AF) OIS 100X Space Standard Zoom
+Front camera: 12MP, F2.2 (Dual Pixel AF)
+Chipsets: Snapdragon 8 Gen 2 (4 nm)

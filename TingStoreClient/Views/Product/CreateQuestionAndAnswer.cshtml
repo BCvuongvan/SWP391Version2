@@ -2,56 +2,57 @@
 @{
     ViewData["Title"] = "CreateQuestionAndAnswer";
 }
+
 <body>
-<style>
-    .card-body {
-        border: 1px solid rgb(208, 198, 198);
-        border-radius: 10px;
-    }
-    
-    .btn-custom {
-    padding: 10px 20px; 
-    font-size: 0.9rem; 
-    line-height: 1; 
-    text-align: left; 
-    display: inline-block; 
-    white-space: nowrap;
-}
+    <style>
+        .card-body {
+            border: 1px solid rgb(208, 198, 198);
+            border-radius: 10px;
+        }
 
-}
+        .btn-custom {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            line-height: 1;
+            text-align: left;
+            display: inline-block;
+            white-space: nowrap;
+        }
 
-</style>
+        }
+    </style>
 
-<div class="container">
-    <div class="page-header">
+    <div class="container">
+        <div class="page-header">
             <div class="float-end" style="margin-top: -30px;">
-                <a asp-controller="Product" asp-action="ManagementQuestionAndAnswer" asp-route-id="@Model.proId" data-bs-toggle="tooltip" title
-                    class="btn btn-success" data-bs-original-title="Back" aria-label="Back" ><i
-                        class="fas fa-reply"></i></a>
+                <a asp-controller="Product" asp-action="ManagementQuestionAndAnswer" asp-route-id="@Model.proId"
+                    data-bs-toggle="tooltip" title class="btn btn-success" data-bs-original-title="Back"
+                    aria-label="Back"><i class="fas fa-reply"></i></a>
             </div>
-    </div>
-    @if (TempData["ErrorMessage"] != null)
-{
-    <div class="alert alert-danger">
-        @TempData["ErrorMessage"]
-    </div>
-}
+        </div>
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger">
+                @TempData["ErrorMessage"]
+            </div>
+        }
 
-    <div>
-        <h4 style="margin-top:40px; text-align: center;"><strong>ADD NEW
-            QUESTION AND ANSWER</strong></h4>
-            </div>
+        <div>
+            <h4 style="margin-top:40px; text-align: center;"><strong>ADD NEW
+                    QUESTION AND ANSWER</strong></h4>
+        </div>
         <div class="card-body" style="margin-bottom: 10px;">
             <form asp-controller="Product" asp-action="CreateQuestionAndAnswer" method="post" id="productForm"
                 style="margin: 10px;" enctype="multipart/form-data">
                 <div id="technicalSpecsContainer" class="form-group">
                     <label class="form-label">Question and answer: </label>
                     <div id="specifications-container" style="display: flex; align-items: center; gap: 10px;">
-                    <!-- Adjusted part: Use flexbox for alignment -->
-                    <input type="text" id="questionName" placeholder="Question" class="form-control" />
-                    <input type="text" id="answerValue" placeholder="Answer" class="form-control" />
-                    <button type="button" id="addQuestionAndAnswerButton" class="btn btn-primary btn-custom">Add</button>
-                </div>
+                        <!-- Adjusted part: Use flexbox for alignment -->
+                        <input type="text" id="questionName" placeholder="Question" class="form-control" />
+                        <input type="text" id="answerValue" placeholder="Answer" class="form-control" />
+                        <button type="button" id="addQuestionAndAnswerButton"
+                            class="btn btn-primary btn-custom">Add</button>
+                    </div>
                     <table id="q&aTable" class="table">
                         <thead>
                             <tr>
@@ -65,10 +66,8 @@
                     </table>
                 </div>
                 <div class="button-container" style="text-align: center;">
-                    <button type="submit" style="font-size: 18px; padding: 10px 20px;"
-                        class="fancy-button">Create</button>
+                    <button type="submit" class="btn btn-primary">Create</button>
                 </div>
-
             </form>
         </div>
     </div>

@@ -1,0 +1,10 @@
+Screen size: 6.1 inches
+Screen technology: Dynamic AMOLED 2X
+Rear camera: Main camera: 50MP, f/1.8 Ultra-wide-angle camera: 12MP, f/2.2 Telephoto camera: 10MP, f/2.4
+Front camera: 10MP, f/2.2
+Chipsets: Snapdragon 8 Gen 1
+Amount of RAM: 8 GB
+Internal memory: 256 GB
+Battery: 3700 mAh
+SIM card: 2 Nano SIM or 1 Nano + 1 eSIM
+Operating system: Android 12

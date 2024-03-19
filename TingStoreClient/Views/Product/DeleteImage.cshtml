@@ -1,41 +1,45 @@
 @model ProductImage
 @{
     ViewData["Title"] = "DeleteImage";
-    Layout = "/Views/Shared/_ManagementProduct.cshtml";
 }
-<nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-    <div class="navbar-nav align-items-center ms-auto">
-        <div class="nav-item">
-            <a class="nav-link" style="margin-right: 20px;" asp-controller="Product"
-                asp-action="ManagementProductDetail" asp-route-id="@Model.proId">
-                <i class="fa fa-sign-out-alt"></i>
-                <span class="d-none d-lg-inline-flex">Back</span>
-            </a>
-        </div>
-    </div>
-</nav>
-<section id="product_part" class="main">
+
+<body>
+    <style>
+        h1 {
+            margin-left: 20px;
+        }
+    </style>
     <div class="container">
-        <h2 class="font-weight-bold text-uppercase text-primary mb-4 large-font custom-heading"
-            style="margin-right: 120px;">ARE YOU SURE YOU WANT TO DELETE THIS PHOTO?</h2>
-        <div class="card-body" style="margin-bottom: 10px;">
-            <form asp-controller="Product" asp-action="DeleteImageProductDetail" asp-route-imageId="@Model.imageId"
-                method="post" style="margin: 10px;">
-                <div hidden>
-                    <input type="text" asp-for="imageId" class="form-control">
-                </div>
-                <div>
-                    <label class="form-label">Product Photo: </label>
-                    <input type="text" asp-for="imageUrl" class="form-control large-input" disabled> <br>
-                </div>
-                <div style="margin-left: 250px;">
-                    <img src="~/assets/Product_Images/@Model.imageUrl" asp-for="ImageFile"
-                        style="width: 500px; height: 500px;">
-                </div> <br>
-                <div class="button text-end">
-                    <button type="submit" class="btn btn-primary">Delete</button>
-                </div>
-            </form>
+        <div class="page-header">
+            <h1>Are you sure you want to delete this photo?</h1>
+            <div class="float-end" style="margin-top: -50px;">
+                <a asp-controller="Product" asp-action="ManagementProductDetail" asp-route-id="@Model.proId"
+                    data-bs-toggle="tooltip" title class="btn btn-success" data-bs-original-title="Back"
+                    aria-label="Back"><i class="fas fa-reply"></i></a>
+            </div>
         </div>
+        <section id="product_part" class="main">
+            <div class="container">
+                <div class="card-body" style="margin-bottom: 10px;">
+                    <form asp-controller="Product" asp-action="DeleteImageProductDetail"
+                        asp-route-imageId="@Model.imageId" method="post" style="margin: 10px;">
+                        <div hidden>
+                            <input type="text" asp-for="imageId" class="form-control">
+                        </div>
+                        <div>
+                            <label class="form-label">Product Photo: </label>
+                            <input type="text" asp-for="imageUrl" class="form-control large-input" disabled> <br>
+                        </div>
+                        <div class="text-center">
+                            <img src="~/assets/Product_Images/@Model.imageUrl" asp-for="ImageFile"
+                                style="width: 400px; height: 400px;">
+                        </div> <br>
+                        <div class="button text-end">
+                            <button type="submit" class="btn btn-primary">Delete</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </div>
-</section>
+</body>

@@ -1,0 +1,6 @@
+Screen size:  1.77 inches
+Screen technology: IPS LCD
+Rear camera:  QVGA
+Chipsets: Unisoc T107
+Internal memory: 128 MB
+Battery:  1450mAh

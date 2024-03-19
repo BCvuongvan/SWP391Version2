@@ -42,7 +42,7 @@
                         <div class="form-group">
                             <label asp-for="proQuantity" class="form-label">Number Of Products: </label>
                             <input type="text" asp-for="proQuantity" class="form-control large-input">
-                            <span asp-validation-for="proQuantity" class=" error text-danger"></span>
+                            <span asp-validation-for="proQuantity" class="error text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="proImage" class="form-label">Product Picture:</label> <br>
@@ -71,7 +71,7 @@
     </div>
 </body>
 @section Scripts {
-        @{
-            <partial name="_ValidationScriptsPartial" />
-        }
+    @{
+        <partial name="_ValidationScriptsPartial" />
     }
+}

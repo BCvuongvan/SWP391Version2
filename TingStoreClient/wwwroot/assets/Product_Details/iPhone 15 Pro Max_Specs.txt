@@ -1,1 +1,5 @@
-sss: sss
+Screen size: 6.7 inches
+Screen technology: Super Retina XDR OLED
+Rear camera: Main camera: 48MP, 24mm, ƒ/1.78 Ultra-wide-angle camera: 12 MP, 13 mm, ƒ/2.2 Telephoto camera: 12 MP
+
+
