@@ -97,6 +97,11 @@ namespace TingStoreClient.Controllers
         [HttpPost("create")]
         public async Task<IActionResult> CreateSaleProduct(DiscountPercent disPer, IFormFile proImageFile, List<int> selectedProducts)
         {
+            if (proImageFile == null || proImageFile.Length == 0)
+            {
+                ModelState.AddModelError("proImageFile", "Product sale image is required.");
+                return View(disPer); 
+            }
             bool checkFlashSale = false;
             HttpResponseMessage response = await client.GetAsync($"https://localhost:5001/api/DiscountProduct/active");
             String data = await response.Content.ReadAsStringAsync();

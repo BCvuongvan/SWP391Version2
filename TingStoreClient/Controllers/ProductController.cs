@@ -101,6 +101,11 @@ namespace TingStoreClient.Controllers
         [HttpPost("create")]
         public async Task<IActionResult> CreateProduct(Product product, IFormFile proImageFile, string productInfo, string highlightFeatures, List<string> specNames, List<string> specValues)
         {
+            if (proImageFile == null || proImageFile.Length == 0)
+            {
+                ModelState.AddModelError("proImageFile", "Product image is required.");
+                return View(product); 
+            }
             // Xử lý file ảnh
             if (proImageFile != null && proImageFile.Length > 0)
             {
@@ -112,7 +117,7 @@ namespace TingStoreClient.Controllers
                     await proImageFile.CopyToAsync(fileStream);
                 }
 
-                product.proImage = fileName; // Giả sử bạn có trường ProImage trong model Product của mình
+                product.proImage = fileName; 
             }
 
             // Lưu thông tin sản phẩm và tính năng nổi bật vào file
@@ -142,7 +147,6 @@ namespace TingStoreClient.Controllers
                 }
             }
 
-            // Gửi dữ liệu sản phẩm qua API
             var data = JsonSerializer.Serialize(product);
             var content = new StringContent(data, Encoding.UTF8, "application/json");
             HttpResponseMessage response = await client.PostAsync(api, content);
@@ -188,6 +192,7 @@ namespace TingStoreClient.Controllers
 
                 if (response.IsSuccessStatusCode)
                 {
+
                     return RedirectToAction("ManagementProductDetail", new { id = productId });
                 }
                 else
@@ -537,7 +542,7 @@ namespace TingStoreClient.Controllers
             for (int i = 0; i < questionName.Count; i++)
             {
                 qaContent.AppendLine($"Question: {questionName[i]}");
-                qaContent.AppendLine($"Anawer: {answerValue[i]}");
+                qaContent.AppendLine($"Answer: {answerValue[i]}");
                 qaContent.AppendLine(); // Thêm dòng trống giữa các cặp Q&A
             }
 
